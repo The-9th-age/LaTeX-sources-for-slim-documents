@@ -1,6 +1,7 @@
 
 %%% Input parameters %%%
 		
+\define@key{unit}{subentrynumber}{\def\unit@subentrynumber{#1}}
 \define@key{unit}{name}{\def\unit@name{#1}}
 \define@key{unit}{QRSname}{\def\unit@QRSname{#1}}
 \define@key{unit}{logo}{\def\unit@logo{#1}}
@@ -27,6 +28,7 @@
 \define@key{unit}{costnote}{\def\unit@costnote{#1}}
 \define@key{unit}{fluff}{\def\unit@fluff{#1}}
 
+\define@key{unit}{globalname}{\def\unit@globalname{#1}}
 \define@key{unit}{global@Ad}{\def\unit@global@Ad{#1}}
 \define@key{unit}{global@Adfly}{\def\unit@global@Adfly{#1}}
 \define@key{unit}{global@Ma}{\def\unit@global@Ma{#1}}
@@ -35,6 +37,25 @@
 \define@key{unit}{global@Rsr}{\def\unit@global@Rsr{#1}}
 \define@key{unit}{globalrules}{\def\unit@globalrules{#1}}
 
+\define@key{unit}{globalnameB}{\def\unit@globalnameB{#1}}
+\define@key{unit}{globalB@Ad}{\def\unit@globalB@Ad{#1}}
+\define@key{unit}{globalB@Adfly}{\def\unit@globalB@Adfly{#1}}
+\define@key{unit}{globalB@Ma}{\def\unit@globalB@Ma{#1}}
+\define@key{unit}{globalB@Mafly}{\def\unit@globalB@Mafly{#1}}
+\define@key{unit}{globalB@Di}{\def\unit@globalB@Di{#1}}
+\define@key{unit}{globalB@Rsr}{\def\unit@globalB@Rsr{#1}}
+\define@key{unit}{globalrulesB}{\def\unit@globalrulesB{#1}}
+
+\define@key{unit}{globalnameC}{\def\unit@globalnameC{#1}}
+\define@key{unit}{globalC@Ad}{\def\unit@globalC@Ad{#1}}
+\define@key{unit}{globalC@Adfly}{\def\unit@globalC@Adfly{#1}}
+\define@key{unit}{globalC@Ma}{\def\unit@globalC@Ma{#1}}
+\define@key{unit}{globalC@Mafly}{\def\unit@globalC@Mafly{#1}}
+\define@key{unit}{globalC@Di}{\def\unit@globalC@Di{#1}}
+\define@key{unit}{globalC@Rsr}{\def\unit@globalC@Rsr{#1}}
+\define@key{unit}{globalrulesC}{\def\unit@globalrulesC{#1}}
+
+\define@key{unit}{defensename}{\def\unit@defensename{#1}}
 \define@key{unit}{defense@HP}{\def\unit@defense@HP{#1}}
 \define@key{unit}{defense@Df}{\def\unit@defense@Df{#1}}
 \define@key{unit}{defense@Re}{\def\unit@defense@Re{#1}}
@@ -43,6 +64,26 @@
 \define@key{unit}{printAeg}{\def\unit@printAeg{#1}}
 \define@key{unit}{defenserules}{\def\unit@defenserules{#1}}
 \define@key{unit}{defensearmour}{\def\unit@defensearmour{#1}}
+
+\define@key{unit}{defensenameB}{\def\unit@defensenameB{#1}}
+\define@key{unit}{defenseB@HP}{\def\unit@defenseB@HP{#1}}
+\define@key{unit}{defenseB@Df}{\def\unit@defenseB@Df{#1}}
+\define@key{unit}{defenseB@Re}{\def\unit@defenseB@Re{#1}}
+\define@key{unit}{defenseB@Arm}{\def\unit@defenseB@Arm{#1}}
+\define@key{unit}{defenseB@Aeg}{\def\unit@defenseB@Aeg{#1}}
+\define@key{unit}{printAegB}{\def\unit@printAegB{#1}}
+\define@key{unit}{defenserulesB}{\def\unit@defenserulesB{#1}}
+\define@key{unit}{defensearmourB}{\def\unit@defensearmourB{#1}}
+
+\define@key{unit}{defensenameC}{\def\unit@defensenameC{#1}}
+\define@key{unit}{defenseC@HP}{\def\unit@defenseC@HP{#1}}
+\define@key{unit}{defenseC@Df}{\def\unit@defenseC@Df{#1}}
+\define@key{unit}{defenseC@Re}{\def\unit@defenseC@Re{#1}}
+\define@key{unit}{defenseC@Arm}{\def\unit@defenseC@Arm{#1}}
+\define@key{unit}{defenseC@Aeg}{\def\unit@defenseC@Aeg{#1}}
+\define@key{unit}{printAegC}{\def\unit@printAegC{#1}}
+\define@key{unit}{defenserulesC}{\def\unit@defenserulesC{#1}}
+\define@key{unit}{defensearmourC}{\def\unit@defensearmourC{#1}}
 
 \define@key{unit}{offensename}{\def\unit@offensename{#1}}
 \define@key{unit}{forceoffensenameprint}{\def\unit@forceoffensenameprint{#1}}
@@ -150,7 +191,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, secondoptionallogo=, thirdoptionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, basesizenotag=, scoring=, categorynote=, costnote=, fluff=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, pathsnote=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
+		subentrynumber=, name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, secondoptionallogo=, thirdoptionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, basesizenotag=, scoring=, categorynote=, costnote=, fluff=, globalname=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, globalnameB=, globalB@Ad=, globalB@Adfly=, globalB@Ma=, globalB@Mafly=, globalB@Di=, globalB@Rsr=, globalrulesB=, globalnameC=, globalC@Ad=, globalC@Adfly=, globalC@Ma=, globalC@Mafly=, globalC@Di=, globalC@Rsr=, globalrulesC=, defensename=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, defensenameB=, defenseB@HP=, defenseB@Df=, defenseB@Re=, defenseB@Arm=, defenseB@Aeg=, printAegB=, defenserulesB=, defensearmourB=, defensenameC=, defenseC@HP=, defenseC@Df=, defenseC@Re=, defenseC@Arm=, defenseC@Aeg=, printAegC=, defenserulesC=, defensearmourC=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, pathsnote=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
 	}%
 	\setkeys{unit}%
 }
@@ -196,24 +237,14 @@
 
 %%% The Command %%%
 
-\newcommand{\unitentry}[1]{%
-\toggletrue{insideunitentry}
-\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
-\defunit{#1}%
-%
-\begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
-%
-%%%%%%%%%%%%%%%%%%%%%%
-% Unit title, logos and general info
-%
-\def\temphypertag{}
-\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\temphypertag] % remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
-\xdef\unithypertag{\bookprefix\arabic{categorynumber}\temphypertag}% using the unit name macro to define an hypertag
-\hypertarget{\unithypertag}{}%
+\newcommand{\unitentryheader}{%
 \rule{\textwidth}{0.5pt}\par\vspace{-5pt}%
 {%
 % Logos
-\expandafter\ifblank\expandafter{\unit@logo}{}{% is there a logo?
+\expandafter\ifblank\expandafter{\unit@logo}{% is there a logo?
+	\begin{minipage}[b]{1pt}%
+		\rule{0pt}{1.2cm}% ensuring the banner is as high as when we have a picture, and that the second minipage is centered approprietly
+}{
 	\hspace*{-3pt}\expandafter\ifblank\expandafter{\unit@secondlogo}{%
 		\begin{minipage}[b]{0.08\textwidth}%
 			\expandafter\ifblank\expandafter{\unit@speciallogo}{%
@@ -226,13 +257,13 @@
 			\includegraphics[width=0.5\textwidth]{{logo_\unit@secondlogo}.png}%
 			\vspace*{-4pt}%
 	}%
-	\end{minipage}%
 }% END is there a logo?
+\end{minipage}%
 %
 % Title, unit cost and size
 \setlength{\lengthbeforemodelsizetwologos}{\lengthbeforemodelsize - 0.08\textwidth}
 \expandafter\ifblank\expandafter{\unit@logo}{% is there a logo?
-	\hspace*{3pt}\begin{minipage}[b]{0.59\textwidth-3pt}%
+	\hspace*{2pt}\begin{minipage}[b]{0.59\textwidth-3pt}%
 }{%
 	\expandafter\ifblank\expandafter{\unit@secondlogo}{%
 		\hspace{0.01\textwidth}\begin{minipage}[b]{0.5\textwidth+3pt}%
@@ -243,7 +274,9 @@
 	}%
 }% END is there a logo?
 % Title with hyperlink, scoring logo
-{\Largerfontsize\textbf{\unit@name}}%
+{\Largerfontsize\textbf{%
+	\expandafter\ifblank\expandafter{\unit@subentrynumber}{}{(\unit@subentrynumber{}) }\unit@name%
+}}%
 \vspace*{3pt}\newline%
 % Is everything replace by a note?
 \expandafter\ifblank\expandafter{\unit@costnote}{% NO
@@ -323,9 +356,9 @@
 \begin{minipage}[b]{0.2\textwidth}%
 \renewcommand{\arraystretch}{1}%
 \begin{tabular}{@{}>{\raggedleft}p{0.25\textwidth}@{\hskip 0.03\textwidth}p{0.72\textwidth}@{}}%
-\ChLab{\Height}&\unit@size{}\tabularnewline%
-\ChLab{\type}&\unit@type{}\tabularnewline%
-\ChLab{\basesize}&\unit@basesize{}%
+\expandafter\ifblank\expandafter{\unit@size}{}{\ChLab{\Height}}&\unit@size{}\tabularnewline%
+\expandafter\ifblank\expandafter{\unit@type}{}{\ChLab{\type}}&\unit@type{}\tabularnewline%
+\expandafter\ifblank\expandafter{\unit@basesize}{}{\ChLab{\basesize}}&\unit@basesize{}%
 \expandafter\ifblank\expandafter{\unit@basesizenotag}{%
 	~\si{\milli\meter}%
 	\ifsubstring{\unit@basesize}{\timess}{}{~\roundbase}%
@@ -426,6 +459,24 @@
 	\fluffbox{\unit@fluff}%
 	\vspace{-10pt}\rule{\textwidth}{0.5pt}\par%
 }%
+}
+
+
+\newcommand{\unitentry}[1]{%
+\toggletrue{insideunitentry}
+\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
+\defunit{#1}%
+%
+\begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
+%
+%%%%%%%%%%%%%%%%%%%%%%
+% Unit title, logos and general info
+%
+\def\temphypertag{}
+\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\temphypertag] % remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
+\xdef\unithypertag{\bookprefix\arabic{categorynumber}\temphypertag}% using the unit name macro to define an hypertag
+\hypertarget{\unithypertag}{}%
+\unitentryheader{}%
 %%%%%%%%%%%%%%%%%%%%%%
 % Characteristics and rules
 %%%%%%%%%%%%%%%%%%%%%%
@@ -433,147 +484,241 @@
 \renewcommand{\arraystretch}{1.4}%
 \vspace*{-7pt}%
 \startcharacteristicstable{}%
-\hspace*{3pt}{\ChLab{\GlobalCharacteristics}}&%
-{\ChLab{\AdvanceRateInitials}}&%
-{\ChLab{\MarchRateInitials}}&%
-{\ChLab{\DisciplineInitials}}&%
-\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
-	&&%
-}{%
-	\iftoggle{twocellsRsr}{%
-		\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChLab{\resurrectedInitials}}&%
+	\hspace*{3pt}{\ChLab{\GlobalCharacteristics}}&%
+	{\ChLab{\AdvanceRateInitials}}&%
+	{\ChLab{\MarchRateInitials}}&%
+	{\ChLab{\DisciplineInitials}}&%
+	\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
+		&&%
 	}{%
-		\ChLab{\resurrectedInitials}&&%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChLab{\resurrectedInitials}}&%
+		}{%
+			\ChLab{\resurrectedInitials}&&%
+		}%
 	}%
-}%
-\ChLab{\ModelRules}\tabularnewline%
-\expandafter\ifblank\expandafter{\unit@global@Adfly}{}{%
-\raggedleft\setlength{\parskip}{0pt}%
-\ChLab{\groundmovementlabel}\par%
-\ChLab{\flymovementlabel}%
-}%
-&%
-\expandafter\ifblank\expandafter{\unit@global@Ad}{-}{%
-\ifsubstring{\unit@global@Ad}{\ascharacter}{\ChVal{{\unit@global@Ad}}}{\ChVal{\distance{\unit@global@Ad}}}%
-}%
-\expandafter\ifblank\expandafter{\unit@global@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Adfly}}}%
-&%
-\expandafter\ifblank\expandafter{\unit@global@Ma}{-}{%
-\ifsubstring{\unit@global@Ma}{\ascharacter}{\ChVal{{\unit@global@Ma}}}{\ChVal{\distance{\unit@global@Ma}}}%
-}%
-\expandafter\ifblank\expandafter{\unit@global@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Mafly}}}%
-&%
-\expandafter\ifblank\expandafter{\unit@global@Di}{-}{\ChVal{\unit@global@Di}}&%
-\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
-	&&%
-}{%
-	\iftoggle{twocellsRsr}{%
-		\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@global@Rsr}}&%
-	}{%
-		\ChVal{\unit@global@Rsr}&&%
-	}%
-}%
-\strut\expandafter\ifblank\expandafter{\unit@globalrules}{}{\alphaorderlist{\unit@globalrules}}%
+	\ChLab{\ModelRules}%
 \tabularnewline%
+	\expandafter\ifblank\expandafter{\unit@globalname}{}{\nameindent\unit@globalname{}}%
+	\expandafter\ifblank\expandafter{\unit@global@Adfly}{}{%
+		\strut\hspace*{\fill}\setlength{\parskip}{0pt}%
+		\ChLab{\groundmovementlabel}\par%
+		\strut\hspace*{\fill}\ChLab{\flymovementlabel}%
+	}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@global@Ad}{-}{%
+	\ifsubstring{\unit@global@Ad}{\ascharacter}{\ChVal{{\unit@global@Ad}}}{\ChVal{\distance{\unit@global@Ad}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@global@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Adfly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@global@Ma}{-}{%
+	\ifsubstring{\unit@global@Ma}{\ascharacter}{\ChVal{{\unit@global@Ma}}}{\ChVal{\distance{\unit@global@Ma}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@global@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Mafly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@global@Di}{-}{\ChVal{\unit@global@Di}}&%
+	\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@global@Rsr}}&%
+		}{%
+			\ChVal{\unit@global@Rsr}&&%
+		}%
+	}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrules}{}{\alphaorderlist{\unit@globalrules}}%
+\tabularnewline%
+%
+\expandafter\ifblank\expandafter{\unit@globalnameB}{}{%
+	\nameindent\unit@globalnameB{}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Adfly}{}{%
+		\strut\hspace*{\fill}\setlength{\parskip}{0pt}%
+		\ChLab{\groundmovementlabel}\par%
+		\strut\hspace*{\fill}\ChLab{\flymovementlabel}%
+	}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Ad}{-}{%
+	\ifsubstring{\unit@globalB@Ad}{\ascharacter}{\ChVal{{\unit@globalB@Ad}}}{\ChVal{\distance{\unit@globalB@Ad}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalB@Adfly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Ma}{-}{%
+	\ifsubstring{\unit@globalB@Ma}{\ascharacter}{\ChVal{{\unit@globalB@Ma}}}{\ChVal{\distance{\unit@globalB@Ma}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalB@Mafly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Di}{-}{\ChVal{\unit@globalB@Di}}&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@globalB@Rsr}}&%
+		}{%
+			\ChVal{\unit@globalB@Rsr}&&%
+		}%
+	}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrulesB}{}{\alphaorderlist{\unit@globalrulesB}}%
+	\tabularnewline%
+}%
+%
+\expandafter\ifblank\expandafter{\unit@globalnameC}{}{%
+	\nameindent\unit@globalnameC{}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Adfly}{}{%
+		\strut\hspace*{\fill}\setlength{\parskip}{0pt}%
+		\ChLab{\groundmovementlabel}\par%
+		\strut\hspace*{\fill}\ChLab{\flymovementlabel}%
+	}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Ad}{-}{%
+	\ifsubstring{\unit@globalC@Ad}{\ascharacter}{\ChVal{{\unit@globalC@Ad}}}{\ChVal{\distance{\unit@globalC@Ad}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalC@Adfly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Ma}{-}{%
+	\ifsubstring{\unit@globalC@Ma}{\ascharacter}{\ChVal{{\unit@globalC@Ma}}}{\ChVal{\distance{\unit@globalC@Ma}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalC@Mafly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Di}{-}{\ChVal{\unit@globalC@Di}}&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@globalC@Rsr}}&%
+		}{%
+			\ChVal{\unit@globalC@Rsr}&&%
+		}%
+	}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrulesC}{}{\alphaorderlist{\unit@globalrulesC}}%
+	\tabularnewline%
+}%
 \end{tabular}%
 
 %%%%%%%%%%%%%%%%%%%%%%
 % Defensive Characteristics
 \vspace*{-7pt}%
 \startcharacteristicstable{}%
-\hspace*{3pt}\ChLab{\DefensiveCharacteristics{}}&%
-{\ChLab{\HealthPointsInitials}}&%
-{\ChLab{\DefensiveSkillInitials}}&%
-{\ChLab{\ResilienceInitials}}& %
-{\ChLab{\ArmourInitials}}&%
-\expandafter\ifblank\expandafter{\unit@printAeg}{%
-	\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChLab{\AegisInitials}}%
-}{\ChLab{\AegisInitials}}&%
-\tabularnewline%
-&% no defensive name
-\expandafter\ifblank\expandafter{\unit@defense@HP}{-}{\ChVal{\unit@defense@HP}}&%
-\expandafter\ifblank\expandafter{\unit@defense@Df}{-}{\ChVal{\unit@defense@Df}}&%
-\expandafter\ifblank\expandafter{\unit@defense@Re}{-}{\ChVal{\unit@defense@Re}}&%
-\expandafter\ifblank\expandafter{\unit@defense@Arm}{\ChVal{0}}{\ChVal{\unit@defense@Arm}}&%
-\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChVal{\unit@defense@Aeg}}&%
-\strut\expandafter\ifblank\expandafter{\unit@defenserules}{}{\alphaorderlist{\unit@defenserules}}%
-\expandafter\ifblank\expandafter{\unit@defensearmour}{}{%
-\expandafter\ifblank\expandafter{\unit@defenserules}{}{, }%
-\alphaorderlist{\unit@defensearmour}}%
-\tabularnewline%
+	\hspace*{3pt}\ChLab{\DefensiveCharacteristics{}}&%
+	{\ChLab{\HealthPointsInitials}}&%
+	{\ChLab{\DefensiveSkillInitials}}&%
+	{\ChLab{\ResilienceInitials}}& %
+	{\ChLab{\ArmourInitials}}&%
+	\expandafter\ifblank\expandafter{\unit@printAeg}{%
+		\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChLab{\AegisInitials}}%
+	}{\ChLab{\AegisInitials}}&%
+	\tabularnewline%
+	\expandafter\ifblank\expandafter{\unit@defensename}{}{\nameindent\unit@defensename{}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@HP}{-}{\ChVal{\unit@defense@HP}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Df}{-}{\ChVal{\unit@defense@Df}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Re}{-}{\ChVal{\unit@defense@Re}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Arm}{\ChVal{0}}{\ChVal{\unit@defense@Arm}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChVal{\unit@defense@Aeg}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserules}{}{\alphaorderlist{\unit@defenserules}}%
+	\expandafter\ifblank\expandafter{\unit@defensearmour}{}{%
+	\expandafter\ifblank\expandafter{\unit@defenserules}{}{, }%
+	\alphaorderlist{\unit@defensearmour}}%
+	\tabularnewline%
+%
+\expandafter\ifblank\expandafter{\unit@defensenameB}{}{%
+	\nameindent\unit@defensenameB{}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@HP}{-}{\ChVal{\unit@defenseB@HP}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Df}{-}{\ChVal{\unit@defenseB@Df}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Re}{-}{\ChVal{\unit@defenseB@Re}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Arm}{\ChVal{0}}{\ChVal{\unit@defenseB@Arm}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Aeg}{}{\ChVal{\unit@defenseB@Aeg}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{\alphaorderlist{\unit@defenserulesB}}%
+	\expandafter\ifblank\expandafter{\unit@defensearmourB}{}{%
+	\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{, }%
+	\alphaorderlist{\unit@defensearmourB}}%
+	\tabularnewline%
+}%
+%
+\expandafter\ifblank\expandafter{\unit@defensenameC}{}{%
+	\nameindent\unit@defensenameC{}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@HP}{-}{\ChVal{\unit@defenseC@HP}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Df}{-}{\ChVal{\unit@defenseC@Df}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Re}{-}{\ChVal{\unit@defenseC@Re}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Arm}{\ChVal{0}}{\ChVal{\unit@defenseC@Arm}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Aeg}{}{\ChVal{\unit@defenseC@Aeg}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{\alphaorderlist{\unit@defenserulesC}}%
+	\expandafter\ifblank\expandafter{\unit@defensearmourC}{}{%
+	\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{, }%
+	\alphaorderlist{\unit@defensearmourC}}%
+	\tabularnewline%
+}%
 \end{tabular}%
 
 %%%%%%%%%%%%%%%%%%%%%%
 % Offensive Characteristics
 \vspace*{-7pt}%
 \startcharacteristicstable{}%
-\hspace*{3pt}\ChLab{\OffensiveCharacteristics{}}&%
-{\ChLab{\AttackValueInitials}}&%
-{\ChLab{\OffensiveSkillInitials}}&%
-{\ChLab{\StrengthInitials}}& %
-{\ChLab{\ArmourPenetrationInitials}}&%
-{\ChLab{\AgilityInitials}}&%
-\tabularnewline%
+	\hspace*{3pt}\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	\tabularnewline%
 %\togglefalse{printoffensename}% reset
 %\expandafter\ifblank\expandafter{\unit@forceoffensenameprint}{}{\toggletrue{printoffensename}}%
 %\expandafter\ifblank\expandafter{\unit@offensenameB}{}{\toggletrue{printoffensename}}%
 %\expandafter\ifblank\expandafter{\unit@offensenameI}{}{\toggletrue{printoffensename}}%
-\toggletrue{printoffensename}% now we walways print offense names
-\iftoggle{printoffensename}{%
-	\nameindent\unit@offensename{}%
-}{}%
-&%
-\expandafter\ifblank\expandafter{\unit@offense@At}{}{\ChVal{\unit@offense@At}}&%
-\expandafter\ifblank\expandafter{\unit@offense@Of}{}{\ChVal{\unit@offense@Of}}&%
-\expandafter\ifblank\expandafter{\unit@offense@St}{}{\ChVal{\unit@offense@St}}&%
-\expandafter\ifblank\expandafter{\unit@offense@AP}{}{\ChVal{\unit@offense@AP}}&% TO-DO Remove 0 as default value in favour of nothing.
-\expandafter\ifblank\expandafter{\unit@offense@Ag}{}{\ChVal{\unit@offense@Ag}}&%
-\strut\expandafter\ifblank\expandafter{\unit@offenserules}{}{\alphaorderlist{\unit@offenserules}}%
-\expandafter\ifblank\expandafter{\unit@offenseweapons}{}{%
-\expandafter\ifblank\expandafter{\unit@offenserules}{}{, }%
-\alphaorderlist{\unit@offenseweapons}}%
-\tabularnewline%
+	\toggletrue{printoffensename}% now we walways print offense names
+	\iftoggle{printoffensename}{%
+		\nameindent\unit@offensename{}%
+	}{}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@offense@At}{}{\ChVal{\unit@offense@At}}&%
+	\expandafter\ifblank\expandafter{\unit@offense@Of}{}{\ChVal{\unit@offense@Of}}&%
+	\expandafter\ifblank\expandafter{\unit@offense@St}{}{\ChVal{\unit@offense@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offense@AP}{}{\ChVal{\unit@offense@AP}}&% TO-DO Remove 0 as default value in favour of nothing.
+	\expandafter\ifblank\expandafter{\unit@offense@Ag}{}{\ChVal{\unit@offense@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserules}{}{\alphaorderlist{\unit@offenserules}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweapons}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserules}{}{, }%
+	\alphaorderlist{\unit@offenseweapons}}%
+	\tabularnewline%
 %
 \expandafter\ifblank\expandafter{\unit@offensenameB}{}{%
-\nameindent\unit@offensenameB{}&%
-\expandafter\ifblank\expandafter{\unit@offenseB@At}{}{\ChVal{\unit@offenseB@At}}&%
-\expandafter\ifblank\expandafter{\unit@offenseB@Of}{}{\ChVal{\unit@offenseB@Of}}&%
-\expandafter\ifblank\expandafter{\unit@offenseB@St}{}{\ChVal{\unit@offenseB@St}}&%
-\expandafter\ifblank\expandafter{\unit@offenseB@AP}{}{\ChVal{\unit@offenseB@AP}}&%
-\expandafter\ifblank\expandafter{\unit@offenseB@Ag}{}{\ChVal{\unit@offenseB@Ag}}&%
-\strut\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{\alphaorderlist{\unit@offenserulesB}}%
-\expandafter\ifblank\expandafter{\unit@offenseweaponsB}{}{%
-\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{, }%
-\alphaorderlist{\unit@offenseweaponsB}}%
-\tabularnewline%
+	\nameindent\unit@offensenameB{}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@At}{}{\ChVal{\unit@offenseB@At}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@Of}{}{\ChVal{\unit@offenseB@Of}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@St}{}{\ChVal{\unit@offenseB@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@AP}{}{\ChVal{\unit@offenseB@AP}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@Ag}{}{\ChVal{\unit@offenseB@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{\alphaorderlist{\unit@offenserulesB}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweaponsB}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{, }%
+	\alphaorderlist{\unit@offenseweaponsB}}%
+	\tabularnewline%
 }%
 %
 \expandafter\ifblank\expandafter{\unit@offensenameC}{}{%
-\nameindent\unit@offensenameC{}&%
-\expandafter\ifblank\expandafter{\unit@offenseC@At}{}{\ChVal{\unit@offenseC@At}}&%
-\expandafter\ifblank\expandafter{\unit@offenseC@Of}{}{\ChVal{\unit@offenseC@Of}}&%
-\expandafter\ifblank\expandafter{\unit@offenseC@St}{}{\ChVal{\unit@offenseC@St}}&%
-\expandafter\ifblank\expandafter{\unit@offenseC@AP}{}{\ChVal{\unit@offenseC@AP}}&%
-\expandafter\ifblank\expandafter{\unit@offenseC@Ag}{}{\ChVal{\unit@offenseC@Ag}}&%
-\strut\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{\alphaorderlist{\unit@offenserulesC}}%
-\expandafter\ifblank\expandafter{\unit@offenseweaponsC}{}{%
-\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{, }%
-\alphaorderlist{\unit@offenseweaponsC}}%
-\tabularnewline%
+	\nameindent\unit@offensenameC{}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@At}{}{\ChVal{\unit@offenseC@At}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@Of}{}{\ChVal{\unit@offenseC@Of}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@St}{}{\ChVal{\unit@offenseC@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@AP}{}{\ChVal{\unit@offenseC@AP}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@Ag}{}{\ChVal{\unit@offenseC@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{\alphaorderlist{\unit@offenserulesC}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweaponsC}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{, }%
+	\alphaorderlist{\unit@offenseweaponsC}}%
+	\tabularnewline%
 }%
 %
 \expandafter\ifblank\expandafter{\unit@offensenameI}{}{%
-\nameindent\unit@offensenameI{}&%
-&%
-&%
-\expandafter\ifblank\expandafter{\unit@offenseI@St}{}{\ChVal{\unit@offenseI@St}}&%
-\expandafter\ifblank\expandafter{\unit@offenseI@AP}{}{\ChVal{\unit@offenseI@AP}}&%
-\expandafter\ifblank\expandafter{\unit@offenseI@Ag}{}{\ChVal{\unit@offenseI@Ag}}&%
-\strut\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{\alphaorderlist{\unit@offenserulesI}}%
-\expandafter\ifblank\expandafter{\unit@offenseweaponsI}{}{%
-\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{, }%
-\alphaorderlist{\unit@offenseweaponsI}}%
-\tabularnewline%
+	\nameindent\unit@offensenameI{}&%
+	&%
+	&%
+	\expandafter\ifblank\expandafter{\unit@offenseI@St}{}{\ChVal{\unit@offenseI@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseI@AP}{}{\ChVal{\unit@offenseI@AP}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseI@Ag}{}{\ChVal{\unit@offenseI@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{\alphaorderlist{\unit@offenserulesI}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweaponsI}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{, }%
+	\alphaorderlist{\unit@offenseweaponsI}}%
+	\tabularnewline%
 }%
 \end{tabular}\newline%
 \vspace*{-8pt}\strut% Fixing the space after the characteristics table (else there is a bug when there is multiple offense lines)
@@ -738,6 +883,7 @@
 \expandafter\dtbfilltype\expandafter{\unit@type}%
 \expandafter\dtbfillscoring\expandafter{\unit@scoring}%
 %
+\expandafter\dtbfillglobalname\expandafter{\unit@globalname}%
 \expandafter\dtbfillglobal@Ad\expandafter{\unit@global@Ad}%
 \expandafter\dtbfillglobal@Ma\expandafter{\unit@global@Ma}%
 \expandafter\dtbfillglobal@Adfly\expandafter{\unit@global@Adfly}%
@@ -756,6 +902,45 @@
 }%
 \expandafter\dtbfillglobalrules\expandafter{\unit@globalrules}%
 %
+\expandafter\dtbfillglobalnameB\expandafter{\unit@globalnameB}%
+	\expandafter\dtbfillglobalB@Ad\expandafter{\unit@globalB@Ad}%
+	\expandafter\dtbfillglobalB@Ma\expandafter{\unit@globalB@Ma}%
+	\expandafter\dtbfillglobalB@Adfly\expandafter{\unit@globalB@Adfly}%
+	\expandafter\dtbfillglobalB@Mafly\expandafter{\unit@globalB@Mafly}%
+	\expandafter\dtbfillglobalB@Di\expandafter{\unit@globalB@Di}%
+	%
+	\expandafter\dtbfillglobalB@Rsr\expandafter{\unit@globalB@Rsr}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Rsr}{}{%
+		\pdfstringdef\textwithoutformatting{\unit@globalB@Rsr}%
+		\pdfsubstitute\textwithoutformatting{ }{}%
+		\dolanguagespecificsubstitute{}%
+		\substitute\textwithoutformatting{\string\376}{}%
+		\substitute\textwithoutformatting{\string\377}{}%
+		\substitute\textwithoutformatting{\string\000}{}%
+		\expandafter\dtbfillglobalB@RsrSortLabel\expandafter{\textwithoutformatting}%
+	}%
+	\expandafter\dtbfillglobalrulesB\expandafter{\unit@globalrulesB}%
+%
+\expandafter\dtbfillglobalnameC\expandafter{\unit@globalnameC}%
+	\expandafter\dtbfillglobalC@Ad\expandafter{\unit@globalC@Ad}%
+	\expandafter\dtbfillglobalC@Ma\expandafter{\unit@globalC@Ma}%
+	\expandafter\dtbfillglobalC@Adfly\expandafter{\unit@globalC@Adfly}%
+	\expandafter\dtbfillglobalC@Mafly\expandafter{\unit@globalC@Mafly}%
+	\expandafter\dtbfillglobalC@Di\expandafter{\unit@globalC@Di}%
+	%
+	\expandafter\dtbfillglobalC@Rsr\expandafter{\unit@globalC@Rsr}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Rsr}{}{%
+		\pdfstringdef\textwithoutformatting{\unit@globalC@Rsr}%
+		\pdfsubstitute\textwithoutformatting{ }{}%
+		\dolanguagespecificsubstitute{}%
+		\substitute\textwithoutformatting{\string\376}{}%
+		\substitute\textwithoutformatting{\string\377}{}%
+		\substitute\textwithoutformatting{\string\000}{}%
+		\expandafter\dtbfillglobalC@RsrSortLabel\expandafter{\textwithoutformatting}%
+	}%
+	\expandafter\dtbfillglobalrulesC\expandafter{\unit@globalrulesC}%
+%
+\expandafter\dtbfilldefensename\expandafter{\unit@defensename}%
 \expandafter\dtbfilldefense@HP\expandafter{\unit@defense@HP}%
 \expandafter\dtbfilldefense@Df\expandafter{\unit@defense@Df}%
 \expandafter\dtbfilldefense@Re\expandafter{\unit@defense@Re}%
@@ -764,6 +949,24 @@
 \expandafter\dtbfillprintAeg\expandafter{\unit@printAeg}%
 \expandafter\dtbfilldefenserules\expandafter{\unit@defenserules}%
 \expandafter\dtbfilldefensearmour\expandafter{\unit@defensearmour}%
+%
+\expandafter\dtbfilldefensenameB\expandafter{\unit@defensenameB}%
+	\expandafter\dtbfilldefenseB@HP\expandafter{\unit@defenseB@HP}%
+	\expandafter\dtbfilldefenseB@Df\expandafter{\unit@defenseB@Df}%
+	\expandafter\dtbfilldefenseB@Re\expandafter{\unit@defenseB@Re}%
+	\expandafter\dtbfilldefenseB@Arm\expandafter{\unit@defenseB@Arm}%
+	\expandafter\dtbfilldefenseB@Aeg\expandafter{\unit@defenseB@Aeg}%
+	\expandafter\dtbfilldefenserulesB\expandafter{\unit@defenserulesB}%
+	\expandafter\dtbfilldefensearmourB\expandafter{\unit@defensearmourB}%
+%
+\expandafter\dtbfilldefensenameC\expandafter{\unit@defensenameC}%
+	\expandafter\dtbfilldefenseC@HP\expandafter{\unit@defenseC@HP}%
+	\expandafter\dtbfilldefenseC@Df\expandafter{\unit@defenseC@Df}%
+	\expandafter\dtbfilldefenseC@Re\expandafter{\unit@defenseC@Re}%
+	\expandafter\dtbfilldefenseC@Arm\expandafter{\unit@defenseC@Arm}%
+	\expandafter\dtbfilldefenseC@Aeg\expandafter{\unit@defenseC@Aeg}%
+	\expandafter\dtbfilldefenserulesC\expandafter{\unit@defenserulesC}%
+	\expandafter\dtbfilldefensearmourC\expandafter{\unit@defensearmourC}%
 %
 \expandafter\dtbfilloffensename\expandafter{\unit@offensename}%
 \expandafter\dtbfilloffense@Ag\expandafter{\unit@offense@Ag}%
@@ -775,29 +978,29 @@
 \expandafter\dtbfilloffenseweapons\expandafter{\unit@offenseweapons}%
 %
 \expandafter\dtbfilloffensenameB\expandafter{\unit@offensenameB}%
-\expandafter\dtbfilloffenseB@Ag\expandafter{\unit@offenseB@Ag}%
-\expandafter\dtbfilloffenseB@At\expandafter{\unit@offenseB@At}%
-\expandafter\dtbfilloffenseB@Of\expandafter{\unit@offenseB@Of}%
-\expandafter\dtbfilloffenseB@St\expandafter{\unit@offenseB@St}%
-\expandafter\dtbfilloffenseB@AP\expandafter{\unit@offenseB@AP}%
-\expandafter\dtbfilloffenserulesB\expandafter{\unit@offenserulesB}%
-\expandafter\dtbfilloffenseweaponsB\expandafter{\unit@offenseweaponsB}%
+	\expandafter\dtbfilloffenseB@Ag\expandafter{\unit@offenseB@Ag}%
+	\expandafter\dtbfilloffenseB@At\expandafter{\unit@offenseB@At}%
+	\expandafter\dtbfilloffenseB@Of\expandafter{\unit@offenseB@Of}%
+	\expandafter\dtbfilloffenseB@St\expandafter{\unit@offenseB@St}%
+	\expandafter\dtbfilloffenseB@AP\expandafter{\unit@offenseB@AP}%
+	\expandafter\dtbfilloffenserulesB\expandafter{\unit@offenserulesB}%
+	\expandafter\dtbfilloffenseweaponsB\expandafter{\unit@offenseweaponsB}%
 %
 \expandafter\dtbfilloffensenameC\expandafter{\unit@offensenameC}%
-\expandafter\dtbfilloffenseC@Ag\expandafter{\unit@offenseC@Ag}%
-\expandafter\dtbfilloffenseC@At\expandafter{\unit@offenseC@At}%
-\expandafter\dtbfilloffenseC@Of\expandafter{\unit@offenseC@Of}%
-\expandafter\dtbfilloffenseC@St\expandafter{\unit@offenseC@St}%
-\expandafter\dtbfilloffenseC@AP\expandafter{\unit@offenseC@AP}%
-\expandafter\dtbfilloffenserulesC\expandafter{\unit@offenserulesC}%
-\expandafter\dtbfilloffenseweaponsC\expandafter{\unit@offenseweaponsC}%
+	\expandafter\dtbfilloffenseC@Ag\expandafter{\unit@offenseC@Ag}%
+	\expandafter\dtbfilloffenseC@At\expandafter{\unit@offenseC@At}%
+	\expandafter\dtbfilloffenseC@Of\expandafter{\unit@offenseC@Of}%
+	\expandafter\dtbfilloffenseC@St\expandafter{\unit@offenseC@St}%
+	\expandafter\dtbfilloffenseC@AP\expandafter{\unit@offenseC@AP}%
+	\expandafter\dtbfilloffenserulesC\expandafter{\unit@offenserulesC}%
+	\expandafter\dtbfilloffenseweaponsC\expandafter{\unit@offenseweaponsC}%
 %
 \expandafter\dtbfilloffensenameI\expandafter{\unit@offensenameI}%
-\expandafter\dtbfilloffenseI@Ag\expandafter{\unit@offenseI@Ag}%
-\expandafter\dtbfilloffenseI@St\expandafter{\unit@offenseI@St}%
-\expandafter\dtbfilloffenseI@AP\expandafter{\unit@offenseI@AP}%
-\expandafter\dtbfilloffenserulesI\expandafter{\unit@offenserulesI}%
-\expandafter\dtbfilloffenseweaponsI\expandafter{\unit@offenseweaponsI}%
+	\expandafter\dtbfilloffenseI@Ag\expandafter{\unit@offenseI@Ag}%
+	\expandafter\dtbfilloffenseI@St\expandafter{\unit@offenseI@St}%
+	\expandafter\dtbfilloffenseI@AP\expandafter{\unit@offenseI@AP}%
+	\expandafter\dtbfilloffenserulesI\expandafter{\unit@offenserulesI}%
+	\expandafter\dtbfilloffenseweaponsI\expandafter{\unit@offenseweaponsI}%
 % End of Unit Entry
 \ifdefined\thisisanarmybook%
 %
@@ -806,3 +1009,34 @@
 \fi%
 \togglefalse{insideunitentry}
 }% END newcommand unitentry
+
+\newcommand{\unitheader}[1]{%
+	\toggletrue{insideunitentry}%
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
+	\defunit{#1}%
+	%
+	\begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
+	%
+	%%%%%%%%%%%%%%%%%%%%%%
+	% Unit title, logos and general info
+	%
+	\def\temphypertag{}%
+	\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\temphypertag] % remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
+	\xdef\unithypertag{\bookprefix\arabic{categorynumber}\temphypertag}% using the unit name macro to define an hypertag
+	\hypertarget{\unithypertag}{}%
+	\unitentryheader{}%
+	% End of Unit Entry
+	\ifdefined\thisisanarmybook%
+	%
+	\else%
+	\def\@minipagerestore{}%
+	\fi%
+	\togglefalse{insideunitentry}%
+	\vspace*{-3pt}%
+	\hfill{\verysmallfontsize\textcolor{white}{d}} % Else footer goes wild for some reason with ocgcolorlinks option
+	\end{minipage}%
+	\vspace{-28.7pt}\par%
+}
+
+
+

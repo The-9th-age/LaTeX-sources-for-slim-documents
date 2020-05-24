@@ -219,7 +219,11 @@
 \ifdefined\thisisthepathsbook%
 	\noindent\frontpagecreditswithoutblue%
 \else
-	\noindent\frontpagecredits%
+	\ifdefined\thisisasupplement%
+		\noindent\frontpagecreditsnohowtoread%
+	\else%
+		\noindent\frontpagecredits%
+	\fi%
 \fi%
 }}
 

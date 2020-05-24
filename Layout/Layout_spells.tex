@@ -20,117 +20,132 @@
 
 \newcommand{\spellrule}{\newline\greytextcolor{\rule{\textwidth}{0.5pt}}\newline}%
 
-\newcommand{\newpathlogo}[2]{\clearpage\begin{center}\toctarget{#2}{\includegraphics[height=1.8cm]{#1}}\end{center}}
+\newcommand{\newpathlogo}[2]{%
+	\clearpage%
+	\begin{center}%
+	\toctarget{#2}{\includegraphics[height=1.8cm]{#1}}%
+	\end{center}%
+}
 
 \newcommand{\starttable}[2]{%
-\begin{center}
-%\begin{tabular}{m{0.53\linewidth}m{0.47\linewidth}}
-\begin{tabular}{p{\linewidth}}
-\rowcolor[RGB]{#1}\multicolumn{1}{M{\linewidth}}{%
-\rule{0pt}{0.7cm}% setting a minimum height
-{\hugefontsize\textbf{#2}}}\tabularnewline%
+	\begin{center}
+	%\begin{tabular}{m{0.53\linewidth}m{0.47\linewidth}}
+	\begin{tabular}{p{\linewidth}}
+	\rowcolor[RGB]{#1}\multicolumn{1}{M{\linewidth}}{%
+	\rule{0pt}{0.7cm}% setting a minimum height
+	{\hugefontsize\textbf{#2}}}\tabularnewline%
 }
 
 \newcommand{\tablepassive}[2]{%
-\textbf{#1}\spacebeforecolon{}: #2\tabularnewline%
-\hline%
+	\ifblank{#1}{}{\textbf{#1}\spacebeforecolon{}: }%
+	#2\tabularnewline%
+	\hline%
 }
 
 \newcommand{\tablelabels}{%
-\end{tabular}\vspace*{-3pt}\newline%
-\begin{minipage}[c]{0.5\linewidth}%
-\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
-\textit{\spellsCastingValue}&
-\textit{\spellsRange}&
-\textit{\spellsType}&
-\textit{\spellsDuration}\tabularnewline
-\end{tabular}\end{minipage}\begin{minipage}[c]{0.5\linewidth}%
-\begin{tabular}{m{\textwidth}}\textit{\spellsEffect}\end{tabular}\end{minipage}%
-\vspace*{-3pt}\spellrule%
+	\end{tabular}\vspace*{-3pt}\newline%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
+	\textit{\spellsCastingValue}&
+	\textit{\spellsRange}&
+	\textit{\spellsType}&
+	\textit{\spellsDuration}\tabularnewline
+	\end{tabular}\end{minipage}\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{m{\textwidth}}\textit{\spellsEffect}\end{tabular}\end{minipage}%
+	\vspace*{-3pt}\spellrule%
 }
 
 \newcommand{\spelllabelandtitle}[2]{%
-\begin{minipage}[c]{0.5\linewidth}%
-\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
-{\Largefontsize\textbf{#1}}&%
-{\Largefontsize\textbf{#2}}\tabularnewline%
-\end{tabular}\par%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
+	{\Largefontsize\textbf{#1}}&%
+	{\Largefontsize\textbf{#2}}\tabularnewline%
+	\end{tabular}\par%
 }
 
 \newcommand{\tablespellcastingvalue}[1]{%
-\vspace*{-7pt}%
-\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}%
-\textbf{#1}&%
+	\vspace*{-7pt}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}%
+	\textbf{#1}&%
 }
 
 \newcommand{\tablespellrange}[1]{%
-\textbf{#1}&%
+	\textbf{#1}&%
 }
 
 \newcommand{\tablespelltype}[1]{%
-#1 &%
+	#1 &%
 }
 
 \newcommand{\tablespellrangeandtype}[1]{%
-\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{#1}}&%
+	\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{#1}}&%
 }
 
 \newcommand{\tablespellduration}[1]{%
-#1\tabularnewline%
-\end{tabular}%
-\end{minipage}\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
+	#1\tabularnewline%
+	\end{tabular}%
+	\end{minipage}\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
 }
 
 \newcommand{\tablespelleffect}[1]{%
-#1\vspace*{2pt}\end{minipage}%
+	#1\vspace*{2pt}\end{minipage}%
 }
 
 \newcommand{\closetable}{%
-\end{center}%
+	\end{center}%
 }
 
-\newcommand{\newcosmologylogo}{\clearpage\begin{center}\toctarget{cosmology}{\hspace*{0.3cm}\includegraphics[width=0.5cm]{\cosmologycosmosicon}\hspace*{4.35cm}\includegraphics[height=1.8cm]{\cosmologyicon}\hspace*{3.95cm}\includegraphics[width=0.8cm]{\cosmologychaosicon}}\end{center}}
+\newcommand{\newcosmologylogo}{%
+	\clearpage%
+	\begin{center}%
+	\toctarget{cosmology}{\hspace*{0.3cm}\includegraphics[width=0.5cm]{\cosmologycosmosicon}%
+	\hspace*{4.35cm}%
+	\includegraphics[height=1.8cm]{\cosmologyicon}%
+	\hspace*{3.95cm}%
+	\includegraphics[width=0.8cm]{\cosmologychaosicon}}%
+	\end{center}%
+}
 
 \newcommand{\starttablecosmology}{%
-\begin{center}%
-\begin{tabular}{M{0.05\linewidth}m{0.15\linewidth}m{0.15\linewidth}m{0.15\linewidth}M{0.15\linewidth}M{0.1\linewidth}m{0.25\linewidth}}%
-\rowcolor[RGB]{\colors@cosmology}\multicolumn{7}{p{\linewidth}}{%
-\rule{0pt}{0.7cm}% setting a minimum height
-\centering{%
-\begin{minipage}{\widthof{\textbf{\cosmos}}}\vspace*{-0.35cm}\textbf{\textcolor{white}{\cosmos}}\end{minipage}%
-\hspace*{3.5cm}%
-\begin{minipage}{\widthof{\hugefontsize\textbf{\cosmology}}}{\vspace*{-0.2cm}\hugefontsize\textbf{\textcolor{white}{\cosmology}}}\end{minipage}%
-\hspace*{3.5cm}%
-\begin{minipage}{\widthof{\textbf{\chaos}}}\vspace*{-0.35cm}\textbf{\textcolor{white}{\chaos}}\end{minipage}%
-}}\tabularnewline%
+	\begin{center}%
+	\begin{tabular}{M{0.05\linewidth}m{0.15\linewidth}m{0.15\linewidth}m{0.15\linewidth}M{0.15\linewidth}M{0.1\linewidth}m{0.25\linewidth}}%
+	\rowcolor[RGB]{\colors@cosmology}\multicolumn{7}{p{\linewidth}}{%
+	\rule{0pt}{0.7cm}% setting a minimum height
+	\centering{%
+	\begin{minipage}{\widthof{\textbf{\cosmos}}}\vspace*{-0.35cm}\textbf{\textcolor{white}{\cosmos}}\end{minipage}%
+	\hspace*{3.5cm}%
+	\begin{minipage}{\widthof{\hugefontsize\textbf{\cosmology}}}{\vspace*{-0.2cm}\hugefontsize\textbf{\textcolor{white}{\cosmology}}}\end{minipage}%
+	\hspace*{3.5cm}%
+	\begin{minipage}{\widthof{\textbf{\chaos}}}\vspace*{-0.35cm}\textbf{\textcolor{white}{\chaos}}\end{minipage}%
+	}}\tabularnewline%
 }
 
 \newcommand{\tablepassivecosmology}[2]{%
-\multicolumn{7}{p{\linewidth}}{%
-\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
+	\multicolumn{7}{p{\linewidth}}{%
+	\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
 }
 
 \newcommand{\tablelabelscosmology}{%
-\hline
-&\textit{\spellsType}&
-\textit{\spellsDuration}&&
-\textit{\spellsCastingValue}&
-\textit{\spellsRange}&
-\tabularnewline
-\hline
+	\hline
+	&\textit{\spellsType}&
+	\textit{\spellsDuration}&&
+	\textit{\spellsCastingValue}&
+	\textit{\spellsRange}&
+	\tabularnewline
+	\hline
 }
 
 \newcommand{\spelllabelandtitlecosmology}[2]{%
-\Largefontsize\textbf{#1}&
-\multicolumn{3}{m{0.45\linewidth}}{\Largefontsize\textbf{#2}}&
+	\Largefontsize\textbf{#1}&
+	\multicolumn{3}{m{0.45\linewidth}}{\Largefontsize\textbf{#2}}&
 }
 
 \newcommand{\tablespellcastingvaluecosmology}[1]{%
-\textbf{#1}&
+	\textbf{#1}&
 }
 
 \newcommand{\tablespellrangecosmology}[1]{%
-\textbf{#1}&\tabularnewline
+	\textbf{#1}&\tabularnewline
 }
 
 \newcommand{\tablecosmosicon}{\raisebox{-.2\height}{\includegraphics[width=0.4cm]{\cosmologycosmosicon}}&}
@@ -159,56 +174,56 @@
 %%% Hereditary Spells %%%
 
 \newcommand{\starthereditaryspell}[2][\hereditaryspellnumber{}]{%
-\begin{center}%
-\setlength{\tabcolsep}{0pt}%
-\renewcommand{\arraystretch}{1.7}%
-\arrayrulecolor{\greycolor}%
-\setlength{\arrayrulewidth}{0.5pt}%
-\begin{minipage}[c]{0.5\linewidth}%
-\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
-\textit{\spellsCastingValue}&
-\textit{\spellsRange}&
-\textit{\spellsType}&
-\textit{\spellsDuration}\tabularnewline
-\end{tabular}\end{minipage}\begin{minipage}[c]{0.5\linewidth}%
-\begin{tabular}{m{\textwidth}}%
-\textit{\spellsEffect}\tabularnewline
-\end{tabular}\end{minipage}%
-\vspace*{-3pt}\spellrule%
-\begin{minipage}[c]{0.5\linewidth}%
-\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
-{\Largefontsize\textbf{#1}}&%
-{\Largefontsize\textbf{#2}}\tabularnewline%
-\end{tabular}\par%
+	\begin{center}%
+	\setlength{\tabcolsep}{0pt}%
+	\renewcommand{\arraystretch}{1.7}%
+	\arrayrulecolor{\greycolor}%
+	\setlength{\arrayrulewidth}{0.5pt}%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
+	\textit{\spellsCastingValue}&
+	\textit{\spellsRange}&
+	\textit{\spellsType}&
+	\textit{\spellsDuration}\tabularnewline
+	\end{tabular}\end{minipage}\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{m{\textwidth}}%
+	\textit{\spellsEffect}\tabularnewline
+	\end{tabular}\end{minipage}%
+	\vspace*{-3pt}\spellrule%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
+	{\Largefontsize\textbf{#1}}&%
+	{\Largefontsize\textbf{#2}}\tabularnewline%
+	\end{tabular}\par%
 }
 
 \newcommand{\HScastingvalue}[1]{%
-\vspace*{-10pt}%
-\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
-\textbf{#1}&
+	\vspace*{-10pt}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
+	\textbf{#1}&
 }
 
 \newcommand{\HSrange}[1]{%
-\textbf{#1}&
+	\textbf{#1}&
 }
 
 \newcommand{\HStype}[1]{%
-#1 &
+	#1 &
 }
 
 \newcommand{\HSrangeandtype}[1]{%
-\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{#1}}&%
+	\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{#1}}&%
 }
 
 \newcommand{\HSduration}[1]{%
-#1\end{tabular}%
-\end{minipage}\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
+	#1\end{tabular}%
+	\end{minipage}\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
 }
 
 \newcommand{\HSeffect}[1]{%
-#1\vspace*{2pt}\end{minipage}%
+	#1\vspace*{2pt}\end{minipage}%
 }
 
 \newcommand{\closehereditaryspell}{%
-\end{center}%
+	\end{center}%
 }

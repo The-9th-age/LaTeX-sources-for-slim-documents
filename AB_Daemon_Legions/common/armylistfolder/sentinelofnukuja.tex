@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\sentinelofnukuja{},
+	logo=character,
+	optionallogo=bird,
+	categorynote=\strixianspiritcategorynote{},
+	cost=660,
+	unitsize=1,
+	type=\beast{},
+	size=\heightstandard{},
+	maxunitsperarmy=3,
+	basesize=50\timess{}100,
+	global@Ad=2,
+	global@Ma=4,
+	global@Di=9,
+	globalrules={\supernal{},\fearless{},\wizardmaster{},\fear{},\hidebf{\omniscience{}},\hidebf{\dominionofsloth{}},\hidebf{\thirdeye{}}},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=4+,
+	printAeg=defined,
+	offensename=\sentinelofnukuja{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=1,
+	offenserules={\crushattack{}},
+	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy,\evocation{}=evocation,\witchcraft{}=witchcraft},
+	options={%
+		\ifgeneralmusttakegreaterdominion{}=30,
+		\manifestationsoffatherchaosandsloth{}=\upto{}150,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\darkpulpit{} (\mount{})=\free{},
+			\textbf{\strixianspirit{}} (\zerotooneunitsperarmy{})=20,
+		}},
+		\darkfire{} (2+)=20,
+	},
+	modelrulesdef={%
+		\modelruledef{\omniscience}{\ruletype{\universalrule}\omnisciencedef}
+		\modelruledef{\dominionofsloth}{\ruletype{\universalrule}\dominionofslothdef}
+		\modelruledef{\thirdeye}{\ruletype{\universalrule}\thirdeyedef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\strixianspirit}{\ruletype{\universalrule}\strixianspiritdef}
+	},
+}% END UNIT ENTRY
