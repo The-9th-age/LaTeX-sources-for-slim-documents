@@ -1,0 +1,59 @@
+% Army Model Rule Names
+
+\newcommand{\theforestfollows}{The Forest Follows}
+
+\newcommand{\emboldeningboughs}{Emboldening Boughs}
+\newcommand{\forestwalker}{Forest Walker}
+\newcommand{\sylvanspirit}{Sylvan Spirit}
+\newcommand{\treesinging}{Tree Singing}
+
+\newcommand{\masterarcher}{Master Archer}
+
+\newcommand{\impalingroots}{Impaling Roots}
+\newcommand{\sylvanlongbow}{Sylvan Longbow}
+\newcommand{\sylvanblades}{Sylvan Blades}
+\newcommand{\sylvanlance}{Sylvan Lance}
+
+\newcommand{\elvencloak}{Elven Cloak}
+\newcommand{\elvencloaks}{Elven Cloaks}
+
+% Army Model Rule Texts
+
+\newcommand{\theforestfollowsdef}{%
+Right after determining who deploys first (after step 1 of the Deployment Phase Sequence), you must place a single \forest{} Terrain Feature entirely within your half of the Battlefield, not in contact with any other Terrain Feature, and more than \distance{6} away from any Objective. If both players are fielding Sylvan Elves, the player that selected their Deployment Zone places their \forest{} first. This Terrain Feature may not be larger than \SI{27}{\centi\meter} in length and \SI{19}{\centi\meter} in width. All Forests on the Battlefield are considered Dangerous Terrain (1) for all units except those with \strider{} or \strider{\forest{}}.
+}
+
+\newcommand{\emboldeningboughsdef}{%
+A unit with more than half of its models with \emboldeningboughs{} gains \textbf{\stubborn{}} while more than half of the unit's models with the centre of their bases are inside a \forest{}.
+}
+\newcommand{\forestwalkerdef}{%
+The model gains \textbf{\strider{\forest}}. If a unit comprised entirely of models with \forestwalker{} starts a Round of Combat with more than half of its models with the centre of their bases inside a \forest{}, then all model parts without \harnessed{} must reroll to-wound rolls of \result{1} with their Close Combat Attacks for the duration of that Round of Combat.
+}
+\newcommand{\sylvanspiritdef}{%
+The model gains \textbf{\fearless{}} and \textbf{\magicalattacks{}}. Models with \sylvanspirit{} can only join or be joined by models with \sylvanspirit{}.
+}
+\newcommand{\treesingingdef}{%
+Each model with \treesinging{} may discard 1 Veil Token once per friendly Magic Phase, right after Siphon the Veil. If so, choose a \forest{} Terrain Feature within \distance{24} of the model with \treesinging{} that is not in contact with any unit. Move this \forest{} in a straight line up to \distance{6}. This movement stops just before moving into contact with any units or other Terrain Features. Each \forest{} may only be moved with Tree Singing once per Magic Phase.
+}
+
+\newcommand{\masterarcherdef}{%
+When shooting with a \sylvanlongbow{}, all models with \masterarcher{} in a unit may choose to gain either +2 \ArmourPenetration{} or +2 to hit.
+}
+
+\newcommand{\impalingrootsdef}{%
+\range{12}, \shots{D6+1}, \St{} 4, \AP{} 1, \textbf{\quicktofire{}}, \textbf{\marchandshoot{}}, ignores to-hit modifiers from Cover. If its target is in contact with a \forest{}, the \Strength{} is \textbf{set} to 5 and \ArmourPenetration{} to 2.
+}
+\newcommand{\sylvanlongbowdef}{%
+\itemrestriction{0-55 Models with \sylvanlongbow{} per Army.}
+Follows the rules for Longbows. In addition, attacks made with a  \sylvanlongbow{} gain \ArmourPenetration{} 1 and \textbf{\quicktofire{}}. Also, when shooting from Short Range, their \Strength{} is \textbf{set} to 4.
+}
+\newcommand{\sylvanbladesdef}{%
+Follows the rules for \pw{}. In addition, attacks made with \sylvanblades{} gain +1 \ArmourPenetration{}.
+}
+\newcommand{\sylvanlancedef}{%
+Follows the rules for Light Lances. In addition, attacks made with a \sylvanlance{} gain +1 \ArmourPenetration{}.
+}
+
+\newcommand{\elvencloakdef}{%
+When combined with \la{}, the wearer gains +1 Armour. \elvencloaks{} cannot be enchanted.
+}

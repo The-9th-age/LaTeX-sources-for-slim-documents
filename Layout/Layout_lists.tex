@@ -1,0 +1,105 @@
+
+%\setlist[itemize]{label=\textbullet}
+\newcommand{\listsymbol}{\textbullet}
+
+%%% Captions lists %%%
+
+\newcommand{\captionlist}{\vspace*{3pt}\newline}
+\newcommand{\captionitem}{\hspace*{0.3cm}}
+
+
+%%% Lists with prices %%%
+
+\newcommand{\startpricelist}{\raggedcolumns\begin{multicols}{2}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\endpricelist{\end{description}\end{multicols}}
+\newcommand{\pricelistitem}[3]{\item \begin{samepage}\textbf{#1}\predotfill\hfill\nobreak\pts{#2}\newline{#3}\end{samepage}\par}
+\newcommand{\nopricelistitem}[1]{\item \textbf{#1}\newline}
+
+\newcommand{\startpricelistNSP}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\endpricelistNSP{\end{description}}
+
+\newcommand{\startsortedpricelist}{%
+\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]%
+\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+}
+\def\endsortedpricelist{%
+\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost}{% Print back the ordered table
+\begin{samepage}\pricelistitem{\nameoftheitem}{\cost}%
+\ruletext{}\end{samepage}%
+}%
+\end{description}\end{samepage}%
+}
+
+\newcommand{\sortedpricelistitem}[3]{%
+\DTLnewrow{sortedpricelist}%
+\DTLnewdbentry{sortedpricelist}{name}{#1}%
+\DTLnewdbentry{sortedpricelist}{cost}{#2}%
+\DTLnewdbentry{sortedpricelist}{ruletext}{#3}%
+\pdfstringdef\textwithoutformatting{#1}%
+\pdfsubstitute\textwithoutformatting{'}{}%
+\pdfsubstitute\textwithoutformatting{ }{}%
+\dolanguagespecificsubstitute{}%
+\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{sortlabel}}%
+\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+\pdfstringdef\costwithoutformatting{#2}%
+\pdfsubstitute\costwithoutformatting{ }{}%
+\pdfsubstitute\costwithoutformatting{\free}{0}%
+\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+\substitute\costwithoutformatting{\string\376}{}%
+\substitute\costwithoutformatting{\string\377}{}%
+\substitute\costwithoutformatting{\string\000}{}%
+\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{costsortlabel}}%
+\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
+}
+
+\newcommand{\startsortedpricelistNSP}{%
+\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]%
+\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+}
+\def\endsortedpricelistNSP{%
+\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost}{% Print back the ordered table
+\pricelistitem{\nameoftheitem}{\cost}%
+\ruletext{}%
+}%
+\end{description}%
+}
+
+\newcommand{\startitemlist}{\raggedcolumns\begin{multicols}{2}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\enditemlist{\end{description}\end{multicols}}
+\newcommand{\listitem}[1]{\item[#1\spacebeforecolon{}:]}
+
+\newcommand{\startitemlistonecol}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\enditemlistonecol{\end{description}}
+\newcommand{\listitemonecol}[1]{\item \textbf{#1\spacebeforecolon{}:}\newline}
+
+\newenvironment{smallitemize}{\begin{itemize}[itemsep=3pt,topsep=3pt]}{\end{itemize}}
+
+
+%%% Army Model Rules sorting
+
+\newcommand{\startAMRsortedlist}{%
+	\DTLifdbexists{AMRlist}{\DTLcleardb{AMRlist}}{\DTLnewdb{AMRlist}}% Create new/discard old list
+}
+
+\newcommand{\closeAMRsortedlist}{%
+	\DTLsort*{sortlabel}{AMRlist}% Sort list
+	\DTLforeach*{AMRlist}{\name=name,\ruletext=ruletext}{%
+		\subsubtitle{\name}
+		\ruletext{}\par%
+	}
+	\DTLcleardb{AMRlist}%
+}
+
+\newcommand{\AMRsortedlistentry}[2]{%
+	\DTLnewrow{AMRlist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{AMRlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{AMRlist}{name}{#1}%
+	\DTLnewdbentry{AMRlist}{ruletext}{#2}%
+}

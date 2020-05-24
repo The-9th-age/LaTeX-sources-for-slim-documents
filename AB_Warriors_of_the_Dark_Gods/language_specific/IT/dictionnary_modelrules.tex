@@ -1,0 +1,91 @@
+%\maintitle{WDGModelRules}{\armymodelrules}
+
+% Army Model Rules
+
+\newcommand{\favoursofthedarkgods}{Favori degli dei oscuri} 
+
+\newcommand{\envy}{Invidia} 
+\newcommand{\envyfulltitle}{Favore di Kuulima, Dea dell'\envy{}}
+\newcommand{\gluttony}{Gola} 
+\newcommand{\gluttonyfulltitle}{Favore di Akaan, Dio della \gluttony{}}
+\newcommand{\greed}{Avarizia} 
+\newcommand{\greedfulltitle}{Favore di Sugulag, Dio dell'\greed{}}
+\newcommand{\lust}{Lussuria} 
+\newcommand{\lustfulltitle}{Favore di Cibaresh, Dio della \lust{}}
+\newcommand{\pride}{Superbia} 
+\newcommand{\pridefulltitle}{Favore di Savar, Dio della \pride{}}
+\newcommand{\sloth}{Accidia} 
+\newcommand{\slothfulltitle}{Favore di Nukuja, Dea dell'\sloth{}}
+\newcommand{\wrath}{Ira} 
+\newcommand{\wrathfulltitle}{Favore di Vanadra, Dea dell'\wrath{}}
+
+\newcommand{\pathfavoured}{Cammino del favorito} 
+\newcommand{\pathexiled}{Cammino dell'esiliato} 
+\newcommand{\favouredchampion}{Campione favorito}
+\newcommand{\irredeemable}{Irredento} 
+\newcommand{\veilwalker}{Errante del velo}
+\newcommand{\battlefever}{Brama di battaglia} 
+\newcommand{\hellforgedarmor}{Armatura infera} 
+\newcommand{\spikedshield}{Scudo chiodato}
+
+%\subtitle{\favoursofthedarkgods{}}
+
+\newcommand{\favoursofthedarkgodsintro}{Un Personaggio con un Favore non può aggregarsi a unità che contengono modelli con un Favore diverso da quello del Personaggio.}
+
+\newcommand{\slothdef}{%
+I modelli con questo Favore ottengono +1 Resilienza. Se un modello con questo Favore Dichiara una carica contro un’unità nemica a più di \distance{10} di distanza o esegue un Movimento di marcia di più di \distance{10}, tale effetto non si applica fino all'inizio della successiva Fase di mischia nel successivo Turno del giocatore.
+}
+
+\newcommand{\greeddef}{%
+Il portatore ottiene \gw{}, \halberd{}, \pw{} e \textbf{\weaponmaster}. Un personaggio con questo Favore può acquistare 50 punti addizionali di Equipaggiamento speciale.
+}
+
+\newcommand{\gluttonydef}{%
+La prima volta che un modello con questo Favore carica con successo un'unità in Fuga, o vince un combattimento e non Insegue (o Sfonda), la parte di modello ottiene +1 Forza (l’effetto dura per l'intera partita).
+}
+
+\newcommand{\envydef}{%
+La parte di modello ottiene \textbf{\devastatingcharge{} (+1 Penetrazione armatura)}. Applica Tiro massimizzato alle Distanze di carica delle unità con metà o più dei modelli con questo Favore.
+}
+
+\newcommand{\wrathdef}{%
+La parte di modello ottiene \textbf{\lightningreflexes} e +1 Agilità. Gli Attacchi da corpo a corpo assegnati contro il modello ottengono +1 per Colpire. Tali effetti si applicano solo nel primo Round di combattimento.
+}
+
+\newcommand{\lustdef}{%
+Il modello ottiene \textbf{\feignedflight{}} e \textbf{\strider{}}. Le unità con più di metà di modelli con questo Favore possono dichiarare Fuga come Reazione alla carica, anche se hanno Impassibile. In tal caso, applica Tiro minimizzato al successivo test di Chiamata a raccolta.
+}
+
+\newcommand{\pridedef}{%
+Applica Tiro minimizzato ai Test di Disciplina effettuati dalle unità con almeno un modello con questo Favore.
+}
+
+\newcommand{\pathfavoureddef}{%
+Quando il modello Dichiara o si batte a Duello, ottiene +1 al Risultato del combattimento fino alla fine del Round di combattimento (nota che questo effetto non si applica se il modello con \pathfavoured{} viene rimosso come perdita).
+}
+\newcommand{\pathexileddef}{%
+Il modello ottiene \textbf{\stubborn{}} nel primo Round di combattimento, purché la sua unità non abbia più ranghi che file, e sia Ingaggiata in combattimento sul suo Fronte. Le unità con \pathexiled{} non possono aggregarsi a o includere unità con \pathfavoured{}. 
+}
+\newcommand{\favouredchampiondef}{%
+Il modello ottiene +1 Agilità, +1 Abilità offensiva, +1 Abilità difensiva, e +1 Punto vita. Le parti di modello con \harnessed{} non ne sono influenzate.
+}
+\newcommand{\irredeemabledef}{%
+Il modello non può effettuare Attacchi di calpestamento e può effettuare \grindattacks{} come Attacchi di supporto (ignorando il numero massimo di Attacchi di supporto). Quando un modello con \irredeemable{} è ucciso da un Attacco da mischia, rimuovilo come perdita solo alla fine del Livello di Agilità 0. Un'unità con almeno un modello con \irredeemable{} non può mai avere più ranghi che file.
+}
+\newcommand{\veilwalkerdef}{%
+Il modello può bersagliare unità nemiche a contatto di base quando lancia \spellformat{Fuoco infernale}{}. Quando un modello con \veilwalker{} lancia qualsiasi Incantesimo non infuso puoi scartare un Segnalino velo mentre dichiari i/il bersagli(o) dell’incantesimo e attivare un effetto tra:
+\begin{itemize}[label={-}]
+\item \spellformat{Segreto della carne}{}: I tiri per Ferire falliti dall'incantesimo devono essere ripetuti.
+\item \spellformat{Segreto della separazione}{}: La Gittata dell'incantesimo è aumentata di \distance{6}. Gli incantesimi ad Aura ottengono solo Gittata +\distance{3}. Incantesimi di tipo: Mago non sono ne sono influenzati.
+\item \spellformat{Segreto della sostanza}{}: I Tiri armatura che hanno successo contro le ferite causate dall'incantesimo devono essere ripetuti.
+\end{itemize}
+}
+\newcommand{\battlefeverdef}{%
+Le unità con più di metà dei modelli con \battlefever{} devono ripetere ogni tiro di \result{1} naturale quando tirano per la Distanza di carica. 
+}
+\newcommand{\hellforgedarmordef}{%
+Segue le regole per \pa{} (può essere incantata come se fosse un'\pa{}) . Il modello del portatore ottiene \textbf{\fearless{}}. Se più di metà dei modelli di un'unità possiede \hellforgedarmor, l'unità deve ritirare i Test di marcia falliti (anche quando montata su una Cavalcatura Gigantesca).
+}
+\newcommand{\spikedshielddef}{%
+Segue le regole per gli Scudi, eccetto che non fornisce +1 Armatura ai modelli di Cavalleria Grande. Questa armatura non può ricevere Incanti d'armatura dalla sezione comune di Equipaggiamento speciale. Ogniqualvolta un modello che usa questo scudo con un'\hw{} subisce un Attacco da Mischia da un modello nemico sul suo Fronte, se il Tiro armatura è superato con un tiro naturale di 4+, l'unità che ha effettuato l'attacco subisce immediatamente un colpo con Forza 4 e Penetrazione armatura 1. Questo viene considerato un Attacco speciale.
+}

@@ -1,0 +1,54 @@
+
+\unitentry{%
+	name=\knightsofthegrail{},
+	logo=special,
+	cost=220,
+	unitsize=3,
+	maxunitsize=9,
+	costpermodel=84,
+	scoring=yes,
+	addrestriction={\zerotoXunitsperarmy{2}\refsymbol{}},
+	categorynote=\refsymbol{}\kightsofthegrailrestriction{},
+	type=\cavalry{},
+	size=\sizestandard{},
+	basesize=25\timess{}50,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=8,
+	globalrules={\scoring{},\textbf{\pureofheart{}}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=2,
+	defensearmour={\ha{},\shield{}},
+	defenserules={\theblessing{}},
+	offensename=\knightofthegrail{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\oathoffealty{},\grailoath{},\lanceformation{},\divineattacks{},\textbf{\holymight}},
+	offenseweapons={\lance{}},
+	offensenameB=\warhorse{},
+	offenseB@At=1,
+	offenseB@Of=3,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=3,
+	offenserulesB={\harnessed{},\devastatingcharge{+1 \St{}, +1 \AP{}}},
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+		\standardbearer{}=20,
+		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	modelrulesdef={%
+		\modelruledef{\pureofheart}{\ruletype{\universalrule}\pureofheartdef}%
+		\modelruledef{\holymight}{\ruletype{\attackattributeclosecombat}\holymightdef}%
+	},
+	toggles={%
+		\toggletrue{twocolprintcommandgroup}%
+		\togglefalse{onecolprintcommandgroup}%
+	},
+} % END UNIT ENTRY

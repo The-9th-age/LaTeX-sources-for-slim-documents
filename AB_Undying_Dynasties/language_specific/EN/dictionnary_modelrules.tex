@@ -1,0 +1,66 @@
+% Army Model Rules Names
+
+\newcommand{\resurrected}{Resurrected}
+
+\newcommand{\hierophant}{Hierophant}
+\newcommand{\dusttodust}{Dust to Dust}
+\newcommand{\ensouledstatue}{Ensouled Statue}
+\newcommand{\undyingwill}{Undying Will}
+\newcommand{\autonomous}{Autonomous}
+\newcommand{\undergroundambush}{Un\-der\-ground Ambush}
+
+\newcommand{\aspenbow}{Aspen Bow}
+\newcommand{\greataspenbow}{Great Aspen Bow}
+
+\newcommand{\mummyscurse}{Mummy's Curse}
+
+% Army Model Rules Texts
+
+\newcommand{\resurrecteddef}{%
+Some unit profiles contain the additional Characteristic Resurrected, shortened \resurrectedInitials{}, which determines the number of Health Points Raised with \spellformat{\deathisonlythebeginning}{Hereditary Attribute Spell}.
+}
+
+\newcommand{\hierophantdef}{%
+One of a Kind. An Undying Dynasties army \textbf{must} include a single model with this Universal Rule. When the \hierophant{} casts \spellformat{\deathisonlythebeginning}{} as a non-Bound Spell, you may choose to \textbf{set} the spell range to \distance{18} (instead of the spell's normal target restrictions).
+}
+
+\newcommand{\dusttodustdef}{%
+At the end of any phase in which the \hierophant{} is removed as a casualty, every unit in the army with \dusttodust{} must pass a Discipline Test or lose a number of Health Points equal to the amount by which the test was failed, with no saves of any kind allowed. These lost Health Points are allotted following the rules for \unstable{}. The number of Health Points lost is reduced by 1 if the unit is within range of \rallyaroundtheflag{}.\DTLpar
+At the end of the Player Turn in which the \hierophant{} was removed as a casualty, a new \hierophant{} may be selected. In order to do so, nominate a friendly Wizard Character. This Character becomes the new \hierophant{}.\DTLpar
+At the start of each friendly Player Turn after the army's \hierophant{} has been removed as a casualty and no new \hierophant{} has been selected, every unit with \dusttodust{} must once again pass a Discipline Test or lose Health Points as described above.
+}
+
+\newcommand{\ensouledstatuedef}{%
+The model gains \textbf{\undead} and \textbf{\dusttodust}. If more than half of the models in a unit have \ensouledstatue{}, reduce the number of Health Points lost by this unit due to \dusttodust{} and \unstable{} by 1.
+}
+
+\newcommand{\undyingwilldef}{%
+Units with one or more models with \undyingwill{} gain +2 Offensive Skill, +2 Defensive Skill, \textbf{\lethalstrike}, and replace their Shooting Weapons' Aim with (4+). Characters, Beasts, models with \ensouledstatue{}, and model parts with \harnessed{} are not affected by \undyingwill{}.
+}
+
+\newcommand{\autonomousdef}{%
+\undead{} units consisting entirely of models with \autonomous{} may perform March Moves as normal even when outside the range of friendly models' \commandingpresence{}. The unit must still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.
+}
+
+\newcommand{\undergroundambushdef}{%
+The model follows the rules for \ambush{}, with the following exception: instead of entering the Battlefield from a Board Edge, place the unit anywhere on the Battlefield in a legal formation and following the Unit Spacing rule. Then roll a D6:
+\begin{itemize}
+\item If 5--6 is rolled, the unit arrives where it was initially placed.
+\item If 1--4 is rolled, move the unit (without changing the direction it is facing) \distance{2D6} in a randomly chosen direction. If this would bring the unit within \distance{1} of other units, Impassable Terrain, or the Board Edge, the unit stops \distance{1} short of them and each model in the Ambushing unit must take a Dangerous Terrain (1) Test. The unit may then perform a Pivot (and must follow the Unit Spacing rule after the Pivot). None of these manoeuvres prevent the unit from moving following the rules for Ambush afterwards.
+\end{itemize}%
+
+}
+
+\newcommand{\aspenbowdef}{%
+\range{24}, \shots{1}, \St{} 3, \AP{} 0, \textbf{\volleyfire{}}.\newline
+This weapon \textbf{always} hits on a roll equal to or greater than its Aim.
+}
+
+\newcommand{\greataspenbowdef}{%
+\range{36}, \shots{1}, \St{} 5, \AP{} 2, \textbf{\volleyfire{}}.\newline
+This weapon \textbf{always} hits on a roll equal to or greater than its Aim.
+}
+
+\newcommand{\mummyscursedef}{%
+When the model with \mummyscurse{} is removed as a casualty, the model which caused the final wound suffers 1 hit with Strength 6 and Armour Penetration 10. This is treated as a Ranged Attack. If more than one model was part of the action which brought the downfall of the model with \mummyscurse{}, randomise which of those models suffers the hit.
+}

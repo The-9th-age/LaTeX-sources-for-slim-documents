@@ -1,0 +1,121 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'example_of_charge_phase_two.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1828.3463962bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,2.64503477)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{example_of_charge_phase_two.pdf}}%
+    \put(0.88641348,2.25082181){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtChargeRangeRoll}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{example_of_charge_phase_two.pdf}}%
+    \put(0.8865844,2.18412049){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtPassed}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004464,2.39898102){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{example_of_charge_phase_two.pdf}}%
+    \put(0.16302475,2.53502637){\color[rgb]{1,1,1}\rotatebox{14.43532}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{example_of_charge_phase_two.pdf}}%
+    \put(0.7129331,2.51067331){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{example_of_charge_phase_two.pdf}}%
+    \put(0.18446053,2.11931733){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtChargeRangeRoll}}}%
+    \put(0.18471691,2.05261601){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtPassed}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004463,1.83308954){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{example_of_charge_phase_two.pdf}}%
+    \put(0.71293311,1.94478196){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004463,1.28770842){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{example_of_charge_phase_two.pdf}}%
+    \put(0.71293312,1.39940083){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{example_of_charge_phase_two.pdf}}%
+    \put(0.20790984,1.56737396){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtDisciplineTest}}}%
+    \put(0.20808076,1.50067263){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtPassed}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{example_of_charge_phase_two.pdf}}%
+    \put(0.16623145,0.59984223){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtChargeRangeRoll}}}%
+    \put(0.16648783,0.53314085){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figEOCPtPassed}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{example_of_charge_phase_two.pdf}}%
+    \put(0.85132472,1.02122764){\makebox(0,0)[b]{\smash{\figEOCPtChargeRangeRoll}}}%
+    \put(0.8515811,0.95452634){\makebox(0,0)[b]{\smash{\figEOCPtFailed}}}%
+    \put(0.00753387,2.64101987){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figEOCPtA}}}%
+    \put(0.00753387,2.1268145){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figEOCPtB}}}%
+    \put(0.00753387,1.56785451){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figEOCPtC}}}%
+    \put(0.00753387,0.45457277){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figEOCPtE}}}%
+    \put(0.06989955,2.50205112){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.07377546,2.33150873){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.64354289,2.24625613){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.95362041,2.52918298){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.30778511,2.56328612){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0.48075218,2.47491957){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.56408552,2.25788399){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{G}}}}%
+    \put(0.18673312,1.93180136){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.07377548,1.76561731){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.64354289,1.6803646){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.95362041,1.96329167){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.48075218,1.90902816){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.56408552,1.69199247){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{G}}}}%
+    \put(0.18675287,1.38641996){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.07377541,1.22023597){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.64354289,1.13498336){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.95362041,1.41791043){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.48075218,1.36364681){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.56408552,1.14661123){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{G}}}}%
+    \put(0.18675288,0.31534748){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.32958939,0.22668292){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.64354289,0.06391096){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.84988676,0.34000269){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.48075218,0.29257436){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.56408552,0.07553883){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{G}}}}%
+    \put(0.24004463,0.72181695){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0.71293314,0.83350936){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lb]{\smash{\figEOCPtcharge}}}}%
+    \put(0.00753389,1.02001219){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figEOCPtD}}}%
+    \put(0.18675287,0.82052855){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.0531574,0.6543445){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{\figbigletter{B}}}}%
+    \put(0.64354289,0.56909189){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.95362041,0.85201896){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.48075218,0.79775534){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.56408552,0.58071976){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{G}}}}%
+  \end{picture}%
+\endgroup%

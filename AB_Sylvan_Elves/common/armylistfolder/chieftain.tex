@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\chieftain{},
+	logo=character,
+	cost=145,
+	unitsize=1,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\forestwalker{}},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\chieftain{},
+	offense@At=3,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=7,
+	offenserules={\lightningreflexes{}},
+	options={%
+		\bsb{}=50,
+		\joinakindred{}=\nolimit{},
+		\specialequipmentallowance{}=\upto{}100,
+		\AlCoOrder{%
+			\shield{}=5,
+			\la{}=5,
+			\elvencloak{}=10,
+		},
+		\sylvanlongbow{} (1+)=5,
+		\onechoiceonlyTWOCOL{\AlCoOrder{%
+			\spear{}=5,
+			\sylvanblades{}=5,
+			\gw{}=10,
+			\lance{}=10,
+			\sylvanlance{}=10,
+		}},
+	},
+	mounts={%
+		\elvenhorse{} \withlighttroops{}=50,
+		\greatelk{}=90,
+		\eagleking{}=140
+	},
+} % END UNIT ENTRY
