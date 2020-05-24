@@ -1,0 +1,58 @@
+
+{%
+\renewcommand{\commandgrouptwocols}[1]{%
+	\begin{innerframetwocols}[\labels@commandgroupoptions]%
+		\setlength{\columnsep}{10pt+0.3cm}%
+		\setlength{\multicolsep}{0pt}%
+		\vspace*{-3pt}\begin{multicols}{2}%
+			\explicitoptionslist{#1}%
+		\end{multicols}%
+	\end{innerframetwocols}%
+}
+\unitentry{%
+	name=\vassalcavalry{},
+	logo=special,
+	cost=170,
+	unitsize=5,
+	maxunitsize=15,
+	costpermodel=15,
+	scoring=,
+	maxunitsperarmy=2,
+	type=\cavalry{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=7,
+	globalrules={\feignedflight{},\lighttroops{},\vanguard{} (\distance{6})},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=1,
+	defensearmour={\la{},\shield{}},
+	offensename=\vassalrider{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\oilskins{}},
+	offenseweapons={\lightlance{},\bow{} (4+)},
+	offensenameB=\vassalsteed{},
+	offenseB@At=2,
+	offenseB@Of=3,
+	offenseB@St=3,
+	offenseB@AP=1,
+	offenseB@Ag=3,
+	offenserulesB={\harnessed{}},	
+	commandgroup={% explicit options here to be able to use hyperlinks
+		\setexploption{\musician{}}{20}
+		\setexploption{\standardbearer{}}{20}
+		\setexploption{\suboptionindent{}\bannerallowance{}}{\nolimit{}}
+		\setexploption{\vassalchieftain{}\refsymbol{} \onvassalsteed{}\refsB{}}{30}
+		\setexploption{\refsymbolbis{}\vassalchieftaincavalrynote{}}{}
+		\setexploption{\refsBbis{}\vassalsteedcavalrynote{}}{}
+	},
+	toggles={\toggletrue{onecolprintcommandgroup}\togglefalse{twocolprintcommandgroup}},
+}% END UNIT ENTRY
+}

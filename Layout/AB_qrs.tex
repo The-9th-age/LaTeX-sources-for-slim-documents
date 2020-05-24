@@ -68,7 +68,7 @@
 		}%
 }%
 	&&%
-	\strut\expandafter\ifblank\expandafter{\rowglobalrules}{}{\alphaorderlist{\rowglobalrules}}%	
+	\strut\expandafter\ifblank\expandafter{\rowglobalrules}{}{\expandafter\alphaorderlist\expandafter{\rowglobalrules}}%	
 	\tabularnewline%
 	%
 	% Global Profile B
@@ -100,7 +100,7 @@
 			}%
 	}%
 		&&%
-		\strut\expandafter\ifblank\expandafter{\rowglobalrulesB}{}{\alphaorderlist{\rowglobalrulesB}}%	
+		\strut\expandafter\ifblank\expandafter{\rowglobalrulesB}{}{\expandafter\alphaorderlist\expandafter{\rowglobalrulesB}}%	
 		\tabularnewline%
 	}%
 	%
@@ -133,7 +133,7 @@
 			}%
 	}%
 		&&%
-		\strut\expandafter\ifblank\expandafter{\rowglobalrulesC}{}{\alphaorderlist{\rowglobalrulesC}}%	
+		\strut\expandafter\ifblank\expandafter{\rowglobalrulesC}{}{\expandafter\alphaorderlist\expandafter{\rowglobalrulesC}}%	
 		\tabularnewline%
 	}%
 	%
@@ -156,10 +156,10 @@
 	\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
 	\expandafter\ifblank\expandafter{\rowdefenseAeg}{}{\ChVal{\rowdefenseAeg}}&%
 	&%
-	\strut\expandafter\ifblank\expandafter{\rowdefenserules}{}{\alphaorderlist{\rowdefenserules}}%
+	\strut\expandafter\ifblank\expandafter{\rowdefenserules}{}{\expandafter\alphaorderlist\expandafter{\rowdefenserules}}%
 	\expandafter\ifblank\expandafter{\rowdefensearmour}{}{%
 	\expandafter\ifblank\expandafter{\rowdefenserules}{}{, }%
-	\alphaorderlist{\rowdefensearmour}}%
+	\expandafter\alphaorderlist\expandafter{\rowdefensearmour}}%
 	\tabularnewline%
 	%
 	% Defensive Profile B
@@ -178,10 +178,10 @@
 		\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
 		\expandafter\ifblank\expandafter{\rowdefenseBAeg}{}{\ChVal{\rowdefenseBAeg}}&%
 		&%
-		\strut\expandafter\ifblank\expandafter{\rowdefenserulesB}{}{\alphaorderlist{\rowdefenserulesB}}%
+		\strut\expandafter\ifblank\expandafter{\rowdefenserulesB}{}{\expandafter\alphaorderlist\expandafter{\rowdefenserulesB}}%
 		\expandafter\ifblank\expandafter{\rowdefensearmourB}{}{%
 		\expandafter\ifblank\expandafter{\rowdefenserulesB}{}{, }%
-		\alphaorderlist{\rowdefensearmourB}}%
+		\expandafter\alphaorderlist\expandafter{\rowdefensearmourB}}%
 		\tabularnewline%
 	}%
 	%
@@ -201,10 +201,10 @@
 		\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
 		\expandafter\ifblank\expandafter{\rowdefenseCAeg}{}{\ChVal{\rowdefenseCAeg}}&%
 		&%
-		\strut\expandafter\ifblank\expandafter{\rowdefenserulesC}{}{\alphaorderlist{\rowdefenserulesC}}%
+		\strut\expandafter\ifblank\expandafter{\rowdefenserulesC}{}{\expandafter\alphaorderlist\expandafter{\rowdefenserulesC}}%
 		\expandafter\ifblank\expandafter{\rowdefensearmourC}{}{%
 		\expandafter\ifblank\expandafter{\rowdefenserulesC}{}{, }%
-		\alphaorderlist{\rowdefensearmourC}}%
+		\expandafter\alphaorderlist\expandafter{\rowdefensearmourC}}%
 		\tabularnewline%
 	}%
 	%
@@ -231,10 +231,10 @@
 	{\ChLab{\AgilityInitials}}&%
 	\expandafter\ifblank\expandafter{\rowoffenseAg}{-}{\ChVal{\rowoffenseAg}}&%	
 	&%
-	\strut\expandafter\ifblank\expandafter{\rowoffenserules}{}{\alphaorderlist{\rowoffenserules}}%
+	\strut\expandafter\ifblank\expandafter{\rowoffenserules}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserules}}%
 	\expandafter\ifblank\expandafter{\rowoffenseweapons}{}{%
 	\expandafter\ifblank\expandafter{\rowoffenserules}{}{, }%
-	\alphaorderlist{\rowoffenseweapons}}%	
+	\expandafter\alphaorderlist\expandafter{\rowoffenseweapons}}%	
 	\tabularnewline%
 	%
 	% Offensive Profile B
@@ -253,10 +253,10 @@
 		{\ChLab{\AgilityInitials}}&%
 		\expandafter\ifblank\expandafter{\rowoffenseBAg}{-}{\ChVal{\rowoffenseBAg}}&%
 		&%
-		\strut\expandafter\ifblank\expandafter{\rowoffenserulesB}{}{\alphaorderlist{\rowoffenserulesB}}%
+		\strut\expandafter\ifblank\expandafter{\rowoffenserulesB}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserulesB}}%
 		\expandafter\ifblank\expandafter{\rowoffenseweaponsB}{}{%
 		\expandafter\ifblank\expandafter{\rowoffenserulesB}{}{, }%
-		\alphaorderlist{\rowoffenseweaponsB}}%
+		\expandafter\alphaorderlist\expandafter{\rowoffenseweaponsB}}%
 		\tabularnewline%
 	}%
 	%
@@ -276,10 +276,10 @@
 		{\ChLab{\AgilityInitials}}&%
 		\expandafter\ifblank\expandafter{\rowoffenseCAg}{-}{\ChVal{\rowoffenseCAg}}&%
 		&%
-		\strut\expandafter\ifblank\expandafter{\rowoffenserulesC}{}{\alphaorderlist{\rowoffenserulesC}}%
+		\strut\expandafter\ifblank\expandafter{\rowoffenserulesC}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserulesC}}%
 		\expandafter\ifblank\expandafter{\rowoffenseweaponsC}{}{%
 		\expandafter\ifblank\expandafter{\rowoffenserulesC}{}{, }%
-		\alphaorderlist{\rowoffenseweaponsC}}%
+		\expandafter\alphaorderlist\expandafter{\rowoffenseweaponsC}}%
 		\tabularnewline%
 	}%
 	%
@@ -297,10 +297,10 @@
 		{\ChLab{\AgilityInitials}}&%
 		\expandafter\ifblank\expandafter{\rowoffenseIAg}{}{\ChVal{\rowoffenseIAg}}&%
 		&%
-		\strut\expandafter\ifblank\expandafter{\rowoffenserulesI}{}{\alphaorderlist{\rowoffenserulesI}}%
+		\strut\expandafter\ifblank\expandafter{\rowoffenserulesI}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserulesI}}%
 		\expandafter\ifblank\expandafter{\rowoffenseweaponsI}{}{%
 		\expandafter\ifblank\expandafter{\rowoffenserulesI}{}{, }%
-		\alphaorderlist{\rowoffenseweaponsI}}%
+		\expandafter\alphaorderlist\expandafter{\rowoffenseweaponsI}}%
 		\tabularnewline%
 	}%
 	\end{tabular}\newline%

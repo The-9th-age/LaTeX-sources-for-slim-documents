@@ -1,0 +1,51 @@
+
+\maintitle{IDQRS}{\quickrefsheet}
+
+\input{../Layout/AB_qrs.tex}
+
+\vspace*{10pt}
+
+\centeredsubtitle{\artilleryandshootingweapons{}}
+
+\startartillerytable{}
+\blunderbuss{} & - & \distance{18} & 3 & 1 & 1 & \alphaorderlistpar{\areaattack{} (2\timess{}1),\quicktofire{}}\par\blunderbussqrsrule{} \tabularnewline
+\flintlockaxe{} & - & \distance{18} & 4 & 2 & 1 & - \tabularnewline
+\naphthathrower{}\newline (\gunneryteam{}) & \flamethrower{} & \distance{18} & 3 \{4\} & 0 \{1\} & 1 & \alphaorderlistpar{\flamingattacks{},\{\multiplewounds{}{} (\Dthree{})\},\marchandshoot{},\quicktofire{}} \tabularnewline
+\naphthathrower{}\newline (\infernalartillery{}) & \flamethrower{} & \distance{24} & 4 \{5\} & 1 \{2\} & 1 & \alphaorderlistpar{\flamingattacks{},\{\multiplewounds{}{} (\Dthree{})\},\accurate{},\moveorfire{}} \tabularnewline
+\naphthathrower{}\newline (\infernalengine{}) & \flamethrower{} & \distance{18} & 4 \{5\} & 1 \{2\} & 1 & \alphaorderlistpar{\flamingattacks{},\{\multiplewounds{}{} (\Dthree{})\},\quicktofire{}} \tabularnewline
+\rocketbattery{}\newline (\gunneryteam{}) & - & \distance{24} & 5 & 2 & 4 & \alphaorderlistpar{\marchandshoot{},\quicktofire{},{\multiplewounds{}{} (\Dthree{}, \clippedwings{})}}\par \rocketbatterymisfire{} \tabularnewline
+\rocketbattery{}\newline (\infernalartillery{}) & - & \distance{36} & 6 & 3 & 4 & \alphaorderlistpar{\accurate{},\moveorfire{},{\multiplewounds{}{} (\Dthree{}, \clippedwings{})}}\par \rocketbatterymisfire{} \tabularnewline
+\rocketbattery{}\newline (\infernalengine{}) & - & \distance{24} & 6 & 3 & 4 & \alphaorderlistpar{\quicktofire{},{\multiplewounds{}{} (\Dthree{}, \clippedwings{})}}\par \rocketbatterymisfire{} \tabularnewline
+\titanmortar{}\newline (\gunneryteam{}) & \catapult{} (4\timess{}4) & 6--\distance{30} & 3 [6] & 0 [3] & 1 & \alphaorderlistpar{\marchandshoot{},\quicktofire{},{[\multiplewounds{}{} (\Dthree{}, \clippedwings{})]}} \tabularnewline
+\titanmortar{}\newline (\infernalartillery{}) & \catapult{} (4\timess{}4) & 6--\distance{36} & 4 [7] & 1 [4] & 1 & \alphaorderlistpar{\accurate{},\moveorfire{},{[\multiplewounds{}{} (\Dthree{}, \clippedwings{})]}} \tabularnewline
+\titanmortar{}\newline (\infernalengine{}) & \catapult{} (4\timess{}4) & 6--\distance{30} & 4 [7] & 1 [4] & 1 & \alphaorderlistpar{\quicktofire{},{[\multiplewounds{}{} (\Dthree{}, \clippedwings{})]}} \tabularnewline
+\triplespeed{} & - & \distance{18} & 4 & 2 & 3 & \triplespeedqrsrule{} \tabularnewline
+\vassalslingshot{}\newline (\boltthrower{}) & - & \distance{48} & 3 [6] & 10 & 1 & \alphaorderlistpar{\areaattack{1\timess{}5},[\multiplewounds{}{} (\Dthree{})]} \tabularnewline
+\vassalslingshot{}\newline (\oilflaskthrower{}) & - & \distance{36} & 1 & 0 & 3 & \oilflaskthrowerqrseffect{} \tabularnewline
+\closeartillerytable{}
+
+\vspace*{10pt}
+
+\centeredsubtitle{\shootingmodelrules{}}
+
+\begin{center}
+\alternaterowcolors\normalfontsize
+\noindent\begin{tabular}{@{}m{3cm}m{13.1cm}@{}}
+	\clustermunitions{} & \clustermunitionsqrsrule{} \tabularnewline
+	\ethercloud{} & \ethercloudqrsrule{} \tabularnewline
+	\kadimmanifestation{} & \kadimmanifestationqrsrule{} \tabularnewline
+	\oilskins{} & \oilskinsqrsrule{} \tabularnewline
+\end{tabular}
+\end{center}
+
+\vspace*{10pt}
+
+\centeredsubtitle{\aimtable{}}
+
+\aimtableintro{}\newline
+\startaimtable
+\flintlockaxe{} & 2+ & \overlord{}, \prophet{}, \vizier{} \tabularnewline
+& 3+ & \citadelguardSINGULAR{} \tabularnewline
+\closeaimtable
+
+\debugfooter

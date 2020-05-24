@@ -1,0 +1,64 @@
+
+{\renewcommand{\labels@commandgroupoptions}{\allianceoptions}
+\renewcommand{\optionsalphaorderlist}[1]{\optionslist{#1}}
+\unitentry{%
+	name=\captain{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\themenagerieinitials}{\themenagerie},
+	cost=145,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules=,
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	offensename=\captain{},
+	offense@At=3,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=7,
+	offenserules={\lightningreflexes{},\killerinstinct{}},
+	commandgroup={% Alliance Options
+		\onechoiceonlyTWOCOL{\AlCoOrder{%
+			\cultofcadaron{}=5,
+			\cultofnabh{}=10,
+			\cultofolaron{}=40,
+			\cultofyema{}=20,
+			\beastmaster{}=45,
+			\fleetcommander{}=40,
+		}},
+	},
+	options={%
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}100,
+		\shield{}=5,
+		\ha{}=10,
+		\onechoiceonlyACO{%
+			\repeatercrossbow{} (2+)=5,
+			\repeaterhandbow{} (2+)=5,
+		},
+		\onechoiceonlyTWOCOL{\AlCoOrder{%
+			\pw{}=5,
+			\gw{}=10,
+			\lance{}=15,
+			\halberd{}=5,
+		}},
+	},
+	mounts={%
+		\elvenhorse{}=45,
+		\raptor{}=50,
+		\raptorchariot{} (\notfleetcommander{})=120,
+		\pegasus{}=95,
+		\manticore{} (\themenagerieinitials{}) (\notfleetcommander{})=180,
+	},
+}% END UNIT ENTRY
+}

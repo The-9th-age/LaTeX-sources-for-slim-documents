@@ -2,10 +2,10 @@
 \unitentry{%
 	name=\bloatflies{},
 	logo=bird,
-	cost=295,
+	cost=300,
 	unitsize=3,
 	maxunitsize=6,
-	costpermodel=95,
+	costpermodel=100,
 	maxunitsperarmy=3,
 	type=\beast{},
 	size=\heightlarge{},
@@ -13,21 +13,21 @@
 	global@Ad=2,
 	global@Ma=4,
 	global@Adfly=6,
-	global@Mafly=12,
+	global@Mafly=14,
 	global@Di=8,
-	globalrules={\supernal{},\fearless{},\lighttroops{},\fly{6}{12},\fear{}},
+	globalrules={\supernal{},\fearless{},\lighttroops{},\fly{6}{14},\fear{}},
 	defense@HP=4,
-	defense@Df=3,
+	defense@Df=2,
 	defense@Re=4,
 	defense@Arm=0,
-	defense@Aeg=5+,
+	defense@Aeg=,
 	printAeg=defined,
-	defenserules={\fortitude{} (5+)},
+	defenserules={\boatfliesaegis{},\fortitude{} (5+)},
 	offensename=\bloatfly{},
-	offense@At=4,
-	offense@Of=3,
-	offense@St=4,
-	offense@AP=2,
+	offense@At=2,
+	offense@Of=5,
+	offense@St=6,
+	offense@AP=3,
 	offense@Ag=3,
 	offenserules={\hidebf{\acidblood}},
 	commandgroup={%
@@ -41,8 +41,8 @@
 	explicitoptions={%
 		\manifestationonechoice{%
 			\addsortedexploption{prename=gluttony,hypertag=broodmother,name=\broodmother{},cost=18\permodel{}}
-			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=12\permodel{}}
-			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=6\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=6\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=4\permodel{}}
 			\addsortedexploption{prename=chaos,hypertag=dextroustentacles,name=\dextroustentacles{},cost=5\permodel{}}
 			\addsortedexploption{prename=chaos,hypertag=kaleidoscopicflesh,name=\kaleidoscopicflesh{},cost=6\permodel{}}
 		}

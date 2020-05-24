@@ -7,13 +7,16 @@
 		\pdfstringdef\textwithoutformatting{#1}%
 		\pdfsubstitute\textwithoutformatting{<STICKTO<}{}%
 		\pdfsubstitute\textwithoutformatting{[}{}%
+		\pdfsubstitute\textwithoutformatting{\{}{}%
 		\pdfsubstitute\textwithoutformatting{'}{}%
 		\pdfsubstitute\textwithoutformatting{ }{}%
 		\dolanguagespecificsubstitute{}%
-		\sortitem{\textwithoutformatting}{\actualname}%	
+		\def\tempoaddcommand{\sortitem{\textwithoutformatting}}%
+		\expandafter\tempoaddcommand\expandafter{\actualname}%	
 	}{%
 	\pdfstringdef\textwithoutformatting{#1}%
 	\pdfsubstitute\textwithoutformatting{[}{}%
+	\pdfsubstitute\textwithoutformatting{\{}{}%
 	\pdfsubstitute\textwithoutformatting{'}{}%
 	\pdfsubstitute\textwithoutformatting{ }{}%
 	\dolanguagespecificsubstitute{}%
@@ -29,6 +32,7 @@
 		\pdfstringdef\textwithoutformatting{#1}%
 		\pdfsubstitute\textwithoutformatting{<STICKTO<}{}%
 		\pdfsubstitute\textwithoutformatting{[}{}%
+		\pdfsubstitute\textwithoutformatting{\{}{}%
 		\pdfsubstitute\textwithoutformatting{'}{}%
 		\pdfsubstitute\textwithoutformatting{ }{}%
 		\dolanguagespecificsubstitute{}%
@@ -43,10 +47,12 @@
 		\substitute\costwithoutformatting{\string\376}{}%
 		\substitute\costwithoutformatting{\string\377}{}%
 		\substitute\costwithoutformatting{\string\000}{}%
-		\sortitemwithcost{\textwithoutformatting}{\actualname}{\costwithoutformatting}%
+		\def\tempoaddcommand{\sortitemwithcost{\textwithoutformatting}}%
+		\expandafter\tempoaddcommand\expandafter{\actualname}{\costwithoutformatting}%
 	}{%
 	\pdfstringdef\textwithoutformatting{#1}%
 	\pdfsubstitute\textwithoutformatting{[}{}%
+	\pdfsubstitute\textwithoutformatting{\{}{}%
 	\pdfsubstitute\textwithoutformatting{'}{}%
 	\pdfsubstitute\textwithoutformatting{ }{}%
 	\dolanguagespecificsubstitute{}%
@@ -90,7 +96,7 @@
 	\def\DTLentrycommand{\DTLnewdbentry{alphaorderlist}{sortlabel}}%
 	\expandafter\DTLentrycommand\expandafter{#1}% Add entry sortlabel
 	\def\DTLentrycommand{\DTLnewdbentry{alphaorderlist}{description}}%
-	\expandafter\DTLentrycommand\expandafter{#2}% Add entry description
+	\DTLentrycommand{#2}% Add entry description
 }
 
 \newcommand{\sortitemwithcost}[3]{%
@@ -98,7 +104,7 @@
 	\def\DTLentrycommand{\DTLnewdbentry{alphaandcostorderlist}{sortlabel}}%
 	\expandafter\DTLentrycommand\expandafter{#1}% Add entry sortlabel
 	\def\DTLentrycommand{\DTLnewdbentry{alphaandcostorderlist}{description}}%
-	\expandafter\DTLentrycommand\expandafter{#2}% Add entry description
+	\DTLentrycommand{#2}% Add entry description
 	\def\DTLentrycommand{\DTLnewdbentry{alphaandcostorderlist}{cost}}%
 	\expandafter\DTLentrycommand\expandafter{#3}% Add entry cost
 }
@@ -119,27 +125,58 @@
 }
 
 \newcommand{\alphaorderlist}[1]{%
-\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
-\expandafter\parcommalist\expandafter{#1}{\locallists@alphaorderlist}%
-\forlistloop{\addtosortedlist}{\locallists@alphaorderlist}%
-\DTLsort*{sortlabel}{alphaorderlist}% Sort list
-\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
-\theDesc{}\DTLiflastrow{}{, }%
-}%
-\DTLcleardb{alphaorderlist}%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{, }%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistbf}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\textbf{\theDesc{}}\DTLiflastrow{}{, }%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistpar}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{\DTLpar}%
+	}%
+	\DTLcleardb{alphaorderlist}%
 }
 
 \newcommand{\calculatepenultimate}[1]{\DTLsub{\dtlpenultimate}{#1}{1}}
 \newcommand{\alphaorderlistand}[1]{%
-\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
-\expandafter\parcommalist\expandafter{#1}{\locallists@alphaorderlist}%
-\forlistloop{\addtosortedlist}{\locallists@alphaorderlist}%
-\DTLsort*{sortlabel}{alphaorderlist}% Sort list
-\expandafter\calculatepenultimate\expandafter{\DTLrowcount{alphaorderlist}}%
-\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
-\theDesc{}\DTLiflastrow{}{%
-	\dtlifnumeq{\dtlpenultimate}{\DTLcurrentindex}{, \wordand{} }{, }%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\expandafter\calculatepenultimate\expandafter{\DTLrowcount{alphaorderlist}}%
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{%
+			\dtlifnumeq{\dtlpenultimate}{\DTLcurrentindex}{, \wordand{} }{, }%
+		}%
 	}%
-}%
-\DTLcleardb{alphaorderlist}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistandbf}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\expandafter\calculatepenultimate\expandafter{\DTLrowcount{alphaorderlist}}%
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\textbf{\theDesc{}}\DTLiflastrow{}{%
+			\dtlifnumeq{\dtlpenultimate}{\DTLcurrentindex}{, \wordand{} }{, }%
+		}%
+	}%
+	\DTLcleardb{alphaorderlist}%
 }

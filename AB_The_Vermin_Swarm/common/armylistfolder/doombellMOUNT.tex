@@ -1,0 +1,30 @@
+
+\unitentry{%
+	name=\doombell{},
+	logo=character_monster,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=60\timess{}100,
+	maxmountsperarmy=1,
+	categorynote={\mountcategorynote{\builtandbred}},
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=\ascharacter{},
+	globalrules={\toweringpresence{},{\stateoftrance{} (\ratsatarms{}, \verminguard{})},\warplatform{},\fear{},\terror{},\channel{} (2),\hidebf{\abovethemasses{}},\hidebf{\soundingthebell{}}},
+	defense@HP=5,
+	defense@Df=\ascharacter{},
+	defense@Re=5,
+	defense@Arm=\ascharacter{}+2,
+	defenserules={\aegis{} (4+)},
+	offensename=\verminhulkbodyguardSHORT{},
+	offense@At=4,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\battlefocus{},\harnessed{}},
+	modelrulesdef={%
+		\modelruledef{\abovethemasses}{\ruletype{\universalrule}\abovethemassesdef}
+		\modelruledef{\soundingthebell}{\ruletype{\universalrule}\soundingthebelldef}
+	},
+}% END UNIT ENTRY

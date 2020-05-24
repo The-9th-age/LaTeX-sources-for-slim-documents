@@ -1,0 +1,72 @@
+
+\unitentry{%
+	name=\infernalartillery{},
+	logo=special,
+	cost=160,
+	unitsize=1,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=75,
+	global@Ad=0,
+	global@Ma=0,
+	global@Di=9,
+	globalrules={\infernalbrand{},\hidebf{\baseplate{}},\firesofindustry{} (2),\warmachine{}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{}},
+	offensename=\crew{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\moveorfire{},\accurate{}},
+	modelrulesdef={%
+		\modelruledef{\baseplate}{\ruletype{\universalrule}\baseplatedef{}}
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\naphthathrower{}=\free{},
+			\rocketbattery{} (4+)=80,
+			\titanmortar{} (4+)=75,
+		}},	
+	},
+	endtext={%
+		\vspace*{7pt}%
+		\raggedcolumns%
+		\setlength{\columnsep}{10pt}%
+		\begin{multicols}{3}%
+			\ifnaphthathrower{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=\free{},
+					\clustermunitions{}=10,
+					\ethercloud{}=10,
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+			\columnbreak
+			\iftitanmortar{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=10,
+					\clustermunitions{}=\free{},
+					\ethercloud{}=10,
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+			\columnbreak
+			\ifrocketbattery{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=20,
+					\clustermunitions{}=10,
+					\ethercloud{}=\free{},
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+		\end{multicols}%
+	},
+}% END UNIT ENTRY

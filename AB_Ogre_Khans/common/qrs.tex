@@ -9,10 +9,10 @@
 
 \startartillerytable
 \braceofogrepistols{} & - & \distance{24} & 4 & 2 & 2 & \quicktofire{} \tabularnewline
-\huntingspear{} & - & \distance{12} & \STasuser{}\newline + 1 & \STasuser{}\newline + 1 & 1 & \quicktofire{}, \multiplewounds{}{} (\Dthree{}, \againstgigantic{}) \tabularnewline
+\huntingspear{} & - & \distance{12} & \STasuser{}\newline + 1 & \STasuser{}\newline + 1 & 1 & \alphaorderlist{\quicktofire{},{\multiplewounds{}{} (\Dthree{}, \againstgigantic{})}} \tabularnewline
 \ogrecrossbow{} & - & \distance{30} & 2 [5] & 1 [3] & 1 & \areaattack{} (1\timess{}5) \tabularnewline
-\viperscurse{} & - & \STasuser{} & 4 & 2 & 4 & \magicalattacks{},\newline \poisonattacks{},\newline\alwayshitsonfourplus{} \tabularnewline
-\thundercannon{} (1) & \cannon{} & \distance{48} & 5 [10] & 2 [10] & 1 & \areaattack{} (1\timess{}5)\par [\multiplewounds{\Dthree{}+1}{\clippedwings{}}] \tabularnewline
+\viperscurse{} & - & \STasuser{} & 4 & 2 & 4 & \alphaorderlistpar{\magicalattacks{},\poisonattacks{}}\par\alwayshitsonfourplus{} \tabularnewline
+\thundercannon{} (1) & \cannon{} & \distance{48} & 5 [10] & 2 [10] & 1 & \alphaorderlistpar{\areaattack{} (1\timess{}5),[\multiplewounds{\Dthree{}+1}{\clippedwings{}}]} \tabularnewline
 \thundercannon{} (2) & \volleygun{} & \distance{12} & 5 & 4 & \XDsix{2} & - \tabularnewline
 \scratapult{} & \catapult{} (5\timess{}5) & \distance{12--48} & 3 & 1 & 1 & \lethalstrike{} \tabularnewline
 \handcannon{} & - & \distance{24} & 4 & 2 & \Dsix{} & \quicktofire{} \tabularnewline

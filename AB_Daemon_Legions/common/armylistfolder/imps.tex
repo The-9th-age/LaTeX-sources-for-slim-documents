@@ -1,14 +1,11 @@
 
-\def\energyboltsruleone{\textbf{\reload{}}}
-\def\energyboltsruletwo{\textbf{\volleyfire{}}}
-
 \unitentry{%
 	name=\imps{},
 	logo=core,
 	cost=205,
 	unitsize=10,
 	maxunitsize=25,
-	costpermodel=14,
+	costpermodel=15,
 	scoring=yes,
 	maxmodelsperarmy=40,
 	type=\beast{},
@@ -20,7 +17,7 @@
 	globalrules={\supernal{},\scoring{},\fearless{}},
 	defense@HP=1,
 	defense@Df=2,
-	defense@Re=2,
+	defense@Re=3,
 	defense@Arm=0,
 	defense@Aeg=5+,
 	printAeg=defined,
@@ -36,8 +33,8 @@
 		\champion{}=20,
 		\musician{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\standardbearer{} \wordwith{} \onechoiceonlyNOC{}\spacebeforecolon{}:=,
-		\alphaorderstickto{\standardbearer{}=21}\suboptionindent{}\textbf{\firestarter{}} (\spellformat{\thaumaturgyspellone{}}{})=60,
-		\alphaorderstickto{\standardbearer{}=22}\suboptionindent{}\textbf{\firestarter{}} (\spellformat{\spearofinfinity{}}{})=45,
+		\alphaorderstickto{\standardbearer{}=22}\suboptionindent{}\textbf{\firestarter{}} (\spellformat{\thaumaturgyspellone{}}{\thaumaturgy})=60,
+		\alphaorderstickto{\standardbearer{}=21}\suboptionindent{}\textbf{\firestarter{}} (\spellformat{\spearofinfinity{}\newline\suboptionindent{}}{\hereditaryspell})=45,
 	},
 	explicitoptions={%
 		\manifestationonechoice{%
@@ -50,10 +47,10 @@
 	},
 	modelrulesdef={%
 		\modelruledef{\energybolts}{%
-			\ruletype{\shootingweapon}\range{24}, \shots{1}, \St{} 5, \AP{} 0, \alphaorderlist{\energyboltsruleone{},\energyboltsruletwo{}}.%
+			\ruletype{\shootingweapon}\range{24}, \shots{1}, \St{} 5, \AP{} 0, \alphaorderlistbf{\reload{},\volleyfire{}}.%
 		}
 	},
 	optionalmodelrulesdef={%
-		\modelruledef{\firestarter}{\ruletype{\universalrule}\firestarterdef}
+		\modelruledef{\firestarter{} (X)}{\ruletype{\universalrule}\firestarterdef}
 	},
 }% END UNIT ENTRY

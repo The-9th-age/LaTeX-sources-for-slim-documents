@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\plaguepatriarch{},
+	logo=character,
+	categorynote=,
+	cost=155,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\safetyinnumbers{},\callous{},\honourless{},\wizardapprentice{},\frenzy{},\fearless{},\hidebf{\putridscholar{}}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=0,
+	offensename=\plaguepatriarch{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={\hatred{},\battlefocus{}},
+	options={%
+		3 \instancesofdarkshard{}=30,
+		\specialitemsallowance{}=\upto{}100,
+		\la{}=5,
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\plagueflail{}=30,
+		},
+	},
+	mounts={%
+		\plaguependulum{}=440,
+	},
+	magic={\wizardadept{}=75},
+	paths={\occultism{}=occultism},
+	modelrulesdef={%
+		\modelruledef{\putridscholar}{\ruletype{\universalrule}\putridscholardef}
+	},
+}% END UNIT ENTRY

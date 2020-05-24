@@ -1,0 +1,87 @@
+
+\unitentry{%
+	name=\infernalengine{},
+	logo=IoD,
+	cost=400,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\construct{},
+	size=\heightgigantic{},
+	basesize=60\timess{}100,
+	global@Ad=6,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\firesofindustry{} (2),\infernalbrand{},\unbreakable{},\fearless{},\hidebf{\fullsteamahead{}},\hidebf{\furnacebreach{}}},
+	defense@HP=6,
+	defense@Df=1,
+	defense@Re=7,
+	defense@Arm=4,
+	offensename=\crew{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\quicktofire{}},
+	offensenameB=\chassis{},
+	offenseB@St=6,
+	offenseB@AP=3,
+	offenseB@Ag=2,
+	offenserulesB={\harnessed{},\impacthits{} (\Dsix{}+1),\grindattacks{} (\Dthree{})},
+	modelrulesdef={
+		\modelruledef{\fullsteamahead}{\ruletype{\universalrule}\fullsteamaheaddef}
+		\modelruledef{\furnacebreach}{\ruletype{\universalrule}\furnacebreachdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\steeljuggernaut}{\ruletype{\universalrule}\vspace*{-\baselineskip}\steeljuggernautdef}
+		\modelruledef{\rockcrusher}{\ruletype{\universalrule}\rockcrusherdef}
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\naphthathrower{}=30,
+			\rocketbattery{} (4+)=80,
+			\titanmortar{} (4+)=40,
+			\textbf{\rockcrusher{}}=\free{},
+		}},
+		\eachoptionis{} \zerotoXunitsperarmy{1}.=,
+	},
+	endtext={%
+		\vspace*{8pt}%
+		\raggedcolumns%
+		\setlength{\columnsep}{10pt}%
+		\begin{multicols}{3}%
+			\ifnaphthathrower{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\textbf{\steeljuggernaut{}}=35,
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=5,
+					\clustermunitions{}=\free{},
+					\ethercloud{}=5,
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+			\columnbreak
+			\iftitanmortar{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\textbf{\steeljuggernaut{}}=20,
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=10,
+					\clustermunitions{}=10,
+					\ethercloud{}=\free{},
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+			\columnbreak
+			\ifrocketbattery{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\textbf{\steeljuggernaut{}}=20,
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=10,
+					\clustermunitions{}=10,
+					\ethercloud{}=\free{},
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+		\end{multicols}%
+	},
+}% END UNIT ENTRY

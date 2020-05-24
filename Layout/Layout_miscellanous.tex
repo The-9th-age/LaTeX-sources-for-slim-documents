@@ -9,23 +9,6 @@
 \newcommand{\baddown}{\textcolor{red}{$\searrow$}}
 \newcommand{\goodup}{\textcolor{green}{$\nearrow$}}
 
-%%%  Lists handling %%%
-
-\newcommand{\addlocallist}{\listadd\locallists@dummy}%
-\NewDocumentCommand{\parsespacelist}{>{\SplitList{ }} m }{%
-	\ProcessList{#1}{\addlocallist}%
-}%
-\NewDocumentCommand{\parsecommalist}{>{\SplitList{,}} m }{%
-	\ProcessList{#1}{\addlocallist}%
-}%
-\newcommand{\parselist}[3][,]{%
-	\renewcommand\addlocallist{\listadd#3}%
-  	\undef#3%
-  	\ifstrequal{#1}{ }{\parsespacelist{#2}}{\parsecommalist{#2}}%
-}
-
-\def\parcommalist{\parselist[,]}%
-
 %%% Captions %%%
 
 \newcommand{\captionpar}{\vspace*{10pt}\newline}

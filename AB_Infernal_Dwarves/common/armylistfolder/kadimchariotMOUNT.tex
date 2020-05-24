@@ -1,0 +1,33 @@
+
+\unitentry{%
+	name=\kadimchariot{},
+	logo=character,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	maxmountsperarmy=1,
+	categorynote=\kadimchariotmountrestriction{},
+	global@Ad=6,
+	global@Ma=6,
+	global@Di=\ascharacter{},
+	globalrules={\swiftstride{},\fear{},\hidebf{\contractdriven{}}},
+	defense@HP=4,
+	defense@Df=\ascharacter{},
+	defense@Re=5,
+	defense@Arm=\ascharacter{}+2,
+	defenserules={\aegis{} (2+, \againstflamingattacks{})},
+	offensename=\kadimbeast{},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={\harnessed{},\volcanicembrace{} (\Dthree{}),\battlefocus{}},
+	offensenameI=\chassis{},
+	offenseI@St=5,
+	offenseI@AP=2,
+	offenserulesI={\impacthits{\Dthree{}+1},\inanimate{}},
+	modelrulesdef={%
+		\modelruledef{\contractdriven{}}{\ruletype{\universalrule}\contractdrivendef}
+	},
+}% END UNIT ENTRY

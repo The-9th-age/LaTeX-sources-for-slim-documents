@@ -186,6 +186,7 @@
 }
 
 \newcommand{\fluffref}[1]{\vspace*{3pt}\newline\hspace*{0.5\textwidth}\begin{minipage}{0.5\textwidth}\begin{flushright}\textnormal{---#1}\end{flushright}\end{minipage}}
+\newcommand{\fluffrefnonewline}[1]{\vspace*{3pt}\hspace*{0.5\textwidth}\begin{minipage}{0.5\textwidth}\begin{flushright}\textnormal{---#1}\end{flushright}\end{minipage}}
 
 %%% Command to add a new unit definition %%%
 
@@ -360,7 +361,7 @@
 \expandafter\ifblank\expandafter{\unit@type}{}{\ChLab{\type}}&\unit@type{}\tabularnewline%
 \expandafter\ifblank\expandafter{\unit@basesize}{}{\ChLab{\basesize}}&\unit@basesize{}%
 \expandafter\ifblank\expandafter{\unit@basesizenotag}{%
-	~\si{\milli\meter}%
+	~\mm%
 	\ifsubstring{\unit@basesize}{\timess}{}{~\roundbase}%
 }{}%
 \tabularnewline%
@@ -455,12 +456,13 @@
 }%
 %
 % Fluff
-\expandafter\ifblank\expandafter{\unit@fluff}{}{%
-	\fluffbox{\unit@fluff}%
-	\vspace{-10pt}\rule{\textwidth}{0.5pt}\par%
+\ifdefvoid{\unit@fluff}{}{%
+	\ifundef{\nofluffinunitentry}{%
+		\fluffbox{\unit@fluff}%
+		\vspace{-10pt}\rule{\textwidth}{0.5pt}\par%
+	}{}%
 }%
 }
-
 
 \newcommand{\unitentry}[1]{%
 \toggletrue{insideunitentry}
@@ -526,7 +528,7 @@
 			\ChVal{\unit@global@Rsr}&&%
 		}%
 	}%
-	\strut\expandafter\ifblank\expandafter{\unit@globalrules}{}{\alphaorderlist{\unit@globalrules}}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrules}{}{\expandafter\alphaorderlist\expandafter{\unit@globalrules}}%
 \tabularnewline%
 %
 \expandafter\ifblank\expandafter{\unit@globalnameB}{}{%
@@ -557,7 +559,7 @@
 			\ChVal{\unit@globalB@Rsr}&&%
 		}%
 	}%
-	\strut\expandafter\ifblank\expandafter{\unit@globalrulesB}{}{\alphaorderlist{\unit@globalrulesB}}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrulesB}{}{\expandafter\alphaorderlist\expandafter{\unit@globalrulesB}}%
 	\tabularnewline%
 }%
 %
@@ -589,7 +591,7 @@
 			\ChVal{\unit@globalC@Rsr}&&%
 		}%
 	}%
-	\strut\expandafter\ifblank\expandafter{\unit@globalrulesC}{}{\alphaorderlist{\unit@globalrulesC}}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrulesC}{}{\expandafter\alphaorderlist\expandafter{\unit@globalrulesC}}%
 	\tabularnewline%
 }%
 \end{tabular}%
@@ -613,10 +615,10 @@
 	\expandafter\ifblank\expandafter{\unit@defense@Re}{-}{\ChVal{\unit@defense@Re}}&%
 	\expandafter\ifblank\expandafter{\unit@defense@Arm}{\ChVal{0}}{\ChVal{\unit@defense@Arm}}&%
 	\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChVal{\unit@defense@Aeg}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@defenserules}{}{\alphaorderlist{\unit@defenserules}}%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserules}{}{\expandafter\alphaorderlist\expandafter{\unit@defenserules}}%
 	\expandafter\ifblank\expandafter{\unit@defensearmour}{}{%
 	\expandafter\ifblank\expandafter{\unit@defenserules}{}{, }%
-	\alphaorderlist{\unit@defensearmour}}%
+	\expandafter\alphaorderlist\expandafter{\unit@defensearmour}}%
 	\tabularnewline%
 %
 \expandafter\ifblank\expandafter{\unit@defensenameB}{}{%
@@ -626,10 +628,10 @@
 	\expandafter\ifblank\expandafter{\unit@defenseB@Re}{-}{\ChVal{\unit@defenseB@Re}}&%
 	\expandafter\ifblank\expandafter{\unit@defenseB@Arm}{\ChVal{0}}{\ChVal{\unit@defenseB@Arm}}&%
 	\expandafter\ifblank\expandafter{\unit@defenseB@Aeg}{}{\ChVal{\unit@defenseB@Aeg}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{\alphaorderlist{\unit@defenserulesB}}%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{\expandafter\alphaorderlist\expandafter{\unit@defenserulesB}}%
 	\expandafter\ifblank\expandafter{\unit@defensearmourB}{}{%
 	\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{, }%
-	\alphaorderlist{\unit@defensearmourB}}%
+	\expandafter\alphaorderlist\expandafter{\unit@defensearmourB}}%
 	\tabularnewline%
 }%
 %
@@ -640,10 +642,10 @@
 	\expandafter\ifblank\expandafter{\unit@defenseC@Re}{-}{\ChVal{\unit@defenseC@Re}}&%
 	\expandafter\ifblank\expandafter{\unit@defenseC@Arm}{\ChVal{0}}{\ChVal{\unit@defenseC@Arm}}&%
 	\expandafter\ifblank\expandafter{\unit@defenseC@Aeg}{}{\ChVal{\unit@defenseC@Aeg}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{\alphaorderlist{\unit@defenserulesC}}%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{\expandafter\alphaorderlist\expandafter{\unit@defenserulesC}}%
 	\expandafter\ifblank\expandafter{\unit@defensearmourC}{}{%
 	\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{, }%
-	\alphaorderlist{\unit@defensearmourC}}%
+	\expandafter\alphaorderlist\expandafter{\unit@defensearmourC}}%
 	\tabularnewline%
 }%
 \end{tabular}%
@@ -673,10 +675,10 @@
 	\expandafter\ifblank\expandafter{\unit@offense@St}{}{\ChVal{\unit@offense@St}}&%
 	\expandafter\ifblank\expandafter{\unit@offense@AP}{}{\ChVal{\unit@offense@AP}}&% TO-DO Remove 0 as default value in favour of nothing.
 	\expandafter\ifblank\expandafter{\unit@offense@Ag}{}{\ChVal{\unit@offense@Ag}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@offenserules}{}{\alphaorderlist{\unit@offenserules}}%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserules}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserules}}%
 	\expandafter\ifblank\expandafter{\unit@offenseweapons}{}{%
 	\expandafter\ifblank\expandafter{\unit@offenserules}{}{, }%
-	\alphaorderlist{\unit@offenseweapons}}%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweapons}}%
 	\tabularnewline%
 %
 \expandafter\ifblank\expandafter{\unit@offensenameB}{}{%
@@ -686,10 +688,10 @@
 	\expandafter\ifblank\expandafter{\unit@offenseB@St}{}{\ChVal{\unit@offenseB@St}}&%
 	\expandafter\ifblank\expandafter{\unit@offenseB@AP}{}{\ChVal{\unit@offenseB@AP}}&%
 	\expandafter\ifblank\expandafter{\unit@offenseB@Ag}{}{\ChVal{\unit@offenseB@Ag}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{\alphaorderlist{\unit@offenserulesB}}%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserulesB}}%
 	\expandafter\ifblank\expandafter{\unit@offenseweaponsB}{}{%
 	\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{, }%
-	\alphaorderlist{\unit@offenseweaponsB}}%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweaponsB}}%
 	\tabularnewline%
 }%
 %
@@ -700,10 +702,10 @@
 	\expandafter\ifblank\expandafter{\unit@offenseC@St}{}{\ChVal{\unit@offenseC@St}}&%
 	\expandafter\ifblank\expandafter{\unit@offenseC@AP}{}{\ChVal{\unit@offenseC@AP}}&%
 	\expandafter\ifblank\expandafter{\unit@offenseC@Ag}{}{\ChVal{\unit@offenseC@Ag}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{\alphaorderlist{\unit@offenserulesC}}%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserulesC}}%
 	\expandafter\ifblank\expandafter{\unit@offenseweaponsC}{}{%
 	\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{, }%
-	\alphaorderlist{\unit@offenseweaponsC}}%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweaponsC}}%
 	\tabularnewline%
 }%
 %
@@ -714,10 +716,10 @@
 	\expandafter\ifblank\expandafter{\unit@offenseI@St}{}{\ChVal{\unit@offenseI@St}}&%
 	\expandafter\ifblank\expandafter{\unit@offenseI@AP}{}{\ChVal{\unit@offenseI@AP}}&%
 	\expandafter\ifblank\expandafter{\unit@offenseI@Ag}{}{\ChVal{\unit@offenseI@Ag}}&%
-	\strut\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{\alphaorderlist{\unit@offenserulesI}}%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserulesI}}%
 	\expandafter\ifblank\expandafter{\unit@offenseweaponsI}{}{%
 	\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{, }%
-	\alphaorderlist{\unit@offenseweaponsI}}%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweaponsI}}%
 	\tabularnewline%
 }%
 \end{tabular}\newline%
@@ -751,7 +753,7 @@
 % Is options long enough to put it out of the twocols layout?
 \iftoggle{thereisoptions}{%
 	\expandafter\ifblank\expandafter{\unit@options}{\toggletrue{twocolprintoptions}}{% For specific options, we don't have a way yet to count the options, so we set the two cols layout by default
-	\countitemsinoptionslist{\unit@options}%
+	\expandafter\countitemsinoptionslist\expandafter{\unit@options}%
 	\ifnumcomp{\value{numberofitemsinlist}}{>}{3}{\toggletrue{thereismorethanXitemsinoptions}}{}%
 	\ifboolexpr{ togl {optionsistheonlynonrulesdefframe} and togl {thereismorethanXitemsinoptions}}{%
 		\toggletrue{onecolprintoptions}
@@ -779,7 +781,7 @@
 	\ifnumcomp{\value{numberoftwocolframes}}{>}{0}{%
 		\toggletrue{twocolprintcommandgroup}%
 	}{%
-		\countitemsinoptionslist{\unit@commandgroup}%
+		\expandafter\countitemsinoptionslist\expandafter{\unit@commandgroup}%
 		\ifnumcomp{\value{numberofitemsinlist}}{>}{1}{%
 				\toggletrue{onecolprintcommandgroup}%
 		}{%

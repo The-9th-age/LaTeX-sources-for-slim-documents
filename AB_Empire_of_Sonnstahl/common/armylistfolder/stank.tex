@@ -1,7 +1,4 @@
 
-\def\stankcannonruleone{\textbf{\areaattack{1\timess{}5}}}
-\def\stankcannonruletwo{[\textbf{\multiplewounds{\Dthree{}, \clippedwings{}}{}}]}
-
 \unitentry{%
 	name=\stank{},
 	logo=EoS,
@@ -33,7 +30,7 @@
 	modelrulesdef={%
 		\modelruledef{\steampowered}{\ruletype{\universalrule}{\steampowereddef}}%
 		\modelruledef{\stankcannon}{\ruletype{\artilleryweapon}{%
-			\textbf{\cannon{}}, \range{36}, \shots{1}, \St{} 3 [7], \AP{} 0 [6], \alphaorderlist{\stankcannonruleone{}, \stankcannonruletwo{}}.%
+			\textbf{\cannon{}}, \range{36}, \shots{1}, \St{} 3 [7], \AP{} 0 [6], \alphaorderlistbf{\areaattack{1\timess{}5},{[\multiplewounds{\Dthree{}, \clippedwings{}}{}]}}.%
 		}}%
 	},
 }% END UNIT ENTRY

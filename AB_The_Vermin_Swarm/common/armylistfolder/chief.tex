@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\chief{},
+	logo=character,
+	categorynote=,
+	cost=100,
+	unitsize=1,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\safetyinnumbers{},\callous{},\honourless{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	offensename=\chief{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=6,
+	offenserules=,
+	options={%
+		\textbf{\fetthisbroodmaster{}}=20,
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}100,
+		\AlCoOrder{\shield{}=5,
+		\ha{}=5,},
+		\onechoiceonlyACO{%
+			\pw{} \wordand{} \tailweapon{}=5,
+			\gw{}=5,
+			\halberd{}=5,
+			\ratlockpistols{} (3+)=10,
+		},		
+	},
+	mounts={%
+		\verminhulkbodyguard{}=75,
+		\monstrousrat{}=200,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\fetthisbroodmaster}{\ruletype{\universalrule}\fetthisbroodmasterdef}
+	},
+}% END UNIT ENTRY

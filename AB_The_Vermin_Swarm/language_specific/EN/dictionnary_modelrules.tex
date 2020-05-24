@@ -1,0 +1,99 @@
+
+% Army Model Rules Names
+
+\newcommand{\safetyinnumbers}{Safety in Numbers}
+\newcommand{\callous}{Callous}
+\newcommand{\stateoftrance}{State of Trance}
+\newcommand{\broodscourage}{Brood's Courage}
+\newcommand{\tagalong}{Tag-Along}
+\newcommand{\honourless}{Honourless}
+\newcommand{\darkshard}{Dark Shard}
+
+\newcommand{\plagueflail}{Plague Flail}
+\newcommand{\meatgrinder}{Meat Grinder}
+\newcommand{\sling}{Sling}
+\newcommand{\gasglobes}{Gas Globes}
+\newcommand{\ratlockpistols}{Ratlock Pistols}
+\newcommand{\jezail}{Jezail}
+\newcommand{\rotarygun}{Rotary Gun}
+\newcommand{\globelauncher}{Globe Launcher}
+\newcommand{\naphtalauncher}{Naphta Launcher}
+
+\newcommand{\tailweapon}{Tail Weapon}
+\newcommand{\lightningattack}{Lightning Attack}
+
+
+% Army Model Rules Texts
+
+\newcommand{\safetyinnumbersdef}{%
+	Non-Fleeing units consisting entirely of models with Safety in Numbers add their number of Full Ranks after the first to their Discipline value, up to a maximum of +3 and \textbf{never} above 10. Safety in Numbers cannot be used to modify the Discipline that is distributed by models with Commanding Presence (but the received Commanding Presence can be modified by Safety in Numbers). Furthermore, units consisting entirely of models with Safety in Numbers gain +\distance{1} to their Flee Distance rolls.%
+}
+\newcommand{\callousdef}{%
+	The model is allowed to use Shooting Attacks and \spellformat{\theawakenedswarm}{\hereditaryspell} against enemy units that are Engaged in Combat with friendly units, as long as all friendly units Engaged in the Combat are of Standard Height. All units Engaged in this Combat are ignored for Cover purposes (but not for drawing Line of Sight). When a model with this rule targets an enemy unit Engaged in Combat with a Shooting Attack or with \spellformat{\theawakenedswarm}{}, roll to hit as normal against the intended target. Each hit must then be randomised to see which unit is hit. Roll a D6 for each hit\newrule{:}
+	\begin{itemize}%
+		\item \newrule{O}n 3+, the intended target is hit\newrule{.}%
+		\item \newrule{O}therwise a friendly unit Engaged in that Combat is hit. If there are several friendly units involved in the combat, randomise which one is hit.%
+	\end{itemize}%
+}
+\newcommand{\stateoftrancedef}{%
+	The model's unit gains \textbf{\fearless}. The model must be deployed in, and can only join, a unit that includes at least one model from one of the unit entries stated in brackets (X). The model can never voluntarily leave its unit.%
+}
+\newcommand{\broodscouragedef}{%
+	\newrule{When calculating the Discipline modifier from Safety in Numbers, a unit may use the number of Full Ranks of another friendly unit if all of the following conditions are met:}%
+	\begin{itemize}%
+		\item \newrule{More than half of its models have Brood's Courage (X).}%
+		\item \newrule{The friendly unit is within \distance{6}.}%
+		\item \newrule{The friendly unit includes at least one model from one of the unit entries stated in brackets.}%
+	\end{itemize}%
+}
+\newcommand{\tagalongdef}{%
+	If the model is within \distance{3} of a friendly non-Fleeing unit with at least one Rat-at-Arms or Vermin Guard model, it gains \textbf{\aegis{} (4+, against Ranged Attacks)}.%
+}
+\newcommand{\honourlessdef}{%
+	A Character with Honourless cannot be chosen by the enemy as the model that suffers the penalties for refusing a
+Duel.%
+}
+\newcommand{\darksharddef}{%
+	\newrule{Each instance of Dark Shard is One use only}. Declare usage just before the model rolls to cast a non-Bound Spell. Any Dispelling Attempt made against this Casting Attempt suffers \minuss{}D3 to the dispelling roll. Roll this dice as soon as the Dark Shard is used. If a natural \result{1} is rolled for this D3, the model using the Dark Shard suffers 1 hit with Toxic Attacks. This is an exception to the Casting and Dispelling Modifier rules (i.e. it is allowed to modify the dispelling roll by more than \minuss{}2).%
+}
+
+\newcommand{\plagueflaildef}{%
+	Attacks made with a Plague Flail gain +2 Strength and +2 Armour Penetration. Unless using another weapon, the
+wielder of a Plague Flail suffers \minuss{}1 Defensive Skill. In addition, at Initiative Step 10 (regardless of the wielder's Agility), the wielder must choose an enemy unit that it could normally allocate Close Combat Attacks towards (including Supporting Attacks). The chosen enemy unit suffers a hit with Toxic Attacks. This hit is considered to be a Special Attack.\newline%
+	This weapon cannot be enchanted with Weapon Enchantments from the List of Common Special Items.%
+}
+\newcommand{\meatgrinderdef}{%
+	When using this weapon, the wielder gains \textbf{Grind Attacks (2D6)} and \textbf{Impact Hits (2D6)}. These Impact Hits and Grind Attacks are resolved with Strength 4 and Armour Penetration 2.%
+}
+
+\newcommand{\gasglobesdef}{%
+	Hits from this weapon ignore the target's Resilience and are instead \textbf{set} to wound on 4+.%
+}
+
+\newcommand{\ratlockpistolsdef}{%
+	Counts as Paired Weapons in close combat.%
+}
+
+\newcommand{\jezaildef}{%
+	If rolling a natural \result{1} to hit, the bearer suffers 1 hit with Toxic Attacks.%
+}
+
+\newcommand{\rotarygunshotschoice}{%
+	\shots{\XDsix{2}\timess{}2} or \shots{\XDsix{3}\timess{}2} (the owner chooses which to use)%
+}
+
+\newcommand{\globelauncherdef}{%
+	If a Standard Height model equipped with a Globe Launcher is within \distance{3} of a unit with at least one Rat-at-Arms or Vermin Guard model when shooting, it may draw Line of Sight to the target as if this unit was shooting instead of itself (i.e. the unit cannot be Fleeing, Shaken, or Engaged). The target must still be within range and in the Front Arc of the model shooting with the Globe Launcher.%
+}
+
+\newcommand{\naphtalauncherdef}{%
+	This weapon ignores to-hit modifiers from Cover and Hard Target (X).%
+}
+
+\newcommand{\tailweapondef}{%
+	When attacking with Paired Weapons, the model part gains +1 Attack Value.%
+}
+
+\newcommand{\lightningattackdef}{%
+	At the end of a phase in which a unit that consists entirely of models with Fly has suffered one or more hits from attacks with Lightning Attack, the unit suffers an additional D6 hits with Strength 4 and Armour Penetration 1. These hits are considered Special Attacks if the hits with Lightning Attack were suffered in the Melee Phase, and they are considered ranged Special Attacks if the hits with Lightning Attack were suffered from Ranged Attacks.%
+}

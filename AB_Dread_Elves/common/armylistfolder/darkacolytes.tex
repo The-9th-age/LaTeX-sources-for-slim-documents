@@ -1,0 +1,58 @@
+
+{\renewcommand{\labels@mountsoptions}{\allianceoptions}
+\renewcommand{\optionsalphaandcostorderlist}[1]{\optionslist{#1}}
+\unitentry{%
+	name=\darkacolytes{},
+	logo=special,
+	cost=225,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=38,
+	scoring=,
+	maxunitsperarmy=2,
+	type=\cavalry{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=9,
+	global@Ma=18,
+	global@Di=8,
+	globalrules={\wizardconclave{},\lighttroops{},\vanguard{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=1,
+	defenserules={\aegis{} (4+)},
+	offensename=\acolyte{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\killerinstinct{},\lightningreflexes{},\poisonattacks{}},
+	offensenameB=\elvenhorse{},
+	offenseB@At=1,
+	offenseB@Of=3,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=4,
+	offenserulesB={\harnessed{}},	
+	commandgroup={%
+		\champion{}=130,
+	},
+	mounts={%
+		\cultofyema{} \only{\acolyte{}}=7\permodel{},
+	},
+	wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\cosmologyspellone}{\cosmology},
+			\spellformat{\cosmologyspellthree}{\cosmology},
+			\spellformat{\cripplingfatigue}{\hereditaryspell},
+		}
+		\wizardconclavespellslist{\darkacolyteyemawizardconclave{}\spacebeforecolon{}:}{%
+			\spellformat{\occultismspellone}{\occultism},
+			\spellformat{\occultismspellfour}{\occultism},
+			\spellformat{\occultismspellsix}{\occultism},		
+		}
+	},
+}% END UNIT ENTRY
+}
