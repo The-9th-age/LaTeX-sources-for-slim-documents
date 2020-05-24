@@ -1,0 +1,49 @@
+\unitentry{%
+	name=\mammothhunter{},
+	logo=character,
+	cost=210,
+	unitsize=1,
+	type=\infantry{},
+	size=\sizelarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={\lighttroops{},\notaleader{},\swiftstride{},\textbf{\loner{}},\textbf{\animalmaster{}}},
+	defense@HP=4,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={\la{}},
+	offensename=\mammothhunter{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\sonsoftheavalanche{},\huntingspear{}},
+	options={%
+		\asinglebigname{}=\nolimit{},
+		\specialequipmentallowance{}=\upto{}100,
+		\textbf{\leaderofthepack}=\free{},
+		\weapononechoice{%
+			\pw{}=10,
+            \ironfist{}=15,
+			\lance{}=15,
+			\gw{}=20,
+		},
+        \onechoiceonlyACO{%
+            \vanguard{}=15,
+			\scout{}=15,
+            May take a \tusker{}=95,
+            May take a \rockaurochs{} \& lose \lighttroops{} =360,
+        	},
+	},
+	modelrulesdef={%
+		\modelruledef{\loner}{\ruletype{\universalrule}\lonerdef}%
+		\modelruledef{\animalmaster}{\ruletype{\universalrule}\animalmasterdef}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\leaderofthepack}{\ruletype{\universalrule}\leaderofthepackdef}%
+	},
+} % END UNIT ENTRY

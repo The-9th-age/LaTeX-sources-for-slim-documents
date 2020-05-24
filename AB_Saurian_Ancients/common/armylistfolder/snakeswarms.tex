@@ -1,0 +1,35 @@
+
+\unitentry{%
+	name=\snakeswarms{},
+	logo=special,
+	cost=130,
+	unitsize=2,
+	maxunitsize=4,
+	costpermodel=40,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=7,
+	globalrules={\coldblooded{},\skirmisher{},\lighttroops{}, \fearless{},\textbf{\venomoustide{}},\unstable{}},
+	defense@HP=5,
+	defense@Df=3,
+	defense@Re=2,
+	defense@Arm=0,
+	defenserules={\hardtarget{} (1)},
+	offensename=\snakeswarms{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=2,
+	offense@AP=0,
+	offense@Ag=1,
+	offenserules={\poisonattacks{}},
+	options={%
+		May take \scout{}=12\permodel{},
+    },
+	modelrulesdef={%
+		\modelruledef{\venomoustide}{\ruletype{\universalrule}\venomoustidedef}%
+	},
+} % END UNIT ENTRY

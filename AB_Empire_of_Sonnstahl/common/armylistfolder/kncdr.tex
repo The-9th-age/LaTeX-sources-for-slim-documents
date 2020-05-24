@@ -1,0 +1,43 @@
+
+\unitentrynobase{%
+	name=\kncdr{},
+	logo=character,
+	cost=200,
+	unitsize=1,
+	type=\cavalry{},
+	size=\seemount{},
+	%basesize=20\timess{}20, % Coded via custon unit string in local layout.tex
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	globalrules={\textbf{\firstkn{}}},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\pa{}},
+	offensename=\kncdr{},
+	offense@Ag=6,
+	offense@At=4,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	options={%
+		\specialitemsallowance{}=\upto{}200,
+		\shield{}=5,
+		\weapononechoice{%
+            \pick{}=30,
+            \gw{}=15,
+            \halberd{}=15,
+            \lance{}=20,
+		},
+    },
+	mounts={%
+			\musttakeoneofthefollowingbfNOC,
+			\alphaorderstickto{\musttakeoneofthefollowingbfNOC{}=20}\suboptionindent{}\horse{}=\free{},
+			\alphaorderstickto{\musttakeoneofthefollowingbfNOC{}=20}\suboptionindent{}\younggriff{}=30,
+	},
+	modelrulesdef={%
+		\modelruledef{\firstkn{}}{\ruletype{\universalrule{}}\firstkndef{}}
+	},
+} % END UNIT ENTRY

@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\weaponbeasts{},
+	logo=arrows,
+	cost=135,
+	unitsize=1,
+	maxunitsize=2,
+	costpermodel=130,
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\sizelarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=6,
+	globalrules={\coldblooded{},\lighttroops{},\strider{Water Terrain}},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=3,
+	offensename=\weaponbeasts{},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	options={%
+		\musttakeoneofthefollowing{%
+			\textbf{\salamander{}} (\zerotoXperarmy{2})=30\permodel{},
+			\textbf{\spearback{}} (\zerotoXperarmy{2})=\free{},
+		},
+    },
+	optionalmodelrulesdef={%
+		\modelruledef{\shootspikes}{\ruletype{\shootingweapon}\shootspikesdef}%
+		\modelruledef{\spoutflames}{\ruletype{\flamethrower}\spoutflamesdef}%
+	},
+} % END UNIT ENTRY

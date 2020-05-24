@@ -253,6 +253,26 @@
 	}%
 }
 
+\newcommand{\pathslistinline}[1]{%
+	\expandafter\ifblank\expandafter{#1}{}{%
+		\DTLifdbexists{pathlist}{\DTLcleardb{pathlist}}{\DTLnewdb{pathlist}}% Create new/discard old list
+		\setcounter{numberofitemsinlist}{0}%
+		\expandafter\parcommalist\expandafter{#1}{\locallists@pathlist}%
+		\forlistloop{\stepcounter{numberofitemsinlist}\addtopathlist}{\locallists@pathlist}%
+		\DTLsort*{sortlabel}{pathlist}% Sort list
+		\begin{tabular}[t]{@{}*{\value{numberofitemsinlist}}{M{2.7cm}@{}}}%
+			\DTLforeach*{pathlist}{%
+										\theName=name,%
+										\theIcon=icon%
+										}{% Print the path table	
+				\strut\includegraphics[height=0.8cm]{Icon_\theIcon.pdf}\par%
+				\theName{}%
+				\DTLiflastrow{\tabularnewline}{&}%
+			}%
+		\end{tabular}\vspace*{-10pt}% debugging a weird additional space?
+	}%
+}
+
 %%% Wizard Conclave %%%
 
 % Wizard Conclave entry.

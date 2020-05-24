@@ -1,0 +1,250 @@
+%%%% UNIT ENTRY NAMES
+% CHARACTERS
+\newcommand{\saurianwarlord}{Saurian Warlord}
+\newcommand{\warlord}{Warlord}
+
+\newcommand{\saurianveteran}{Saurian Veteran}
+\newcommand{\veteran}{Veteran}
+
+\newcommand{\cuatllord}{Cuatl Lord}
+
+\newcommand{\skinkcaptain}{Skink Captain}
+
+\newcommand{\skinkpriest}{Skink Priest}
+
+\newcommand{\caimanancient}{Caiman Ancient}
+
+% MOUNTS 
+\newcommand{\raptor}{Raptor}
+
+\newcommand{\carnosaur}{Carnosaur}
+
+\newcommand{\alphacarnosaur}{Alpha Carnosaur}
+
+\newcommand{\alphapteradon}{Alpha Pteradon}
+
+\newcommand{\alpharhamphodon}{Alpha Rhamphodon}
+
+\newcommand{\taurosaur}{Taurosaur}
+\newcommand{\skinkcrew}{Skink Crew}
+
+\newcommand{\skinkpalanquin}{Skink Palanquin}
+
+% CORE
+\newcommand{\saurianwarriors}{Saurian Warriors}
+
+\newcommand{\skinkbraves}{Skink Braves}
+\newcommand{\skinkcaiman}{Caiman}
+
+% SPECIAL
+\newcommand{\templeguard}{Temple Guard}
+
+\newcommand{\raptorriders}{Raptor Riders}
+\newcommand{\rider}{Rider}
+
+\newcommand{\caimans}{Caimans}
+
+\newcommand{\snakeswarms}{Snake Swarms}
+
+% JUNGLE GUERILLAS
+\newcommand{\skinkhunters}{Skink Hunters}
+
+\newcommand{\chameleons}{Chameleons}
+
+\newcommand{\weaponbeasts}{Weapon Beasts}
+
+\newcommand{\pteradonsentries}{Pteradon Sentries}
+\newcommand{\pteradon}{Pteradon}
+
+\newcommand{\rhamphodonriders}{Rhamphodon Riders}
+\newcommand{\rhamphodon}{Rhamphodon}
+
+% THUNDER LIZARDS
+\newcommand{\stygiosaur}{Stygiosaur}
+\newcommand{\skinkrider}{Skink Rider}
+
+\newcommand{\thyroscutus}{Thyroscutus}
+\newcommand{\altar}{Altar}
+
+\newcommand{\snakes}{Snakes}
+
+%%%% UNIT ENTRY RULES
+
+%% CHARACTERS
+%%CUATL LORD
+\newcommand{\palanquin}{Palanquin}
+\newcommand{\palanquindef}{% Universal Rule
+When a Cuatl Lord is in a unit with Bodyguard, it gains \textbf{Stand Behind}. A model with this rule can be the General even if it is also the Battle Standard Bearer, and it cannot be chosen by the enemy as the model that refuses a Duel. The model counts as being mounted.
+}
+
+\newcommand{\disciplinesnote}{\textbf{Cuatl Lord Disciplines}. Disciplines cannot be duplicated within an army.}
+\newcommand{\disciplines}{May take Cuatl Lord Disciplines}
+
+\newcommand{\masterreality}{Master of Reality}
+\newcommand{\masterrealitydef}{% Cuatl Disciplines
+During Siphon the Veil, the owner must convert Veil Tokens into Magic Dice for a cost of 2:1 (instead of 3:1). At the end of each friendly Siphon the Veil subphase, all Veil Tokens that have not been converted into Magic Dice are discarded.
+}
+
+\newcommand{\grasp}{Grasp of the Immortal}
+\newcommand{\graspdef}{% Cuatl Disciplines
+The Cuatl Lord gains \textbf{Channel (1)} and a +1 modifier to its casting rolls. When rolling casting rolls with a single Magic Dice, a natural roll of \result{1} or \result{2} on the Magic Dice is always a failed Casting Attempt, regardless of any modifiers.
+}
+
+\newcommand{\ancknow}{Ancient Knowledge}
+\newcommand{\ancknowdef}{% Cuatl Disciplines
+\itemrestriction{Models with Divination only.}
+Instead of selecting spells, the Cuatl Lord knows all spells from Divination. A single Learned Spell may be exchanged for the Hereditary Spell during Spell Selection. Ignore the rules for The Conclave and instead apply the following: Spells from Divination gain \distance{3} range up to a maximum of \distance{+9} for each friendly model part with Telepathic Link within \distance{12} of the Caster and each additional friendly Wizard without Telepathic Link within \distance{12} of the Caster. 
+}
+
+\newcommand{\breakspells}{Breaker of Spells}
+\newcommand{\breakspellsdef}{% Cuatl Disciplines
+The owner of the Cuatl Lord may reroll its first failed Dispel Attempt in each enemy Magic Phase.
+}
+
+\newcommand{\proteanpot}{Protean Potentate}
+\newcommand{\proteanpotdef}{% Cuatl Disciplines
+The Cuatl Lord gains \textbf{Protean Magic} and access to Druidism, and knows all the Learned Spells it now has access to as well as its Hereditary Spell. This Discipline cannot be combined with Ancient Knowledge or the Sun Tablet Artefact on the same model.
+}
+
+\newcommand{\soulfireweaver}{Soulfire Weaver}
+\newcommand{\soulfireweaverdef}{% Cuatl Disciplines
+Every time the Cuatl Lord successfully casts a spell from Evocation, it can choose to discard one or more Veil Tokens instead of casting the Attribute Spell. For each Veil Token discarded this way, choose one unengaged enemy unit within \distance{12} of a target of the spell (no unit can be chosen more than once per spell). Each chosen unit suffers a hit with Strength 4, Armour Penetration 0,  \textbf{\areaattack{} (2\timess{}2)}, and \textbf{Magical Attacks}
+}
+
+\newcommand{\symbiosis}{Symbiosis}
+\newcommand{\symbiosisdef}{% Cuatl Disciplines
+The Cuatl Lord may cast spells of any type through models with Telepathic Link. When casting spells through a Telepathic Link, the range of spells of type Damage without Aura is not reduced. Otherwise follow the normal rules for Telepathic Link.
+}
+
+\newcommand{\trainedbirth}{Trained from Birth}
+\newcommand{\trainedbirthdef}{% Cuatl Disciplines
+The Cuatl Lord knows the Learned Spell \#1 from its chosen Path in addition to its other spells and cannot select it during Spell Selection.
+}
+
+%SKINK CPT
+\newcommand{\jgmountnotefull}[2]{Character mounted on an option marked [#1] additionally counts towards #2.}
+
+%CAIMAN ANCIENT
+\newcommand{\replacehalbwithgw}{Replace \halberd{} with \gw{}}
+\newcommand{\replacebpwithonechoice}{\optionschoice{Replace \blowpipe{} with \onechoiceonlyNOC{}:}}
+
+%MOUNTS
+%TAURO
+\newcommand{\sharphorns}{Sharp Horns}
+\newcommand{\sharphornsdef}{% Special Attack.
+The model part may reroll the dice for the number of Impact Hits it causes.
+}
+
+\newcommand{\replacebgbpwithonechoice}{\optionschoice{Replace \giantblowpipes{} with \onechoiceonlyNOC{}:}}
+
+%ALPHA CARNO
+\newcommand{\apexpredator}{Apex Predator}
+\newcommand{\apexpredatordef}{% Universal Rule
+When charging a single model unit with Gigantic Size and/or Fly, the model gains \distance{+2} to its Charge Range roll.
+}
+
+%ALPHA RHAP
+\newcommand{\releaserocks}{Release Rocks}
+\newcommand{\releaserocksdef}{% Special Attack
+Sweeping Attack which can be used once per game. The enemy unit suffers D3 hits with Strength 4 and Armour Penetration 1 for each Pteradon in the unit.
+}
+
+%ALPHA PTER
+\newcommand{\preyscent}{Prey Scent}
+\newcommand{\preyscentdef}{% Attack Attribute -- Close Combat
+Right before the battle (during step 7 of the Deployment Phase Sequence), if you have one or more units of Rhamphodon Riders or Skink Captains on Alpha Rhamphodon, you must choose 2 units from your opponent's Army List (this may also be Characters). The models of these units are considered \result{marked}. Rhamphodons (not their riders) gain +D3 Attack Value and must reroll failed to-hit rolls with attacks allocated either towards marked models, or towards models joined to units with more than half of their models marked. The additional attacks must be allocated towards marked models or towards models joined to units with more than half of their models marked.
+}
+
+%SKINK PAL
+\newcommand{\skinkpal}{Skink Palanquin}
+\newcommand{\skinkpaldef}{%: Universal Rule
+The model gains \textbf{Stand Behind} while it is joined to a unit of Saurian Warriors or Skink Braves that does not contain any Caiman models. In addition to its other spells, the model knows the Learned Spell \#1 from its chosen Path and cannot select it during Spell Selection.
+}
+\newcommand{\plaqueofthesnakegod}{Plaque of the Snake God}
+\newcommand{\plaqueofthesnakegoddef}{% Universal Rule
+All Skink\refsymbol{} model parts in the same unit as the Plaque of the Snake God gain \textbf{Hatred}.
+}
+
+%CORE
+%SKINKS
+\newcommand{\bravepoisjav}{A unit with Poisoned Javelins additionally counts towards Jungle Guerillas. Caimans in such units do not count towards Jungle Guerillas.}
+\newcommand{\caimanbraves}{May add one \hyperlink{SA3skinkcaiman}{\textbf{\skinkcaiman{}}} for every 10 Skinks}
+\newcommand{\percaiman}{\nobreak{}/\skinkcaiman{}}
+
+\newcommand{\combinedstrength}{Combined Strength}
+\newcommand{\combinedstrengthdef}{% Universal Rule
+Skink Braves may add Caimans to their unit. Caimans are \rnf{} models of a different Model Classification (Large Infantry). Follow the normal rules for determining if the Size of the unit is considered to be Standard or Large (see Model Classification). Caimans follow the rules for Matching bases (see Front Rank), except that they do not have to be placed as far forward as possible. Instead, they can be placed anywhere in the unit.\\
+Skink Braves and Caimans in the same unit do not share a common Health Pool even though they are both \rnf{} models. Instead, each of them have their own Health Pool (lost Health Points are never passed between the types, and any excess lost Health Points are ignored).
+\begin{itemize}
+\item \textbf{Distributing Hits}: When distributing hits to the unit (i.e. for attacks towards the unit as a whole), first distribute hits between \rnf{} models and Characters. Then randomize all hits distributed onto \rnf{} models. Roll a D6 for each hit: 1--4 hits a Skink Brave, 5--6 hits a Caiman. If the Skink Braves lose enough Health Points in order to wipe them all out, any remaining Health Point losses suffered are distributed onto the Champion.
+\item \textbf{Stomp Attacks}: When distributing hits from Stomp Attacks, ignore all models in the unit that are not Standard Infantry. Hits distributed onto Skink Braves are not randomised. 
+\item \textbf{Allocating Attacks}: Close Combat Attacks can be allocated as normal towards different Health Pools in base contact: Skink Braves, Caimans, Champion, Character(s). 
+\item \textbf{Swirling Melee}: All enemies allocating attacks using Swirling Melee (i.e. attacking \rnf{} models not in base contact) may choose to do this either against Skink Braves or against Caimans. If this is used to attack Caimans, the attacks suffer a \minuss1 to-hit modifier.
+\end{itemize}
+}
+
+%SAURUS WARRIORS
+\newcommand{\onetotemchoiceonly}{May take a \textbf{Totem Animal} \optionschoice{(One choice only):}}
+\newcommand{\totemanimals}{Totem Animals}
+\newcommand{\totemanimalsdef}{% Universal Rule
+Saurian Warriors may take one of the following Totem Animals. If a Saurian Warriors unit selects this option, then all Saurian Warriors in the army \textbf{must} be upgraded with the same Totem Animal.
+\begin{itemize}
+\item \textbf{Crocodile}: The model gains +1 Armour against Close Combat Attacks.
+\item \textbf{Jaguar}: The model gains \distance{+1} Advance Rate and \distance{+2} March Rate.
+\item \textbf{Piranha}: The model gains \textbf{Fear}.
+\item \textbf{Serpent}: The model gains +1 Agility and \textbf{Fight in Extra Rank}.
+\end{itemize}
+}
+
+%SPECIAL
+%PTER SENTRIES
+\newcommand{\firebola}{Fire Bola}
+\newcommand{\fireboladef}{% Shooting Weapon
+\range{8}, \shots{1}, \St{} 4, \AP{} 1, \textbf{\flamingattacks{}}, \textbf{\quicktofire{}}.
+}
+
+%TEMPLE GUARDS
+\newcommand{\cobaltclub}{Cobalt Club}
+\newcommand{\cobaltclubdef}{% Close Combat Weapon
+Attacks made with this weapon gain +2 Strength.
+}
+
+%SNAKE SWARMS
+\newcommand{\venomoustide}{Venomous Tide}
+\newcommand{\venomoustidedef}{% Universal Rule
+All models in enemy units must take a Dangerous Terrain (1) Test after successfully charging a unit of Snake Swarms.
+}
+
+%JUNGLE GUERILLAS
+%WEAPON BEASTS
+\newcommand{\salamander}{Salamander}
+\newcommand{\spearback}{Spearback}
+
+\newcommand{\spoutflames}{\salamander{} -- Spout Flames}
+\newcommand{\spoutflamesdef}{% Flamethrower Artillery Weapon
+\range{8}, \shots{1}, \St{} 4, \AP{} 1, \textbf{\flamingattacks{}}. If a Misfire is rolled, the Salamander \textbf{always} counts as rolling the 5+ Malfunction result.
+}
+
+\newcommand{\shootspikes}{\spearback{} -- Shoot Spikes (4+)}
+\newcommand{\shootspikesdef}{% Shooting Weapon
+\range{18}, \shots{2D6}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}. This weapon may not be used if the model performed a March Move in this Player Turn. Spearbacks must declare Stand and Shoot as a Charge Reaction if possible, but they do not suffer the \minuss1 to-hit modifier for it.
+}
+
+%THUNDER LIZARDS
+%STYGOSAUR
+\newcommand{\mystictraveller}{Mystic Traveller}
+\newcommand{\mystictravellerdef}{% Universal Rule
+The Skink Rider gains \textbf{Telepathic Link} and is a Wizard Adept that selects 2 spells from \textit{Swarm of Insects}, \textit{Savage Fury}, \textit{Awaken the Beast} (Shamanism), and \textit{Spark of Creation} (Hereditary Spell) during Spell Selection. This rule overrides the normal Spell Selection rules connected to being a Wizard Adept.
+}
+
+%THYROSUTUS
+\newcommand{\altarofthesnakegod}{Altar of the Snake-God}
+\newcommand{\altarofthesnakegoddef}{% Universal Rule
+The model gains an additional model part:\newline
+\altarprofile{}
+}
+
+\newcommand{\sunengine}{Sun Engine}
+\newcommand{\sunenginedef}{% Universal Rule
+The model gains \textbf{Channel (1)}. 
+}

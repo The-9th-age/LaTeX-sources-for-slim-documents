@@ -1,0 +1,31 @@
+
+\unitentry{%
+	name=\skinkpalanquin{},
+	logo=character,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=50\timess{}50,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=\ascharacter{},
+	globalrules={\textbf{\skinkpalanquin{}},\tall{}},
+	defense@HP=3,
+	defense@Df=\ascharacter{},
+	defense@Re=3,
+	defense@Arm=\ascharacter{}+1,
+	offensename=\skinkpalanquin{},
+	offenserules={\harnessed{},\inanimate{}},
+	options={%
+		May change base size to 40\timess{}40 \si{\milli\meter}=\free{},
+		May take \textbf{\plaqueofthesnakegod{}}=90,
+    },
+	modelrulesdef={%
+		\modelruledef{\skinkpal}{\ruletype{\universalrule}\skinkpaldef}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\plaqueofthesnakegod}{\ruletype{\universalrule}\plaqueofthesnakegoddef}%
+	},
+	endtext={%
+		\refsymbol{}\textit{The following model parts are considered Skinks: Skink Captains, Skink Priests, Skink Braves, Skink Hunters, Chameleons, Pteradon Sentries - Rider only, Rhamphodon Riders - Rider only}.%
+	}
+} % END UNIT ENTRY

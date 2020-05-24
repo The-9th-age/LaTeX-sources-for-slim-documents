@@ -1,0 +1,62 @@
+
+\unitentry{%
+	name=\asklanderchief{},
+	fluff=\asklanderchieffluff{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\legendarybeastsinitials}{\legendarybeasts},
+	cost=115,
+	unitsize=1,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	globalrules={\battlefever{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+    defensearmour={\ha{}},
+	offensename=\asklanderchief{},
+	offense@Ag=5,
+	offense@At=3,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=1,
+	offenserules={\textbf{\deedsnotwords{}}},
+	options={%
+		\bsb{}=50,	   		
+	   	{\allowanceifgeneral{}, \textbf{\jarl{}}}=30,
+	   	\textbf{\longshipraid{}} (\zerotoXmodelsperarmy{2})=40,
+	   	\specialequipmentallowance{}=\upto{}100,
+	   	\suboptionindent{}\allowanceifgeneral{}=\upto{}150,
+	   	\shield{}=5,
+	   	\berserkersbearpeltchiefoption{} (\berserkersbearpeltchiefoptionnote{})=50, 
+	   	\throwingweapons{} (4+)=5,
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\lightlance{}=5,
+			\spear{}=5,
+			\gw{}=10,
+		},
+	},
+	mounts={%
+		\blackstallion{}=85,
+		\shadowchaser{}=75,
+		\wardais{}=50,
+		\darkchariot{}=115,
+		\chimera{} (\legendarybeastsinitials{})=165,
+		\wastelandbehemoth{} (\legendarybeastsinitials{})=375,
+	},
+	modelrulesdef={%
+		\modelruledef{\deedsnotwords{}}{\ruletype{\attackattribute{}}\deedsnotwordsdef{}}%
+	},	
+	optionalmodelrulesdef={%
+		\modelruledef{\jarl{}}{\ruletype{\universal}{\jarldef{}}}%
+		\modelruledef{\longshipraid{}}{\ruletype{\universal}{\longshipraiddef{}}}%
+	},
+} % END UNIT ENTRY
+
+

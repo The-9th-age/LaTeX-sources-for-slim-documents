@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\berserkers{},
+	fluff=\berserkersfluff{},
+	logo=special,
+	cost=150,
+	unitsize=8,
+	maxunitsize=25,
+	costpermodel=16,
+    maxunitsperarmy=3,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\battlefever{},\lighttroops{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\textbf{\berserkersbearpelt{}}, \shield{}},
+	offensename=\berserker{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+	},
+	options={%
+		\onechoiceonlyACO{%
+			\pw{}=3\permodel{},
+			\spear{}=2\permodel{},
+			\gw{}=4\permodel{},
+		},
+	},
+	modelrulesdef={%
+		\modelruledef{\berserkersbearpelt}{\ruletype{\armour}{\berserkersbearpeltdef}}
+	},
+} % END UNIT ENTRY

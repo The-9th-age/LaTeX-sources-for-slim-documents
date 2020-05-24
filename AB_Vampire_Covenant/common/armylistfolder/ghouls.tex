@@ -1,0 +1,42 @@
+
+{\renewcommand{\labels@mountsoptions}{\bloodtiestitle{\strigoi{}}}
+\unitentry{%
+	name=\ghouls{},
+	logo=core,
+	cost=130,
+	unitsize=10,
+	maxunitsize=40,
+	costpermodel=17,
+	scoring=yes,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	global@Rsr=D6+4,
+	globalrules={\undead{},\ashestoashes{},\scoring{},\textbf{\firstraised{}},\fearless{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename=\ghoul{},
+	offense@At=2,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\poisonattacks{},\unholyappetite{}},
+	commandgroup={%
+		\champion{}=20,
+	},
+	modelrulesdef={%
+		\modelruledef{\firstraised}{\ruletype{\universalrule}\firstraiseddef}
+	},
+	mounts={%
+		\vanguard{}\refsymbol{} (\NOTESTzerotoXmodelsperunit{35})=2\permodel{},
+		\refsymbolbis{}\ghoulsvanguardnote{}=\void{3},
+	},
+} % END UNIT ENTRY
+} % END of renewcommand

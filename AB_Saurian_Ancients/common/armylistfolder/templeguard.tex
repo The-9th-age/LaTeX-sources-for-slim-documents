@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\templeguard{},
+	logo=special,
+	cost=365,
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=32,
+	scoring=yes,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\coldblooded{},\fearless{},\scoring{},\bodyguard{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=2,
+	defensearmour={\la{},\shield{}},
+	offensename=\templeguard{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={\bornpredator{}},
+	offenseweapons={\textbf{\cobaltclub{}}},
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+		\standardbearer{}=20,
+		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	modelrulesdef={%
+		\modelruledef{\cobaltclub}{\ruletype{\closecombatweapon}\cobaltclubdef}%
+	},
+} % END UNIT ENTRY

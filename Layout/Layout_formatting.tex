@@ -27,6 +27,10 @@
 
 %%% Colours and text formatting %%%
 
+\definecolor{brandblue}{RGB}{37,76,115}%{40,70,120}
+\definecolor{brandgold}{RGB}{217,166,51}%{255,200,90}
+\definecolor{brandred}{RGB}{200,40,30}
+
 \newcommand{\greycolor}{black!50}
 \newcommand{\lightgreycolor}{black!5}
 \newcommand{\greytextcolor}{\textcolor{\greycolor}}
@@ -46,8 +50,8 @@
 \newcommand{\predotfill}{\penalty0\hbox{}\nobreak} % avoiding a cost being printed at the beginning of a new line => it goes to the end of the line instead
 
 \newcommand{\boosted}[1]{\textbf{\textcolor{blue}{$\{$#1$\}$}}}
-\newcommand{\base}[1]{\textcolor{red}{\hspace*{-0.25ex}\leftspecialbracket{}#1\rightspecialbracket{}}}
-\newcommand{\specialboosted}[1]{\textbf{\textcolor{olive}{\hspace*{-0.25ex}\leftspecialbracket{}\hspace*{-0.4ex}\leftspecialbracket{}#1\rightspecialbracket{}\hspace*{-0.4ex}\rightspecialbracket{}}}}
+\newcommand{\base}[1]{\textcolor{red}{\leftspecialbracket{}#1\rightspecialbracket{}}}
+\newcommand{\specialboosted}[1]{\textbf{\textcolor{olive}{\leftspecialbracket{}\hspace*{-0.4ex}\leftspecialbracket{}#1\rightspecialbracket{}\hspace*{-0.4ex}\rightspecialbracket{}}}}
 
 \newcommand{\cboosted}[1]{\textcolor{blue}{#1}}
 \newcommand{\cbase}[1]{\textcolor{red}{#1}}
@@ -69,6 +73,7 @@
 
 \newcommand{\starsymbol}{$\star$}
 \newcommand{\refsymbol}{*}
+\newcommand{\refsymbolbis}{*}
 \DeclareSIUnit[number-unit-product = {}]{\inch}{″}
 \DeclareSIUnit[number-unit-product = {}]{\foot}{′}
 \newcommand{\plusone}{+1} % still used?

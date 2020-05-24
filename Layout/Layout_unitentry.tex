@@ -21,6 +21,7 @@
 \define@key{unit}{basesize}{\def\unit@basesize{#1}}
 \define@key{unit}{scoring}{\def\unit@scoring{#1}}
 \define@key{unit}{categorynote}{\def\unit@categorynote{#1}}
+\define@key{unit}{fluff}{\def\unit@fluff{#1}}
 
 \define@key{unit}{global@Ad}{\def\unit@global@Ad{#1}}
 \define@key{unit}{global@Adfly}{\def\unit@global@Adfly{#1}}
@@ -95,11 +96,56 @@
 }
 
 
+%%% Length definition for the category note
+
+\newlength{\categorynoteheight}%
+
+
+%%% Toggle for two cells for Rsr
+
+\newtoggle{twocellsRsr}
+\togglefalse{twocellsRsr}
+	
+
+%%% Fluff box definition %%%
+
+\newtoggle{insideunitentry}
+\togglefalse{insideunitentry}
+
+\newcommand{\fluffbox}[1]{%
+	\iftoggle{insideunitentry}{%
+		\vspace*{-2pt}\hspace*{3pt}%
+		\begin{minipage}{\textwidth-6pt}%
+			\itshape%
+			#1%
+		\end{minipage}%
+		\vspace*{6pt}\par%
+	}{%
+		\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
+		\vspace*{5pt}\hspace*{5pt}%
+		\fboxsep5pt
+		\colorbox{\lightgreycolor}{%
+			\begin{minipage}{\textwidth-20pt}%
+				\itshape%
+				#1%
+			\end{minipage}%
+		}%
+		\vspace*{5pt}\par%
+		\ifdefined\thisisanarmybook%
+			%
+		\else%
+			\def\@minipagerestore{}%
+		\fi%
+	}%
+}
+
+\newcommand{\fluffref}[1]{\vspace*{3pt}\newline\hspace*{0.5\textwidth}\begin{minipage}{0.5\textwidth}\begin{flushright}\textnormal{---#1}\end{flushright}\end{minipage}}
+
 %%% Command to add a new unit definition %%%
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, scoring=, categorynote=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
+		name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, scoring=, categorynote=, fluff=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
 	}%
 	\setkeys{unit}%
 }
@@ -146,6 +192,7 @@
 %%% The Command %%%
 
 \newcommand{\unitentry}[1]{%
+\toggletrue{insideunitentry}
 \def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
 \defunit{#1}%
 %
@@ -272,16 +319,37 @@
 %
 % Category note and optional logo
 \expandafter\ifblank\expandafter{\unit@optionallogo}{% no logo
-\expandafter\ifblank\expandafter{\unit@categorynote}{}{%
-\vspace*{-4pt}\textit{\unit@categorynote}\par%
-\vspace*{-10pt}\rule{\textwidth}{0.5pt}\par%
-}%
+	\expandafter\ifblank\expandafter{\unit@categorynote}{}{%
+		\vspace*{-4pt}\unit@categorynote{}\par%
+		\vspace*{-10pt}\rule{\textwidth}{0.5pt}\par%
+	}%
 }{% with logo
-\vspace*{-7pt}\hspace*{-3pt}\begin{tabular}{@{}m{0.06\textwidth}@{}m{0.9\textwidth}@{}}%
-\includegraphics[width=0.06\textwidth]{{logo_\unit@optionallogo}.png}&%
-\textit{\unit@categorynote}\tabularnewline%
-\end{tabular}\par%
-\vspace*{-10pt}\rule{\textwidth}{0.5pt}\par%
+	% Check if the category note has more than 2 lines.
+	\setbox0=\vbox{\begin{minipage}{0.94\textwidth}\unit@categorynote{}\end{minipage}}%
+	\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+	\ifdim\categorynoteheight>25pt\relax
+		\vspace*{-1pt}%
+	\else
+		\vspace*{-7pt}%
+	\fi
+	\begin{minipage}{0.06\textwidth}%
+		\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+	\end{minipage}%
+	\begin{minipage}{0.94\textwidth}%
+		\unit@categorynote{}%
+	\end{minipage}\par%
+	\ifdim\categorynoteheight>25pt\relax
+		\vspace*{-2pt}%
+	\else
+		\vspace*{-6pt}%
+	\fi
+	\rule{\textwidth}{0.5pt}\par%
+}%
+%
+% Fluff
+\expandafter\ifblank\expandafter{\unit@fluff}{}{%
+	\fluffbox{\unit@fluff}%
+	\vspace{-10pt}\rule{\textwidth}{0.5pt}\par%
 }%
 %%%%%%%%%%%%%%%%%%%%%%
 % Characteristics and rules
@@ -294,8 +362,15 @@
 {\ChLab{\AdvanceRateInitials}}&%
 {\ChLab{\MarchRateInitials}}&%
 {\ChLab{\DisciplineInitials}}&%
-\expandafter\ifblank\expandafter{\unit@global@Rsr}{}{{\ChLab{\resurrectedInitials}}}&%
-&%
+\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
+	&&%
+}{%
+	\iftoggle{twocellsRsr}{%
+		\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChLab{\resurrectedInitials}}&%
+	}{%
+		\ChLab{\resurrectedInitials}&&%
+	}%
+}%
 \ChLab{\ModelRules}\tabularnewline%
 \expandafter\ifblank\expandafter{\unit@global@Adfly}{}{%
 \raggedleft\setlength{\parskip}{0pt}%
@@ -314,8 +389,15 @@
 \expandafter\ifblank\expandafter{\unit@global@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Mafly}}}%
 &%
 \expandafter\ifblank\expandafter{\unit@global@Di}{-}{\ChVal{\unit@global@Di}}&%
-\expandafter\ifblank\expandafter{\unit@global@Rsr}{}{\ChVal{\unit@global@Rsr}}&%
-&%
+\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
+	&&%
+}{%
+	\iftoggle{twocellsRsr}{%
+		\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@global@Rsr}}&%
+	}{%
+		\ChVal{\unit@global@Rsr}&&%
+	}%
+}%
 \strut\expandafter\ifblank\expandafter{\unit@globalrules}{}{\alphaorderlist{\unit@globalrules}}%
 \tabularnewline%
 \end{tabular}%
@@ -637,4 +719,5 @@
 \else%
 \def\@minipagerestore{}%
 \fi%
+\togglefalse{insideunitentry}
 }% END newcommand unitentry

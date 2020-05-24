@@ -1,0 +1,51 @@
+%Language is defined here
+%\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+\def\thisbookhasacover{../Suppl_AB_Asklanders/pics/asklanders_cover_pic_compressed.jpg}% remove "_compressed" if you want an uncompressed cover picture
+\def\addbooktitletocover{\AA{}SKLANDERS}% full caps, use \titlesmallcaps{XXX} for link words
+%\def\uncompressedcover % uncomment if you want an uncompressed background for the cover
+\def\thisisasupplementarmy{Warriors of the Dark Gods}
+
+% Preamble
+\input{../Layout/Layout.tex}
+\input{common/layout.tex}
+\input{language_specific/\languagetag/dictionnary_armylist.tex}
+\input{language_specific/\languagetag/dictionnary_fluff.tex}
+\input{language_specific/\languagetag/dictionnary_modelrules.tex}
+\input{language_specific/\languagetag/dictionnary_others.tex}
+\input{language_specific/\languagetag/dictionnary_specialequipment.tex}
+\input{common/toc.tex}
+\input{common/footer.tex}
+
+\newcommand{\booktitle}{\AA{}sklanders}
+\newcommand{\preversion}{\nth{2} Edition, version~}
+\newcommand{\version}{2.0}
+%\newcommand\releasedate{June 1, 2019} % Comment if you want to use today's date in your default language
+%\newcommand{\translationversion}{PROOFREADING VERSION} % Translation version, or anything related to version
+\newcommand{\booklogo}{pics/logo_big_ASK.png}
+\def\bookprefix{ASK}
+\hypersetup{pdftitle={T9A -- \booktitle{} -- \version}}
+
+\begin{document}
+
+% all main sections are in specific files
+\input{../Layout/Titlepage.tex}
+\fluffbox{\fluffone}
+\additionalspacebeforemaintitle{}
+\input{common/modelrules.tex}
+\fluffbox{\flufftwo}
+\additionalspacebeforemaintitle{}
+\input{common/hereditaryspell.tex}
+\newpage
+\input{common/specialequipment.tex}
+\fluffbox{\fluffthree}
+\additionalspacebeforemaintitle{}
+\input{common/armyorg.tex}
+\input{common/armylist.tex}
+\newpage
+\input{common/qrs.tex}
+%\newpage
+%\input{language_specific/\languagetag/changelog.tex}
+
+\end{document}

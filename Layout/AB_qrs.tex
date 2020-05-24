@@ -40,10 +40,17 @@
 	&%	
 	{\ChLab{\DisciplineInitials}}&%
 	\expandafter\ifblank\expandafter{\rowglobalDi}{-}{\ChVal{\rowglobalDi}}&%	
-	\expandafter\ifblank\expandafter{\rowglobalRsr}{}{{\ChLab{\resurrectedInitials}}}&%
-	\expandafter\ifblank\expandafter{\rowglobalRsr}{}{\ChVal{\rowglobalRsr}}&%
-	\multicolumn{2}{c}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}&%
-	&%
+	\expandafter\ifblank\expandafter{\rowglobalRsr}{%
+			&&\multicolumn{2}{c}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+	}{%
+		\iftoggle{twocellsRsr}{%
+				{\ChLab{\resurrectedInitials}}&%
+				\multicolumn{3}{@{}P{0.12\textwidth}@{}}{\hspace*{8.4pt}{\ChVal{\rowglobalRsr}}\hspace*{\fill}\strut\includegraphics[height=5pt]{logo_scoring.png}\strut\hspace*{4pt}\strut}%
+		}{%
+			{\ChLab{\resurrectedInitials}}&{\ChVal{\rowglobalRsr}}&%
+		}%
+}%
+	&&%
 	\strut\expandafter\ifblank\expandafter{\rowglobalrules}{}{\alphaorderlist{\rowglobalrules}}%	
 	\tabularnewline%
 	%
