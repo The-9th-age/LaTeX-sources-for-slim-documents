@@ -146,26 +146,26 @@
 \newcommand{\giftsofdarkgodsnote}{\textbf{Gifts of the Dark Gods}. Each Gift is One of a Kind.}
 
 \newcommand{\daemonicwings}{Daemonic Wings}
+\newcommand{\daemonicwingsrestriction}{Models on foot only}
 \newcommand{\daemonicwingsrule}{%
-\itemrestriction{Models on foot only.}%
-The bearer gains \textbf{\fly{8}{16}}, \textbf{\lighttroops{}}, and \textbf{\swiftstride{}}.%
+	The bearer gains \textbf{\fly{8}{16}}, \textbf{\lighttroops{}}, and \textbf{\swiftstride{}}.%
 }
 \newcommand{\entropicaura}{Entropic Aura}
+\newcommand{\entropicaurarestriction}{Standard and Large models only}
 \newcommand{\entropicaurarule}{%
-\itemrestriction{Standard and Large models only.}%
-Weapon Enchantments and Armour Enchantments carried by the bearer, models in the bearer's unit, and models in units that are in base contact with the bearer cannot be used.\columnbreak
+	Weapon Enchantments and Armour Enchantments carried by the bearer, models in the bearer's unit, and models in units that are in base contact with the bearer cannot be used.\columnbreak
 }
 \newcommand{\luckofthedarkgods}{Luck of the Dark Gods}
 \newcommand{\luckofthedarkgodsrule}{%
-The bearer's model gains \textbf{\aegis{+1, max. 4+}}.%
+	The bearer's model gains \textbf{\aegis{+1, max. 4+}}.%
 }
 \newcommand{\idolofspite}{Idol of Spite}
 \newcommand{\idolofspiterule}{%
-One use only. May be activated at the start of a Round of Combat. For the duration of that Round of Combat, the bearer gains +1 Attack Value, +1 Strength, and +1 Armour Penetration.%
+	One use only. May be activated at the start of a Round of Combat. For the duration of that Round of Combat, the bearer gains +1 Attack Value, +1 Strength, and +1 Armour Penetration.%
 }
 \newcommand{\darkprelate}{Dark Prelate}
 \newcommand{\darkprelaterule}{%
-	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells, Power Level (4/8), with type \castersunit{}. \spellformat{\occultismspelltwo}{} is automatically cast with the amplified version (without performing The Sacrifice).%
+	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells, Power Level (4/8), with type \castersunit{}. \spellformat{\occultismspelltwo}{} is \removedrule{automatically }cast \newrule{as} the amplified version \removedrule{(}without performing The Sacrifice\removedrule{)}.%
 }
 
 % Doom Lord
@@ -262,16 +262,18 @@ The model's maximum number of Supporting\newline Attacks is \textbf{set} to 3.%
 
 \newcommand{\damnation}{Damnation}
 \newcommand{\damnationdef}{%
-The unit cannot be joined by Characters, and it may never have more ranks than files. When the unit fails a Break Test, it does not Flee. Instead replace each model of the unit with a \wretchedone{} model after step 8 of the Round of Combat Sequence (after taking Panic Tests):
+The unit cannot be joined by \newrule{any} Characters, and it may never have more ranks than files. When the unit fails a Break Test, it does not \newrule{perform the extra Close Combat Attacks from Path of the Exiled}. Instead replace each model of the unit with a \wretchedone{} model after step 8 of the Round of Combat Sequence (after taking Panic Tests):
 \begin{itemize}
 \item The unit with \damnation{} is considered destroyed and its models are considered to be removed as casualties.
 \item Each \wretchedone{} model is placed in the same position and facing the same direction as the replaced model, even if the replaced model was in base contact with an enemy unit. In this case, the \wretchedone{} model is placed in base contact with the enemy unit too.
 \item The \wretchedone{} models form a new unit.
 \item The \wretchedone{} unit follows the rules for Summoned Units, except that it ignores the Unit Spacing rule when placed on the Battlefield.
+\item \newrule{The Wretched One unit cannot perform any Combat Reforms during that Round of Combat, however the enemy units can do so as normal.}
+\item \newrule{Note that the following Round of Combat is not considered the First Round of Combat for the Wretched One unit nor the enemy units it is Engaged with.}
 \end{itemize}%
 }
 
-\newcommand{\replacewithdamnation}{Lose \pathexiled{} and\newline gain \textbf{\damnation{}}}
+\newcommand{\replacewithdamnation}{\removedrule{Lose \pathexiled{} and\newline gain }\textbf{\damnation{}}}
 
 % Battleshrine
 
@@ -335,7 +337,7 @@ The model gains \textbf{\wizardapprentice}. Instead of selecting spells as norma
 \newcommand{\twoominousgateways}{Two \textbf{Ominous Gateways}}
 \newcommand{\ominousgatewaydef}{%
 \zerotoXchoiceperarmy{2}.\newline%
-\newrule{At the start of} step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield with a Gateway Marker. This must be outside the opponent's Deployment Zone.\removedrule{ If both players have Ominous Gateways, the player that picked their Deployment Zone marks their Ominous Gateways first.}%
+At the start of step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield with a Gateway Marker. This must be outside the opponent's Deployment Zone.%
 }
 
 \newcommand{\gateway}{Gateway}

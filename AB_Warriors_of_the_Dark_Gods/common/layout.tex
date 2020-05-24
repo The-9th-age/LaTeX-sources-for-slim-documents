@@ -97,43 +97,36 @@
 
 %%%% Gifts of the Dark Gods %%%%
 
-\newcommand{\giftsofthedarkgodslistentry}[3]{%
-\DTLnewrow{giftslist}%
-\DTLnewdbentry{giftslist}{name}{#1}%
-\DTLnewdbentry{giftslist}{cost}{#2}%
-\DTLnewdbentry{giftslist}{ruletext}{#3}%
-\pdfstringdef\textwithoutformatting{#1}%
-\pdfsubstitute\textwithoutformatting{'}{}%
-\pdfsubstitute\textwithoutformatting{ }{}%
-\dolanguagespecificsubstitute{}%
-\def\DTLentrycommand{\DTLnewdbentry{giftslist}{sortlabel}}%
-\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
-\pdfstringdef\costwithoutformatting{#2}%
-\pdfsubstitute\costwithoutformatting{ }{}%
-\pdfsubstitute\costwithoutformatting{\free}{0}%
-\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
-\substitute\costwithoutformatting{\string\376}{}%
-\substitute\costwithoutformatting{\string\377}{}%
-\substitute\costwithoutformatting{\string\000}{}%
-\def\DTLentrycommand{\DTLnewdbentry{giftslist}{costsortlabel}}%
-\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
-}
-
+% Use the following with \itementry
 \newcommand{\giftsofthedarkgodslist}[2]{%
-\DTLifdbexists{giftslist}{\DTLcleardb{giftslist}}{\DTLnewdb{giftslist}}% Create new/discard old list
+	\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
 #2%
-\DTLsort*{costsortlabel=descending,sortlabel}{giftslist}% Sort list
+	\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
 \begin{innerframenopts}[\labels@optionalmodelrulesdef]%
 \begin{center}#1\end{center}%
 \vspace*{8pt}%
 \raggedcolumns%
 \begin{multicols}{2}\startpricelistNSP%
-\DTLforeach*{giftslist}{\ruletext=ruletext,\nameoftherule=name,\cost=cost}{% Print back the ordered table
-\pricelistitem{\nameoftherule}{\cost}%
-\ruletext{}%
+\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isenchantment=enchantment}{% Print back the ordered table
+\pricelistitem{\nameoftheitem}{\cost}{% Check if we need \itemrestriction
+		\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
+		\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
+		\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
+		\ifboolexpr{togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction}}{%
+			\itemrestriction{%
+				\iftoggle{isdominant}{\dominant{}. }{}%
+				\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+				\iftoggle{hasrestriction}{\restriction{}.}{}%			
+			}%
+		}{}%
+		\expandafter\ifblank\expandafter{\isenchantment}{}{%
+			\enchantmentrestriction{\isenchantment{}}%
+		}%
+		\ruletext{}%
+		}%
 }%
 \endpricelistNSP\end{multicols}%
-\DTLcleardb{giftslist}%
+\DTLcleardb{sortedpricelist}%
 \end{innerframenopts}%
 }
 

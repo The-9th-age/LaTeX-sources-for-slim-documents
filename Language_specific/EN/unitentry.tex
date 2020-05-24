@@ -56,8 +56,19 @@
 \newcommand{\zerotoXunitsperarmy}[1]{0--#1 \isitoneornot{#1}{Units}{Units}/Army}
 \newcommand{\zerotoXmodelsperarmy}[1]{0--#1 \isitoneornot{#1}{Models}{Models}/Army}
 \newcommand{\zerotoXmountsperarmy}[1]{0--#1 \isitoneornot{#1}{Mounts}{Mounts}/Army}
-
 \newcommand{\zerotoXmodelsperunit}[1]{0--#1 \isitoneornot{#1}{Models}{Models}/Unit}
+
+% No automatic test for plural or singular -- plural
+\newcommand{\NOTESTzerotoXunitsperarmy}[1]{0--#1 Units/Army}
+\newcommand{\NOTESTzerotoXmodelsperarmy}[1]{0--#1 Models/Army}
+\newcommand{\NOTESTzerotoXmountsperarmy}[1]{0--#1 Mounts/Army}
+\newcommand{\NOTESTzerotoXmodelsperunit}[1]{0--#1 Models/Unit}
+
+% No automatic test for plural or singular -- singular
+\newcommand{\zerotooneunitsperarmy}{0--1 Units/Army}
+\newcommand{\zerotoonemodelsperarmy}{0--1 Models/Army}
+\newcommand{\zerotoonemountsperarmy}{0--1 Mounts/Army}
+\newcommand{\zerotoonemodelsperunit}{0--1 Models/Unit}
 
 \newcommand{\zerotoXchoice}[1]{0--#1}
 \newcommand{\zerotoXchoiceperarmy}[1]{0--#1 per Army}% deprecated

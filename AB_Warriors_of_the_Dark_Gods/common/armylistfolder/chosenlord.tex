@@ -12,7 +12,7 @@
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=9,
-	globalrules={\pathfavoured{},\newrule{\fearless{}}},
+	globalrules={\pathfavoured{},\fearless{}},
 	defense@HP=3,
 	defense@Df=7,
 	defense@Re=5,
@@ -26,19 +26,19 @@
 	offense@AP=2,
 	offenserules={},
 	options={%
-		\newrule{\trophyrack{}}=\newrule{25},
+		\trophyrack{}=25,
 		\specialequipmentallowance{}=\upto{}150,
 		\allowanceifgeneral{}=\upto{}200,
 		\maytakegifts{}=\nolimit{},
 		\replaceshieldwithspikedshield{}=15,
 		\mustchoosefavour{%
-            \envy{}=\newrule{25},
+            \envy{}=25,
             \gluttony{}=25,
-            \greed{}=\newrule{30},
+            \greed{}=30,
             \lust{}=\free{},
             \pride{}=40,
             \sloth{}=45,
-            \wrath{}=\newrule{20},
+            \wrath{}=20,
 		},
 		\onechoiceonlyACO{%
             \pw{}=10,
@@ -50,19 +50,19 @@
 	mounts={%
           \blacksteed{}=120,
           \wardais{}=60,
-          \scythedskywheel{}=\newrule{120},
+          \scythedskywheel{}=120,
           \darkchariot{}=130,
-          \karkadan{}=\newrule{95},
+          \karkadan{}=95,
           \chimera{} (\legendarybeastsinitials{})=170,
-          \wastelanddragon{} (\legendarybeastsinitials{}) \only{\general}=\newrule{390},
+          \wastelanddragon{} (\legendarybeastsinitials{}) \only{\general}=390,
 	},
 	endtext={%
 		\giftsofthedarkgodslist{\giftsofdarkgodsnote}{%
-			\giftsofthedarkgodslistentry{\daemonicwings}{\newrule{90}}{\daemonicwingsrule}
-			\giftsofthedarkgodslistentry{\entropicaura}{60}{\entropicaurarule}
-			\giftsofthedarkgodslistentry{\luckofthedarkgods}{60}{\luckofthedarkgodsrule}
-			\giftsofthedarkgodslistentry{\idolofspite}{60}{\idolofspiterule}
-			\giftsofthedarkgodslistentry{\darkprelate}{60}{\darkprelaterule}
+			\input{common/giftsofthedarkgodsfolder/daemonicwings.tex}
+			\input{common/giftsofthedarkgodsfolder/entropicaura.tex}
+			\input{common/giftsofthedarkgodsfolder/luckofthedarkgods.tex}
+			\input{common/giftsofthedarkgodsfolder/idolofspite.tex}
+			\input{common/giftsofthedarkgodsfolder/darkprelate.tex}
 		}
 	},
 } % END UNIT ENTRY

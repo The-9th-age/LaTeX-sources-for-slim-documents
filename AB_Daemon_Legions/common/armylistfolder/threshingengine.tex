@@ -44,11 +44,11 @@
 	explicitoptions={%
 		\explonechoiceonly{%
 			\setexploption{\fly{9}{9} \wordand{} \lighttroops{} (\zerotoXunitsperarmy{2})}{30}
-			\setexploption{\textbf{\hordethresher{}} (\zerotoXunitsperarmy{3})}{\newrule{75}}
-			\setexploption{\textbf{\legionthresher{}} (\zerotoXunitsperarmy{2})}{\newrule{140}}
+			\setexploption{\textbf{\hordethresher{}} (\zerotoXunitsperarmy{3})}{75}
+			\setexploption{\textbf{\legionthresher{}} (\zerotoXunitsperarmy{2})}{140}
 		}
 		\manifestationonechoice{%
-			\addsortedexploption{prename=greed,hypertag=diviningsnout,name=\diviningsnout{},cost=\newrule{15}}
+			\addsortedexploption{prename=greed,hypertag=diviningsnout,name=\diviningsnout{},cost=15}
 			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},cost=35}
 			\addsortedexploption{prename=pride,hypertag=hornsofhubris,name=\hornsofhubris{},cost=20}
 			\addsortedexploption{prename=lust,hypertag=roaminghands,name=\roaminghands{},cost=40}
@@ -58,6 +58,6 @@
 	optionalmodelrulesdef={%
 		\modelruledef{\hordethresher}{\ruletype{\universalrule}\hordethresherdef}
 		\modelruledef{\legionthresher}{\ruletype{\universalrule}\legionthresherdef}
-		\modelruledef{\newrule{\void{ZZZ}\colossalstature}}{\newrule{\ruletype{\universalrule}\colossalstaturedef}}
+		\modelruledef{\void{ZZZ}\colossalstature}{\ruletype{\universalrule}\colossalstaturedef}
 	},
 } % END UNIT ENTRY
