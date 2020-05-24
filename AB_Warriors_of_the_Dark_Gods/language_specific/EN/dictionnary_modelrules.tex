@@ -24,7 +24,7 @@
 \newcommand{\battlefever}{Battle Fever}
 \newcommand{\unburnt}{Unburnt}
 \newcommand{\warbandstandard}{Warband Standard}% deprecated
-\newcommand{\trophyrack}{\newrule{Trophy Rack}}
+\newcommand{\trophyrack}{Trophy Rack}
 \newcommand{\hellforgedarmor}{Hell-Forged Armour}
 \newcommand{\spikedshield}{Spiked Shield}
 
@@ -33,7 +33,7 @@
 \newcommand{\favoursofthedarkgodsintro}{A Character with a Favour cannot join a unit that contains any models with a different Favour than the Character.}
 
 \newcommand{\envydef}{%
-The model gains \textbf{\swiftstride}. In addition, a Charging model part with this Attack Attribute must reroll any natural to-hit rolls of \result{1}. Units with \newrule{all} of their models with this Favour must reroll any natural rolls of \result{1} when rolling for Charge Range.%
+The model gains \textbf{\swiftstride}. In addition, a Charging model part with this Attack Attribute must reroll any natural to-hit rolls of \result{1}. Units with all of their models with this Favour must reroll any natural rolls of \result{1} when rolling for Charge Range.%
 }
 
 \newcommand{\gluttonydef}{%
@@ -46,7 +46,12 @@ The bearer gains \gw{}, \halberd{}, \pw{}, and \textbf{\weaponmaster}. A Charact
 }
 
 \newcommand{\lustdef}{%
-The model gains \textbf{\feignedflight{}} and \textbf{\strider{}}. Units with more than half of their models with this Favour may declare Flee as a Charge Reaction even if they have Fearless. The Rally Test after voluntarily declaring Flee as a Charge Reaction is subject to Minimised Roll.%
+The model gains \textbf{\strider{}}. \newrule{In addition, u}nits with more than half of their models with this Favour \newrule{are subject to the following rules:}%
+\begin{itemize}
+\item \newrule{They gain \textbf{\feignedflight{}}.}
+\item \newrule{They} may declare Flee as a Charge Reaction even if they have Fearless.
+\item \newrule{Their} Rally Test after voluntarily declaring Flee as a Charge Reaction is subject to Minimised Roll.
+\end{itemize}%
 }
 
 \newcommand{\pridedef}{%
@@ -54,8 +59,8 @@ Discipline Tests taken by units with at least one model with this Favour are sub
 }
 
 \newcommand{\slothdef}{%
-Models with this Favour gain +1 Resilience. If a model with this Favour declares a Charge against an enemy unit that is more than \distance{10}\newrule{\refsymbol{}} away or performs \newrule{an Advance or} March Move of more than \distance{10}\newrule{\refsymbol{}}, this effect is lost until the start of the Melee Phase in the next Player Turn.\newline%
-\newrule{\refsymbol{} These distances are decreased to \distance{6} if the model is Gigantic.}%
+Models with this Favour gain +1 Resilience. If a model with this Favour declares a Charge against an enemy unit that is more than \distance{10}\refsymbol{} away or performs an Advance or March Move of more than \distance{10}\refsymbol{}, this effect is lost until the start of the Melee Phase in the next Player Turn.\newline%
+\refsymbol{} These distances are decreased to \distance{6} if the model is Gigantic.%
 }
 
 \newcommand{\wrathdef}{%
@@ -63,10 +68,10 @@ The model part gains \textbf{\lightningreflexes} and +1 Agility. Close Combat At
 }
 
 \newcommand{\pathfavoureddef}{%
-\newrule{Units with more than half of their models with Path of the Favoured must reroll failed Break Tests. In addition, m}odel parts with Path of the Favoured upgraded to a Champion additionally gain +1 Health Point to a maximum of 3, and their Discipline is \textbf{set} to 9.%
+Units with more than half of their models with Path of the Favoured must reroll failed Break Tests. In addition, model parts with Path of the Favoured upgraded to a Champion additionally gain +1 Health Point to a maximum of 3, and their Discipline is \textbf{set} to 9.%
 }
 \newcommand{\pathexileddef}{%
-\newrule{Units with more than half of their models with Path of the Exiled must reroll failed Break Tests.} At the end of step 7 of a Round of Combat (after taking Break Tests), models with Path of the Exiled in a unit that failed a Break Test simultaneously perform Close Combat Attacks (ignoring the rules for Initiative Order, but otherwise following the normal rules such as Supporting Attacks and Allocating Attacks). Afterwards, they are removed as casualties. Models with Path of the Exiled cannot join or be joined by models with \pathfavoured{}.%
+Units with more than half of their models with Path of the Exiled must reroll failed Break Tests. At the end of step 7 of a Round of Combat (after taking Break Tests), models with Path of the Exiled in a unit that failed a Break Test simultaneously perform Close Combat Attacks (ignoring the rules for Initiative Order, but otherwise following the normal rules such as Supporting Attacks and Allocating Attacks). Afterwards, they are removed as casualties. Models with Path of the Exiled cannot join or be joined by models with \pathfavoured{}.%
 }
 \newcommand{\irredeemabledef}{%
 The model cannot make Stomp Attacks and, when in the second rank and not in base contact with any enemy models, can make \grindattacks{} across models in the first rank directly in front of it. When a model with \irredeemable{} is killed by a Melee Attack, remove it as a casualty only at the end of Initiative Step 0. A unit with at least one model with \irredeemable{} may never have more ranks than files.%
@@ -86,7 +91,7 @@ Units with more than half of their models with \battlefever{} must reroll failed
 Flaming Attacks made against the model must reroll successful to-wound rolls. In addition, the model considers all units consisting entirely of models without Unburnt as Insignificant.%
 }
 \newcommand{\trophyrackdef}{%
-\newrule{T}he bearer's unit may reroll failed Discipline Tests, unless Fleeing\newrule{, and each time the bearer's model kills an enemy model in a Duel, the bearer's model gains a +1 Combat Score modifier for the rest of the game. In addition, the bearer may take a single Banner Enchantment (using its Special Item allowance as normal)}.%
+The bearer's unit may reroll failed Discipline Tests, unless Fleeing\newrule{. E}ach time \newrule{attacks made} the bearer's model kill an enemy model in a Duel, the bearer's model gains a +1 Combat Score modifier for the rest of the game \newrule{(this also applies to attacks made outside the Melee Phase)}. In addition, the bearer\newrule{'s model} may take a single Banner Enchantment (using \newrule{the bearer's} Special Item allowance as normal).%
 }
 \newcommand{\hellforgedarmordef}{%
 Follows the rules for \pa{} (can be enchanted as if it was \pa{}). The wearer's model gains \textbf{\aegis{} (5+, against Toxic Attacks)}.%
