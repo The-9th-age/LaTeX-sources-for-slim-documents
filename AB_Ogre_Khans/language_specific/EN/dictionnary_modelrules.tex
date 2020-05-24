@@ -1,0 +1,153 @@
+% Army Model Rule Names
+
+\newcommand{\scraplinglookout}{Scrapling Lookout}
+\newcommand{\mountainhide}{Mountain Hide}
+\newcommand{\sonsoftheavalanche}{Sons of the Avalanche}
+\newcommand{\ironfist}{Iron Fist}
+\newcommand{\braceofogrepistols}{Brace of Ogre Pistols}
+\newcommand{\ogrecrossbow}{Ogre Crossbow}
+\newcommand{\huntingspear}{Hunting Spear}
+\newcommand{\asinglebigname}{A single Big Name}
+
+% Army Model Rule Texts
+
+\newcommand{\scraplinglookoutdef}{%
+If a unit includes a \standardbearer{} or a \bsb{} with \scraplinglookout{}, there must be fewer than 3 \rnf{} models before hits can be distributed onto \characters{} with the same \type{} and \Height{} as the unit.
+}
+
+\newcommand{\mountainhidedef}{%
+When a model with \mountainhide{} suffers a wound from an attack with \multiplewounds{}, the number of wounds that it is multiplied into (due to \multiplewounds{}) is halved, rounding up.
+}
+
+\newcommand{\sonsoftheavalanchedef}{%
+The model part gains \impacthits{1}. If its unit has 2 or more Full Ranks, the model part gains \impacthits{2}. a character with \sonsoftheavalanche{} instead gains \impacthits{D3}, or \impacthits{D3+1} if its unit has 2 or more Full Ranks. In addition, the model is immune to the effects of \fear{} from enemy models.
+}
+
+\newcommand{\ironfistdef}{%
+The wielder gains +1 Armour and +1 Attack Value unless using another weapon. If the wielder is on foot, it also gains Parry.\newline
+This weapon cannot be enchanted with \weaponenchantment{} from the Common \specialequipment{} section.}
+
+\newcommand{\braceofogrepistolsdef}{%
+\range{24}, \shots{2}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}. Counts as \pw{} in Close Combat.
+}
+
+\newcommand{\ogrecrossbowdef}{%
+\range{30}, \shots{1}, \St{} 2 [5], \AP{} 1 [3], \textbf{\areaattack{1\timess{}5}}.
+}
+
+\newcommand{\huntingspeardef}{%
+\range{12}, \shots{1}, \St{} as user +1, \AP{} as user +1, \textbf{Quick to Fire}, \textbf{Multiple Wounds (D3, against Gigantic)}.
+}
+
+
+% Unit Specific Model Rules Names
+
+\newcommand{\loner}{Loner}
+\newcommand{\animalmaster}{Animal Master}
+\newcommand{\leaderofthepack}{Leader of the Pack}
+\newcommand{\battlescarred}{Battle-Scarred}
+\newcommand{\touchoffrost}{Touch of Frost}
+\newcommand{\itsatrap}{It's a Trap!}
+\newcommand{\handcannon}{Hand Cannon}
+\newcommand{\livingavalanche}{Living Avalanche}
+\newcommand{\freezingaura}{Freezing Aura}
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+\newcommand{\rage}{Rage}
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\backtowork}{Back to Work!}
+
+
+% Unit Specific Model Rules
+
+\newcommand{\lonerdef}{%
+A model on foot with Loner can only join units of Yetis and Sabretooth Tigers (ignore the Insignificant rule for joining units). If mounted, it cannot join any unit. A model with Loner cannot join a unit containing any other Characters, and Characters cannot join a unit containing a model with Loner.
+}
+
+\newcommand{\animalmasterdef}{%
+The model gains Commanding Presence, but only units of Sabertooth Tigers may benefit from it.
+}
+
+\newcommand{\leaderofthepackdef}{%
+The Mammoth Hunter changes its base size to 50\timess{}50\si{\milli\meter}. As long the model is part of a unit of Sabretooth Tigers, the unit (including the Mammoth Hunter) gains Swift Reform and Vanguard, and the Mammoth Hunter counts as being Standard Beast for the purposes of distributing hits.
+}
+
+\newcommand{\battlescarreddef}{%
+Each unit of \mercenaryveterans{} \textbf{must} be given two of the following upgrades listed below (written on the Army List). The model gains :
+\begin{itemize}
+\item \accurate{}
+\item \devastatingcharge{+1 Str, +1 AP}{}
+\item \lethalstrike{}
+\item \magicresistance{2}{}
+\item \pa{}
+\item \poisonattacks{}
+\item \swiftstride{}
+\item \vanguard{}
+\end{itemize}
+Each upgrade may only be taken by a single unit of \mercenaryveterans{} in your army.
+}
+
+\newcommand{\touchoffrostdef}{%
+Enemy units suffer \minuss{}1 Agility for each unit of Yetis May upgrade one model to a Champion in base contact with them.
+}
+
+\newcommand{\itsatrapdef}{%
+Each unit of Scrapling Trappers may place a Trap Counter:
+\begin{itemize}
+\item{right before the battle (during step 7 of the Deployment Phase Sequence), on a single Terrain Feature other than Open Terrain that the unit was deployed in or was in base contact with at any point during its Vanguard move, and}
+\item{once during each friendly Movement Phase, on a single Terrain Feature other than Open Terrain that the unit was in base contact with at any point during this phase after an Advance Move, March Move, or a Reform.}
+\end{itemize}
+If an enemy unit makes an Advance Move, March Move, Reform, Pivot, Charge Move, Failed Charge Move, Pursuit Move, or Flee Move inside or into base contact with a Terrain Feature with one or more Trap Counters, remove all Trap Counters in that particular Terrain Feature. Each model in the unit must take a Dangerous Terrain (1) Test (these tests are not considered to be caused by the Terrain Feature; any Dangerous Terrain Tests that would normally be caused by the Terrain Feature still need to be taken).
+}
+
+\newcommand{\handcannondef}{%
+\range{24}, \shots{D6}, \St{} 4, \AP{} 2, \textbf{Quick to Fire}.
+}
+
+\newcommand{\thundercannondef}{%
+This Shooting Weapon can be fired in two ways:%
+\begin{itemize}
+\item As a \textbf{\cannon{}} Artillery Weapon with \range{48}, \shots{1}, \St{} 5 [10], \AP{} 2 [10], \textbf{\areaattack{1\timess{}5}}, [\textbf{\multiplewounds{D3+1, \clippedwings{}}{}}].
+\item As an Artillery Weapon with \range{12}, \shots{2D6}, \St{} 5, \AP{} 4.
+\end{itemize}
+A Thunder Cannon that only Pivots (and moves no further) during its owner’s Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.
+}
+
+\newcommand{\scratapultdef}{%
+\textbf{\catapult{5\timess{}5}} with \range{12--48}, \shots{1}, \St{} 3, \AP{} 1, \textbf{Lethal Strike}.\newline
+A Scratapult that only Pivots (and moves no further) during its owner’s Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.
+}
+
+\newcommand{\livingavalanchedef}{%
+Impact Hits from the model gain +1 Strength and +1 Armour Penetration.
+}
+
+\newcommand{\replaceoxbowwonechoice}{\optionschoice{The Rider may replace its \ogrecrossbow{} with \onechoiceonlyNOC{}:}}
+\newcommand{\anyreplaceoxbowwonechoice}{Any Rider may replace its Ogre Crossbow with}
+
+\newcommand{\freezingauradef}{%
+The model can cast \textit{Chilling Howl} from Shamanism as a Bound Spell with Power Level (4/8).\newline
+Enemy units within 9” of one or more Frost Mammoths suffer \minuss{}3 Agility. The roll for Flee Distance of enemy units that Break from Combat while in base contact with one or more Frost Mammoths is subject to Minimised Roll.
+}
+
+\newcommand{\giantseegiantdodef}{%
+The model gains Sons of the Avalanche and counts as a Character for the purpose of Sons of the Avalanche.\newline
+The model is a Musician. The range of the Giant's March to the Beat, and to enemy units that are required to take a March Test due to the Slave Giant, are both extended to \distance{18}. 
+}
+
+\newcommand{\ragedef}{%
+Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers \minuss{}1 Attack Value.
+}
+
+\newcommand{\bigbrotherdef}{%
+The model's Health Points are \textbf{set} to 8, and its base size is changed to 75x100mm.\newline
+The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.
+}
+
+\newcommand{\giantclubdef}{%
+Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.
+}
+
+\newcommand{\backtoworkdef}{%
+The Scrapling Foreman is a Champion, except it does not benefit from First Among Equals. It gains Rally Around the Flag, but only Scraplings, Scratapults, and Scrapling Trappers may benefit from it.
+}

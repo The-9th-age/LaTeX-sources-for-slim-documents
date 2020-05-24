@@ -1,5 +1,43 @@
 
 \begin{titlepage}
+
+\ifdefined\thisbookhasacover
+	\ifdefined\uncompressedcover
+		\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{../Layout/pics/full_cover.jpg}};
+	\else
+		\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{../Layout/pics/full_cover_compressed.jpg}};	
+	\fi
+	\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt,below=76mm,blur shadow] at (current page.north){\includegraphics[width=150mm]{\thisbookhasacover}};
+	\ifdefined\languageisfrench% add other languages
+		\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_FR.png}};
+	\else
+		\ifdefined\languageisitalian
+			\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_IT.png}};
+		\else
+			\ifdefined\languageisspanish
+				\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_ES.png}};
+			\else
+				\ifdefined\languageisgerman
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
+				\else
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
+				\fi
+			\fi
+		\fi
+	\fi
+	\ifdefined\addbooktitletocover
+			\newcommand{\titlesmallcaps}[1]{{\fontsize{27}{32.4}\selectfont#1}}
+			\tikz[remember picture,overlay] \node[inner sep=0pt, above=3cm, font=\color{brandgold}\fulltitlefont\fontsize{40}{48}\selectfont] at (current page.south) {\addbooktitletocover};
+	\fi
+	\clearpage
+	\newpage
+	\thispagestyle{empty}
+	\null
+	\newpage
+	\thispagestyle{empty}
+\fi
+
+
 \begin{center}
 
 \ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
@@ -8,31 +46,30 @@
 
 \ifdefined\languageisfrench
 
-\begin{center}
 \includegraphics[height=3.3cm]{../Layout/pics/BRAND9AgeLogotype_FR.pdf}%
-\end{center}
 
 \else
 \ifdefined\languageisitalian
 
-\begin{center}
 \includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_IT.pdf}%
-\end{center}
 
 \else
 
 \ifdefined\languageisspanish
 
-\begin{center}
 \includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_ES.pdf}%
-\end{center}
 
 \else
 
-\begin{center}
-\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
-\end{center}
+\ifdefined\languageisgerman
 
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
+
+\else
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
+
+\fi
 \fi
 \fi
 \fi
@@ -52,28 +89,32 @@
 
 \fi
 
-{\titlefont\fontsize{40}{48}\selectfont
+{\fulltitlefont\fontsize{40}{48}\selectfont
 	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={Where you see one title, there are thousands of rats sneakily working in your back you don't.}}%
 		\booktitle%
 	\EndAccSupp{}%
+}
 \vspace{0.4cm}
 
 \ifdefined\thisisanarmybook
-\fontsize{12}{14.4}\selectfont \armybookname{}
+	\ifdefined\thisisasupplementarmy
+		\fontsize{12}{14.4}\selectfont \supplementarmybookname{\thisisasupplementarmy}
+	\else
+		\fontsize{12}{14.4}\selectfont \armybookname{}
+	\fi
+\else
+	\ifdefined\thisisasupplement
+		\fontsize{12}{14.4}\selectfont \supplementname{}
+	\fi
 \fi
 
-\ifdefined\thisisasupplement
-\fontsize{12}{14.4}\selectfont \supplementname{}
-\fi
-
-\fontsize{12}{14.4}\selectfont
+{\fontsize{12}{14.4}\selectfont
 	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
 	\ifdef{\preversion}{\preversion}{}\version{}%
-	\EndAccSupp{}%	
+	\EndAccSupp{} -- \ifdef{\releasedate}{\releasedate}{\today}
 
-\ifdef{\releasedate}{\releasedate}{\today}
-
-\ifdef{\translationversion}{{\fontsize{12}{14.4}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}}
+\ifdef{\translationversion}{{\fontsize{12}{14.4}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}
+}
 
 \ifdefined\thisisthepathsbook
 
@@ -162,7 +203,7 @@
 
 \begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
 \includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
-{\fontsize{10}{12}\selectfont \textcolor{black!50}{%
+{\fontsize{10}{12}\selectfont \greytextcolor{%
 \ifdefined\thisisthepathsbook%
 	\noindent\frontpagecreditswithoutblue%
 \else
@@ -171,9 +212,14 @@
 }}
 
 \vspace*{10pt}
-\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\license}}
+\noindent{\fontsize{10}{12}\selectfont \greytextcolor{\license}}
 \tabularnewline
 \end{tabular}
+
+\ifdefined\thisisasupplementarmy
+	{\fontsize{10}{12}\selectfont \greytextcolor{\supplementarmydisclaimer{}}}
+\fi
+
 
 \fi
 

@@ -1,0 +1,31 @@
+\unitnologo{%
+	name=\scraplingforeman{},
+	logo=core,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\insignificant{},\backtowork{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\foreman{},
+	offense@At=3,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons={\throwingweapons{} (5+)},
+	options={%
+		\weapononechoice{%
+			\halberd{}=4,
+			\gw=4,
+		},	
+	},
+	modelrulesdef={%
+		\modelruledef{\backtowork}{\ruletype{\universalrule}\backtoworkdef}
+	},
+} % END UNIT ENTRY

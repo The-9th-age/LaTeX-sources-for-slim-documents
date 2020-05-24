@@ -107,15 +107,19 @@
 \vspace*{8pt}%
 \raggedcolumns%
 \begin{multicols}{2}\startpricelistNSP%
-\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isenchantment=enchantment}{% Print back the ordered table
+\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isonfootonly=onfootonly,\iswizardsonly=wizardsonly,\isenchantment=enchantment}{% Print back the ordered table
 \pricelistitem{\nameoftheitem}{\cost}{% Check if we need \itemrestriction
 		\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
 		\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
 		\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
-		\ifboolexpr{togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction}}{%
+		\expandafter\ifblank\expandafter{\isonfootonly}{\togglefalse{isonfootonly}}{\toggletrue{isonfootonly}}%
+		\expandafter\ifblank\expandafter{\iswizardsonly}{\togglefalse{iswizardsonly}}{\toggletrue{iswizardsonly}}%
+		\ifboolexpr{togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction} or togl {iswizardsonly} or togl {isonfootonly}}{%
 			\itemrestriction{%
 				\iftoggle{isdominant}{\dominant{}. }{}%
 				\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+				\iftoggle{isonfootonly}{\modelsonfootonly{}. }{}%
+				\iftoggle{iswizardsonly}{\wizardsonly{}. }{}%
 				\iftoggle{hasrestriction}{\restriction{}.}{}%			
 			}%
 		}{}%

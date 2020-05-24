@@ -1,0 +1,57 @@
+
+\unitentry{%
+	name=\marshal{},
+	logo=character,
+	optionallogo=character_EoS,
+	categorynote=\charactermountnote{\sunfInitial}{\sunf},
+	cost=160,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	globalrules={\orders{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\pa{}},
+	offensename=\marshal{},
+	offense@Ag=5,
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	options={%
+		\bsb{}=\free{},
+		\specialitemsallowance{}=\upto{}200,
+		\suboptionindent if \bsb{}=\upto{}100,
+		\shield{}=5,
+		\pistol{} (2+)=5,
+		\onechoiceonly{%
+			\textbf{\greattac{}} (\zerotoXunitsperarmy{1})=60,
+			\textbf{\impprince{}} (General only)=175,
+		},
+		\weapononechoice{%
+            \pw{}=5,
+            \gw{}=10,
+            \halberd{}=10,
+            \lance{}=10,
+		},
+    },
+	mounts={%
+          \horse{}=70,
+          \pegasus{}=75,
+          \greatgriff{}\refsymbol{} ({\sunfInitial})=150,
+          \dragon{} (\impprince{} only) ({\sunfInitial})=460,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\greattac}{\ruletype{\universalrule}{\greattacdef}}%
+		\modelruledef{\impprince}{\ruletype{\universalrule}{\impprincedef}}%
+	},
+		endtext={%
+		\refsymbol{}Cannot be taken by a \bsb{}.
+	},
+} % END UNIT ENTRY

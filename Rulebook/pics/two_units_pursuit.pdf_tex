@@ -1,0 +1,90 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'two_units_pursuit.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{935.433075bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,2.5408345)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{two_units_pursuit.pdf}}%
+    \put(0.86427727,2.22674257){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{two_units_pursuit.pdf}}%
+    \put(0.86427717,1.33280342){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{two_units_pursuit.pdf}}%
+    \put(0.86373898,0.42371256){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{two_units_pursuit.pdf}}%
+    \put(0.16720431,2.1206823){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{two_units_pursuit.pdf}}%
+    \put(0.1672042,1.22674285){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{two_units_pursuit.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{two_units_pursuit.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{two_units_pursuit.pdf}}%
+    \put(0.65205286,0.42371253){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{two_units_pursuit.pdf}}%
+    \put(0.09097956,0.47527551){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figTwoPursOne}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{two_units_pursuit.pdf}}%
+    \put(0.25766267,0.08133594){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figTwoPursTwo}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{two_units_pursuit.pdf}}%
+    \put(0.78841641,0.07526207){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.01876403,2.49402206){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figTwoPursA}}}%
+    \put(0.50379569,2.23320807){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figTwoPursunitD}}}%
+    \put(0.11678662,1.94522941){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figTwoPursunitB}}}%
+    \put(0.56041901,2.50836031){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figTwoPursunitA}}}%
+    \put(0.6289794,1.95050187){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figTwoPursunitC}}}%
+    \put(0.60630925,1.74820195){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\distance{6}}}}%
+    \put(0.01736762,1.73644635){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figTwoPursB}}}%
+    \put(0.30356806,2.1434095){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.28841657,2.42371245){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.4096286,1.87829228){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.49267058,1.12390206){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\distance{7}}}}%
+    \put(0.67447771,0.91253597){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\distance{5}}}}%
+    \put(0.28841639,1.52977306){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.40962856,0.98435291){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.64255782,0.00184156){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\distance{5}}}}%
+    \put(0.01989069,0.81220388){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figTwoPursC}}}%
+    \put(0.68235582,0.63583374){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+  \end{picture}%
+\endgroup%

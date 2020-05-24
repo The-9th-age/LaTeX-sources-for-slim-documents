@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\arty{},
+	logo=cannonballs,
+	unitsize=1,
+	addrestriction=\zerotoXunitsperarmy{4},
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=60,
+	global@Ad=4,
+	global@Ma=4,
+	global@Di=7,
+	globalrules={\warmachine{}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename={\crew{}},
+	%forceoffensenameprint={\crew{}},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\moveorfire{}},
+	optionalmodelrulesdef={%
+		\modelruledef{\cannon}{\ruletype{\artilleryweapon}\cannondef}
+		\modelruledef{\impvolleygun}{\ruletype{\artilleryweapon}\impvolleygundef}
+		\modelruledef{\impmortar}{\ruletype{\artilleryweapon}\impmortardef}
+		\modelruledef{\improcket}{\ruletype{\artilleryweapon}\improcketdef}
+	},
+	options={%
+		\mustbecomeoneofthefollowing{%
+			\cannon{} (4+) (\zerotoXunitsperarmy{2})=250,
+			\improcket{} (4+) (\zerotoXunitsperarmy{2})=160,
+			\impmortar{} (4+) (\zerotoXunitsperarmy{2})=200,
+			\impvolleygun{} (4+) (\zerotoXunitsperarmy{2})=200,
+		},
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+} % END UNIT ENTRY

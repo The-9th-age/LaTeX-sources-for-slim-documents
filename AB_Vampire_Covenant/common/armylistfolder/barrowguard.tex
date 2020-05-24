@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\barrowguard{},
+	logo=special,
+	cost=175,
+	unitsize=15,
+	maxunitsize=40,
+	costpermodel=22,
+	scoring=yes,
+	type=\infantry{},
+	size=\sizestandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	global@Rsr=D3+4,
+	globalrules={\undead{},\ashestoashes{},\scoring{},\fearless{},{\bodyguard{} (\general{}, \barrowking{})}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	offensename=\barrowguardSINGULAR{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	offenserules={\magicalattacks{},\lethalstrike{},\multiplewounds{2}{\againststandard{}}},
+	options={%
+		\onechoiceonlyACO{%
+			\halberd{}=4\permodel{},
+			\gw{}=5\permodel{},
+			\shield{}=2\permodel{},
+		},
+	},
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+		\standardbearer{}=20,
+		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+} % END UNIT ENTRY

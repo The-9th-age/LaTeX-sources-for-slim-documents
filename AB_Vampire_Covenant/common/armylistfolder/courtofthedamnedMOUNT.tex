@@ -1,0 +1,42 @@
+
+{\renewcommand{\labels@mountsoptions}{\bloodtiestitle{\lamia{}}}
+\unitentry{%
+	name=\courtofthedamned{},
+	logo=character,
+	type=\construct{},
+	size=\sizelarge{},
+	basesize=60\timess{}100,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=\ascharacter{},
+	globalrules={\ghoststep{},\fear{},\toweringpresence{},\warplatform{},\textbf{\chillofthegrave{}}},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=\ascharacter{},
+	offensename=\paramour{} (2),
+	offense@At=2,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=6,
+	offenserules={\vampiric{} (6+)},
+	offensenameB=\spectralpallbearers{},
+	offenseB@At=8,
+	offenseB@Of=2,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=2,
+	offenserulesB={\harnessed{},\magicalattacks{}},
+	offensenameI=\chassis{},
+	offenseI@St=5,
+	offenseI@AP=2,
+	offenserulesI={\impacthits{D6},\inanimate{}},
+	modelrulesdef={%
+		\modelruledef{\chillofthegrave}{\ruletype{\universalrule}\chillofthegravedef}
+	},
+	mounts={%
+		\musttakeaegis{}=75,
+	},
+} % END UNIT ENTRY
+} % END of renewcommand

@@ -146,7 +146,6 @@
 \newcommand{\giftsofdarkgodsnote}{\textbf{Gifts of the Dark Gods}. Each Gift is One of a Kind.}
 
 \newcommand{\daemonicwings}{Daemonic Wings}
-\newcommand{\daemonicwingsrestriction}{Models on foot only}
 \newcommand{\daemonicwingsrule}{%
 	The bearer gains \textbf{\fly{8}{16}}, \textbf{\lighttroops{}}, and \textbf{\swiftstride{}}.%
 }
@@ -165,7 +164,7 @@
 }
 \newcommand{\darkprelate}{Dark Prelate}
 \newcommand{\darkprelaterule}{%
-	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells, Power Level (4/8), with type \castersunit{}. \spellformat{\occultismspelltwo}{} is \removedrule{automatically }cast \newrule{as} the amplified version \removedrule{(}without performing The Sacrifice\removedrule{)}.%
+	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells, Power Level (4/8), with type \castersunit{}. \spellformat{\occultismspelltwo}{} is cast as the amplified version without performing The Sacrifice.%
 }
 
 % Doom Lord
@@ -236,12 +235,12 @@ After Spell Selection, the Wizard \textbf{must} replace one of its Learned Spell
 	\optionschoiceTWOCOL{Only units with a Champion may upgrade Warriors with a single Favour:\refsymbol{}}{\AlOrder{#1}}%
 }
 
-\newcommand{\unitsizereduction}{ Max. unit size for a unit with a Favour is reduced to \textbf{20} models}
+\newcommand{\unitsizereduction}{The max. unit size for a unit with a Favour is reduced to \textbf{20} models.}
 \newcommand{\upgradeto}{Upgrade to}
 
 % Fallen
 
-\newcommand{\fallennote}{\refsymbol{} \zerotoXunitsperarmy{6} if a \doomlord{} is General.}
+\newcommand{\fallennote}{\refsymbolbis{}\zerotoXunitsperarmy{6} if a \doomlord{} is General}
 
 %% SPECIAL
 
@@ -262,18 +261,18 @@ The model's maximum number of Supporting\newline Attacks is \textbf{set} to 3.%
 
 \newcommand{\damnation}{Damnation}
 \newcommand{\damnationdef}{%
-The unit cannot be joined by \newrule{any} Characters, and it may never have more ranks than files. When the unit fails a Break Test, it does not \newrule{perform the extra Close Combat Attacks from Path of the Exiled}. Instead replace each model of the unit with a \wretchedone{} model after step 8 of the Round of Combat Sequence (after taking Panic Tests):
+The unit cannot be joined by any Characters, and it may never have more ranks than files. When the unit fails a Break Test, it does not perform the extra Close Combat Attacks from Path of the Exiled. Instead replace each model of the unit with a \wretchedone{} model after step 8 of the Round of Combat Sequence (after taking Panic Tests):
 \begin{itemize}
 \item The unit with \damnation{} is considered destroyed and its models are considered to be removed as casualties.
 \item Each \wretchedone{} model is placed in the same position and facing the same direction as the replaced model, even if the replaced model was in base contact with an enemy unit. In this case, the \wretchedone{} model is placed in base contact with the enemy unit too.
 \item The \wretchedone{} models form a new unit.
 \item The \wretchedone{} unit follows the rules for Summoned Units, except that it ignores the Unit Spacing rule when placed on the Battlefield.
-\item \newrule{The Wretched One unit cannot perform any Combat Reforms during that Round of Combat, however the enemy units can do so as normal.}
-\item \newrule{Note that the following Round of Combat is not considered the First Round of Combat for the Wretched One unit nor the enemy units it is Engaged with.}
+\item The Wretched One unit cannot perform any Combat Reforms during that Round of Combat, however the enemy units can do so as normal.
+\item Note that the following Round of Combat is not considered the First Round of Combat for the Wretched One unit nor the enemy units it is Engaged with.
 \end{itemize}%
 }
 
-\newcommand{\replacewithdamnation}{\removedrule{Lose \pathexiled{} and\newline gain }\textbf{\damnation{}}}
+\newcommand{\replacewithdamnation}{\textbf{\damnation{}}}
 
 % Battleshrine
 
@@ -336,7 +335,7 @@ The model gains \textbf{\wizardapprentice}. Instead of selecting spells as norma
 \newcommand{\oneominousgateway}{One \textbf{Ominous Gateway}}
 \newcommand{\twoominousgateways}{Two \textbf{Ominous Gateways}}
 \newcommand{\ominousgatewaydef}{%
-\zerotoXchoiceperarmy{2}.\newline%
+\itemrestriction{\zerotoXchoiceperarmy{2}.}%
 At the start of step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield with a Gateway Marker. This must be outside the opponent's Deployment Zone.%
 }
 
