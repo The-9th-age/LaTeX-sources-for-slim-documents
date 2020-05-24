@@ -3,6 +3,9 @@
 
 \renewcommand{\hideinQRS}[1]{}
 \renewcommand{\hidebf}[1]{#1}
+\ifundef{\languageisfrench}{}{%
+	\renewcommand{\frenchsmallcharacs}[1]{{\smallfontsize#1}}
+}
 
 % Script to automatically draw the Quick Ref Sheet
 

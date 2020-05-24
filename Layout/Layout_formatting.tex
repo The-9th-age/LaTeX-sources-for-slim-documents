@@ -131,3 +131,11 @@ $\rangle$%
 \ifundef{\DEnewline}{%
 	\newcommand{\DEnewline}{}% defined to \newline when language is DE
 }{}%
+
+\ifundef{\languageisfrench}{%
+	\newcommand{\onlyinfrench}[1]{}%
+	\newcommand{\frenchsmallcharacs}[1]{#1}%
+}{%
+	\newcommand{\onlyinfrench}[1]{#1}%
+	\newcommand{\frenchsmallcharacs}[1]{{\normalfontsize#1}}%
+}

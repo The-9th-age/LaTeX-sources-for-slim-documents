@@ -6,7 +6,7 @@
 	name=\steppemammoth{},
 	fluff=\steppemammothfluff{},
 	logo=arrows,
-	cost=370,
+	cost=420,
 	unitsize=1,
 	maxunitsperarmy=1,
 	type=\beast{},
@@ -20,7 +20,7 @@
 	defense@Df=3,
 	defense@Re=6,
 	defense@Arm=3,
-	offensename=\crew{} (X),
+	offensename=\crew{} (6),
 	offense@At=1,
 	offense@Of=4,
 	offense@St=4,
@@ -35,11 +35,10 @@
 	offenseB@Ag=2,
 	offenserulesB={\impacthits{} (\Dthree{}), \harnessed{}},
 	options={%
-		\mustchooseonechoiceonly{\AlCoOrder{%
-			\crew{} (6)=\free{},
-			\crew{} (3) \wordand{} \textbf{\fistofthemakhar{}} (4+) \onthesteppemammoth{}=40,
-			\crew{} (6) \wordand{} \rallyaroundtheflag{}\refsymbol{}=100,
-		}},
+		\onechoiceonlyACO{%
+			\rallyaroundtheflag{}\refsymbol{}=50,
+			\textbf{\fistofthemakhar{} (4+)}=\free{},
+		},
 		\refsymbolbis{}\steppemammothnote{}=,
 	},
 	optionalmodelrulesdef={\modelruledef{\fistofthemakhar}{\ruletype{\artilleryweapon}%

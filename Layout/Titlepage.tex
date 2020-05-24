@@ -52,8 +52,7 @@
 
 \begin{center}
 
-\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
-\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing book title}}
 
 
 \ifdefined\languageisfrench
@@ -121,11 +120,16 @@
 \fi
 
 {\fontsize{12}{14.4}\selectfont
-	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
-	\ifdef{\preversion}{\preversion}{}\version{}%
-	\EndAccSupp{} -- \ifdef{\releasedate}{\releasedate}{\today}
+	
+	\ifdef{\editionversion}{\editionversion{}, }{}\versionname{} \ifdef{\balanceversion}{\balanceversion{}}{}%
+	\ifdef{\documentversion}{\ifdef{\balanceversion}{.}{}\documentversion{}}{} %
+	\ifdef{\betaversion}{\betaname{} \betaversion{} }{}%
+	\ifdef{\alphaversion}{\alphaname{} \alphaversion{} }{}%
+	\ifdef{\hotfixversion}{\hotfixname{} \hotfixversion{} }{}%
+	-- \BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}
+	\ifdef{\releasedate}{\releasedate}{\today}\EndAccSupp{}
 
-\ifdef{\translationversion}{{\fontsize{12}{14.4}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}
+\ifdef{\specialversion}{{\vspace{3pt}\noindent{}\specialversion}}{}
 }
 
 \ifdefined\thisisthepathsbook
