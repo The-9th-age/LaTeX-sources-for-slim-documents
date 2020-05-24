@@ -1,6 +1,8 @@
 
 \maintitle{HBEHonours}{\honours}
 
+{\renewcommand{\labels@mountsoptions}{\honoursmountoptions}
+
 \subtitle{\honoursforhighprincesandcommanders}
 
 \spacebetweenhonours
@@ -10,10 +12,10 @@
 \addnewhonour{%
 	logo=warden,
 	name=\highwardenoftheflame{},
-	cost=105,
+	cost=90,
 	text=\highwardenoftheflamedef{},
 	frames={%
-		\def\tempmounts{\Onfootonly{}.=,}%
+		\def\tempmounts{\Onfootonly{}=,}%
 		\mountsnopts{\tempmounts}%
 	},
 }
@@ -21,10 +23,10 @@
 \addnewhonour{%
 	logo=tower,
 	name=\masterofcanreigtower{},
-	cost=135,
+	cost=150,
 	text=\masterofcanreigtowerdef{},
 	frames={%
-		\def\tempmounts{\Onfootonly{}.=,}%
+		\def\tempmounts{\Onfootonly{}=,}%
 		\def\tempaddoptions{\highprincemustgainlearnedspells{}=80,}%
 		\mountsnopts{\tempmounts}\columnbreak\addoptions{\tempaddoptions}%
 	},
@@ -36,7 +38,7 @@
 	cost=50,
 	text=\queenscavalierdef{},
 	frames={%
-		\def\tempmounts{\elvenhorse{}=70,\youngdragon{} (\ancientalliesInitial{})=290,\dragon{} (\ancientalliesInitial{})=460,\ancientdragon{} \only{\highprince} (\ancientalliesInitial{})=660}%
+		\def\tempmounts{\elvenhorse{}=45,\youngdragon{} (\ancientalliesInitial{})=275,\dragon{} (\ancientalliesInitial{})=450,\ancientdragon{} \only{\highprince} (\ancientalliesInitial{})=625}%
 		\mounts{\tempmounts}\columnbreak%
 		\charactermountnote{\ancientalliesInitial}{\ancientallies}%
 	},
@@ -45,10 +47,10 @@
 \addnewhonour{%
 	logo=fleet,
 	name=\fleetofficer{},
-	cost=75,
+	cost=50,
 	text=\fleetofficerdef{},
 	frames={%
-		\def\tempmounts{\gianteagle{}=60,\griffon{} (\ancientalliesInitial{})=200,\skysloop{} (\navalordnanceInitial{})=300}%
+		\def\tempmounts{\gianteagle{}=50,\griffon{} (\ancientalliesInitial{})=185,\skysloop{} (\navalordnanceInitial{})=285}%
 		\mounts{\tempmounts}\columnbreak%
 		\charactermountnote{\ancientalliesInitial}{\ancientallies}\newline%
 		\charactermountnote{\navalordnanceInitial}{\navalordnance}%
@@ -61,9 +63,9 @@
 	cost=40,
 	text=\queenscompaniondef{},
 	frames={%
-		\def\tempmounts{\Onfootonly{}.=,}%
+		\def\tempmounts{\Onfootonly{}=,}%
 		\mountsnopts{\tempmounts}\columnbreak%
-		\def\tempaddoptions{\onechoiceonlyACO{\moonlightarrows{}=15,\queenscompanionoption{}=40},}%
+		\def\tempaddoptions{\onechoiceonlyACO{\moonlightarrows{}=15,\queenscompanionoption{}=35},}%
 		\addoptions{\tempaddoptions}%
 	},
 }
@@ -71,10 +73,10 @@
 \addnewhonour{%
 	logo=huntsman,
 	name=\royalhuntsman{},
-	cost=60,
+	cost=40,
 	text=\royalhuntsmandef{},
 	frames={%
-	\def\tempmounts{\lionchariot{}=120}%
+	\def\tempmounts{\lionchariot{}=115}%
 	\mounts{\tempmounts}%
 	},
 }
@@ -92,21 +94,18 @@
 \addnewhonour{%
 	logo=scholar,
 	name=\asfadscholar{},
-	cost=90,
+	cost=95,
 	text=\asfadscholardef{},
-	frames={%
-		\def\tempmounts{\maybemountedasnormal{}.=,}%
-		\mountsnopts{\tempmounts}%
-	},
+	frames={},
 }
 
 \addnewhonour{%
 	logo=fieryheart,
 	name=\orderofthefieryheart{},
-	cost=30,
+	cost=20,
 	text=\orderofthefieryheartdef{},
 	frames={%
-		\def\tempmounts{\youngdragon{} (\ancientalliesInitial{})=330,\dragon{} (\ancientalliesInitial{}) \only{\wizardmaster}=540}%
+		\def\tempmounts{\youngdragon{} (\ancientalliesInitial{})=315,\dragon{} (\ancientalliesInitial{}) \only{\wizardmaster}=510}%
 		\mounts{\tempmounts}%
 		\vspace*{-3pt}\charactermountnote{\ancientalliesInitial}{\ancientallies}\DTLpar\columnbreak%
 		\def\tempaddoptions{%
@@ -122,3 +121,4 @@
 }
 
 \closehonourslist
+}

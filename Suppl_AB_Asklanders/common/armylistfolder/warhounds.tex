@@ -3,18 +3,18 @@
 	name=\warhounds{},
 	fluff=\warhoundsfluff{},
 	logo=core,
-	cost=90,
+	cost=95,
 	unitsize=5,
 	maxunitsize=15,
-	costpermodel=10,
+	costpermodel=8,
 	maxunitsperarmy=4,
 	type=\beast{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=25\timess{}50,
 	global@Ad=8,
 	global@Ma=16,
 	global@Di=5,
-	globalrules={\insignificant{},\textbf{\releasethehounds{}}},
+	globalrules={\insignificant{},\hidebf{\releasethehounds{}}},
 	defense@HP=1,
 	defense@Df=3,
 	defense@Re=3,
@@ -26,7 +26,7 @@
 	offense@St=3,
 	offense@AP=0,
 	offenserules={},
-	optionalmodelrulesdef={%
+	modelrulesdef={%
 		\modelruledef{\releasethehounds}{\ruletype{\universalrule}{\releasethehoundsdef}}%
 	},
 } % END UNIT ENTRY

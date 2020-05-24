@@ -2,13 +2,13 @@
 \unitentry{%
 	name=\forestguard{},
 	logo=core,
-	cost=175,
+	cost=170,
 	unitsize=15,
 	maxunitsize=50,
-	costpermodel=15,
+	costpermodel=14,
 	scoring=yes,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=5,
 	global@Ma=10,
@@ -18,7 +18,7 @@
 	defense@Df=5,
 	defense@Re=3,
 	defense@Arm=0,
-	defensearmour={\la{},\shield{}},
+	defensearmour={\la{}},
 	offensename=\forestguardSINGULAR{},
 	offense@At=1,
 	offense@Of=5,
@@ -26,9 +26,11 @@
 	offense@AP=0,
 	offense@Ag=5,
 	offenserules={\lightningreflexes{}},
-	offenseweapons={\spear{}},
 	options={%
-		\replacespearandshieldwithelvencloakandsylvanblades{}=1\permodel{},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\spear{} \wordand{} \shield{}=\free{},
+			\elvencloak{} \wordand{} \sylvanblades{}=1\permodel{},
+		}},
 	},
 	commandgroup={%
 		\champion{}=20,
@@ -36,4 +38,4 @@
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

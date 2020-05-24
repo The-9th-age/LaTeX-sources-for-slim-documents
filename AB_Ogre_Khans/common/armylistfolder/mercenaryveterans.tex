@@ -3,19 +3,19 @@
 	name=\mercenaryveterans{},
 	logo=special,
 	optionallogo=cannonballs,
-	categorynote={If equipped with Braces of Ogre Pistols, \mercenaryveterans{} additionally count towards Powder Keg and can only add up to 3 additional models.},
-	cost=245,
+	categorynote={\refsymbol{}\mercenaryveteranscategorynote{}},
+	cost=235,
 	unitsize=3,
-	maxunitsize=8,
-	costpermodel=100,
+	maxunitsize=8\refsymbol{},
+	costpermodel=95,
 	scoring=yes,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
 	global@Ad=6,
 	global@Ma=12,
 	global@Di=8,
-	globalrules={\scraplinglookout{},\scoring{},\textbf{\battlescarred{}}},
+	globalrules={\scraplinglookout{},\scoring{},\hidebf{\battlescarred{}}},
 	defense@HP=3,
 	defense@Df=4,
 	defense@Re=4,
@@ -35,12 +35,16 @@
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
 	options={%
-		\weapononechoice{%
-			\braceofogrepistols{} (4+)=24\permodel{},
-			\gw{}=8\permodel{},
-			\halberd=12\permodel{},
-			\ironfist=13\permodel{},
-			\pw=8\permodel{},
+		\onechoiceonlyACO{%
+			\braceofogrepistols{} (4+)\refsymbol{}=25\permodel{},
+			\gw{}=5\permodel{},
+			\halberd{}=10\permodel{},
+			\ironfist{}=14\permodel{},
+			\pw{}=7\permodel{},
 		},
 	},
+	modelrulesdef={%
+		\modelruledef{\battlescarred}{\ruletype{\universalrule}\battlescarreddef}%
+	},
+	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
 } % END UNIT ENTRY

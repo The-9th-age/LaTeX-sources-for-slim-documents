@@ -1,16 +1,16 @@
 \unitentry{
 	name=\castellan{},
 	logo=character,
-	cost=80,
+	cost=70,
 	unitsize=1,
 	maxunitsperarmy=5,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=7,
-	globalrules={\insignificant{},\serf{},\textbf{\lowborn}},
+	globalrules={\insignificant{},\serf{},\hidebf{\lowborn}},
 	defense@HP=3,
 	defense@Df=4,
 	defense@Re=4,
@@ -23,7 +23,7 @@
 	offense@AP=1,
 	offense@Ag=3,
 	options={%
-		\mustbecomeonechoiceonly{\AlCoOrder{%
+		\mustchooseonechoiceonly{\AlCoOrder{%
 			\textbf{\bannerman}=\free{},
 			\textbf{\masteratarms}=\free{},
 		}},

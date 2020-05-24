@@ -4,7 +4,7 @@
 	logo=character,
 	secondlogo=cannonballs,
 	categorynote=\twocategoriesnote{\characters}{\iar},
-	cost=125,
+	cost=120,
 	unitsize=1,
 	type=\infantry{},
 	size=\heightstandard{},
@@ -12,12 +12,12 @@
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=7,
-	globalrules={\textbf{\mstart{}},\engineer{} (3+)},
+	globalrules={\hidebf{\mstart{}},\engineer{} (3+)},
 	defense@HP=2,
 	defense@Df=3,
 	defense@Re=3,
 	defense@Arm=0,
-	defensearmour={\la{}},
+	defensearmour=\la{},
 	offensename=\artificer{},
 	offense@Ag=3,
 	offense@At=1,
@@ -26,7 +26,7 @@
 	offense@AP=0,
 	options={%
 		\specialitemsallowance{}=\upto{}50,
-		\shootingweapononechoice{%
+		\onechoiceonlyACO{%
 			\handgun{} (3+)=5,
 			\longrifle{} (3+)=10,
 			\repgun{} (4+)=10,
@@ -34,7 +34,7 @@
 		},
     },
 	mounts={%
-			\horse{}=20,
+			\horse{}=15,
 	},
 	modelrulesdef={%
 		\modelruledef{\mstart}{\ruletype{\universalrule}\mstartdef}%

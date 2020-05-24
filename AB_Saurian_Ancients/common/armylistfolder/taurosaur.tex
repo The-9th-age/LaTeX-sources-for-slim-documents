@@ -2,16 +2,16 @@
 \unitentry{%
 	name=\taurosaur{},
 	logo=monster,
-	cost=450,
+	cost=455,
 	unitsize=1,
 	maxunitsperarmy=3,
 	type=\beast{},
-	size=\sizegigantic{},
+	size=\heightgigantic{},
 	basesize=50\timess{}100,
 	global@Ad=6,
 	global@Ma=10,
 	global@Di=7,
-	globalrules={\coldblooded{}, \fearless{}},
+	globalrules={\coldblooded{},\fearless{}},
 	defense@HP=6,
 	defense@Df=3,
 	defense@Re=6,
@@ -22,22 +22,22 @@
 	offense@St=3,
 	offense@AP=0,
 	offense@Ag=4,
-	offenseweapons={\poisonedjavelin{} (4+)},
+	offenseweapons=\poisonedjavelin{} (4+),
 	offensenameB=\taurosaur{},
 	offenseB@At=4,
 	offenseB@Of=3,
 	offenseB@St=6,
 	offenseB@AP=3,
 	offenseB@Ag=2,
-	offenserulesB={\impacthits{} (D6+1),\devastatingcharge{+1 \At{}},\harnessed{},\textbf{\sharphorns{}}},
-	offenseweaponsB={\giantblowpipes{} (3+)},
+	offenserulesB={\impacthits{} (\Dsix{}+1),\devastatingcharge{+1 \At{}},\harnessed{},\hidebf{\sharphorns{}}},
 	options={%
-		\replacebgbpwithonechoice{%
-			\engineoftheancients{}=90,
-			\giantbow{} (3+)=20,
-		},
+		\optionschoice{\thetaurosaurmusttake{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+			\giantblowpipes{} (4+)=\free{},
+			\engineoftheancients{}=100,
+			\greatbow{} (4+)=\free{},
+		}},
     },
 	modelrulesdef={%
-		\modelruledef{\sharphorns}{\ruletype{\specialattack}\sharphornsdef}
+		\modelruledef{\sharphorns}{\ruletype{\attackattribute}\sharphornsdef}
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

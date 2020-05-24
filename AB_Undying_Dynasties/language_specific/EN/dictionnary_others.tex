@@ -17,16 +17,20 @@
 % Hereditary Spell
 
 \newcommand{\deathisonlythebeginningintro}{%
-Undying Dynasties do not have a regular \hereditaryspell{}. Instead, all \deathculthierarchs{} know the Hereditary Attribute Spell \spellformat{\deathisonlythebeginning}{} (in addition to Path Attributes). Whenever the Wizard successfully casts a non-Attribute non-Bound Spell of type \augment{}, the Hereditary Attribute Spell is automatically cast.
+	Undying Dynasties do not have a regular \hereditaryspell{}. Instead, all \deathculthierarchs{} know the Hereditary Attribute Spell \spellformat{\deathisonlythebeginning}{} (in addition to Path Attributes). At step 1 of each Casting Attempt of a non-Attribute non-Bound Spell of type Augment with a Death Cult Hierarch, the owner may declare that the Wizard will cast an amplified version of the spell:%
+	\begin{itemize}%
+		\item The Casting Value of the amplified version is increased by 2.%
+		\item If the amplified version is successfully cast, \spellformat{\deathisonlythebeginning}{} is automatically cast (as an Attribute Spell).%
+	\end{itemize}%
 }
 \newcommand{\deathisonlythebeginning}{Death is Only the Beginning}
 \newcommand{\DOBseebelow}{See below}
 \newcommand{\deathisonlythebeginningrange}{%
-The spell targets a single unit that was the target of the spell that triggered the Hereditary Attribute Spell.}
+	The spell targets a single unit that was the target of the spell that triggered the Hereditary Attribute Spell.}
 \newcommand{\deathisonlythebeginningdef}{%
-%
-The target Raises a number of Health Points equal to the \resurrected{} value of the \rnf{} models in the unit. If the target contains any Characters, you may instead choose a single Character in it. This Character Recovers a number of Health Points equal to its \resurrected{} value.\vspace*{5pt}\par%
-Characters and models with \toweringpresence{} cannot Recover more than 2 Health Points in each Magic Phase from \spellformat{\deathisonlythebeginning}{}.%
+	%
+	The target Raises a number of Health Points equal to the \resurrected{} value of the \rnf{} models in the unit. If the target unit contains any Characters, you may instead choose a single Character in it. This Character Recovers a number of Health Points equal to its \resurrected{} value.\vspace*{5pt}\par%
+	Characters and models with \toweringpresence{} cannot Recover more than 2 Health Points in each Magic Phase from \spellformat{\deathisonlythebeginning}{}.%
 }
 
 % Monarchs of Undeath
@@ -39,6 +43,7 @@ Characters and models with \toweringpresence{} cannot Recover more than 2 Health
 
 % QRS
 
-\newcommand{\aspenbowaimnote}{4+ for Characters, 5+ for anyone else}
-\newcommand{\towoundagainstagility}{to wound against Agility}
+\newcommand{\QRSothers}{Others}
+\newcommand{\towoundagainstagility}{Wounds against Agility}
 \newcommand{\panictestcharnelcatapult}{Panic Test at 1 casualty and with \minuss{}1 Discipline}
+\newcommand{\aimnote}{These weapons \textbf{always} hit on a roll equal to or greater than their Aim.}

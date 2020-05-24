@@ -2,13 +2,13 @@
 \unitentry{%
 	name=\peasantcrusaders{},
 	logo=special,
-	cost=150,
+	cost=135,
 	unitsize=20,
 	maxunitsize=40,
-	costpermodel=10,
+	costpermodel=9,
 	scoring=yes,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
@@ -18,7 +18,7 @@
 	defense@Df=2,
 	defense@Re=3,
 	defense@Arm=0,
-	defensearmour={\la{},\shield{}},
+	defensearmour={\la{}},
 	offensename=\peasantcrusader{},
 	offense@At=1,
 	offense@Of=3,
@@ -26,11 +26,16 @@
 	offense@AP=0,
 	offense@Ag=3,
 	offenserules={\hatred{},\devastatingcharge{+1 \At{}}},
-	options={\replaceshieldwithpairedweapons{}=\free{},},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=\free{},
+			\pw{}=\free{},
+		}},
+	},
 	commandgroup={%
 		\champion{}=20,
 		\musician{}=20,
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

@@ -1,19 +1,22 @@
 
+\def\stankcannonruleone{\textbf{\areaattack{1\timess{}5}}}
+\def\stankcannonruletwo{[\textbf{\multiplewounds{\Dthree{}, \clippedwings{}}{}}]}
+
 \unitentry{%
 	name=\stank{},
-	logo=cannonballs,
-	secondlogo=EoS,
-	categorynote=\twocategoriesnote{\iar}{\sunf},
-	cost=475,
+	logo=EoS,
+	secondlogo=cannonballs,
+	categorynote=\twocategoriesnote{\sunf}{\iar},
+	cost=490,
 	unitsize=1,
 	maxunitsperarmy=1,
 	type=\construct{},
 	size=\heightlarge{},
 	basesize=50\timess{}100,
-	global@Ad=4D3,
+	global@Ad=\XDthree{4},
 	global@Ma=,
 	global@Di=7,
-	globalrules={\unbreakable{},\toweringpresence{},\fearless{},\fear{},\randommovement{4D3},\textbf{\steampowered{}}},
+	globalrules={\unbreakable{},\toweringpresence{},\fearless{},\fear{},\randommovement{\XDthree{4}},\hidebf{\steampowered{}}},
 	defense@HP=7,
 	defense@Df=3,
 	defense@Re=6,
@@ -22,13 +25,15 @@
 	offense@St=5,
 	offense@AP=2,
 	offense@Ag=3,
-	offenserules={\breathattack{\St{} 2, \AP{} 3},\textbf{\stankcannon{} (3+)},\grindattacks{3D3}},
+	offenserules={\breathattack{\St{} 2, \AP{} 3},\hidebf{\stankcannon{} (3+)},\grindattacks{\XDthree{3}}},
 	offensenameI=\steelram{},
 	offenseI@St=7,
 	offenseI@AP=4,
-	offenserulesI={\impacthits{2D3},\inanimate{}},
+	offenserulesI={\impacthits{\XDthree{2}},\inanimate{}},
 	modelrulesdef={%
 		\modelruledef{\steampowered}{\ruletype{\universalrule}{\steampowereddef}}%
-		\modelruledef{\stankcannon}{\ruletype{\artilleryweapon}{\stankcannondef}}%
+		\modelruledef{\stankcannon}{\ruletype{\artilleryweapon}{%
+			\textbf{\cannon{}}, \range{36}, \shots{1}, \St{} 3 [7], \AP{} 0 [6], \alphaorderlist{\stankcannonruleone{}, \stankcannonruletwo{}}.%
+		}}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

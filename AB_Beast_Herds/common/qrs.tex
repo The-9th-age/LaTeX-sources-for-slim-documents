@@ -3,20 +3,27 @@
 
 \input{../Layout/AB_qrs.tex}
 
-\centeredsubtitle{\artilleryweapons{}}
+\vspace*{20pt}
+
+\centeredsubtitle{\artilleryandshootingweapons{}}
 
 \startartillerytable{}
-\beerbarrel{} (\beastgiant{}) & - & - & \distance{8} & 4 & 0 & 1 & \textbf{\areaattack{3\timess{}3}}\par\textbf{\reload}\par\hitsautomatically \tabularnewline
-\hurlattack{} (\cyclops{}) & \catapult{4\timess{}4} & 4+ & \distance{6--36} & 3 [7] & 0 [4] & 1 & \textbf{\divineattacks{}}\par\textbf{\magicalattacks}\par [\textbf{\multiplewounds{D3, \clippedwings{}}{}}] \tabularnewline
+\hawthorncurse{} & - & \distance{18} & 3 [6] & 10 & 1 & \areaattack{1\timess{}5}\par\reload{}\par[\multiplewounds{}{} (\Dthree{})]\par\nonegativetohitmodifiers{} \tabularnewline
+\beerbarrel{} (\beastgiant{}) & - & \distance{8} & 4 & 0 & 1 & \areaattack{3\timess{}3}\par\reload{}\par\hitsautomatically \tabularnewline
+\hurlattack{} (\cyclops{}) & \catapult{4\timess{}4} & \distance{6--36} & 3 [7] & 0 [4] & 1 & \divineattacks{}\par\magicalattacks{}\par [\multiplewounds{\Dthree{}, \clippedwings{}}{}] \tabularnewline
 \closeartillerytable{}
 
-\centeredsubtitle{\othershootingweapons{}}
+\centeredsubtitle{\aimtable{}}
 
-\startshootingtable
+\startaimtable
+\hawthorncurse{} & 3+ & \characters{} \tabularnewline
+\hurlattack{} & 4+ & \cyclops{} \tabularnewline
 \bow{} & 4+ & \mongrelraider{} \tabularnewline
 \throwingweapons{} & 4+ & \beastlord{}, \beastchieftain{}, \centaurchieftain{} \tabularnewline
 & 5+ & \centaur{}, \wildhorn{} \tabularnewline
-\closeshootingtable
+\closeaimtable
+
+\vspace*{10pt}
 
 \centeredsubtitle{\listoftotems}
 

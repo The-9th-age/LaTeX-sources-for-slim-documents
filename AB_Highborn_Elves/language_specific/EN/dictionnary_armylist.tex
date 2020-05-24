@@ -100,7 +100,7 @@
 
 % Dragon
 
-\newcommand{\dragonnote}{Dragon and Ancient Dragon share the same \zerotoXmountsperarmy{1} limitation.}
+\newcommand{\dragonnote}{Dragon and Ancient Dragon share the same \zerotoXmountsperarmy{X} limitation.}
 
 % Sky Sloop
 
@@ -123,10 +123,10 @@ The model can shoot from the third rank (in addition to the first and second) an
 \newcommand{\covervolleydef}{%
 When an enemy unit declares a Charge against a unit with \martialdiscipline{}, a single friendly unit with \covervolley{} may immediately perform a Stand and Shoot Charge Reaction with the following conditions and restrictions:%
 \begin{smallitemize}%
-\item The distance between the Charger and the Charged unit must be greater than the Charger's Advance Rate (using the lowest value among the Charging models if there is more than one).%
+\item The distance between the Charger and the Charged unit \textbf{must} be greater than the Charger's Advance Rate (using the lowest value among the Charging models if there is more than one).%
 \item The unit with \covervolley{} is within \distance{12} of the Charged unit.%
 \item Only models with \covervolley{} may shoot.%
-\item The unit must use Stand and Shoot before the Charged unit declares its Charge Reaction.%
+\item The unit \textbf{must} use Stand and Shoot before the Charged unit declares its Charge Reaction.%
 \item The Stand and Shoot Charge Reaction is performed as if the enemy had declared the Charge against the unit with \covervolley{} in their current position (apply the normal rules for the Stand and Shoot Charge Reaction, i.e. the Charging unit must be Located in the Front Arc of the unit with \covervolley{}, the unit with \covervolley{} cannot be Shaken or Fleeing, etc.).
 \end{smallitemize}%
 }
@@ -144,7 +144,7 @@ The model part gains a +1 to-hit modifier when attacking with a \gw{}.%
 % Lion Guard
 
 \newcommand{\gainhighlandersandlosescoring}{Gain \textbf{\baleighighlanders{}} and lose \scoring{}}
-\newcommand{\highprincegeneral}{\highprince{} \general{}}% both conditions must be met
+\newcommand{\highprincegeneral}{\highprince{} that is the \general{}}% both conditions must be met
 
 \newcommand{\baleighighlanders}{Baleig Highlanders}
 \newcommand{\baleighighlandersdef}{%
@@ -162,7 +162,7 @@ The model gains \hardtarget{} (1), \lighttroops{}, and \skirmisher{}.%
 
 \newcommand{\elvenboltthrower}{Elven Bolt Thrower}
 \newcommand{\elvenboltthrowerdef}{%
-This Shooting Weapon can be fired in two ways:%
+This Artillery Weapon can be fired in two ways:%
 \begin{smallitemize}%
 \item \range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \textbf{\areaattack{} (1\timess{}5)}, [\textbf{\multiplewounds{D3}{}}]%
 \item \range{48}, \shots{6}, \St{} 4, \AP{} 2%
@@ -174,16 +174,16 @@ This Shooting Weapon can be fired in two ways:%
 
 \newcommand{\rebirth}{Rebirth}
 \newcommand{\rebirthdef}{%
-The first time a \phoenix{} loses its last Health Point, the owner must roll a D6.
-The roll is succesful on a roll of 5+ (or 3+ if the model has \wardensbond{}):
+The first time a \phoenix{} loses its last Health Point, the owner \textbf{must} roll a D6.
+The roll is successful on a roll of 5+ (or 3+ if the model has \wardensbond{}):
 \begin{smallitemize}
-\item Remove the model as a casualty as usual, but place a marker on the centre of the model’s final position.
-\item In the next Player Turn, at the start of step 3 of the Movement Phase Sequence (after Rallying Fleeing units), the \phoenix{} model is placed back on the Battlefield. The centre of the model must be placed within \distance{3} of the marker and the model must be placed more than \distance{1} away from other units and Impassable Terrain, facing any direction.
+\item Remove the model as a casualty as usual, but place a marker on the centre of the model's final position.
+\item In the next Player Turn, at the start of step 3 of the Movement Phase Sequence (after Rallying Fleeing units), the \phoenix{} model is placed back on the Battlefield. The centre of the model \textbf{must} be placed within \distance{3} of the marker and the model \textbf{must} be placed more than \distance{1} away from other units and Impassable Terrain, facing any direction.
 \item If the model cannot be placed following these rules, it cannot return for the rest of the game.
 \item The returned model is the same model that left the game, including any and all ongoing effects (such as spells affecting the model), with the exception that it always returns with only 1 Health Point left and counts as Rallied in case it was Fleeing when it lost its last Health Point (and thus is Shaken until the end of the Player Turn).
 \item The model does not grant Victory Point for being Destroyed if it still has Health Points left at the end of the game.
 \end{smallitemize}
-If the roll fails, follow the normal rules (i.e the model is removed as a casualty).%
+If the roll fails, follow the normal rules (i.e. the model is removed as a casualty).%
 }
 
 \newcommand{\firephoenix}{Fire Phoenix}

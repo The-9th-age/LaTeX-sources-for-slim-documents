@@ -1,1 +1,0 @@
-Put in this folder any picture specific to the book, as the logo of the army.

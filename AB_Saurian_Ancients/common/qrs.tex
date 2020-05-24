@@ -2,23 +2,37 @@
 
 \input{../Layout/AB_qrs.tex}
 
-\centeredsubtitle{\shootingweapons}
-\startshootingtable
-\bow{} & 3+ & \skinkcaptain{}\tabularnewline
-& 4+ & \skinkbraves{} \tabularnewline
-\blowpipe{} & 3+ & \skinkcaptain{}\tabularnewline
-& 4+ & \skinkhunters{}, \chameleons{} \tabularnewline
-\firebola{} & 4+ & \pteradon{} Riders \tabularnewline
-\poisonedjavelin{} & 3+ & \skinkcaptain{}, \skinkhunters{} \tabularnewline
-& 4+ & \skinkbraves{}, \pteradon{} Riders, \rhamphodonriders{}, Skink Crew \tabularnewline
-Shoot Spikes & 4+ & \weaponbeasts{} (\spearback{}) \tabularnewline
-\closeshootingtable
+\vspace*{20pt}
 
-\centeredsubtitle{\artilleryweapons}
+\centeredsubtitle{\artilleryandshootingweapons}
 \startartillerytable
-\giantblowpipes{} & - & 4+ & \distance{12} & 3 & 0 & 8 & \textbf{\poisonattacks{}}, \textbf{\quicktofire{}} \tabularnewline
-\giantbow{} & - & 4+ & \distance{36} & 3 [5] & 10 & 1 & \textbf{\areaattack{} (1\timess{}5)}, [\textbf{\multiplewounds{D3}{}}], \textbf{\quicktofire{}} \tabularnewline
-Sprout Flames & \flamethrower{} & 4+ & \distance{8} & 4 & 1 & - & \textbf{\flamingattacks{}} \tabularnewline
+\blowpipe{} & - & \distance{12} & 2 & 0 & 2 & \poisonattacks{}, \blowpipebonus{} \tabularnewline
+\poisonedjavelin{} & - & \distance{12} & \STasuser{} & \STasuser{} & 1 & \poisonattacks{},\newline \quicktofire{} \tabularnewline
+\giantblowpipes{} & - & \distance{12} & 3 & 0 & 8 & \poisonattacks{},\newline \quicktofire{} \tabularnewline
+\greatbow{} & - & \distance{36} & 3 [5] & 10 & 1 & \areaattack{} (1\timess{}5),\newline{} [\multiplewounds{\Dthree{}}{}],\newline \quicktofire{} \tabularnewline
+\wildfireburst{} (\bow{}) & - & \distance{24} & 4 & 1 & 4 & \flamingattacks{},\newline \magicalattacks{},\newline \wildfireburstbonus{},\newline \alwayshitsonthreeplus{} \tabularnewline
+\firebola{} & - & \distance{8} & 4 & 1 & 1 & \flamingattacks{},\newline \quicktofire{} \tabularnewline
+\salamander{} -- \spoutflames{} & \flamethrower{} & \distance{8} & 4 & 1 & 1 & \flamingattacks{} \tabularnewline
+\spearback{} -- \shootspikes{} & - & \distance{18} & 4 & 2 & \XDsix{2} & \quicktofire{},\newline \shootspikesbonus{} \tabularnewline
 \closeartillerytable
+
+\vspace*{10pt}
+
+\centeredsubtitle{\aimtable}
+\startaimtable
+\wildfireburst{} (\bow{}) & 3+ & \characters{} \tabularnewline
+\bow{} & 3+ & \skinkcaptain{}\tabularnewline
+& 4+ & \skinkbrave{} \tabularnewline
+\blowpipe{} & 3+ & \skinkcaptain{}\tabularnewline
+& 4+ & \skinkhunter{}, \chameleon{} \tabularnewline
+\giantblowpipes{} & 3+ & \skinkcaptain{} (\taurosaur{}) \tabularnewline
+& 4+ & \taurosaur{} \tabularnewline
+\greatbow{} & 3+ & \skinkcaptain{} (\taurosaur{}) \tabularnewline
+& 4+ & \taurosaur{} \tabularnewline
+\firebola{} & 4+ & \pteradonsentry{} \tabularnewline
+\poisonedjavelin{} & 3+ & \skinkcaptain{}, \skinkhunter{} \tabularnewline
+& 4+ & \skinkbraves{}, \pteradonsentry{}, \rhamphodonrider{}, \skinkcrew{} \tabularnewline
+\shootspikes{} & 4+ & \weaponbeast{} (\spearback{}) \tabularnewline
+\closeaimtable
 
 \debugfooter

@@ -2,17 +2,17 @@
 \unitentry{%
 	name=\thyroscutus{},
 	logo=monster,
-	cost=320,
+	cost=280,
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\cavalry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=50\timess{}100,
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=6,
 	globalrules={\coldblooded{},\stubborn{}},
-	defense@HP=4,
+	defense@HP=5,
 	defense@Df=4,
 	defense@Re=5,
 	defense@Arm=6,
@@ -22,7 +22,7 @@
 	offense@St=3,
 	offense@AP=0,
 	offense@Ag=4,
-	offenseweapons={\poisonedjavelin{} (4+)},
+	offenseweapons=\poisonedjavelin{} (4+),
 	offensenameB=\thyroscutus{},
 	offenseB@At=3,
 	offenseB@Of=2,
@@ -31,14 +31,17 @@
 	offenseB@Ag=1,
 	offenserulesB={\harnessed{},\crushattack{}},
 	options={%
-		\musttakeoneofthefollowing{%
+		\mustchooseonechoiceonly{\AlCoOrder{%
 			\textbf{\altarofthesnakegod{}}=\free{},
-			\textbf{\sunengine{}}=\free{},
-		},
+			\textbf{\sunengine{}}=15,
+		}},
     },
 	optionalmodelrulesdef={%
 		\modelruledef{\altarofthesnakegod}{\ruletype{\universalrule}\altarofthesnakegoddef}%
 		\modelruledef{\sunengine}{\ruletype{\universalrule}\sunenginedef}%
 	},
-	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},	
-} % END UNIT ENTRY
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}
+		\togglefalse{twocolprintoptionalmodelrulesdef}
+	},	
+}% END UNIT ENTRY

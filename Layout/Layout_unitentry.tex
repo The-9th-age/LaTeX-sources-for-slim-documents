@@ -7,6 +7,8 @@
 \define@key{unit}{speciallogo}{\def\unit@speciallogo{#1}}
 \define@key{unit}{secondlogo}{\def\unit@secondlogo{#1}}
 \define@key{unit}{optionallogo}{\def\unit@optionallogo{#1}}
+\define@key{unit}{secondoptionallogo}{\def\unit@secondoptionallogo{#1}}
+\define@key{unit}{thirdoptionallogo}{\def\unit@thirdoptionallogo{#1}}
 
 \define@key{unit}{cost}{\def\unit@cost{#1}}
 \define@key{unit}{unitsize}{\def\unit@unitsize{#1}}
@@ -19,8 +21,10 @@
 \define@key{unit}{type}{\def\unit@type{#1}}
 \define@key{unit}{size}{\def\unit@size{#1}}
 \define@key{unit}{basesize}{\def\unit@basesize{#1}}
+\define@key{unit}{basesizenotag}{\def\unit@basesizenotag{#1}}
 \define@key{unit}{scoring}{\def\unit@scoring{#1}}
 \define@key{unit}{categorynote}{\def\unit@categorynote{#1}}
+\define@key{unit}{costnote}{\def\unit@costnote{#1}}
 \define@key{unit}{fluff}{\def\unit@fluff{#1}}
 
 \define@key{unit}{global@Ad}{\def\unit@global@Ad{#1}}
@@ -77,6 +81,7 @@
 
 \define@key{unit}{magic}{\def\unit@magic{#1}}
 \define@key{unit}{paths}{\def\unit@paths{#1}}
+\define@key{unit}{pathsnote}{\def\unit@pathsnote{#1}}
 \define@key{unit}{wizardconclave}{\def\unit@wizardconclave{#1}}
 \define@key{unit}{options}{\def\unit@options{#1}}
 \define@key{unit}{explicitoptions}{\def\unit@explicitoptions{#1}}
@@ -145,7 +150,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, scoring=, categorynote=, fluff=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
+		name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, secondoptionallogo=, thirdoptionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, basesizenotag=, scoring=, categorynote=, costnote=, fluff=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, pathsnote=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
 	}%
 	\setkeys{unit}%
 }
@@ -208,60 +213,71 @@
 \rule{\textwidth}{0.5pt}\par\vspace{-5pt}%
 {%
 % Logos
-\hspace*{-3pt}\expandafter\ifblank\expandafter{\unit@secondlogo}{%
-\begin{minipage}[b]{0.08\textwidth}%
-\expandafter\ifblank\expandafter{\unit@speciallogo}{%
-\includegraphics[width=\textwidth]{{logo_\unit@logo}.png}%
-}{\begin{center}\includegraphics[width=0.7\textwidth]{\unit@speciallogo}\end{center}}%
-\vspace*{-4pt}%
-}{%
-\begin{minipage}[b]{0.16\textwidth}%
-\includegraphics[width=0.5\textwidth]{{logo_\unit@logo}.png}%
-\includegraphics[width=0.5\textwidth]{{logo_\unit@secondlogo}.png}%
-\vspace*{-4pt}%
-}%
-\end{minipage}%
+\expandafter\ifblank\expandafter{\unit@logo}{}{% is there a logo?
+	\hspace*{-3pt}\expandafter\ifblank\expandafter{\unit@secondlogo}{%
+		\begin{minipage}[b]{0.08\textwidth}%
+			\expandafter\ifblank\expandafter{\unit@speciallogo}{%
+				\includegraphics[width=\textwidth]{{logo_\unit@logo}.png}%
+			}{\begin{center}\includegraphics[width=0.7\textwidth]{\unit@speciallogo}\end{center}}%
+			\vspace*{-4pt}%
+	}{%
+		\begin{minipage}[b]{0.16\textwidth}%
+			\includegraphics[width=0.5\textwidth]{{logo_\unit@logo}.png}%
+			\includegraphics[width=0.5\textwidth]{{logo_\unit@secondlogo}.png}%
+			\vspace*{-4pt}%
+	}%
+	\end{minipage}%
+}% END is there a logo?
 %
 % Title, unit cost and size
 \setlength{\lengthbeforemodelsizetwologos}{\lengthbeforemodelsize - 0.08\textwidth}
-\expandafter\ifblank\expandafter{\unit@secondlogo}{%
-\hspace{0.01\textwidth}\begin{minipage}[b]{0.5\textwidth+3pt}%
+\expandafter\ifblank\expandafter{\unit@logo}{% is there a logo?
+	\hspace*{3pt}\begin{minipage}[b]{0.59\textwidth-3pt}%
 }{%
-\hspace{0.01\textwidth}\begin{minipage}[b]{0.42\textwidth+3pt}%
-\renewcommand{\perextramodel}{\perextramodelshortened}%
-\setlength{\lengthbeforemodelsize}{\lengthbeforemodelsizetwologos}%
-}%
+	\expandafter\ifblank\expandafter{\unit@secondlogo}{%
+		\hspace{0.01\textwidth}\begin{minipage}[b]{0.5\textwidth+3pt}%
+	}{%
+		\hspace{0.01\textwidth}\begin{minipage}[b]{0.42\textwidth+3pt}%
+		\renewcommand{\perextramodel}{\perextramodelshortened}%
+		\setlength{\lengthbeforemodelsize}{\lengthbeforemodelsizetwologos}%
+	}%
+}% END is there a logo?
 % Title with hyperlink, scoring logo
 {\Largerfontsize\textbf{\unit@name}}%
 \vspace*{3pt}\newline%
-% Unit cost and size
-\expandafter\ifblank\expandafter{\unit@cost}{}{{\largerfontsize\pts{\textbf{\unit@cost}}} }%
-% Is it a single model or a unit with multiple models?
-\expandafter\ifblank\expandafter{\unit@unitsize}{}{% if there is no unitsize, we don't print anything at all
-	% Now we want to see if there is 1 or more models
-	\isitoneornot{\unit@unitsize}{% 1 model
-		% Can you add models?
-		\expandafter\ifblank\expandafter{\unit@costpermodel}{% no other models
-			\hspace*{\lengthbeforemodelsize}%
-			\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} }}%		
-			\hspace*{-\lengthoftheptsblock}%
-			\singlemodel{}%
-		}{% possibility of more models
+% Is everything replace by a note?
+\expandafter\ifblank\expandafter{\unit@costnote}{% NO
+	% Unit cost and size
+	\expandafter\ifblank\expandafter{\unit@cost}{}{{\largerfontsize\pts{\textbf{\unit@cost}}} }%
+	% Is it a single model or a unit with multiple models?
+	\expandafter\ifblank\expandafter{\unit@unitsize}{}{% if there is no unitsize, we don't print anything at all
+		% Now we want to see if there is 1 or more models
+		\isitoneornot{\unit@unitsize}{% 1 model
+			% Can you add models?
+			\expandafter\ifblank\expandafter{\unit@costpermodel}{% no other models
+				\hspace*{\lengthbeforemodelsize}%
+				\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} }}%		
+				\hspace*{-\lengthoftheptsblock}%
+				\singlemodel{}%
+			}{% possibility of more models
+				+ \pts{\textbf{\unit@costpermodel}}\perextramodel{}%
+				%
+				\hspace*{\lengthbeforemodelsize}%
+				\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} + \pts{\textbf{\unit@costpermodel}}\perextramodel{}}}%		
+				\hspace*{-\lengthoftheptsblock}%
+				\textbf{1--\unit@maxunitsize} \Models{}%
+			}%
+		}{% more than 1 model
 			+ \pts{\textbf{\unit@costpermodel}}\perextramodel{}%
 			%
 			\hspace*{\lengthbeforemodelsize}%
 			\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} + \pts{\textbf{\unit@costpermodel}}\perextramodel{}}}%		
 			\hspace*{-\lengthoftheptsblock}%
-			\textbf{1--\unit@maxunitsize} \Models{}%
+			\textbf{\unit@unitsize{}--\unit@maxunitsize} \Models{}%
 		}%
-	}{% more than 1 model
-		+ \pts{\textbf{\unit@costpermodel}}\perextramodel{}%
-		%
-		\hspace*{\lengthbeforemodelsize}%
-		\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} + \pts{\textbf{\unit@costpermodel}}\perextramodel{}}}%		
-		\hspace*{-\lengthoftheptsblock}%
-		\textbf{\unit@unitsize{}--\unit@maxunitsize} \Models{}%
 	}%
+}{% everything replaced with a cost note
+	\unit@costnote{}%
 }%
 \vspace{0pt}%
 \end{minipage}%
@@ -307,10 +323,14 @@
 \begin{minipage}[b]{0.2\textwidth}%
 \renewcommand{\arraystretch}{1}%
 \begin{tabular}{@{}>{\raggedleft}p{0.25\textwidth}@{\hskip 0.03\textwidth}p{0.72\textwidth}@{}}%
-\ChLab{\size}&\unit@size{}\tabularnewline%
+\ChLab{\Height}&\unit@size{}\tabularnewline%
 \ChLab{\type}&\unit@type{}\tabularnewline%
-\ChLab{\basesize}&\unit@basesize{} \si{\milli\meter}%
-\ifsubstring{\unit@basesize}{\timess}{}{~\roundbase}\tabularnewline%
+\ChLab{\basesize}&\unit@basesize{}%
+\expandafter\ifblank\expandafter{\unit@basesizenotag}{%
+	~\si{\milli\meter}%
+	\ifsubstring{\unit@basesize}{\timess}{}{~\roundbase}%
+}{}%
+\tabularnewline%
 \end{tabular}%
 \vspace*{-4pt}%
 \end{minipage}\par%
@@ -324,26 +344,81 @@
 		\vspace*{-10pt}\rule{\textwidth}{0.5pt}\par%
 	}%
 }{% with logo
-	% Check if the category note has more than 2 lines.
-	\setbox0=\vbox{\begin{minipage}{0.94\textwidth}\unit@categorynote{}\end{minipage}}%
-	\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
-	\ifdim\categorynoteheight>25pt\relax
-		\vspace*{-1pt}%
-	\else
-		\vspace*{-7pt}%
-	\fi
-	\begin{minipage}{0.06\textwidth}%
-		\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
-	\end{minipage}%
-	\begin{minipage}{0.94\textwidth}%
-		\unit@categorynote{}%
-	\end{minipage}\par%
-	\ifdim\categorynoteheight>25pt\relax
-		\vspace*{-2pt}%
-	\else
-		\vspace*{-6pt}%
-	\fi
-	\rule{\textwidth}{0.5pt}\par%
+	\expandafter\ifblank\expandafter{\unit@secondoptionallogo}{% no second logo
+		% Check if the category note has more than 2 lines.
+		\setbox0=\vbox{\begin{minipage}{0.94\textwidth}\unit@categorynote{}\end{minipage}}%
+		\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+		\ifdim\categorynoteheight>25pt\relax
+			\vspace*{-1pt}%
+		\else
+			\vspace*{-7pt}%
+		\fi
+		\begin{minipage}{0.06\textwidth}%
+			\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+		\end{minipage}%
+		\begin{minipage}{0.94\textwidth}%
+			\unit@categorynote{}%
+		\end{minipage}\par%
+		\ifdim\categorynoteheight>25pt\relax
+			\vspace*{-2pt}%
+		\else
+			\vspace*{-6pt}%
+		\fi
+		\rule{\textwidth}{0.5pt}\par%
+	}{% there is a second logo
+		\expandafter\ifblank\expandafter{\unit@thirdoptionallogo}{% no third logo
+			% Check if the category note has more than 2 lines.
+			\setbox0=\vbox{\begin{minipage}{0.88\textwidth}\unit@categorynote{}\end{minipage}}%
+			\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-1pt}%
+			\else
+				\vspace*{-7pt}%
+			\fi
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@secondoptionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.88\textwidth}%
+				\unit@categorynote{}%
+			\end{minipage}\par%
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-2pt}%
+			\else
+				\vspace*{-6pt}%
+			\fi
+			\rule{\textwidth}{0.5pt}\par%
+		}{% there is a third logo
+			% Check if the category note has more than 2 lines.
+			\setbox0=\vbox{\begin{minipage}{0.82\textwidth}\unit@categorynote{}\end{minipage}}%
+			\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-1pt}%
+			\else
+				\vspace*{-7pt}%
+			\fi
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@secondoptionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@thirdoptionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.82\textwidth}%
+				\unit@categorynote{}%
+			\end{minipage}\par%
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-2pt}%
+			\else
+				\vspace*{-6pt}%
+			\fi
+			\rule{\textwidth}{0.5pt}\par%		
+		}%
+	}%
 }%
 %
 % Fluff
@@ -439,10 +514,11 @@
 {\ChLab{\ArmourPenetrationInitials}}&%
 {\ChLab{\AgilityInitials}}&%
 \tabularnewline%
-\togglefalse{printoffensename}% reset
-\expandafter\ifblank\expandafter{\unit@forceoffensenameprint}{}{\toggletrue{printoffensename}}%
-\expandafter\ifblank\expandafter{\unit@offensenameB}{}{\toggletrue{printoffensename}}%
-\expandafter\ifblank\expandafter{\unit@offensenameI}{}{\toggletrue{printoffensename}}%
+%\togglefalse{printoffensename}% reset
+%\expandafter\ifblank\expandafter{\unit@forceoffensenameprint}{}{\toggletrue{printoffensename}}%
+%\expandafter\ifblank\expandafter{\unit@offensenameB}{}{\toggletrue{printoffensename}}%
+%\expandafter\ifblank\expandafter{\unit@offensenameI}{}{\toggletrue{printoffensename}}%
+\toggletrue{printoffensename}% now we walways print offense names
 \iftoggle{printoffensename}{%
 	\nameindent\unit@offensename{}%
 }{}%
@@ -587,7 +663,7 @@
 \raggedcolumns%
 \begin{multicols}{2}%
 \iftoggle{twocolprintmodelrulesdef}{\strut\modelrulesdef{\unit@modelrulesdef}}{}%
-\iftoggle{twocolprintmagic}{\strut\magic{\unit@magic}{\unit@paths}}{}%
+\iftoggle{twocolprintmagic}{\strut\magic{\unit@magic}{\unit@paths}{\unit@pathsnote}}{}%
 \iftoggle{twocolprintoptions}{%
 	\expandafter\ifblank\expandafter{\unit@options}{%
 		\strut\explicitoptions{\unit@explicitoptions}%	
@@ -645,7 +721,16 @@
 %%%%%%% Filling the profiles database for the QRS
 \DTLnewrow{profiles}%
 \expandafter\dtbfillunitname\expandafter{\unit@name}%
-\expandafter\dtbfillunitQRSname\expandafter{\unit@QRSname}%
+
+% QRS name defined? if yes, fill the database
+\def\tempQRSname{}
+\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\tempQRSname]%
+\expandafter\ifblank\expandafter{\unit@QRSname}{%
+	\expandafter\ifundef\expandafter{\csname \tempQRSname QRS\endcsname}{\dtbfillunitQRSname{}}{\expandafter\dtbfillunitQRSname\expandafter{\csname \tempQRSname QRS\endcsname}}%
+}{%
+	\expandafter\dtbfillunitQRSname\expandafter{\unit@QRSname}%
+}
+
 \expandafter\dtbfillhypertag\expandafter{\unithypertag}%
 \edef\categorynumberstring{\arabic{categorynumber}}%
 \expandafter\dtbfillcategorytag\expandafter{\categorynumberstring}%

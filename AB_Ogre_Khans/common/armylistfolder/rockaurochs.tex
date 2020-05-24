@@ -2,11 +2,13 @@
 \unitentry{%
 	name=\rockaurochs{},
 	logo=monster,
-	cost=475,
+	cost=490,
 	unitsize=1,
-	maxunitsperarmy=2,
+	%maxunitsperarmy=2,
+	addrestriction=\zerotoXunitsperarmy{2}\refsymbol{},
+	categorynote=\refsymbolbis{}\rockaurochsrestriction{},
 	type=\beast{},
-	size=\sizegigantic{},
+	size=\heightgigantic{},
 	basesize=100\timess{}150,
 	global@Ad=7,
 	global@Ma=14,
@@ -23,21 +25,21 @@
 	offense@St=4,
 	offense@AP=1,
 	offense@Ag=3,
-	offenserules={\ogrecrossbow{} (3+)},
 	offensenameB=\rockaurochs{},
 	offenseB@At=5,
 	offenseB@Of=3,
 	offenseB@St=6,
 	offenseB@AP=3,
 	offenseB@Ag=2,
-	offenserulesB={\impacthits{3D3},\harnessed{},\battlefocus{},\devastatingcharge{+1 \St{}, +1 \AP{}},\textbf{\livingavalanche{}}},
+	offenserulesB={\impacthits{\XDthree{3}},\harnessed{},\battlefocus{},\devastatingcharge{+1 \St{}, +1 \AP{}},\hidebf{\livingavalanche{}}},
 	options={%
-		\replaceoxbowwonechoice{%
+		\optionschoice{\theridermusttake{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
 			\lance{}=10,
-			\huntingspear{} (3+)=\free,
-		},
+			\huntingspear{} (3+)=\free{},
+			\ogrecrossbow{} (3+)=\free{},
+		}},
 	},
 	modelrulesdef={%
 		\modelruledef{\livingavalanche}{\ruletype{\attackattribute}\livingavalanchedef}
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

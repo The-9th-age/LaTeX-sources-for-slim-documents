@@ -5,7 +5,7 @@
 	cost=190,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
 	global@Ad=6,
 	global@Ma=12,
@@ -26,16 +26,16 @@
 	options={%
 		\bsb{}=50,
 		\asinglebigname{}=\nolimit{},
-		\specialequipmentallowance{}=\upto{}100,
-        	\ha=10,
-		\weapononechoice{%
+		\specialitemsallowance{}=\upto{}100,
+        \ha{}=10,
+		\onechoiceonlyACO{%
+			\braceofogrepistols{} (4+)=10,
+			\ogrecrossbow{} (3+)=5,
+		}\columnbreak{},
+		\onechoiceonlyACO{%
 			\pw{}=5,
             \ironfist{}=10,
 			\gw{}=25,
-		},
-		\shootingweapononechoice{%
-			\braceofogrepistols{} (4+)=10,
-			\ogrecrossbow{} (3+)=5,
 		},
 	},
 } % END UNIT ENTRY

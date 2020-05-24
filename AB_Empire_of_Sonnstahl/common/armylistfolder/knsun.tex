@@ -1,12 +1,11 @@
 
 \unitentry{%
 	name=\knsun{},
-	QRSname=\knsunQRS{},
 	logo=special,
 	cost=290,
 	unitsize=3,
 	maxunitsize=6,
-	costpermodel=95,
+	costpermodel=83,
 	scoring=yes,
 	maxunitsperarmy=3,
 	type=\cavalry{},
@@ -15,7 +14,7 @@
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=8,
-	globalrules={\scoring{}},
+	globalrules={\scoring{},\fear{}},
 	defense@HP=3,
 	defense@Df=4,
 	defense@Re=4,
@@ -27,21 +26,23 @@
 	offense@St=4,
 	offense@AP=1,
 	offense@Ag=4,
-	offenseweapons={\halberd{}},
 	offensenameB=\younggriff{},
 	offenseB@At=3,
 	offenseB@Of=4,
 	offenseB@St=5,
-	offenseB@AP=2,
+	offenseB@AP=3,
 	offenseB@Ag=4,
-	offenserulesB={\harnessed{}},
+	offenserulesB=\harnessed{},
 	options={%
-				May replace \halberd{} with \lance{}=12\permodel{},
-			},
+		\optionschoice{\theknightmusttake{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+			\halberd{}=\free{},
+			\lance{}=10\permodel{},
+		}},
+	},
 	commandgroup={%
 		\champion{}=20,
 		\musician{}=20,
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

@@ -6,14 +6,14 @@
 \newcommand{\heartripper}{Heart-Ripper}
 \newcommand{\ritualbloodletter}{Ritual Bloodletter}
 
-\newcommand{\bannerofthegyengget}{Banner of the Gyengget}
-\newcommand{\pennantofthegreatgrasssky}{Pennant of the Great Grass Sky}
-\newcommand{\skullofqenghet}{Skull of Qenghet}
-
 \newcommand{\wrestlersbelt}{Wrestler's Belt}
 \newcommand{\mammothhidecloak}{Mammoth-Hide Cloak}
 \newcommand{\karkadansresilience}{Karkadan's Resilience}
 \newcommand{\yetifurs}{Yeti Furs}
+
+\newcommand{\bannerofthegyengget}{Banner of the Gyengget}
+\newcommand{\pennantofthegreatgrasssky}{Pennant of the Great Grass Sky}
+\newcommand{\skullofqenghet}{Skull of Qenghet}
 
 \newcommand{\lygurstongue}{Lygur's Tongue}
 \newcommand{\aurochscharm}{Aurochs Charm}
@@ -22,69 +22,59 @@
 % Special Equipment Texts
 
 \newcommand{\khagadaislegacydef}{%
-Great Weapon enchantment.\newline
-Attacks made with this weapon gain \textbf{Multiple Wounds(D3)} and become \textbf{Magical Attacks}.
+	Attacks made with this weapon gain \textbf{\multiplewounds{}{} (D3)} and become \textbf{\magicalattacks{}}.%
 }
 
 \newcommand{\viperscursedef}{%
-Brace of Ogre Pistols or Ogre Crossbow enchantment.\newline
-This weapon has Shots 4, Str 4, and AP 2 (Range is dependent on which weapon is enchanted). This weapon also gains \textbf{Poison Attacks} and \textbf{Magical Attacks} (in case of Brace of Ogre Pistols, both of these also apply for Close Combat Attacks made with it). An enchanted Ogre Crossbow loses Area Attack (1×5). Shooting Attacks made with this weapon \textbf{always} hit on 4+.
+	\shots{4}, \St{} 4, \AP{} 2 (Range is dependent on which weapon is enchanted). This weapon also gains \textbf{\magicalattacks{}} and \textbf{\poisonattacks{}} (in case of Brace of Ogre Pistols, both Attack Attributes also apply to Close Combat Attacks made with it). An enchanted Ogre Crossbow loses \areaattack{} (1\timess{}5). Shooting Attacks made with this weapon \textbf{always} hit on 4+.%
 }
 
 \newcommand{\heartripperdef}{%
-Iron Fist or Paired Weapons enchantment.\newline
-Attacks made with this weapon gain \textbf{Lethal Strike}, +1 Armour Penetration, become \textbf{Magical Attacks}, and can never hit on worse than 3+.
+	Attacks made with this weapon gain \textbf{\lethalstrike{}}, +1 Armour Penetration, become \textbf{\magicalattacks{}}, and can \textbf{never} hit on worse than 3+.%
 }
 
+\newcommand{\ritualbloodletterrestriction}{Shamans only}
 \newcommand{\ritualbloodletterdef}{%
-\itemrestriction{Shamans only.}
-Hand Weapon, Paired Weapons, or Iron Fist enchantment.\newline
-The wielder gains +1 Offensive Skill and +1 Attack Value while using this weapon. Attacks made with it become \textbf{Magical Attacks}. For each unsaved wound inflicted with this weapon, the owner gains one Veil Token.
-}
-
-\newcommand{\bannerofthegyenggetdef}{%
-\itemrestriction{Cannot be taken by units that count towards Core}
-All model parts in the bearer’s unit must reroll natural to-hit, to-wound, and Armour Save rolls of ‘1’ in the First Round of Combat (this includes Special Attacks).
-}
-
-\newcommand{\pennantofthegreatgrassskydef}{%
-The bearer’s unit gains \textbf{Swiftstride}.
-}
-
-\newcommand{\skullofqenghetdef}{%
-Models in the bearer’s unit gain \textbf{Fear} and automatically pass Panic Tests caused by Terror.
+	The wielder gains +1 Offensive Skill and +1 Attack Value while using this weapon. Attacks made with it become \textbf{\magicalattacks{}}. For each unsaved wound inflicted with this weapon, the owner gains one Veil Token.%
 }
 
 \newcommand{\wrestlersbeltdef}{%
-\itemrestriction{Models on foot only.}
-Light Armour enchantment.\newline
-The wearer gains +2 Armour and +1 Strength.
+	The wearer gains +2 Armour and +1 Strength.%
 }
 
 \newcommand{\mammothhidecloakdef}{%
-\itemrestriction{Models on foot only.}
-Suits of Armour enchantment.\newline
-The wearer gains +1 Armour. Attacks against the wearer can never have a Strength above 5.
+	The wearer gains +1 Armour. Attacks against the wearer can \textbf{never} have a Strength above 5.%
 }
 
 \newcommand{\karkadansresiliencedef}{%
-Suits of Armour enchantment.\newline
-The wearer gains +1 Resilience but automatically fails all Special Saves.
+	The wearer gains +1 Resilience but automatically fails all Special Saves.%
 }
 
 \newcommand{\yetifursdef}{%
-Suits of Armour enchantment.\newline
-The wearer gains +1 Armour. Enemy units in base contact with the wearer suffer \minuss{}1 Agility.
+	The wearer gains +1 Armour. Enemy units in base contact with the wearer suffer \minuss{}1 Agility.%
+}
+
+\newcommand{\bannerofthegyenggetrestriction}{Cannot be taken by units that count towards Core}
+\newcommand{\bannerofthegyenggetdef}{%
+	In the First Round of Combat, natural to-hit, to-wound, and Armour Save rolls of \result{1} from all model parts in the bearer's unit \textbf{must} be rerolled, including Special Attacks.%
+}
+
+\newcommand{\pennantofthegreatgrassskydef}{%
+	The bearer's unit gains \textbf{\swiftstride{}}.%
+}
+
+\newcommand{\skullofqenghetdef}{%
+	The bearer's unit gains \textbf{\fear{}} and automatically passes Panic Tests caused by Terror.%
 }
 
 \newcommand{\lygurstonguedef}{%
-Enemy units in base contact with the bearer suffer \minuss{}1 Attack Value.
+	Enemy units in base contact with the bearer suffer \minuss{}1 Attack Value.%
 }
 
 \newcommand{\aurochscharmdef}{%
-The bearer gains \textbf{Mountain Hide}.
+	The bearer gains \textbf{\mountainhide{}}.%
 }
 
 \newcommand{\rampagerschaindef}{%
-The bearer gains \textbf{Stomp (D3+1)}, and all models in the bearer’s unit must reroll failed to-wound rolls with Stomp Attacks.
+	The bearer gains \textbf{\stompattacks{} (D3+1)}, and all models in the bearer's unit \textbf{must} reroll failed to-wound rolls with Stomp Attacks.%
 }

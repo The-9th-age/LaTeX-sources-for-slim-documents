@@ -109,40 +109,25 @@
 % Exalted Herald
 
 \newcommand{\manifestation}{Manifestation}
-\newcommand{\manifestationdef}{During Spell Selection, each Exalted Herald must choose two different Manifestations from the list below and apply the effects during the game. The model must select 3 spells out of the spells indicated for the chosen Manifestations, \spellformat{\thaumaturgyspellfive}{\thaumaturgy}, and \spellformat{\hellfire}{\hereditaryspell}. This replaces the normal rules for Spell Selection connected to being a Wizard Adept. In addition, \spellformat{\divinationattribute}{\divination} becomes the Attribute Spell for all non-Bound Spells cast by the model, replacing the spells' corresponding Attribute where applicable.}
+\newcommand{\manifestationdef}{During Spell Selection, each Exalted Herald \textbf{must} choose two different Manifestations from the list below and apply the effects during the game. The model \textbf{must} select 3 spells out of the spells indicated for the chosen Manifestations, \spellformat{\thaumaturgyspellfive}{\thaumaturgy}, and \spellformat{\hellfire}{\hereditaryspell}. This replaces the normal rules for Spell Selection connected to being a Wizard Adept. In addition, \spellformat{\divinationattribute}{\divination} becomes the Attribute Spell for all non-Bound Spells cast by the model.}
 
 \newcommand{\theexaltedheraldgains}{The Exalted Herald gains}
 \newcommand{\theexaltedheraldknows}{The Exalted Herald has access to}
 
 % The manifestations will be automatically sorted in alphabetical order.
 \newcommand{\abidingspirit}{Abiding Spirit}
-\newcommand{\abidingspiritrule}{\textbf{\hardtarget{} (1)}. At the end of each of your Melee Phases, if the Exalted Herald has been on the winning side of a combat in this phase, it Recovers 1 Health Point.}
-\newcommand{\abidingspiritspells}{\spellformat{\thaumaturgyspelltwo}{\thaumaturgy}.}
+\newcommand{\abidingspiritrule}{At the end of each friendly Melee Phase, if the Exalted Herald has been on the winning side of a combat in this phase, it Recovers 1 Health Point.}
 
 \newcommand{\brandofthedragon}{Brand of the Dragon}
-\newcommand{\brandofthedragonrule}{\textbf{\fly{8}{16}}, \textbf{\lighttroops{}}, \textbf{\swiftstride{}}, and \textbf{\breathattack{\St{} 4, \AP{} 1, \flamingattacks{}}}.}
-\newcommand{\brandofthedragonspells}{\spellformat{\occultismspellfour}{\occultism}.}
-
 \newcommand{\emissaryofchaos}{Emissary of Chaos}
-\newcommand{\emissaryofchaosrule}{\textbf{\stompattacks{} (D6)}, \textbf{\stubborn{}}, \textbf{\tall{}}, and \textbf{\terror}.}
-\newcommand{\emissaryofchaosspells}{\spellformat{\occultismspellone}{\occultism}.}
-
 \newcommand{\sorcererimmortal}{Sorcerer Immortal}
-\newcommand{\sorcererimmortalrule}{\textbf{\veilwalker}.}
-\newcommand{\sorcererimmortalspells}{\spellformat{\occultismspellfive}{\occultism} and \spellformat{\occultismspellsix}{\occultism}.}
-
 \newcommand{\unholyavatar}{Unholy Avatar}
-\newcommand{\unholyavatarrule}{+1 Strength, +1 Armour Penetration, and \textbf{\divineattacks}.}
-\newcommand{\unholyavatarspells}{\spellformat{\occultismspellthree}{\occultism}.}
 
 % Chosen Lord
 
 \newcommand{\allowanceifgeneral}{\suboptionindent{}If General}
 \newcommand{\maytakegifts}{A single \textbf{Gift of the Dark Gods}}
 \newcommand{\mustchoosefavour}[1]{\optionschoiceTWOCOL{\textbf{Must} choose a single Favour:}{\AlOrder{#1}}}
-\newcommand{\replaceshieldwithspikedshield}{Replace Shield with Spiked Shield}
-\newcommand{\withoutsloth}{Without Favour of Sloth}
-\newcommand{\withsloth}{With Favour of Sloth}
 \newcommand{\giftsofdarkgodsnote}{\textbf{Gifts of the Dark Gods}. Each Gift is One of a Kind.}
 
 \newcommand{\daemonicwings}{Daemonic Wings}
@@ -152,7 +137,7 @@
 \newcommand{\entropicaura}{Entropic Aura}
 \newcommand{\entropicaurarestriction}{Standard and Large models only}
 \newcommand{\entropicaurarule}{%
-	Weapon Enchantments and Armour Enchantments carried by the bearer, models in the bearer's unit, and models in units that are in base contact with the bearer cannot be used.\columnbreak
+	Weapon Enchantments and Armour Enchantments carried by the bearer, models in the bearer's unit, and models in units that are in base contact with the bearer are ignored.%
 }
 \newcommand{\luckofthedarkgods}{Luck of the Dark Gods}
 \newcommand{\luckofthedarkgodsrule}{%
@@ -164,20 +149,20 @@
 }
 \newcommand{\darkprelate}{Dark Prelate}
 \newcommand{\darkprelaterule}{%
-	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells, Power Level (4/8), with type \castersunit{}. \spellformat{\occultismspelltwo}{} is cast as the amplified version without performing The Sacrifice.%
+	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells with Power Level (4/8) and type \castersunit{}. \spellformat{\occultismspelltwo}{} is cast as the amplified version without performing The Sacrifice.\columnbreak%
 }
 
 % Doom Lord
 
 \newcommand{\masterofdestruction}{Master of Destruction}
 \newcommand{\masterofdestructiondef}{%
-	The bearer can use a \shield{} (or a \spikedshield{}) simultaneously with a \gw{} or a \halberd{}.%
+	The bearer can use a \shield{} or a \spikedshield{} simultaneously with a \gw{} or a \halberd{}.%
 }
 
 % Barbarian Chief
 
 \newcommand{\deedsnotwords}{Deeds not Words}
-\newcommand{\deedsnotwordsdef}{The model part gains \textbf{\battlefocus} and \textbf{\hatred} when in a unit that has \rnf{} models with \battlefever{}.}
+\newcommand{\deedsnotwordsdef}{The model part gains \textbf{\battlefocus} and \textbf{\hatred} when joined to one or more \rnf{} models with \battlefever{}.}
 
 % Feldrak Ancestor
 
@@ -215,9 +200,9 @@
 
 % Battleshrine
 
-\newcommand{\beaconofthedarkgods}{Beacon of the Dark Gods}
-\newcommand{\beaconofthedarkgodsmountdef}{%
-After Spell Selection, the Wizard \textbf{must} replace one of its Learned Spells with one of the following spells: 
+\newcommand{\keeperofthebeacon}{Keeper of the Beacon}
+\newcommand{\keeperofthebeacondef}{%
+After Spell Selection, the Wizard \textbf{must} replace one of its non-Hereditary Learned Spells with one of the following spells: 
 \begin{itemize}
 \item \spellformat{\evocationspelltwo}{\evocation}
 \item \spellformat{\occultismspellsix}{\occultism}
@@ -240,7 +225,7 @@ After Spell Selection, the Wizard \textbf{must} replace one of its Learned Spell
 
 % Fallen
 
-\newcommand{\fallennote}{\refsymbolbis{}\zerotoXunitsperarmy{6} if a \doomlord{} is General}
+\newcommand{\fallennote}{\refsymbolbis{}\zerotoXunitsperarmy{6} if a \doomlord{} is the General}
 
 %% SPECIAL
 
@@ -276,8 +261,10 @@ The unit cannot be joined by any Characters, and it may never have more ranks th
 
 % Battleshrine
 
-\newcommand{\battleshrinespecialequipmentoption}{The Shrine Priest may take a single Banner Enchantment or Artefact from this Army Book}
+\newcommand{\battleshrinespecialequipmentoption}{The Shrine Priest may take a single Banner Enchantment\refsymbol{} or Artefact\refsymbol{}}
+\newcommand{\fromthisarmybookonly}{from this Army Book only}
 
+\newcommand{\beaconofthedarkgods}{Beacon of the Dark Gods}
 \newcommand{\beaconofthedarkgodsunitdef}{%
 Instead of selecting spells as normal, the Wizard \textbf{must} select one of the following spells during Spell Selection: 
 \begin{itemize}
@@ -291,7 +278,7 @@ Instead of selecting spells as normal, the Wizard \textbf{must} select one of th
 
 \newcommand{\skinninglash}{Skinning Lash}
 \newcommand{\skinninglashdef}{%
-A unit with at least one model with Skinning Lash can make a Sweeping Attack against a single unengaged enemy unit when passing within \distance{1} (it does not need to and cannot move through or over that unit). The enemy unit suffers 1 hit with Strength 4 and Armour Penetration 0 for each model with Skinning Lash in the unit. A unit that loses one or more Health Points due to the Skinning Lash Sweeping Attack suffers \minuss{}1 Discipline until the end of its next Player Turn.%
+A unit with at least one model with Skinning Lash can make a Sweeping Attack against a single unengaged enemy unit when passing within \distance{1} (it does not need to and cannot move through or over that unit). The enemy unit suffers 1 hit with Strength 4 and Armour Penetration 0 for each model with Skinning Lash in the unit. A unit that loses one or more Health Points due to one or more Skinning Lash Sweeping Attack suffers \minuss{}1 Discipline until the end of its next Player Turn.%
 }
 
 % Warhounds
@@ -303,7 +290,7 @@ One use only. May be activated at the start of a friendly Player Turn (all model
 
 % Chimera
 
-\newcommand{\chimeracategorynote}{The model additionally counts towards \legendarybeasts{} when taking \textbf{\wings{}}.}
+\newcommand{\chimeracategorynote}{The model also counts towards \legendarybeasts{} when taking \textbf{\wings{}}.}
 
 %% LEGENDARY BEASTS
 
@@ -317,7 +304,7 @@ One use only. May be activated at the start of a friendly Player Turn (all model
 
 \newcommand{\monstrousfamiliar}{Monstrous Familiar}
 \newcommand{\monstrousfamiliardef}{%
-The model gains \textbf{\wizardapprentice}. Instead of selecting spells as normal, it must select one of the following spells (during Spell Selection): \spellformat{\alchemyspellthree}{\alchemy}, \spellformat{\occultismspellfour}{\occultism}, or \spellformat{\hellfire}{\hereditaryspell}.%
+The model gains \textbf{\wizardapprentice}. Instead of selecting spells as normal, it \textbf{must} select one of the following spells (during Spell Selection): \spellformat{\alchemyspellthree}{\alchemy}, \spellformat{\occultismspellfour}{\occultism}, or \spellformat{\hellfire}{\hereditaryspell}.%
 }
 
 \newcommand{\giantclub}{Giant Club}
@@ -327,7 +314,7 @@ The model gains \textbf{\wizardapprentice}. Instead of selecting spells as norma
 \newcommand{\tribalwarspeardef}{Attacks with a \tribalwarspear{} gain +1 Strength and \textbf{Multiple Wounds (D3, against Towering Presence)}. Charging enemy units in base contact with the wielder suffer \minuss{}1 Agility. The wielder follows the rules for War Platforms with the following exception: it can only join Infantry units that include at least one \rnf{} Barbarian Infantry model.}
 
 \newcommand{\bigbrother}{Big Brother}
-\newcommand{\bigbrotherdef}{The model's Health Points are set to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.}
+\newcommand{\bigbrotherdef}{The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.}
 
 % Hellmaw
 
@@ -335,23 +322,29 @@ The model gains \textbf{\wizardapprentice}. Instead of selecting spells as norma
 \newcommand{\oneominousgateway}{One \textbf{Ominous Gateway}}
 \newcommand{\twoominousgateways}{Two \textbf{Ominous Gateways}}
 \newcommand{\ominousgatewaydef}{%
-\itemrestriction{\zerotoXchoiceperarmy{2}.}%
-At the start of step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield with a Gateway Marker. This must be outside the opponent's Deployment Zone.%
+\itemrestriction{\zerotoXperarmy{2}.}%
+At the start of step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield outside the opponent's Deployment Zone with a Gateway Marker.%
 }
 
 \newcommand{\gateway}{Gateway}
 \newcommand{\gatewaydef}{%
 At the end of each friendly Magic Phase, each Hellmaw may do one of the following:
 \begin{smallitemize}%
-\item \textbf{Open a Gateway:} Mark a single point on the Battlefield with a Gateway Marker. This point must be within Line of Sight and \distance{24} of the Hellmaw, and more than \distance{6} away from enemy units. There can never be more than 4 friendly Gateway Markers on the Battlefield (including Ominous Gateways).
+\item \textbf{Open a Gateway:} Mark a single point on the Battlefield with a Gateway Marker. This point \textbf{must} be within Line of Sight and \distance{24} of the Hellmaw, and more than \distance{6} away from enemy units. There can never be more than 4 friendly Gateway Markers on the Battlefield (including Ominous Gateways).
 \item \textbf{Close a Gateway:} Choose a friendly Gateway Marker with its centre within Line of Sight and \distance{24} of the Hellmaw. All units within \distance{6} of the centre of the marker suffer D6 hits with \textbf{Toxic Attacks} and \textbf{Magical Attacks}. Then remove the marker.\newline{}If all friendly Hellmaws have been removed as casualties, immediately close all friendly Gateways as described above.
 \end{smallitemize}%
 
-A friendly unit consisting entirely of non-Gigantic models that ends an Advance or March Move in contact with the centre of a friendly Gateway Marker may choose to enter the Gateway: remove the unit from the Battlefield. The unit:
+A friendly unit may choose to enter the Gateway if all the following conditions are met:
+\begin{smallitemize}
+\item The unit does not contain any Gigantic models.
+\item The unit is in contact with the centre of a friendly Gateway Marker.
+\item All models in the unit just performed an Advance or March Move and no other model has moved since.
+\end{smallitemize}
+Remove the unit from the Battlefield. The unit:
 \begin{smallenumerate}%
 \item Is then placed back on the Battlefield within \distance{3} of the centre of any other friendly Gateway Marker. No model can end up with its centre farther away than its March Rate from the centre of the chosen marker.
-\item Must have the same formation, but may face any direction.
-\item Must follow the Unit Spacing rule.
+\item \textbf{Must} have the same formation, but may face any direction.
+\item \textbf{Must} follow the Unit Spacing rule.
 \item Suffers D6 + X hits with \textbf{Toxic Attacks} and \textbf{Magical Attacks}, distributed by the owner, where X is equal to the number of ranks in the unit. Hits distributed onto models with Hell-Forged Armour or Supernal automatically fail to wound.
 \item Loses Scoring until its next Player Turn.
 \end{smallenumerate}%

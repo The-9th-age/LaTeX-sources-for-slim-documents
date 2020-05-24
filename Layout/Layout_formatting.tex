@@ -49,7 +49,7 @@
 
 \newcommand{\predotfill}{\penalty0\hbox{}\nobreak} % avoiding a cost being printed at the beginning of a new line => it goes to the end of the line instead
 
-\newcommand{\boosted}[1]{\textbf{\textcolor{blue}{$\{$#1$\}$}}}
+\newcommand{\boosted}[1]{\textbf{\textcolor{blue}{\strut$\{$#1$\}$\strut}}}
 \newcommand{\base}[1]{\textcolor{red}{\leftspecialbracket{}#1\rightspecialbracket{}}}
 \newcommand{\specialboosted}[1]{\textbf{\textcolor{olive}{\leftspecialbracket{}\hspace*{-0.4ex}\leftspecialbracket{}#1\rightspecialbracket{}\hspace*{-0.4ex}\rightspecialbracket{}}}}
 
@@ -74,6 +74,12 @@
 \newcommand{\starsymbol}{$\star$}
 \newcommand{\refsymbol}{*}
 \newcommand{\refsymbolbis}{*}
+\newcommand{\refsymbolB}{$^{\dagger}$}
+\newcommand{\refsymbolBbis}{$^{\dagger}$}
+\newcommand{\refs}{*}
+\newcommand{\refsbis}{*}
+\newcommand{\refsB}{$^{\dagger}$}
+\newcommand{\refslBbis}{$^{\dagger}$}
 \DeclareSIUnit[number-unit-product = {}]{\inch}{″}
 \DeclareSIUnit[number-unit-product = {}]{\foot}{′}
 \newcommand{\plusone}{+1} % still used?
@@ -106,6 +112,7 @@ $\rangle$%
 \newcommand{\ChVal}[1]{\textbf{#1}} % Font for Characteristic's values
 
 \newcommand{\suboptionindent}{\hspace*{0.6cm}}
+\newcommand{\optionnewlineindent}{\hspace*{0.3cm}}
 
 \newlength{\lengthbeforemodelsize}
 \setlength{\lengthbeforemodelsize}{6.5cm}
@@ -118,3 +125,9 @@ $\rangle$%
 %\newcommand{\characteristicsline}{\noalign{\vskip -3.5pt}\hline}% deprecated
 
 \newcommand{\ruletype}[1]{#1.\newline}
+
+%%% Language specific %%%
+
+\ifundef{\DEnewline}{%
+	\newcommand{\DEnewline}{}% defined to \newline when language is DE
+}{}%

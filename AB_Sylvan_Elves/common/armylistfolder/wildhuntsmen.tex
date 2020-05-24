@@ -2,13 +2,13 @@
 \unitentry{%
 	name=\wildhuntsmen{},
 	logo=special,
-	cost=300,
+	cost=295,
 	unitsize=5,
 	maxunitsize=12,
-	costpermodel=55,
+	costpermodel=48,
 	maxunitsperarmy=3,
 	type=\cavalry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=25\timess{}50,
 	global@Ad=9,
 	global@Ma=18,
@@ -27,7 +27,6 @@
 	offense@AP=1,
 	offense@Ag=6,
 	offenserules={\lightningreflexes{},\devastatingcharge{+1 \At{}},\battlefocus{}},
-	offenseweapons={\sylvanlance{}},
 	offensenameB=\elvendeer{},
 	offenseB@At=1,
 	offenseB@Of=3,
@@ -37,7 +36,10 @@
 	offenserulesB={\harnessed{}},
 	options={%
 		\shield{}=5\permodel{},
-		\replacesylvanlancewithsylvanblades{}=1\permodel{},
+		\optionschoice{\thehuntsmanmusttake{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+			\sylvanblades{}=\free{},
+			\sylvanlance{}=\free{},
+		}},
 	},
 	commandgroup={%
 		\champion{}=20,
@@ -45,4 +47,4 @@
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

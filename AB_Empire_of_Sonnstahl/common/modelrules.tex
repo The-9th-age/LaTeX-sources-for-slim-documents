@@ -1,18 +1,40 @@
 
+% ARMY MODEL RULES
+
 \maintitle{EoSModelRules}{\armymodelrules}
+
 \subtitle{\universalrules}
+
 \startAMRsortedlist
 \AMRsortedlistentry{\blessings{}}{\blessingsdef}
 \AMRsortedlistentry{\orders{}}{\ordersdef}
+\closeAMRsortedlist
+
+\startAMRsortedlist
 \AMRsortedlistentry{\parent{}}{\parentdef}
 \AMRsortedlistentry{\support{}}{\supportdef}
 \closeAMRsortedlist
 
 \subtitle{\armoury}
+
+\def\longrifleruleone{\textbf{\multiplewounds{}{} (2, \againststandard{})}}
+\def\longrifleruletwo{\textbf{\unwieldy{}}}
+
 \startAMRsortedlist
-\AMRsortedlistentry{\longrifle\titleruletype{\shootingweapon}}{\longrifledef}
-\AMRsortedlistentry{\bop\titleruletype{\shootingweapon}}{\bopdef}
-\AMRsortedlistentry{\repgun\titleruletype{\shootingweapon}}{\repgundef}
-\AMRsortedlistentry{\reppst\titleruletype{\shootingweapon}}{\reppstdef}
+\AMRsortedlistentry{\longrifle\titleruletype{\shootingweapon}}{%
+	\range{48}, \shots{1}, \St{} 5, \AP{} 3, \alphaorderlist{\longrifleruleone{}, \longrifleruletwo{}}.%
+}
+\AMRsortedlistentry{\bop\titleruletype{\shootingweapon}}{%
+	\range{12}, \shots{2}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}. \bopdef%
+}
+\AMRsortedlistentry{\repgun\titleruletype{\shootingweapon}}{%
+	\range{24}, \shots{3}, \St{} 4, \AP{} 2, \textbf{\unwieldy{}}.%
+}
+\AMRsortedlistentry{\reppst\titleruletype{\shootingweapon}}{%
+	\range{12}, \shots{3}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}. \reppstdef%
+}
+\closeAMRsortedlist
+
+\startAMRsortedlist
 \AMRsortedlistentry{\pick\titleruletype{\closecombatweapon}}{\pickdef}
 \closeAMRsortedlist

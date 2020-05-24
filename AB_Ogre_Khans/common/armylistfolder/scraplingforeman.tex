@@ -1,28 +1,31 @@
-\unitnologo{%
+
+\unitentry{%
 	name=\scraplingforeman{},
-	logo=core,
+	logo=,
+	costnote={\foremannote{}},
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=7,
-	globalrules={\insignificant{},\backtowork{}},
+	globalrules={\insignificant{},\hidebf{\backtowork{}}},
 	defense@HP=1,
 	defense@Df=3,
 	defense@Re=3,
 	defense@Arm=0,
-	offensename=\foreman{},
+	defensearmour={\la{}},
+	offensename=\scraplingforeman{},
 	offense@At=3,
-	offense@Of=2,
+	offense@Of=3,
 	offense@St=3,
 	offense@AP=0,
-	offense@Ag=3,
-	offenseweapons={\throwingweapons{} (5+)},
+	offense@Ag=4,
+	offenseweapons={\throwingweapons{} (4+)},
 	options={%
-		\weapononechoice{%
-			\halberd{}=4,
-			\gw=4,
+		\onechoiceonlyACO{%
+			\halberd{}=5,
+			\gw{}=5,
 		},	
 	},
 	modelrulesdef={%

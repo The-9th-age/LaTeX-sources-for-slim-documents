@@ -70,8 +70,8 @@
 \newcommand{\startartillerytable}{%
 \begin{center}
 \alternaterowcolors\normalfontsize
-\noindent\begin{tabular}{@{}p{3.2cm}M{2.2cm}@{}M{1.7cm}@{}M{1.5cm}@{}M{1.2cm}@{}M{1.2cm}@{}M{1.2cm}M{3.5cm}@{}}
-\textbf{\ATname} & \textbf{\ATartillery} & \textbf{\ATtohit} & \textbf{\ATrange} & \textbf{\St{}} & \textbf{\AP{}} & \textbf{\ATshots} & \textbf{\ATrules} \tabularnewline
+\noindent\begin{tabular}{@{}p{3.5cm}M{2.3cm}@{}M{1.5cm}@{}M{1.25cm}@{}M{1.25cm}@{}M{1.4cm}M{4.6cm}@{}}
+\textbf{\ATname} & \textbf{\ATartillery} & \textbf{\ATrange} & \textbf{\St{}} & \textbf{\AP{}} & \textbf{\ATshots} & \textbf{\ATrules} \tabularnewline
 }
 
 \newcommand{\closeartillerytable}{%
@@ -81,14 +81,22 @@
 
 \newcommand{\artillerytablenote}[1]{\vspace*{-5pt}{\normalfontsize#1}}
 
-\newcommand{\startshootingtable}{%
+\newcommand{\startaimtable}{%
 \begin{center}
 \alternaterowcolors\normalfontsize
 \begin{tabular}{lcl}
 \textbf{\ATname} & \textbf{\ATtohit} & \textbf{\STshootingmodel} \tabularnewline
 }
 
-\newcommand{\closeshootingtable}{%
+\newcommand{\closeaimtable}{%
 \end{tabular}
 \end{center}
 }
+
+%% Command that just print outside QRS and is void when inside QRS
+
+\newcommand{\hideinQRS}[1]{#1}
+
+%% BF in profile, and identity in QRS
+
+\newcommand{\hidebf}[1]{\textbf{#1}}
