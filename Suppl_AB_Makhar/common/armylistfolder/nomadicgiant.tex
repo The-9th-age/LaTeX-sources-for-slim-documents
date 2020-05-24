@@ -1,6 +1,7 @@
 
 \def\recurvebowruleone{\textbf{\areaattack{} (1\timess{}5)}}
 \def\recurvebowruletwo{[\textbf{\multiplewounds{}{} (\Dthree{})}]}
+\def\recurvebowrulethree{\textbf{\quicktofire{}}}
 
 \unitentry{%
 	name=\nomadicgiant{},
@@ -32,7 +33,7 @@
 	options={%
 		\textbf{\bigbrother}=35,
 		\onechoiceonlyACO{%
-			\textbf{\giantrecurvebow{}} (4+) (\NOTESTzerotoXmodelsperarmy{2})=30,
+			\textbf{\giantrecurvebow{}} (4+) (\NOTESTzerotoXmodelsperarmy{2})=40,
 			\textbf{\giantclub{}}=30,
 			\textbf{\tribalwarspear{}}=40,
 		},
@@ -46,7 +47,7 @@
 		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
 		\modelruledef{\tribalwarspear{}}{\ruletype{\closecombatweapon{}}\tribalwarspeardef{}}
 		\modelruledef{\giantrecurvebow{}}{\ruletype{\artilleryweapon{}}%
-		\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlist{\recurvebowruleone{},\recurvebowruletwo{}}.}
+		\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlist{\recurvebowruleone{},\recurvebowruletwo{},\recurvebowrulethree{}}.}
 	},%
 	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
 }% END UNIT

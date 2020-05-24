@@ -14,7 +14,7 @@
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=6,
-	globalrules={\newrule{\terror{}},\frenzy{},\fearless{},\insignificant{},\textbf{\followtheherd{}}},
+	globalrules={\terror{},\frenzy{},\fearless{},\insignificant{},\textbf{\followtheherd{}}},
 	defense@HP=3,
 	defense@Df=2,
 	defense@Re=4,
@@ -26,9 +26,15 @@
 	offense@Ag=2,
 	offensename=\karkadan{},
 	offenserules={\impacthits{} (\Dthree{}), \textbf{\stampede{}}},
+	options={%
+		\textbf{\karkadanbulls{}} (\zerotoXmodelsperunit{9})=5\permodel{},
+	},
 	modelrulesdef={%	
 		\modelruledef{\followtheherd}{\ruletype{\universalrule}{\followtheherddef}}%
 		\modelruledef{\stampede}{\ruletype{\attackattribute}{\stampededef}}%
 	},
-	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
+	optionalmodelrulesdef={%	
+		\modelruledef{\karkadanbulls}{\ruletype{\universalrule}{\karkadanbullsdef}}%
+	},
+%	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
 } % END UNIT ENTRY
