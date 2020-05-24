@@ -2,9 +2,9 @@
 \unitentry{%
 	name=\warriors{},
 	logo=core,
-	cost=230,
+	cost=210,
 	unitsize=10,
-	maxunitsize=30,
+	maxunitsize=25\refsymbol{},
 	costpermodel=24,
 	scoring=yes,
 	type=\infantry{},
@@ -13,7 +13,7 @@
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=8,
-	globalrules={\pathfavoured{},\scoring{}},
+	globalrules={\pathfavoured{},\scoring{},\newrule{\fearless{}}},
 	defense@HP=1,
 	defense@Df=5,
 	defense@Re=4,
@@ -26,16 +26,14 @@
 	offense@AP=1,
 	offense@Ag=4,
 	commandgroup={%
-		\champion{}=20,
-		\alphaorderstickto{\champion{}AA}\suboptionindent{}\upgradeto{} \favouredchampion{}\refsymbol{}=15,
-		\alphaorderstickto{\champion{}ZZ}\refsymbol{} \unitsizereduction{}=,
+		\champion{}=30,
 		\musician{}=20,
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
 	options={%
-		\favouredchampionmustchoosefavour{\warriors}{%
-			\envy{}=3\permodel{},
+		\warriorsfavouroption{%
+			\envy{}=4\permodel{},
 			\gluttony{}=3\permodel{},
 			\greed{}=7\permodel{},
 			\lust{}=2\permodel{},
@@ -43,9 +41,10 @@
 			\sloth{}=9\permodel{},
 			\wrath{}=8\permodel{},
 		},
+		\suboptionindent{}\refsymbol{}\unitsizereduction{}=,
 		\onechoiceonlyACO{%
 			\pw{}=\free,
-			\gw{}=4\permodel{},
+			\gw{}=5\permodel{},
 			\halberd{}=6\permodel{},
 		},
 	},

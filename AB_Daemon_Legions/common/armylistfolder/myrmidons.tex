@@ -2,10 +2,10 @@
 \unitentry{%
 	name=\myrmidons{},
 	logo=core,
-	cost=215,
+	cost=\newrule{215},
 	unitsize=10,
-	maxunitsize=25,
-	costpermodel=21,
+	maxunitsize=30,
+	costpermodel=\newrule{22},
 	scoring=yes,
 	type=\beast{},
 	size=\sizestandard{},
@@ -15,7 +15,7 @@
 	global@Di=8,
 	globalrules={\supernal{},\scoring{},\fearless{}},
 	defense@HP=1,
-	defense@Df=3,
+	defense@Df=4,
 	defense@Re=3,
 	defense@Arm=0,
 	defense@Aeg=5+,
@@ -23,10 +23,10 @@
 	offensename=\myrmidon{},
 	offense@At=1,
 	offense@Of=5,
-	offense@St=4,
+	offense@St=5,
 	offense@AP=1,
-	offense@Ag=3,
-	offenserules={\devastatingcharge{+2 \St{}, \battlefocus{}}},
+	offense@Ag=4,
+	offenserules={\fightinextrarank{},\devastatingcharge{\battlefocus{}}},
 	commandgroup={%
 		\champion{}=20,
 		\musician{}=20,
@@ -34,11 +34,11 @@
 	},
 	explicitoptions={%
 		\manifestationonechoice{%
-			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=3\permodel{}}
-			\addsortedexploption{prename=lust,hypertag=hotblood,name=\hotblood{},cost=2\permodel{}}
-			\addsortedexploption{prename=wrath,hypertag=whipcracktail,name=\whipcracktail{},cost=3\permodel{}}
-			\addsortedexploption{prename=chaos,hypertag=bronzebackbone,name=\bronzebackbone{},cost=4\permodel{}}
-			\addsortedexploption{prename=envy,hypertag=greenfireeyes,name=\greenfireeyes{},cost=3\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=2\permodel{}}
+			\addsortedexploption{prename=lust,hypertag=hotblood,name=\hotblood{},cost=1\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=whipcracktail,name=\whipcracktail{},cost=2\permodel{}}
+			\addsortedexploption{prename=pride,hypertag=bronzebackbone,name=\bronzebackbone{},cost=4\permodel{}}
+			\addsortedexploption{prename=envy,hypertag=piercingspike,name=\piercingspike{},cost=\newrule{4}\permodel{}}
 		}
 	},
 } % END UNIT ENTRY

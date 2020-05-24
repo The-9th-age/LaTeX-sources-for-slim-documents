@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\miserofsugulag{},
 	logo=character,
-	cost=695,
+	cost=670,
 	unitsize=1,
 	type=\beast{},
 	size=\sizegigantic{},
@@ -11,9 +11,9 @@
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=9,
-	globalrules={\supernal{},\fearless{},\wizardapprentice{}},
+	globalrules={\supernal{},\fearless{},\wizardapprentice{},\textbf{\dominionofgreed}},
 	defense@HP=6,
-	defense@Df=8,
+	defense@Df=6,
 	defense@Re=7,
 	defense@Arm=0,
 	defense@Aeg=5+,
@@ -29,18 +29,12 @@
 	magic={\wizardadept{}=75,\wizardmaster{}=225,},
 	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy,\evocation{}=evocation},
 	options={%
-		\ifgeneralmusttakedominionofgreed{}=35,
+		\ifgeneralmusttakegreaterdominion{}=35,
 		\manifestationsoffatherchaosandgreed{}=\upto{}175,
 	},
 	modelrulesdef={%
 		\modelruledef{\halfoff}{\ruletype{\personalprotection}\halfoffdef}
-				\modelruledef{\abyssalarmour}{\ruletype{\armour}\abyssalarmourdef}
-	},
-	optionalmodelrulesdef={%
+		\modelruledef{\abyssalarmour}{\ruletype{\armour}\abyssalarmourdef}
 		\modelruledef{\dominionofgreed}{\ruletype{\universalrule}\dominionofgreeddef}
-	},
-	toggles={%
-		\toggletrue{onecolprintoptionalmodelrulesdef}
-		\togglefalse{twocolprintoptionalmodelrulesdef}
 	},
 } % END UNIT ENTRY

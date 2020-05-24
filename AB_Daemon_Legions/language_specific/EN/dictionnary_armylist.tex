@@ -73,7 +73,7 @@
 \newcommand{\legionthresher}{Legion Thresher}
 
 \newcommand{\titanslayerchariot}{Titanslayer Chariot}
-\newcommand{\chtonicmachinator}{Chtonic Machinator}
+\newcommand{\chtonicmachinator}{Chthonic Machinator}
 
 \newcommand{\clawedfiends}{Clawed Fiends}
 \newcommand{\clawedfiend}{Clawed Fiend}
@@ -119,15 +119,15 @@
 
 \newcommand{\divineright}{Divine Right}
 \newcommand{\divinerightdef}{%
-	The bearer must issue a Duel whenever possible. Duels issued by this model must (if possible) be accepted by a Character unless a Champion accepts first. In addition, when fighting a Duel, the model gains \textbf{\lethalstrike} and \textbf{\multiplewounds{}{} (2)}.%
+	The model cannot join units with other Characters and other Characters cannot join its unit. The bearer must issue a Duel whenever possible. Duels issued by this model must (if possible) be accepted by a Character unless a Champion accepts first. In addition, when fighting a Duel, the model gains \textbf{\lethalstrike} and \textbf{\multiplewounds{}{} (2)}.%
 }
 
 \newcommand{\dominionofpride}{Dominion of Pride}
 \newcommand{\dominionofpridedef}{%
-	Follows the rules for Dominion. Units with more than half of their models affected may reroll failed Discipline Tests.%
+	Units with more than half of their models with this rule may reroll failed Discipline Tests.%
 }
 
-\newcommand{\ifgeneralmusttakedominionofpride}{If General, \textbf{must} take \textbf{\dominionofpride}}
+\newcommand{\ifgeneralmusttakegreaterdominion}{If General, \textbf{must} take Greater Dominion}
 
 \newcommand{\manifestationsoffatherchaosandpride}{Manifestations of Father Chaos and Pride}
 
@@ -135,15 +135,13 @@
 
 \newcommand{\knowthyself}{Know Thyself}
 \newcommand{\knowthyselfdef}{%
-	At the start of the Initiative Step in which the bearer's Close Combat Attacks will be performed, choose one model part from each enemy model in base contact and add their Attack Value Characteristics, excluding any modifiers, to the Attack Value of Kuulima's Deceiver.%
+	At the start of the Initiative Step in which the bearer's Close Combat Attacks will be performed, choose one model part from each enemy model in base contact and add their Attack Value Characteristics, excluding any modifiers, to the Attack Value of Kuulima's Deceiver. At the end of each Round of Combat, the bearer's Attack Value is \textbf{set} to 1.%
 }
 
 \newcommand{\dominionofenvy}{Dominion of Envy}
 \newcommand{\dominionofenvydef}{%
-	Follows the rules for Dominion. The affected models' Close Combat Attacks allocated towards models equipped with Close Combat Weapons other than Hand Weapons (regardless if they are using them or not) gain +2 Offensive Skill.%
+	The model's Close Combat Attacks allocated towards models equipped with Close Combat Weapons other than Hand Weapons (regardless if they are using them or not) gain +2 Offensive Skill.%
 }
-
-\newcommand{\ifgeneralmusttakedominionofenvy}{If General, \textbf{must} take \textbf{\dominionofenvy}}
 
 \newcommand{\manifestationsoffatherchaosandenvy}{Manifestations of Father Chaos and Envy}
 
@@ -163,10 +161,8 @@
 
 \newcommand{\dominionofgreed}{Dominion of Greed}
 \newcommand{\dominionofgreeddef}{%
-	Follows the rules for Dominion. The affected models gain +2 Defensive Skill when their unit is in base contact with an enemy Scoring Unit.%
+	The model gains +2 Defensive Skill when its unit is in base contact with an enemy Scoring Unit.%
 }
-
-\newcommand{\ifgeneralmusttakedominionofgreed}{If General, \textbf{must} take \textbf{\dominionofgreed}}
 
 \newcommand{\manifestationsoffatherchaosandgreed}{Manifestations of Father Chaos and Greed}
 
@@ -179,15 +175,13 @@
 
 \newcommand{\razortentacles}{Razor Tentacles}
 \newcommand{\razortentaclesdef}{%
-	If the attack is allocated towards an enemy model in the enemy's Flank or Rear Facing, it gains \textbf{\areaattack{1\timess{}5}}, and its Strength and Armour Penetration are \textbf{set} to half the model's [the model's] Strength, respectively Armour Penetration, rounding fractions up.%
+	If the attack is allocated towards an enemy \rnf{} model while the attacker is Engaged with the Flank or Rear Facing of the target's unit the attack gains \textbf{\areaattack{1\timess{}5}}, and its Strength and Armour Penetration are \textbf{set} to half the model's [the model's] Strength, respectively Armour Penetration, rounding fractions up.%
 }
 
 \newcommand{\dominionoflust}{Dominion of Lust}
 \newcommand{\dominionoflustdef}{%
-	Follows the rules for Dominion. The affected models gain +\distance{2} March Rate and must reroll failed Charge Range rolls when Charging an enemy unit in its Flank or Rear Facing.%
+	The model gains \textbf{\strider{}} and must reroll failed Charge Range rolls when Charging an enemy unit in its Flank or Rear Facing.%
 }
-
-\newcommand{\ifgeneralmusttakedominionoflust}{If General, \textbf{must} take \textbf{\dominionoflust}}
 
 \newcommand{\manifestationsoffatherchaosandlust}{Manifestations of Father Chaos and Lust}
 
@@ -195,7 +189,7 @@
 
 \newcommand{\devour}{Devour}
 \newcommand{\devourdef}{%
-	For each unsaved wound the model causes with Close Combat Attacks, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model gains +1 Health Point.\par
+	For each Health Point loss the model causes with Close Combat Attacks, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model gains +1 Health Point.\par
 	When the model has 18 Health Points, all units within \distance{9} immediately suffer 2D6 hits with \textbf{\toxicattacks}, and the model is removed as a casualty.%
 }
 
@@ -203,10 +197,8 @@
 
 \newcommand{\dominionofgluttony}{Dominion of Gluttony}
 \newcommand{\dominionofgluttonydef}{%
-	Follows the rules for Dominion. The affected models' Melee Attacks must reroll failed to-wound rolls of \result{1}.%
+	The model must reroll natural to-wound rolls of \result{1} with its Melee Attacks.%
 }
-
-\newcommand{\ifgeneralmusttakedominionofgluttony}{If General, \textbf{must} take \textbf{\dominionofgluttony}}
 
 \newcommand{\manifestationsoffatherchaosandgluttony}{Manifestations of Father Chaos and Gluttony}
 
@@ -214,7 +206,7 @@
 
 \newcommand{\omniscience}{Omniscience}
 \newcommand{\omnisciencedef}{%
-	In the Magic Phase, if the model did not March Move or declare a Charge this Player Turn, the cost of converting Veil Tokens into Magic Dice is decreased to 2:1 during this Player Turn (2 Veil Tokens per 1 Magic Dice).%
+	In the owner's Magic Phase, if the model did not March Move or declare a Charge this Player Turn, the cost of converting Veil Tokens into Magic Dice is decreased to 2:1 during this Player Turn (2 Veil Tokens per 1 Magic Dice).%
 }
 
 \newcommand{\strixianspirit}{Strixian Spirit}
@@ -226,10 +218,8 @@
 
 \newcommand{\dominionofsloth}{Dominion of Sloth}
 \newcommand{\dominionofslothdef}{%
-	Follows the rules for Dominion. The affected models gain \textbf{\aegis{} (4+, against Special Attacks)}.%
+	The model gains \textbf{\aegis{} (+1, against Special Attacks)}.%
 }
-
-\newcommand{\ifgeneralmusttakedominionofsloth}{If General, \textbf{must} take \textbf{\dominionofsloth}}
 
 \newcommand{\manifestationsoffatherchaosandsloth}{Manifestations of Father Chaos and Sloth}
 
@@ -240,35 +230,14 @@
 	Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers \minuss{}1 Attack Value.%
 }
 
-\newcommand{\thepathofdalmagoth}{The Path of Dal-Magoth}
-\newcommand{\thepathofdalmagothdef}{%
-	Instead of selecting spells as normal, the model \textbf{must} select the following Learned Spells during Spell Selection.\newline
-	If it is a Wizard Apprentice:
-	\begin{itemize}
-	\item \spellformat{\thaumaturgyspelltwo}{\thaumaturgy}
-	\end{itemize}
-	If it is a Wizard Adept:
-	\begin{itemize}
-	\item \spellformat{\divinationspellone}{\divination}
-	\item \spellformat{\thaumaturgyspelltwo}{\thaumaturgy}
-	\end{itemize}
-	If it is a Wizard Master:
-	\begin{itemize}
-	\item \spellformat{\divinationspellone}{\divination}
-	\item \spellformat{\evocationspellone}{\evocation}
-	\item \spellformat{\thaumaturgyspelltwo}{\thaumaturgy}
-	\end{itemize}
-	This replaces the normal rules for Spell Selection associated with being a Wizard Apprentice, Adept, or Master.%
-}
+\newcommand{\thepathofdalmagoth}{The Path of Dal-Magoth}% deprecated
 
 \newcommand{\vanadraaegis}{\aegis{} (4+, against Melee Attacks)}
 
 \newcommand{\dominionofwrath}{Dominion of Wrath}
 \newcommand{\dominionofwrathdef}{%
-	Follows the rules for Dominion. The affected models cannot benefit from \parry{}, and their attacks ignore \parry{}.%
+	The model cannot benefit from \parry{}, and its attacks ignore \parry{}.%
 }
-
-\newcommand{\ifgeneralmusttakedominionofwrath}{If General, \textbf{must} take \textbf{\dominionofwrath}}
 
 \newcommand{\manifestationsoffatherchaosandwrath}{Manifestations of Father Chaos and Wrath}
 
@@ -310,6 +279,8 @@
 
 % Imps
 
+\newcommand{\impsaegis}{\aegis{} (3+, against Shooting Attacks)}
+
 \newcommand{\energybolts}{Energy Bolts}
 \newcommand{\energyboltsdef}{%
 	\range{24}, \shots{1}, \St{} 5, \AP{} 0, \textbf{\reload}%
@@ -349,7 +320,8 @@
 
 % Threshing Engine
 
-%\newcommand{\flycategorynote}{This unit additionally counts towards Aves if taking Fly.}% Same as the character entry
+\newcommand{\colossalstature}{Colossal Stature}
+\newcommand{\colossalstaturedef}{The model counts as Gigantic for the purpose of determining the number of Full Ranks.}
 
 \newcommand{\hordethresherdef}{%
 The model's profile changes:
@@ -358,6 +330,7 @@ The model's profile changes:
 		\item Its Health Points are \textbf{set} to \textbf{6}.
 		\item It gains \textbf{1} additional Tiller.
 		\item It gains \textbf{1} additional Draft Beast.
+		\item \newrule{It gains \textbf{\colossalstature{}}.}
 		\item The Chassis gains \textbf{\impacthits{3D3}}.
 	\end{itemize}%
 }
@@ -368,6 +341,7 @@ The model's profile changes:
 		\item Its Health Points are \textbf{set} to \textbf{8}.
 		\item It gains \textbf{2} additional Tillers.
 		\item It gains \textbf{2} additional Draft Beasts.
+		\item \newrule{It gains \textbf{\colossalstature{}}.}
 		\item The Chassis gains \textbf{\impacthits{4D3}}.
 	\end{itemize}%
 }
@@ -376,7 +350,7 @@ The model's profile changes:
 
 \newcommand{\mountainbreaker}{Mountain Breaker}
 \newcommand{\mountainbreakerdef}{%
-	The model gains +\distance{D3} Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence. In addition, the model's Impact Hits gain \textbf{\multiplewounds{}{} (D3, against \toweringpresence{})}.%
+	The model gains +\distance{2} Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence. In addition, the model's Impact Hits gain \textbf{\multiplewounds{}{} (D3, against \toweringpresence{})}.%
 }
 
 % Clawed Fiends
@@ -403,7 +377,7 @@ The model's profile changes:
 
 \newcommand{\tighteninggrasp}{Tightening Grasp}
 \newcommand{\tighteninggraspdef}{%
-	The model gains \textbf{\grindattacks{X}}, and can make \grindattacks{} as Supporting Attacks. When the model is not Engaged in Combat, X is \textbf{set} to 0.\par%
+	The model gains \textbf{\grindattacks{X}}, and can make \grindattacks{} as Supporting Attacks, ignoring the maximum number of Supporting Attacks. When the model is not Engaged in Combat, X is \textbf{set} to 0.\par%
 	At the end of each Round of Combat of a combat the model was Engaged in, X is increased by +1 (e.g. \grindattacks{0} becomes \grindattacks{1}).%
 }
 
@@ -419,7 +393,8 @@ The model's profile changes:
 
 \newcommand{\fallingstar}{Falling Star}
 \newcommand{\fallingstardef}{%
-	The model's Offensive Skill and Defensive Skill are \textbf{set} to twice the model's current number of Health Points.%
+	The model's Offensive Skill and Defensive Skill are \textbf{set} to twice the model's current number of Health Points.\newline
+	\newrule{The model counts as a Character for the purpose of Duels. When the model fights a Duel during a Round of Combat, it gains \textbf{Stubborn} until the end of the Round of Combat.}%
 }
 
 % Hope Harvester
@@ -427,7 +402,7 @@ The model's profile changes:
 \newcommand{\aetherbattery}{Aether Battery}
 \newcommand{\aetherbatterydef}{%
 	\volleygun{}. \range{18}, \shots{2D6*2}, \St{} 4, \AP{} 1.\newline%
-	Before rolling for the number of shots, the owner may choose to discard 1--3 Veil Tokens from its Veil Token pool. If so, the number of shots is increased by +3 per discarded Veil Token.%
+	Before rolling for the number of shots, the owner may choose to discard 1--3 Veil Tokens from their Veil Token pool. If so, the number of shots is increased by +3 per discarded Veil Token.%
 }
 
 \newcommand{\engineofdamnation}{Engine of Damnation}
@@ -447,16 +422,16 @@ The model's profile changes:
 \newcommand{\morphlings}{Morphlings}
 \newcommand{\morphlingsdef}{%
 	During Spell Selection, each unit of Veil Serpents \textbf{must} choose a Manifestation from the list below and apply the effects during the game.
-	\begin{itemize}
-	\item \chillingyawn{}
-	\item \mesmerisingplumage{}
-	\item \tarskin{}
-	\end{itemize}%
+	\startmorphlingslist%
+		\newmorphlingentry{chaos}{mirroredscales}{\mirroredscales{}}
+		\newmorphlingentry{lust}{mesmerisingplumage}{\mesmerisingplumage{}}
+		\newmorphlingentry{sloth}{chillingyawn}{\chillingyawn{}}
+	\closemorphlingslist%
 }
 
 % Bloat Flies
 
 \newcommand{\acidblood}{Acid Blood}
 \newcommand{\acidblooddef}{%
-	For each Health Point the model loses against Melee Attacks, the model that caused the wounding hit suffers 1 hit with \toxicattacks{}.%
+	For each \newrule{Fortitude Save the model fails} against Melee Attacks, the model that caused the wounding hit immediately suffers \newrule{1} hit with \toxicattacks{}, before any casualties are removed, distributed onto the model's Health Pool.%
 }

@@ -4,7 +4,7 @@
 	logo=character,
 	optionallogo=bird,
 	categorynote=\strixianspiritcategorynote{},
-	cost=675,
+	cost=620,
 	unitsize=1,
 	type=\beast{},
 	size=\sizestandard{},
@@ -13,7 +13,7 @@
 	global@Ad=2,
 	global@Ma=4,
 	global@Di=9,
-	globalrules={\supernal{},\fearless{},\wizardmaster{},\fear{},\textbf{\omniscience{}}},
+	globalrules={\supernal{},\fearless{},\wizardmaster{},\fear{},\textbf{\omniscience{}},\textbf{\dominionofsloth}},
 	defense@HP=5,
 	defense@Df=5,
 	defense@Re=5,
@@ -31,16 +31,16 @@
 	options={%
 		\musttakeoneofthefollowing{%
 			\throneoftheoracle{} (\mount{})=\free{},
-			\textbf{\strixianspirit{}} (\zerotoXunitsperarmy{1})=25,
+			\textbf{\strixianspirit{}} (\zerotoXunitsperarmy{1})=20,
 		},
-		\ifgeneralmusttakedominionofsloth{}=40,
+		\ifgeneralmusttakegreaterdominion{}=30,
 		\manifestationsoffatherchaosandsloth{}=\upto{}150,
 	},
 	modelrulesdef={%
 		\modelruledef{\omniscience}{\ruletype{\universalrule}\omnisciencedef}
+		\modelruledef{\dominionofsloth}{\ruletype{\universalrule}\dominionofslothdef}
 	},
 	optionalmodelrulesdef={%
-		\modelruledef{\dominionofsloth}{\ruletype{\universalrule}\dominionofslothdef}
 		\modelruledef{\strixianspirit}{\ruletype{\universalrule}\strixianspiritdef}
 	},
 } % END UNIT ENTRY

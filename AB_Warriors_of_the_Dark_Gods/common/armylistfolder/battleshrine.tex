@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\battleshrine{},
 	logo=special,
-	cost=315,
+	cost=\newrule{260},
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\construct{},
@@ -11,7 +11,7 @@
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=8,
-	globalrules={\notaleader{}, \fearless{}, \fear{}, \toweringpresence{}, \channel{1}, \warplatform{}, \standardbearer{}, \textbf{\beaconofthedarkgods{}}, \wizardapprentice{}, },
+	globalrules={\notaleader{},,\battlefever{},\fear{}, \toweringpresence{}, \channel{1}, \warplatform{}, \newrule{\trophyrack{}}, \textbf{\beaconofthedarkgods{}}, \wizardapprentice{}},
 	defense@HP=5,
 	defense@Df=4,
 	defense@Re=5,
@@ -32,10 +32,7 @@
 	offenseB@Ag=1,
 	offenserulesB={\harnessed{},\grindattacks{D6+1}},
 	options={%
-		\onechoiceonly{%
-			\ledgerofsouls{} (\seespecialequipment{})=90,
-			\bannerallowance{}=\nolimit{}}
-		,%
+		\battleshrinespecialequipmentoption{}=\nolimit{},
 	},
 	modelrulesdef={%
         \modelruledef{\beaconofthedarkgods}{\ruletype{\universalrule}{\beaconofthedarkgodsunitdef}}

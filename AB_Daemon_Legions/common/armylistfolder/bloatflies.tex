@@ -2,35 +2,37 @@
 \unitentry{%
 	name=\bloatflies{},
 	logo=bird,
-	cost=195,
-	unitsize=2,
+	cost=\newrule{310},
+	unitsize=3,
 	maxunitsize=6,
-	costpermodel=92,
+	costpermodel=100,
 	maxunitsperarmy=3,
 	type=\beast{},
 	size=\sizelarge{},
 	basesize=50\timess{}75,
 	global@Ad=2,
 	global@Ma=4,
-	global@Adfly=8,
-	global@Mafly=12,
+	global@Adfly=\newrule{6},
+	global@Mafly=\newrule{12},
 	global@Di=8,
-	globalrules={\supernal{},\fearless{},\lighttroops{},\fly{8}{12},\fear{}},
-	defense@HP=5,
-	defense@Df=2,
+	globalrules={\supernal{},\fearless{},\lighttroops{},\fly{\newrule{6}}{\newrule{12}},\fear{}},
+	defense@HP=4,
+	defense@Df=\newrule{3},
 	defense@Re=4,
 	defense@Arm=0,
-	defense@Aeg=6+,
+	defense@Aeg=\newrule{5}+,
 	printAeg=defined,
+	defenserules={\fortitude{} (5+)},
 	offensename=\bloatfly{},
-	offense@At=2,
+	offense@At=\newrule{4},
 	offense@Of=3,
-	offense@St=5,
-	offense@AP=1,
-	offense@Ag=1,
+	offense@St=4,
+	offense@AP=\newrule{2},
+	offense@Ag=3,
 	offenserules={\textbf{\acidblood}},
-	commandgroup={
+	commandgroup={%
 		\champion{}=20,
+		\newrule{\musician{}}=\newrule{20},
 		\standardbearer{}=20,
 	},
 	modelrulesdef={%
@@ -38,11 +40,11 @@
 	},
 	explicitoptions={%
 		\manifestationonechoice{%
-			\addsortedexploption{prename=gluttony,hypertag=broodmother,name=\broodmother{},cost=13\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=broodmother,name=\broodmother{},cost=\newrule{15}\permodel{}}
 			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=10\permodel{}}
-			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=5\permodel{}}
-			\addsortedexploption{prename=chaos,hypertag=unnaturalroots,name=\unnaturalroots{},cost=10\permodel{}}
-			\addsortedexploption{prename=chaos,hypertag=kaleidoscopicflesh,name=\kaleidoscopicflesh{},cost=12\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=7\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=dextroustentacles,name=\newrule{\dextroustentacles{}},cost=\newrule{7\permodel{}}}
+			\addsortedexploption{prename=chaos,hypertag=kaleidoscopicflesh,name=\kaleidoscopicflesh{},cost=11\permodel{}}
 		}
 	},
 }

@@ -5,7 +5,7 @@
 	cost=435,
 	unitsize=3,
 	maxunitsize=5,
-	costpermodel=127,
+	costpermodel=125,
 	scoring=yes,
 	maxmodelsperarmy=12,
 	type=\cavalry{},
@@ -14,7 +14,7 @@
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=8,
-	globalrules={\pathfavoured{},\scoring{},\fear{}},
+	globalrules={\pathfavoured{},\scoring{},\fear{},\newrule{\fearless{}}},
 	defense@HP=3,
 	defense@Df=6,
 	defense@Re=4,
@@ -35,14 +35,14 @@
 	offenseB@Ag=2,
 	offenserulesB={\harnessed{}},
 	commandgroup={%
-		\champion{}=20,
+		\champion{}=25,
 		\musician{}=20,
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
 	options={%
 		\XXXmustchoosefavour{\chosenriders}{%
-			\envy{}=7\permodel{},
+			\envy{}=6\permodel{},
 			\gluttony{}=\free{},
 			\greed{}=3\permodel{},
 			\lust{}=6\permodel{},

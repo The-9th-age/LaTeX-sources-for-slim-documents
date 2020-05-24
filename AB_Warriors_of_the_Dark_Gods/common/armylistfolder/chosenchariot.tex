@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\chosenchariot{},
 	logo=special,
-	cost=340,
+	cost=345,
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\construct{},
@@ -11,7 +11,7 @@
 	global@Ad=7,
 	global@Ma=7,
 	global@Di=8,
-	globalrules={\pathfavoured{},\fear{},\swiftstride{}},
+	globalrules={\pathfavoured{},\fear{},\swiftstride{},\newrule{\fearless{}}},
 	defense@HP=5,
 	defense@Df=6,
 	defense@Re=5,
@@ -34,8 +34,8 @@
 	offenserules={},
 	options={%
 		\XXXmustchoosefavour{\chosencrew}{%
-			\envy{}=20,
-			\gluttony{}=15,
+			\envy{}=15,
+			\gluttony{}=\newrule{10},
 			\greed{}=10,
 			\lust{}=15,
 			\pride{}=15,
