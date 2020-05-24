@@ -20,6 +20,12 @@
 	\end{description}%
 }
 
+\newcommand{\explicitoptionslist}[1]{%
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, itemsep=0cm, parsep=0cm]%
+		#1%
+	\end{description}%
+}
+
 \newcounter{numberofitemsinlist}
 
 \newcommand{\countitemsinoptionslist}[1]{%
@@ -59,11 +65,18 @@
 
 % Options entry.
 \newcommand{\options}[1]{\begin{innerframe}[\labels@options]\optionslist{#1}\end{innerframe}}
+\newcommand{\explicitoptions}[1]{\begin{innerframe}[\labels@options]\explicitoptionslist{#1}\end{innerframe}}
 \newcommand{\addoptions}[1]{\begin{innerframe}[\labels@addoptions]\optionslist{#1}\end{innerframe}}
+
 \newcommand{\optionstwocols}[1]{\begin{innerframetwocols}[\labels@options]%
 \setlength{\columnsep}{10pt+0.3cm}%
 \setlength{\multicolsep}{0pt}%
 \vspace*{-3pt}\begin{multicols}{2}\optionslist{#1}\end{multicols}\end{innerframetwocols}}
+
+\newcommand{\explicitoptionstwocols}[1]{\begin{innerframetwocols}[\labels@options]%
+\setlength{\columnsep}{10pt+0.3cm}%
+\setlength{\multicolsep}{0pt}%
+\vspace*{-3pt}\begin{multicols}{2}\explicitoptionslist{#1}\end{multicols}\end{innerframetwocols}}
 
 % Option specific commands.
 \newcommand{\setoption}[1]{%
@@ -75,6 +88,15 @@
 	}%
 }
 
+\newcommand{\setexploption}[2]{%
+	\item%
+	\expandafter\ifblank\expandafter{#2}{%
+		#1%
+	}{%
+		\option{#1}{#2}%
+	}%
+}
+
 \newcommand{\option}[2]{#1\nobreak\hspace*{3pt}\hfill\nobreak#2}%\penalty0\hbox{}
 
 \newcommand\optionschoice[2]{%
@@ -82,6 +104,13 @@
 	#1%
 	\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]%
 	\forlistloop{\item\setoption}{\locallists@optionschoice}%
+	\end{itemize}%
+}
+
+\newcommand\exploptionschoice[2]{%
+	\item #1%
+	\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]%
+	#2%
 	\end{itemize}%
 }
 
@@ -112,6 +141,74 @@
 		\expandafter\setoption\expandafter{\theDesc}%
 	}%
 	\DTLcleardb{alphaandcostorderlist}%	
+}
+
+\define@key{exploptions}{prename}{\def\exploptions@prename{#1}}
+\define@key{exploptions}{name}{\def\exploptions@name{#1}}
+\define@key{exploptions}{postname}{\def\exploptions@postname{#1}}
+\define@key{exploptions}{hypertag}{\def\exploptions@hypertag{#1}}
+\define@key{exploptions}{cost}{\def\exploptions@cost{#1}}
+\define@key{exploptions}{sortlabel}{\def\exploptions@sortlabel{#1}}
+\define@key{exploptions}{sortcost}{\def\exploptions@sortcost{#1}}
+
+\newcommand{\defexploption}{%
+	\setkeys{exploptions}{%
+		prename=, name=, postname=, hypertag=, cost=, sortlabel=, sortcost=,
+	}%
+	\setkeys{exploptions}%
+}
+
+\newcommand{\addsortedexploption}[1]{%
+	\defexploption{#1}%
+	\DTLnewrow{exploptions}%
+	\pdfstringdef\textwithoutformatting{\exploptions@name}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\substitute\textwithoutformatting{\string\376}{}%
+	\substitute\textwithoutformatting{\string\377}{}%
+	\substitute\textwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%	
+	\pdfstringdef\costwithoutformatting{\exploptions@cost}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\pdfsubstitute\costwithoutformatting{\permodel}{}%
+	\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{sortcost}}%
+	\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%		
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{prename}}%
+	\expandafter\DTLentrycommand\expandafter{\exploptions@prename}%
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{name}}%
+	\expandafter\DTLentrycommand\expandafter{\exploptions@name}%
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{postname}}%
+	\expandafter\DTLentrycommand\expandafter{\exploptions@postname}%
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{hypertag}}%
+	\expandafter\DTLentrycommand\expandafter{\exploptions@hypertag}%
+	\def\DTLentrycommand{\DTLnewdbentry{exploptions}{cost}}%
+	\expandafter\DTLentrycommand\expandafter{\exploptions@cost}%
+}
+
+\newcommand{\prenameformat}[1]{#1 }
+\newcommand{\postnameformat}[1]{#1}
+\newcommand{\explAlCoOrder}[1]{%
+	%\setcounter{AlCoOrdercounter}{0}% initialization
+	\DTLifdbexists{exploptions}{\DTLcleardb{exploptions}}{\DTLnewdb{exploptions}}% Create new/discard old list
+	#1% fill the database
+	\DTLsort*{sortcost,sortlabel}{exploptions}% Sort list
+	\DTLforeach*{exploptions}{\prename=prename,\name=name,\postname=postname,\namehypertag=hypertag,\cost=cost}{% Print back the ordered list
+		\setexploption{%
+			\expandafter\ifblank\expandafter{\prename}{}{\prenameformat{\prename}}%
+			\expandafter\ifblank\expandafter{\namehypertag}{\name}{\hyperlink{\namehypertag}{\name}}%
+			\expandafter\ifblank\expandafter{\postname}{}{\postnameformat{\postname}}%
+		}{\cost}%
+%		\ifnumcomp{\value{AlCoOrdercounter}}{=}{0}{\stepcounter{AlCoOrdercounter}}{\item}%
+%		\expandafter\setoption\expandafter{\theDesc}%
+	}%
+	\DTLcleardb{exploptions}%	
 }
 
 \newcommand{\AlOrder}[1]{%

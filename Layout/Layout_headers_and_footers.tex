@@ -96,3 +96,24 @@
 }
 
 \fi
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Supplement %%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisisasupplement
+
+\newcommand{\standardfooterspace}{\hspace*{0.4cm}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{%
+\strut\begin{hidewhenprinted}%
+\normalfontsize\footerright%
+\end{hidewhenprinted}%
+}
+\fancyfoot[L]{%
+\strut\begin{hidewhenprinted}%
+\normalfontsize\footerleft%
+\end{hidewhenprinted}%
+}
+
+\fi
