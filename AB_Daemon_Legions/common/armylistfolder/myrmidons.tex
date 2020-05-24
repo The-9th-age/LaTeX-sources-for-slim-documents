@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\myrmidons{},
+	logo=core,
+	cost=215,
+	unitsize=10,
+	maxunitsize=25,
+	costpermodel=21,
+	scoring=yes,
+	type=\beast{},
+	size=\sizestandard{},
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\supernal{},\scoring{},\fearless{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\myrmidon{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	offenserules={\devastatingcharge{+2 \St{}, \battlefocus{}}},
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+		\standardbearer{}=20,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=3\permodel{}}
+			\addsortedexploption{prename=lust,hypertag=hotblood,name=\hotblood{},cost=2\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=whipcracktail,name=\whipcracktail{},cost=3\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=bronzebackbone,name=\bronzebackbone{},cost=4\permodel{}}
+			\addsortedexploption{prename=envy,hypertag=greenfireeyes,name=\greenfireeyes{},cost=3\permodel{}}
+		}
+	},
+} % END UNIT ENTRY

@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\sentinelofnukuja{},
+	logo=character,
+	optionallogo=bird,
+	categorynote=\strixianspiritcategorynote{},
+	cost=675,
+	unitsize=1,
+	type=\beast{},
+	size=\sizestandard{},
+	maxunitsperarmy=3,
+	basesize=50\timess{}100,
+	global@Ad=2,
+	global@Ma=4,
+	global@Di=9,
+	globalrules={\supernal{},\fearless{},\wizardmaster{},\fear{},\textbf{\omniscience{}}},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=4+,
+	printAeg=defined,
+	offensename=\sentinelofnukuja{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=1,
+	offenserules={\crushattack{}},
+	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy,\evocation{}=evocation,\witchcraft{}=witchcraft},
+	options={%
+		\musttakeoneofthefollowing{%
+			\throneoftheoracle{} (\mount{})=\free{},
+			\textbf{\strixianspirit{}} (\zerotoXunitsperarmy{1})=25,
+		},
+		\ifgeneralmusttakedominionofsloth{}=40,
+		\manifestationsoffatherchaosandsloth{}=\upto{}150,
+	},
+	modelrulesdef={%
+		\modelruledef{\omniscience}{\ruletype{\universalrule}\omnisciencedef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\dominionofsloth}{\ruletype{\universalrule}\dominionofslothdef}
+		\modelruledef{\strixianspirit}{\ruletype{\universalrule}\strixianspiritdef}
+	},
+} % END UNIT ENTRY

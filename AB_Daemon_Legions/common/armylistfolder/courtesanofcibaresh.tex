@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\courtesanofcibaresh{},
+	logo=character,
+	cost=580,
+	unitsize=1,
+	type=\beast{},
+	size=\sizegigantic{},
+	maxunitsperarmy=1,
+	basesize=50\timess{}100,
+	global@Ad=9,
+	global@Ma=18,
+	global@Di=9,
+	globalrules={\supernal{},\fearless{},\wizardapprentice{},\textbf{\avertyourgaze{}}},
+	defense@HP=6,
+	defense@Df=7,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	defenserules={\hardtarget{} (1),\distracting{}},
+	offensename=\courtesanofcibaresh{},
+	offense@At=6,
+	offense@Of=7,
+	offense@St=5,
+	offense@AP=4,
+	offense@Ag=7,
+	offenserules={\textbf{\razortentacles{}}},
+	magic={\wizardadept{}=75,\wizardmaster{}=225,},
+	paths={\divination{}=divination,\witchcraft{}=witchcraft},
+	options={%
+		\ifgeneralmusttakedominionoflust{}=45,
+		\manifestationsoffatherchaosandlust{}=\upto{}150,
+	},
+	modelrulesdef={%
+		\modelruledef{\avertyourgaze}{\ruletype{\universalrule}\avertyourgazedef}
+		\modelruledef{\razortentacles}{\ruletype{\attackattributeclosecombat}\razortentaclesdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\dominionoflust}{\ruletype{\universalrule}\dominionoflustdef}
+	},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}
+		\togglefalse{twocolprintoptionalmodelrulesdef}
+	},
+} % END UNIT ENTRY

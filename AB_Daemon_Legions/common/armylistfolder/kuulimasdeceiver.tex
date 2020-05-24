@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\kuulimasdeceiver{},
+	logo=character,
+	optionallogo=bird,
+	categorynote=\flycategorynote{},
+	cost=335,
+	unitsize=1,
+	type=\beast{},
+	size=\sizestandard{},
+	maxunitsperarmy=3,
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\fear{},\supernal{},\fearless{},\proteanmagic{},\wizardapprentice{}},
+	defense@HP=4,
+	defense@Df=6,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\kuulimasdeceiver{},
+	offense@At=1,
+	offense@Of=6,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=5,
+	offenserules={\textbf{\knowthyself}},
+	magic={\wizardadept{}=70,\wizardmaster{}=200,},
+	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy,\witchcraft{}=witchcraft,\evocation{}=evocation},
+	options={%
+		\ifgeneralmusttakedominionofenvy{}=40,
+		\fly{7}{14} \wordand{} \lighttroops{}=60,
+		\manifestationsoffatherchaosandenvy{}=\upto{}150,
+	},
+	modelrulesdef={%
+		\modelruledef{\knowthyself}{\ruletype{\universalrule}\knowthyselfdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\dominionofenvy}{\ruletype{\universalrule}\dominionofenvydef}
+	},
+} % END UNIT ENTRY

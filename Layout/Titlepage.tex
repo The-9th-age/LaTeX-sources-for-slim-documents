@@ -8,28 +8,24 @@
 
 \ifdefined\languageisfrench
 
-{\titlefont\fontsize{40}{48}\selectfont%
-	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={Where you see one title, there are thousands of rats sneakily working in your back you don't.}}%
-		\theninthage%
-	\EndAccSupp{}%
-
-	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
-	\fantasybattles%
-	\EndAccSupp{}%		
-}
+\begin{center}
+\includegraphics[height=3.3cm]{../Layout/pics/BRAND9AgeLogotype_FR.pdf}%
+\end{center}
 
 \else
 \ifdefined\languageisitalian
 
-{\titlefont\fontsize{40}{48}\selectfont%
-	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={Where you see one title, there are thousands of rats sneakily working in your back you don't.}}%
-		\theninthage%
-	\EndAccSupp{}%
+\begin{center}
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_IT.pdf}%
+\end{center}
 
-	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
-	\fantasybattles%
-	\EndAccSupp{}%		
-}
+\else
+
+\ifdefined\languageisspanish
+
+\begin{center}
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_ES.pdf}%
+\end{center}
 
 \else
 
@@ -37,6 +33,7 @@
 \includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
 \end{center}
 
+\fi
 \fi
 \fi
 
@@ -63,6 +60,10 @@
 
 \ifdefined\thisisanarmybook
 \fontsize{12}{14.4}\selectfont \armybookname{}
+\fi
+
+\ifdefined\thisisasupplement
+\fontsize{12}{14.4}\selectfont \supplementname{}
 \fi
 
 \fontsize{12}{14.4}\selectfont
@@ -134,6 +135,7 @@
 \fi
 
 \ifdefined\thisisanarmybook
+\vfill
 
 {\fontsize{12}{14.4}\selectfont
 

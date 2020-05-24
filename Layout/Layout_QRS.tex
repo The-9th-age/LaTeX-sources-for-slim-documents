@@ -5,6 +5,7 @@
 \DTLnewdb{categories} % Database containing categories names
 
 \newcommand{\dtbfillunitname}[1]{\DTLnewdbentry{profiles}{unitname}{#1}}
+\newcommand{\dtbfillunitQRSname}[1]{\DTLnewdbentry{profiles}{unitQRSname}{#1}}
 \newcommand{\dtbfillhypertag}[1]{\DTLnewdbentry{profiles}{hypertag}{#1}}
 \newcommand{\dtbfillcategorytag}[1]{\DTLnewdbentry{profiles}{categorytag}{#1}}
 \newcommand{\dtbfillsize}[1]{\DTLnewdbentry{profiles}{size}{#1}}
@@ -24,6 +25,8 @@
 \newcommand{\dtbfilldefense@Df}[1]{\DTLnewdbentry{profiles}{defenseDf}{#1}}
 \newcommand{\dtbfilldefense@Re}[1]{\DTLnewdbentry{profiles}{defenseRe}{#1}}
 \newcommand{\dtbfilldefense@Arm}[1]{\DTLnewdbentry{profiles}{defenseArm}{#1}}
+\newcommand{\dtbfilldefense@Aeg}[1]{\DTLnewdbentry{profiles}{defenseAeg}{#1}}
+\newcommand{\dtbfillprintAeg}[1]{\DTLnewdbentry{profiles}{printAeg}{#1}}
 \newcommand{\dtbfilldefenserules}[1]{\DTLnewdbentry{profiles}{defenserules}{#1}}
 \newcommand{\dtbfilldefensearmour}[1]{\DTLnewdbentry{profiles}{defensearmour}{#1}}
 
@@ -67,7 +70,7 @@
 \newcommand{\startartillerytable}{%
 \begin{center}
 \alternaterowcolors\normalfontsize
-\noindent\begin{tabular}{@{}p{3.5cm}M{2.3cm}@{}M{1.7cm}@{}M{1.5cm}@{}M{1cm}@{}M{1cm}@{}M{1.2cm}M{3.5cm}@{}}
+\noindent\begin{tabular}{@{}p{3.2cm}M{2.2cm}@{}M{1.7cm}@{}M{1.5cm}@{}M{1.2cm}@{}M{1.2cm}@{}M{1.2cm}M{3.5cm}@{}}
 \textbf{\ATname} & \textbf{\ATartillery} & \textbf{\ATtohit} & \textbf{\ATrange} & \textbf{\St{}} & \textbf{\AP{}} & \textbf{\ATshots} & \textbf{\ATrules} \tabularnewline
 }
 

@@ -1,0 +1,16 @@
+
+%%%% Manifestations
+
+\newcommand{\guidingversion}[1]{\base{#1}}% same as base version of spells
+
+
+%%%% God Logos
+
+\newrobustcmd{\godlogotitle}[1]{\raisebox{-.2\height}{\makebox[35pt][c]{\includegraphics[height=20pt]{{pics/#1_5}.pdf}}}}% to be able to use it in heading commands
+
+\newcommand{\godlogoqrs}[1]{\includegraphics[height=1.5cm]{{pics/#1_5}.pdf}\hspace{15pt}}
+
+\renewcommand{\prenameformat}[1]{% command used in explicit options AlCoOrder
+	\hspace*{-18pt}\raisebox{-.2\height}{\makebox[18pt][c]{\includegraphics[height=10pt]{{pics/#1_5}.pdf}}}%
+	{\fontsize{1}{1.2}\selectfont \textcolor{white}{-}}%This part avoid a huge bug in the layout
+}

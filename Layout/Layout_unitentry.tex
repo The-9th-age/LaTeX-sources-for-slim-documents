@@ -2,6 +2,7 @@
 %%% Input parameters %%%
 		
 \define@key{unit}{name}{\def\unit@name{#1}}
+\define@key{unit}{QRSname}{\def\unit@QRSname{#1}}
 \define@key{unit}{logo}{\def\unit@logo{#1}}
 \define@key{unit}{speciallogo}{\def\unit@speciallogo{#1}}
 \define@key{unit}{secondlogo}{\def\unit@secondlogo{#1}}
@@ -33,6 +34,8 @@
 \define@key{unit}{defense@Df}{\def\unit@defense@Df{#1}}
 \define@key{unit}{defense@Re}{\def\unit@defense@Re{#1}}
 \define@key{unit}{defense@Arm}{\def\unit@defense@Arm{#1}}
+\define@key{unit}{defense@Aeg}{\def\unit@defense@Aeg{#1}}
+\define@key{unit}{printAeg}{\def\unit@printAeg{#1}}
 \define@key{unit}{defenserules}{\def\unit@defenserules{#1}}
 \define@key{unit}{defensearmour}{\def\unit@defensearmour{#1}}
 
@@ -75,6 +78,7 @@
 \define@key{unit}{paths}{\def\unit@paths{#1}}
 \define@key{unit}{wizardconclave}{\def\unit@wizardconclave{#1}}
 \define@key{unit}{options}{\def\unit@options{#1}}
+\define@key{unit}{explicitoptions}{\def\unit@explicitoptions{#1}}
 \define@key{unit}{mounts}{\def\unit@mounts{#1}}
 \define@key{unit}{commandgroup}{\def\unit@commandgroup{#1}}
 \define@key{unit}{modelrulesdef}{\def\unit@modelrulesdef{#1}}
@@ -95,7 +99,7 @@
 
 \newcommand{\defunit}{
 	\setkeys{unit}{%
-		name=, logo=, speciallogo=, secondlogo=, optionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, scoring=, categorynote=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, wizardconclave=, options=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
+		name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, scoring=, categorynote=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, paths=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, endtext=, toggles=,
 	}%
 	\setkeys{unit}%
 }
@@ -142,7 +146,7 @@
 %%% The Command %%%
 
 \newcommand{\unitentry}[1]{%
-\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry has spacing has been coded with this in mind, if you remove it, all spaces will be off
+\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
 \defunit{#1}%
 %
 \begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
@@ -325,14 +329,16 @@
 {\ChLab{\DefensiveSkillInitials}}&%
 {\ChLab{\ResilienceInitials}}& %
 {\ChLab{\ArmourInitials}}&%
-&%
+\expandafter\ifblank\expandafter{\unit@printAeg}{%
+	\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChLab{\AegisInitials}}%
+}{\ChLab{\AegisInitials}}&%
 \tabularnewline%
 &% no defensive name
 \expandafter\ifblank\expandafter{\unit@defense@HP}{-}{\ChVal{\unit@defense@HP}}&%
 \expandafter\ifblank\expandafter{\unit@defense@Df}{-}{\ChVal{\unit@defense@Df}}&%
 \expandafter\ifblank\expandafter{\unit@defense@Re}{-}{\ChVal{\unit@defense@Re}}&%
 \expandafter\ifblank\expandafter{\unit@defense@Arm}{\ChVal{0}}{\ChVal{\unit@defense@Arm}}&%
-&%
+\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChVal{\unit@defense@Aeg}}&%
 \strut\expandafter\ifblank\expandafter{\unit@defenserules}{}{\alphaorderlist{\unit@defenserules}}%
 \expandafter\ifblank\expandafter{\unit@defensearmour}{}{%
 \expandafter\ifblank\expandafter{\unit@defenserules}{}{, }%
@@ -420,6 +426,7 @@
 %%%%%%%%%%%%%%%%%%%%%%
 % Which frames are defined?
 \expandafter\ifblank\expandafter{\unit@options}{}{\toggletrue{thereisoptions}}%
+\expandafter\ifblank\expandafter{\unit@explicitoptions}{}{\toggletrue{thereisoptions}}%
 \expandafter\ifblank\expandafter{\unit@magic}{}{\toggletrue{thereismagic}}%
 \expandafter\ifblank\expandafter{\unit@paths}{}{\toggletrue{thereismagic}}%
 \expandafter\ifblank\expandafter{\unit@wizardconclave}{}{\toggletrue{thereiswizardconclave}}%
@@ -440,11 +447,13 @@
 }{}% End of \iftoggle{thereisoptions}
 % Is options long enough to put it out of the twocols layout?
 \iftoggle{thereisoptions}{%
+	\expandafter\ifblank\expandafter{\unit@options}{\toggletrue{twocolprintoptions}}{% For specific options, we don't have a way yet to count the options, so we set the two cols layout by default
 	\countitemsinoptionslist{\unit@options}%
 	\ifnumcomp{\value{numberofitemsinlist}}{>}{3}{\toggletrue{thereismorethanXitemsinoptions}}{}%
 	\ifboolexpr{ togl {optionsistheonlynonrulesdefframe} and togl {thereismorethanXitemsinoptions}}{%
 		\toggletrue{onecolprintoptions}
 	}{\toggletrue{twocolprintoptions}}% End ifnumcomp
+	}%
 }{}% End of \iftoggle{thereisoptions}
 % How do we handle the modelrulesdef now?
 \ifboolexpr{ test {\ifnumcomp{\value{numberofnonrulesdefframes}}{=}{0}}
@@ -497,7 +506,13 @@
 \begin{multicols}{2}%
 \iftoggle{twocolprintmodelrulesdef}{\strut\modelrulesdef{\unit@modelrulesdef}}{}%
 \iftoggle{twocolprintmagic}{\strut\magic{\unit@magic}{\unit@paths}}{}%
-\iftoggle{twocolprintoptions}{\strut\options{\unit@options}}{}%
+\iftoggle{twocolprintoptions}{%
+	\expandafter\ifblank\expandafter{\unit@options}{%
+		\strut\explicitoptions{\unit@explicitoptions}%	
+	}{%
+		\strut\options{\unit@options}%
+	}%
+}{}%
 \iftoggle{twocolprintwizardconclave}{\strut\printwizardconclave{\unit@wizardconclave}}{}%
 \iftoggle{twocolprintmounts}{\strut\mounts{\unit@mounts}}{}%
 \iftoggle{twocolprintcommandgroup}{\strut\commandgroup{\unit@commandgroup}}{}%
@@ -521,7 +536,13 @@
 }{%
 \vspace*{-5pt}%
 \iftoggle{onecolprintmodelrulesdef}{\strut\modelrulesdef{\unit@modelrulesdef}}{}%
-\iftoggle{onecolprintoptions}{\strut\optionstwocols{\unit@options}}{}%
+\iftoggle{onecolprintoptions}{%
+	\expandafter\ifblank\expandafter{\unit@options}{%
+		\strut\explicitoptionstwocols{\unit@explicitoptions}%	
+	}{%
+		\strut\optionstwocols{\unit@options}%
+	}%
+}{}%
 \iftoggle{onecolprintmounts}{\strut\mountstwocols{\unit@mounts}}{}%
 \iftoggle{onecolprintcommandgroup}{\strut\commandgrouptwocols{\unit@commandgroup}}{}%
 \iftoggle{onecolprintoptionalmodelrulesdef}{\strut\optionalmodelrulesdef{\unit@optionalmodelrulesdef}}{}%
@@ -542,6 +563,7 @@
 %%%%%%% Filling the profiles database for the QRS
 \DTLnewrow{profiles}%
 \expandafter\dtbfillunitname\expandafter{\unit@name}%
+\expandafter\dtbfillunitQRSname\expandafter{\unit@QRSname}%
 \expandafter\dtbfillhypertag\expandafter{\unithypertag}%
 \edef\categorynumberstring{\arabic{categorynumber}}%
 \expandafter\dtbfillcategorytag\expandafter{\categorynumberstring}%
@@ -571,6 +593,8 @@
 \expandafter\dtbfilldefense@Df\expandafter{\unit@defense@Df}%
 \expandafter\dtbfilldefense@Re\expandafter{\unit@defense@Re}%
 \expandafter\dtbfilldefense@Arm\expandafter{\unit@defense@Arm}%
+\expandafter\dtbfilldefense@Aeg\expandafter{\unit@defense@Aeg}%
+\expandafter\dtbfillprintAeg\expandafter{\unit@printAeg}%
 \expandafter\dtbfilldefenserules\expandafter{\unit@defenserules}%
 \expandafter\dtbfilldefensearmour\expandafter{\unit@defensearmour}%
 %

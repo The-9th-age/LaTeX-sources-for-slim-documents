@@ -22,7 +22,12 @@
 	% Global Profile
 	%
 	\startcharacteristicstableQRS{}%
-	\nameindent\expandafter\hyperlink\expandafter{\rowhypertag}{\textbf{\rowunitname}}&&%
+	\expandafter\ifblank\expandafter{\rowunitQRSname}{%
+		\nameindent\expandafter\hyperlink\expandafter{\rowhypertag}{\textbf{\rowunitname}}%
+	}{%
+		\nameindent\expandafter\hyperlink\expandafter{\rowhypertag}{\textbf{\rowunitQRSname}}%
+	}%
+	&&%
 	{\ChLab{\AdvanceRateInitials}}&%
 	\expandafter\ifblank\expandafter{\rowglobalAd}{-}{%
 	\ifsubstring{\rowglobalAd}{\ascharacter}{\ChVal{{\rowglobalAd}}}{\ChVal{\distance{\rowglobalAd}}}%
@@ -54,7 +59,8 @@
 	\expandafter\ifblank\expandafter{\rowdefenseRe}{-}{\ChVal{\rowdefenseRe}}&%
 	{\ChLab{\ArmourInitials}}&%
 	\expandafter\ifblank\expandafter{\rowdefenseArm}{\ChVal{0}}{\ChVal{\rowdefenseArm}}&%
-	&&%
+	\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
+	\expandafter\ifblank\expandafter{\rowdefenseAeg}{}{\ChVal{\rowdefenseAeg}}&%
 	&%
 	\strut\expandafter\ifblank\expandafter{\rowdefenserules}{}{\alphaorderlist{\rowdefenserules}}%
 	\expandafter\ifblank\expandafter{\rowdefensearmour}{}{%
@@ -167,7 +173,7 @@
 	\DTLpar%
 }
 
-\DTLforeach*{profiles}{\rowunitname=unitname,\rowhypertag=hypertag,\rowcategorytag=categorytag,\rowsize=size,\rowtype=type,\rowscoring=scoring,\rowglobalAd=globalAd,\rowglobalMa=globalMa,\rowglobalAdfly=globalAdfly,\rowglobalMafly=globalMafly,\rowglobalDi=globalDi,\rowglobalRsr=globalRsr,\rowglobalrules=globalrules,\rowdefenseHP=defenseHP,\rowdefenseDf=defenseDf,\rowdefenseRe=defenseRe,\rowdefenseArm=defenseArm,\rowdefenserules=defenserules,\rowdefensearmour=defensearmour,\rowoffensename=offensename,\rowoffenseAg=offenseAg,\rowoffenseAt=offenseAt,\rowoffenseOf=offenseOf,\rowoffenseSt=offenseSt,\rowoffenseAP=offenseAP,\rowoffenserules=offenserules,\rowoffenseweapons=offenseweapons,\rowoffensenameB=offensenameB,\rowoffenseBAg=offenseBAg,\rowoffenseBAt=offenseBAt,\rowoffenseBOf=offenseBOf,\rowoffenseBSt=offenseBSt,\rowoffenseBAP=offenseBAP,\rowoffenserulesB=offenserulesB,\rowoffenseweaponsB=offenseweaponsB,\rowoffensenameC=offensenameC,\rowoffenseCAg=offenseCAg,\rowoffenseCAt=offenseCAt,\rowoffenseCOf=offenseCOf,\rowoffenseCSt=offenseCSt,\rowoffenseCAP=offenseCAP,\rowoffenserulesC=offenserulesC,\rowoffenseweaponsC=offenseweaponsC,\rowoffensenameI=offensenameI,\rowoffenseIAg=offenseIAg,\rowoffenseISt=offenseISt,\rowoffenseIAP=offenseIAP,\rowoffenserulesI=offenserulesI,\rowoffenseweaponsI=offenseweaponsI}{% Print the list of units with hyperlink
+\DTLforeach*{profiles}{\rowunitname=unitname,\rowunitQRSname=unitQRSname,\rowhypertag=hypertag,\rowcategorytag=categorytag,\rowsize=size,\rowtype=type,\rowscoring=scoring,\rowglobalAd=globalAd,\rowglobalMa=globalMa,\rowglobalAdfly=globalAdfly,\rowglobalMafly=globalMafly,\rowglobalDi=globalDi,\rowglobalRsr=globalRsr,\rowglobalrules=globalrules,\rowdefenseHP=defenseHP,\rowdefenseDf=defenseDf,\rowdefenseRe=defenseRe,\rowdefenseArm=defenseArm,\rowdefenseAeg=defenseAeg,\rowprintAeg=printAeg,\rowdefenserules=defenserules,\rowdefensearmour=defensearmour,\rowoffensename=offensename,\rowoffenseAg=offenseAg,\rowoffenseAt=offenseAt,\rowoffenseOf=offenseOf,\rowoffenseSt=offenseSt,\rowoffenseAP=offenseAP,\rowoffenserules=offenserules,\rowoffenseweapons=offenseweapons,\rowoffensenameB=offensenameB,\rowoffenseBAg=offenseBAg,\rowoffenseBAt=offenseBAt,\rowoffenseBOf=offenseBOf,\rowoffenseBSt=offenseBSt,\rowoffenseBAP=offenseBAP,\rowoffenserulesB=offenserulesB,\rowoffenseweaponsB=offenseweaponsB,\rowoffensenameC=offensenameC,\rowoffenseCAg=offenseCAg,\rowoffenseCAt=offenseCAt,\rowoffenseCOf=offenseCOf,\rowoffenseCSt=offenseCSt,\rowoffenseCAP=offenseCAP,\rowoffenserulesC=offenserulesC,\rowoffenseweaponsC=offenseweaponsC,\rowoffensenameI=offensenameI,\rowoffenseIAg=offenseIAg,\rowoffenseISt=offenseISt,\rowoffenseIAP=offenseIAP,\rowoffenserulesI=offenserulesI,\rowoffenseweaponsI=offenseweaponsI}{% Print the list of units with hyperlink
 	\ifnumequal{\value{categorycounter}}{\rowcategorytag}{%
 		\noindent\greytextcolor{\rule{\textwidth}{0.5pt}}\newline%
 		\printthecurrentQRSentry{}%
