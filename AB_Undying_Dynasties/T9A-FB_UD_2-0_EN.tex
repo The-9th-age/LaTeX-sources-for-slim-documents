@@ -1,0 +1,45 @@
+%Language is defined here
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+%\def\thereisachangelog{}
+
+% Preamble
+\input{../Layout/Layout.tex}
+\input{common/layout.tex}
+\input{language_specific/\languagetag/dictionnary_armylist.tex}
+\input{language_specific/\languagetag/dictionnary_modelrules.tex}
+\input{language_specific/\languagetag/dictionnary_others.tex}
+\input{language_specific/\languagetag/dictionnary_specialequipment.tex}
+\input{common/toc.tex}
+\input{common/footer.tex}
+
+\newcommand{\booktitle}{Undying Dynasties}
+\newcommand{\preversion}{\nth{2} Edition, version~}
+\newcommand{\version}{2.0}
+%\newcommand\releasedate{November 16, 2018} % Comment if you want to use today's date in your default language
+%\newcommand{\translationversion}{PROOFREADING VERSION} % Translation version, or anything related to version
+\newcommand{\booklogo}{pics/logo_big_UD.png}
+\def\bookprefix{UD}
+\hypersetup{pdftitle={T9A -- \booktitle{} -- \version}}
+
+\begin{document}
+
+% all main sections are in specific files
+\input{../Layout/Titlepage.tex}
+\input{common/modelrules.tex}
+\additionalspacebeforemaintitle{}
+\input{common/hereditaryspell.tex}
+\newpage
+\input{common/specialequipment.tex}
+\newpage
+\input{language_specific/\languagetag/monarchsofundeath.tex}
+\clearpage
+\input{common/armyorg.tex}
+\additionalspacebeforemaintitle{}
+\input{common/armylist.tex}
+\newpage
+\input{common/qrs.tex}
+%\newpage
+%\input{language_specific/\languagetag/changelog.tex}
+
+\end{document}

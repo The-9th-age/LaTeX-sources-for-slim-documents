@@ -1,0 +1,64 @@
+
+\newcommand{\summarysection}[1]{\subsection*{#1}}
+\newcommand{\summarysubsection}[1]{\subsubsection*{#1}}
+
+\newcommand{\startsummaries}{%
+	\checkoddpage
+	
+	\ifoddpage
+		\newpage\newpage
+	\else
+		\newpage
+	\fi
+	
+	\newgeometry{top=1cm, bottom=1cm, left=1cm, right=1cm, includehead, headsep=-5pt}
+	\setlength{\tabcolsep}{6pt}
+	
+	\pagestyle{summaries}
+	
+	\begingroup
+	\fontsize{8}{9.6}\selectfont
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}} % Else paragraph and title spaces behave differently when inside or outside a minipage
+	\renewcommand{\arraystretch}{1.2}
+}
+
+\newcommand{\closesummaries}{%
+	\endgroup
+	\restoregeometry
+	\fancyhfoffset{0pt}
+	
+	\pagestyle{brb}
+}
+
+\newlength{\passivelength}
+
+\newcommand{\summarypathrotated}[3]{\cellcolor{#3}\multirow{-#1}{*}{\begin{tabular}{@{}c@{}}\cellcolor{#3}\rotatebox[origin=c]{90}{\textbf{\expandafter\MakeUppercase\expandafter{#2}}}\end{tabular}}}
+
+\newcommand{\startspellsummariestable}{%
+	\begin{center}\alternaterowcolors
+	\renewcommand{\arraystretch}{1.21}
+	\setlength{\tabcolsep}{3pt}
+	\setlength{\passivelength}{\textwidth - 3.16cm - 24pt}
+	\begin{tabular}{M{0.27cm}>{\bfseries}M{0.19cm}m{2.7cm}M{1.08cm}M{1.15cm}M{1.2cm}M{0.8cm}m{\textwidth -7.4cm - 48pt}}
+}
+
+\newcommand{\closespellsummariestable}{%
+	\end{tabular}\end{center}
+}
+
+\newcommand{\magicsummarysecondpage}{%
+	\newpage
+	\thispagestyle{empty}\newgeometry{margin=1cm, includehead=false}
+}
+
+\newcommand{\sumhereditary}[2]{%
+\multicolumn{2}{M{0.46cm+3pt}}{\textbf{#1}}&#2%
+}
+
+\newcommand{\sumhereditaryextended}[2]{%
+\multicolumn{3}{m{3.16cm+9pt}}{\textbf{#1}\hspace*{3pt}#2}%
+}
+
+\newcommand{\sumbattlerune}[1]{%
+\multicolumn{2}{m{2.89cm+6pt}}{#1}%
+}

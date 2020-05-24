@@ -1,0 +1,181 @@
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+
+\ifdefined\languageisfrench
+
+{\titlefont\fontsize{40}{48}\selectfont%
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={Where you see one title, there are thousands of rats sneakily working in your back you don't.}}%
+		\theninthage%
+	\EndAccSupp{}%
+
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
+	\fantasybattles%
+	\EndAccSupp{}%		
+}
+
+\else
+\ifdefined\languageisitalian
+
+{\titlefont\fontsize{40}{48}\selectfont%
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={Where you see one title, there are thousands of rats sneakily working in your back you don't.}}%
+		\theninthage%
+	\EndAccSupp{}%
+
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
+	\fantasybattles%
+	\EndAccSupp{}%		
+}
+
+\else
+
+\begin{center}
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
+\end{center}
+
+\fi
+\fi
+
+\ifdefined\thisisthepathsbook
+
+	\vspace*{10pt}
+
+\else
+
+	\vspace*{0.5cm}
+	\ifdef{\booklogo}{%
+		\includegraphics[height=8cm]{\booklogo}%
+	}{%
+	\includegraphics[height=13cm]{../Layout/pics/logo_9th.png}%
+	}
+
+\fi
+
+{\titlefont\fontsize{40}{48}\selectfont
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={Where you see one title, there are thousands of rats sneakily working in your back you don't.}}%
+		\booktitle%
+	\EndAccSupp{}%
+\vspace{0.4cm}
+
+\ifdefined\thisisanarmybook
+\fontsize{12}{14.4}\selectfont \armybookname{}
+\fi
+
+\fontsize{12}{14.4}\selectfont
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={They shall rise and dominate while you sleep!}}%
+	\ifdef{\preversion}{\preversion}{}\version{}%
+	\EndAccSupp{}%	
+
+\ifdef{\releasedate}{\releasedate}{\today}
+
+\ifdef{\translationversion}{{\fontsize{12}{14.4}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}}
+
+\ifdefined\thisisthepathsbook
+
+	\vspace*{20pt}
+
+	\newcommand{\iconheight}{1.6cm}
+	\newcommand{\minipagewidth}{3cm}
+	\newcommand{\spacebetweeniconrows}{0.8cm}
+
+	\hspace*{0.5cm}\begin{minipage}[c]{\minipagewidth}
+	\begin{center}
+	\titlepagelefticons
+
+	\end{center}
+	\end{minipage}
+	\hfill\begin{minipage}[c]{8cm}
+
+	{\fontsize{12}{14.4}\selectfont
+
+	\hfill\textcolor{white}{\verysmallfontsize d}% debug, else everything goes wild with alignment.
+	\begin{center}
+	\hypertarget{tableofcontents}{\tocentry{howtousethisdoc}{\howtousethisdoc}}
+
+	\vspace*{5pt}\par%
+	
+	\tocentry{pathsofmagic}{\pathsofmagic}\vspace*{5pt}\par%
+
+	{\largefontsize
+	\titlepagetoc%
+	}
+
+	\vspace*{5pt}\par%
+	
+	\tocentry{specialitems}{\specialitems}\vspace*{5pt}\par%
+	
+	{\largefontsize%
+	\hspace*{0.5cm}\tocentry{weapon_enchantments}{\weaponenchantments}\newline%
+	\hspace*{0.5cm}\tocentry{armour_enchantments}{\armourenchantments}\newline%
+	\hspace*{0.5cm}\tocentry{banner_enchantments}{\bannerenchantments}\newline%
+	\hspace*{0.5cm}\tocentry{artefacts}{\artefacts}%
+	}
+	
+	\vspace*{5pt}\par%
+
+	\tocentry{magicphasesummary}{\magicphasesummary}
+
+	\ifdef\thereisachangelog{\vspace*{5pt}\par\tocentry{pathschangelog}{\changelog}}{}
+	\end{center}
+	}
+
+	\end{minipage}\hfill
+	\begin{minipage}[c]{\minipagewidth}
+	\begin{center}
+
+	\titlepagerighticons{}
+	\end{center}
+	\end{minipage}\hspace*{0.5cm}
+
+\fi
+
+\ifdefined\thisisanarmybook
+
+{\fontsize{12}{14.4}\selectfont
+
+\begin{multicols}{2}
+
+\hypertarget{tableofcontents}{\tocfirstcolumn}
+
+\vspace*{\fill}\columnbreak
+
+\tocsecondcolumn
+
+\vspace*{\fill}\end{multicols}
+}
+
+\fi
+
+\vfill
+
+\ifdefined\thisistherulebook
+
+\strut
+
+\else
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{%
+\ifdefined\thisisthepathsbook%
+	\noindent\frontpagecreditswithoutblue%
+\else
+	\noindent\frontpagecredits%
+\fi%
+}}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\license}}
+\tabularnewline
+\end{tabular}
+
+\fi
+
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{2}

@@ -1,0 +1,33 @@
+
+\unitentry{%
+	name=\thicketshepherd{},
+	logo=character,
+	cost=250,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\sizelarge{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\forestwalker{},,\emboldeningboughs{},\sylvanspirit{},\textbf{\ashepherdanditsflock}},
+	defense@HP=4,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=3,
+	defenserules={\flammable{},\aegis{} (5+)},
+	offensename=\thicketshepherd{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=3,
+	offense@Ag=4,
+	options={%
+		\bsb{}=50,
+		\asingleaspectofnature{}=\upto{}100,
+	},
+	modelrulesdef={%
+		\modelruledef{\ashepherdanditsflock}{\ruletype{\universalrule}\ashepherdanditsflockdef}
+	},
+} % END UNIT ENTRY

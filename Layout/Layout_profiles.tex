@@ -1,0 +1,244 @@
+
+%%% Rules %%%
+
+% Rules listing for a unit, with alphabetical order.
+\newcommand{\ruleslist}[1]{%
+	\expandafter\parcommalist\expandafter{#1}{\locallists@ruleslist}%
+	\begin{sortedlist}%
+		\forlistloop{\addtosortedlist}{\locallists@ruleslist}%
+	\end{sortedlist}%
+}
+
+
+%%% Options %%%
+
+% Options listing.
+\newcommand{\optionslist}[1]{%
+	\expandafter\parcommalist\expandafter{#1}{\locallists@optionslist}%
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, itemsep=0cm, parsep=0cm]%
+		\forlistloop{\item\setoption}{\locallists@optionslist}%
+	\end{description}%
+}
+
+\newcounter{numberofitemsinlist}
+
+\newcommand{\countitemsinoptionslist}[1]{%
+	\setcounter{numberofitemsinlist}{0}%
+	\expandafter\ifblank\expandafter{#1}{}{
+		\expandafter\parcommalist\expandafter{#1}{\locallists@optionslist}%
+		\forlistloop{\stepcounter{numberofitemsinlist}\void}{\locallists@optionslist}%
+	}
+}
+% This function has no output. You can check the result with \arabic{numberofitemsinlist}, or use it in numeral expression with \value{numberofitemsinlist}
+
+\newcommand{\optionsalphaorderlist}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\expandafter\parcommalist\expandafter{#1}{\locallists@alphaorderlist}%
+	\forlistloop{\addtosortedlist}{\locallists@alphaorderlist}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, itemsep=0cm, parsep=0cm]%
+		\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\item\expandafter\setoption\expandafter{\theDesc}%
+	}%
+	\end{description}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\optionsalphaandcostorderlist}[1]{%
+	\DTLifdbexists{alphaandcostorderlist}{\DTLcleardb{alphaandcostorderlist}}{\DTLnewdb{alphaandcostorderlist}}% Create new/discard old list
+	\expandafter\parcommalist\expandafter{#1}{\locallists@alphaorderlist}%
+	\forlistloop{\addtosortedlistwithcost}{\locallists@alphaorderlist}%
+	\DTLsort*{cost,sortlabel}{alphaandcostorderlist}% Sort list
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, itemsep=0cm, parsep=0cm]%
+		\DTLforeach*{alphaandcostorderlist}{\theDesc=description}{% Print back the ordered list
+		\item\expandafter\setoption\expandafter{\theDesc}%
+	}%
+	\end{description}%
+	\DTLcleardb{alphaandcostorderlist}%
+}
+
+% Options entry.
+\newcommand{\options}[1]{\begin{innerframe}[\labels@options]\optionslist{#1}\end{innerframe}}
+\newcommand{\addoptions}[1]{\begin{innerframe}[\labels@addoptions]\optionslist{#1}\end{innerframe}}
+\newcommand{\optionstwocols}[1]{\begin{innerframetwocols}[\labels@options]%
+\setlength{\columnsep}{10pt+0.3cm}%
+\setlength{\multicolsep}{0pt}%
+\vspace*{-3pt}\begin{multicols}{2}\optionslist{#1}\end{multicols}\end{innerframetwocols}}
+
+% Option specific commands.
+\newcommand{\setoption}[1]{%
+	\noexpandarg\StrCut{#1}{=}\optiontext\optionvalue%
+	\expandafter\ifstrequal\expandafter{\optionvalue}{}{%
+		\optiontext%
+	}{%
+		\option{\optiontext}{\optionvalue}%
+	}%
+}
+
+\newcommand{\option}[2]{#1\nobreak\hspace*{3pt}\hfill\nobreak#2}%\penalty0\hbox{}
+
+\newcommand\optionschoice[2]{%
+	\parselist[,]{#2}{\locallists@optionschoice}%
+	#1%
+	\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]%
+	\forlistloop{\item\setoption}{\locallists@optionschoice}%
+	\end{itemize}%
+}
+
+\newcommand\optionschoiceTWOCOL[2]{%
+	\parselist[,]{#2}{\locallists@optionschoice}%
+	#1%
+	\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]%
+	\setlength{\columnseprule}{0.5pt}
+	\renewcommand{\columnseprulecolor}{\color{\greycolor}}
+	\raggedcolumns\begin{multicols}{2}
+	\forlistloop{\item\setoption}{\locallists@optionschoice}%
+	\end{multicols}\setlength{\columnseprule}{0pt}
+	\end{itemize}%
+}
+
+%%% alpha and cost ordering specific to options
+
+\newcounter{AlCoOrdercounter}
+
+\newcommand{\AlCoOrder}[1]{%
+	\setcounter{AlCoOrdercounter}{0}% initialization
+	\DTLifdbexists{alphaandcostorderlist}{\DTLcleardb{alphaandcostorderlist}}{\DTLnewdb{alphaandcostorderlist}}% Create new/discard old list
+	\parcommalist{#1}{\locallists@alphaorderlist}%
+	\forlistloop{\addtosortedlistwithcost}{\locallists@alphaorderlist}%
+	\DTLsort*{cost,sortlabel}{alphaandcostorderlist}% Sort list
+		\DTLforeach*{alphaandcostorderlist}{\theDesc=description}{% Print back the ordered list
+		\ifnumcomp{\value{AlCoOrdercounter}}{=}{0}{\stepcounter{AlCoOrdercounter}}{\item}%
+		\expandafter\setoption\expandafter{\theDesc}%
+	}%
+	\DTLcleardb{alphaandcostorderlist}%	
+}
+
+\newcommand{\AlOrder}[1]{%
+	\setcounter{AlCoOrdercounter}{0}% initialization
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\parcommalist{#1}{\locallists@alphaorderlist}%
+	\forlistloop{\addtosortedlist}{\locallists@alphaorderlist}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+		\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\ifnumcomp{\value{AlCoOrdercounter}}{=}{0}{\stepcounter{AlCoOrdercounter}}{\item}%
+		\expandafter\setoption\expandafter{\theDesc}%
+	}%
+	\DTLcleardb{alphaorderlist}%	
+}
+
+%%% Magic options %%%
+
+% Magic entry.
+\newcommand{\magic}[2]{\begin{innerframe}[\magicoptions]%
+\expandafter\ifblank\expandafter{#1}{}{\optionslist{#1}\par}%
+\pathslist{#2}%
+\end{innerframe}}
+
+\newcommand{\pathslist}[1]{%
+	\expandafter\ifblank\expandafter{#1}{}{%
+		\DTLifdbexists{pathlist}{\DTLcleardb{pathlist}}{\DTLnewdb{pathlist}}% Create new/discard old list
+		\setcounter{numberofitemsinlist}{0}%
+		\expandafter\parcommalist\expandafter{#1}{\locallists@pathlist}%
+		\forlistloop{\stepcounter{numberofitemsinlist}\addtopathlist}{\locallists@pathlist}%
+		\DTLsort*{sortlabel}{pathlist}% Sort list
+		\begin{center}%
+		\begin{tabular}{@{}*{\value{numberofitemsinlist}}{M{\textwidth/\value{numberofitemsinlist}}@{}}}%
+			\DTLforeach*{pathlist}{%
+										\theName=name,%
+										\theIcon=icon%
+										}{% Print the path table	
+				\includegraphics[height=0.8cm]{Icon_\theIcon.pdf}\par%
+				\theName{}%
+				\DTLiflastrow{\tabularnewline}{&}%
+			}%
+		\end{tabular}\end{center}\vspace*{-20pt}% debugging a weird additional space?
+	}%
+}
+
+%%% Wizard Conclave %%%
+
+% Wizard Conclave entry.
+
+\newcommand{\printwizardconclave}[1]{\begin{innerframenoptsnonegspace}[\wizardconclave]%
+#1%
+\end{innerframenoptsnonegspace}}
+
+\newcommand{\wizardconclavespellslist}[2]{%
+\parselist[,]{#2}{\locallists@optionschoice}%
+#1%
+\vspace*{-5pt}\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt]%
+\forlistloop{\item}{\locallists@optionschoice}%
+\end{itemize}%
+}
+
+%%% Mount options %%%
+
+% Mount entry.
+\newcommand{\mounts}[1]{\begin{innerframe}[\labels@mountsoptions]\optionsalphaandcostorderlist{#1}\end{innerframe}}
+\newcommand{\mountsnopts}[1]{\begin{innerframenopts}[\labels@mountsoptions]\optionsalphaandcostorderlist{#1}\end{innerframenopts}}
+
+\newcommand{\mountstwocols}[1]{\begin{innerframetwocols}[\labels@mountsoptions]%
+\setlength{\columnsep}{10pt+0.3cm}%
+\setlength{\multicolsep}{0pt}%
+\vspace*{-3pt}\begin{multicols}{2}\optionsalphaandcostorderlist{#1}\end{multicols}\end{innerframetwocols}}
+
+%%% Command group %%%
+
+% Command group entry.
+\newcommand{\commandgroup}[1]{\begin{innerframe}[\labels@commandgroupoptions]%
+\optionsalphaorderlist{#1}%
+\end{innerframe}}
+\newcommand{\commandgrouptwocols}[1]{\begin{innerframetwocols}[\labels@commandgroupoptions]%
+\setlength{\columnsep}{10pt+0.3cm}%
+\setlength{\multicolsep}{0pt}%
+\vspace*{-3pt}\begin{multicols}{2}\optionsalphaorderlist{#1}\end{multicols}\end{innerframetwocols}}
+
+%%% Model rules %%%
+
+% Model rule entry.
+\newcommand{\modelruledef}[2]{%
+\DTLnewrow{unitruleslist}%
+\DTLnewdbentry{unitruleslist}{name}{#1}%
+\DTLnewdbentry{unitruleslist}{ruletext}{#2}%
+\pdfstringdef\textwithoutformatting{#1}%
+\pdfsubstitute\textwithoutformatting{'}{}%
+\pdfsubstitute\textwithoutformatting{ }{}%
+\dolanguagespecificsubstitute{}%
+\def\DTLentrycommand{\DTLnewdbentry{unitruleslist}{sortlabel}}%
+\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+}
+
+% Model rules list and frame.
+\newcommand{\modelrulesdef}[1]{%
+\DTLifdbexists{unitruleslist}{\DTLcleardb{unitruleslist}}{\DTLnewdb{unitruleslist}}% Create new/discard old list
+\begin{innerframenopts}[\labels@modelrulesdef]%
+#1%
+\DTLifdbempty{unitruleslist}{}{%
+	\DTLsort*{sortlabel}{unitruleslist}% Sort list
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+		\DTLforeach*{unitruleslist}{\ruletext=ruletext,\nameoftherule=name}{% Print back the ordered list
+			\item[\nameoftherule{}\spacebeforecolon{}:]\ruletext%
+		}%
+	\end{description}%
+	\DTLcleardb{unitruleslist}%
+}
+\end{innerframenopts}%
+}%
+
+% Optional model rules list and frame.
+\newcommand{\optionalmodelrulesdef}[1]{%
+\DTLifdbexists{unitruleslist}{\DTLcleardb{unitruleslist}}{\DTLnewdb{unitruleslist}}% Create new/discard old list
+\begin{innerframenopts}[\labels@optionalmodelrulesdef]%
+#1%
+\DTLifdbempty{unitruleslist}{}{%
+	\DTLsort*{sortlabel}{unitruleslist}% Sort list
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+		\DTLforeach*{unitruleslist}{\ruletext=ruletext,\nameoftherule=name}{% Print back the ordered list
+			\item[\nameoftherule{}\spacebeforecolon{}:]\ruletext%
+		}%
+	\end{description}%
+	\DTLcleardb{unitruleslist}%
+}
+\end{innerframenopts}%
+}%

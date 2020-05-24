@@ -1,0 +1,86 @@
+
+% Special Equipment Names
+
+\newcommand{\divinejudgement}{Divine Judgement}
+\newcommand{\tristansresolve}{Tristan's Resolve}
+\newcommand{\wyrmwoodcore}{Wyrmwood Core}
+
+\newcommand{\crusaderssalvation}{Crusader's Salvation}
+\newcommand{\fortressoffaith}{Fortress of Faith}
+\newcommand{\faithofpercival}{Faith of Percival}
+\newcommand{\uthersconviction}{Uther's Conviction}
+
+\newcommand{\oriflamme}{Oriflamme}
+\newcommand{\bannerofroland}{Banner of Roland}
+\newcommand{\bannerofthelastcharge}{Banner of the Last Charge}
+\newcommand{\bannerofthegreenknight}{Banner of the Green Knight}
+
+\newcommand{\stormclarion}{Storm Clarion}
+\newcommand{\wafersofpenitence}{Wafers of Penitence}
+\newcommand{\blackknightstabard}{Black Knight's Tabard}
+\newcommand{\crystalofthevaliantcharge}{Crystal of the Valiant Charge}
+
+% Special Equipment Texts
+
+\newcommand{\divinejudgementdef}{%
+\lance{} enchantment.\newline%
+Attacks made with this weapon gain \textbf{\devastatingcharge{\multiplewounds{D3+1}{}}} and become \textbf{\magicalattacks}.%
+}
+\newcommand{\tristansresolvedef}{%
+\hw{} enchantment.\newline%
+When using this weapon, the wielder gains +1 Strength, +1 Armour Penetration, +1 Attack Value, and \textbf{\magicalattacks}. After a successful to-hit roll, the attacker may discard one of the hits with this weapon and choose a Weapon Enchantment carried by the model the attack was allocated towards. The chosen Weapon Enchantment cannot be used for the rest of the battle.%
+}
+\newcommand{\wyrmwoodcoredef}{%
+\lance{} enchantment.\newline%
+The wielder gains \textbf{\breathattack{\St{} 5, \AP{} 0, \flamingattacks}}. Attacks made with this weapon become \textbf{\flamingattacks} and \textbf{\magicalattacks}.%
+}
+
+\newcommand{\crusaderssalvationdef}{%
+\itemrestriction{Dominant.}%
+\ha{} enchantment.\newline%
+The wearer gains +1 Armour and must reroll failed Armour Saves.%
+}
+\newcommand{\fortressoffaithdef}{%
+\shield{} enchantment.\newline%
+While using this Shield, the bearer must reroll all natural to-hit and to-wound rolls of \result{1} with its Close Combat Attacks, and must reroll all natural Armour Save rolls of \result{1}.%
+}
+\newcommand{\faithofpercivaldef}{%
+\itemrestriction{Dominant. Cannot be taken by models with \toweringpresence{}.}%
+\shield{} enchantment.\newline%
+While using this Shield, the wearer gains \textbf{\aegis{} (+1, max. 4+)}. Attacks against the bearer that are \divineattacks{} lose this Attack Attribute while using this Shield.%
+}
+\newcommand{\uthersconvictiondef}{%
+\ha{} enchantment.\newline%
+The bearer gains +1 Armour. The bearer gains \textbf{\aegis{} (+1, max. 4+, against Armour Penetration 6 or more)}.%
+}
+
+\newcommand{\oriflammedef}{%
+\itemrestriction{Cannot be taken by units that count towards Core.}%
+The bearer gains \textbf{\fear}. Enemy units in base contact with the bearer's unit cannot benefit from \rallyaroundtheflag{}.%
+}
+\newcommand{\bannerofrolanddef}{%
+The bearer's unit gains \textbf{\aegis{} (+1, max. 4+, against Ranged Attacks)}. In addition, enemy units cannot choose Stand and Shoot as a Charge Reaction when reacting to charges made by the bearer's unit.%
+}
+\newcommand{\bannerofthelastchargedef}{%
+\rnf{} Cavalry models in the bearer's unit gain \textbf{\impacthits{X}}, where X is equal to the number of Full Ranks in the unit. These \impacthits{} are resolved with Strength 4 and Armour Penetration 1.%
+}
+\newcommand{\bannerofthegreenknightdef}{%
+\itemrestriction{0--2 per Army.}%
+One use only. May be activated during the owner's Movement Phase. The bearer's unit gains +\distance{2} March Rate, \textbf{\ghoststep}, and loses Scoring. All friendly units are treated as Impassable Terrain. The effects last until the start of the next Player Turn.%
+}
+
+\newcommand{\stormclariondef}{%
+One use only. May be activated at the start of any Player Turn. Enemy units cannot make Flying Movements during this Player Turn.%
+}
+\newcommand{\wafersofpenitencedef}{%
+\itemrestriction{Wizards only.}%
+One use only. May be activated after rolling for a Dispelling Attempt. Add +2 to the rolled result. This is an exception to the Casting and Dispelling Modifiers rule.%
+}
+\newcommand{\blackknightstabarddef}{%
+\itemrestriction{Dominant.}%
+One use only. Activate when the bearer reaches 0 (or fewer) Health Points. Do not remove the bearer as a casualty. Instead, after resolving all simultaneous attacks (such as all Shooting Attacks from the same unit or all Melee Attacks at the same Initiative Step), the bearer's Health Points are set to 1, and it gains \textbf{\aegis{} (3+)} until the end of the Player Turn.%
+}
+\newcommand{\crystalofthevaliantchargedef}{%
+\itemrestriction{Dominant. Wizards only.}%
+One use only. May be activated at the start of the opponent's Magic Phase. In this phase, during Siphon the Veil, before converting Veil Tokens into Magic Dice, remove 1 Veil Token from the Active Player's Veil Token pool for each friendly unit that is Engaged in Combat within \distance{18} of the bearer. Add the Veil Tokens removed this way to your Veil Token pool.%
+}
