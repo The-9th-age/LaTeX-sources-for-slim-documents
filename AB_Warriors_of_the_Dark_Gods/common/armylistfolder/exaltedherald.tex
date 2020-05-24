@@ -1,16 +1,26 @@
 
+\def\brandofthedragonruleone{\textbf{\fly{8}{16}}}
+\def\brandofthedragonruletwo{\textbf{\lighttroops{}}}
+\def\brandofthedragonrulethree{\textbf{\swiftstride{}}}
+\def\brandofthedragonrulefour{\textbf{\breathattack{\St{} 4, \AP{} 1, \flamingattacks{}}}}
+
+\def\emissaryofchaosruleone{\textbf{\stompattacks{} (\Dsix{})}}
+\def\emissaryofchaosruletwo{\textbf{\stubborn{}}}
+\def\emissaryofchaosrulethree{\textbf{\tall{}}}
+\def\emissaryofchaosrulefour{\textbf{\terror{}}}
+
 \unitentry{%
 	name=\exaltedherald{},
 	logo=character,
-	cost=850,
+	cost=835,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=50\timess{}50,
 	global@Ad=8,
 	global@Ma=16,
 	global@Di=9,
-	globalrules={\fear{}, \fearless{},, \supernal{}, \wizardadept{}, \textbf{\manifestation}},
+	globalrules={\fear{}, \fearless{}, \supernal{}, \wizardadept{}, \hidebf{\manifestation}},
 	defense@HP=5,
 	defense@Df=8,
 	defense@Re=5,
@@ -28,11 +38,31 @@
     },
     endtext={%
 		\manifestationtable{%
-			\manifestationtabledef{\abidingspirit}{\abidingspiritrule}{\abidingspiritspells}%
-			\manifestationtabledef{\brandofthedragon}{\brandofthedragonrule}{\brandofthedragonspells}%
-			\manifestationtabledef{\emissaryofchaos}{\emissaryofchaosrule}{\emissaryofchaosspells}%
-			\manifestationtabledef{\sorcererimmortal}{\sorcererimmortalrule}{\sorcererimmortalspells}%
-			\manifestationtabledef{\unholyavatar}{\unholyavatarrule}{\unholyavatarspells}%
+			\manifestationtabledef{\abidingspirit}{%
+					\textbf{\hardtarget{} (1)}. \abidingspiritrule{}%
+				}{%
+					\spellformat{\thaumaturgyspelltwo}{\thaumaturgy}%
+				}%
+			\manifestationtabledef{\brandofthedragon}{%
+				\alphaorderlistand{\brandofthedragonruleone{},\brandofthedragonruletwo{},\brandofthedragonrulethree{},\brandofthedragonrulefour{}}%
+			}{%
+				\spellformat{\occultismspellfour}{\occultism}%
+			}%
+			\manifestationtabledef{\emissaryofchaos}{%
+				\alphaorderlistand{\emissaryofchaosruleone{},\emissaryofchaosruletwo{},\emissaryofchaosrulethree{},\emissaryofchaosrulefour{}}%
+			}{%
+				\spellformat{\occultismspellone}{\occultism}.%
+			}%
+			\manifestationtabledef{\sorcererimmortal}{%
+				\textbf{\veilwalker}%
+			}{%
+				\spellformat{\occultismspellfive}{\occultism} \wordand{}\newline \spellformat{\occultismspellsix}{\occultism}%
+			}%
+			\manifestationtabledef{\unholyavatar}{%
+				+1 \Strength{}, +1 \ArmourPenetration{}, \wordand{} \textbf{\divineattacks}%
+			}{%
+				\spellformat{\occultismspellthree}{\occultism}%
+			}%
 		}
     },
 }

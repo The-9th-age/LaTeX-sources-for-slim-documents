@@ -227,9 +227,10 @@
 %%% Magic options %%%
 
 % Magic entry.
-\newcommand{\magic}[2]{\begin{innerframe}[\magicoptions]%
+\newcommand{\magic}[3]{\begin{innerframe}[\magicoptions]%
 \expandafter\ifblank\expandafter{#1}{}{\optionslist{#1}\par}%
 \pathslist{#2}%
+#3%
 \end{innerframe}}
 
 \newcommand{\pathslist}[1]{%

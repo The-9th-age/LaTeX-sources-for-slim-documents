@@ -6,12 +6,12 @@
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=9,
-	globalrules={\forestwalker{},,\emboldeningboughs{},\sylvanspirit{},\textbf{\ashepherdanditsflock}},
+	globalrules={\forestwalker{},\emboldeningboughs{},\sylvanspirit{},\hidebf{\ashepherdanditsflock}},
 	defense@HP=4,
 	defense@Df=5,
 	defense@Re=5,
@@ -25,7 +25,7 @@
 	offense@Ag=4,
 	options={%
 		\bsb{}=50,
-		\asingleaspectofnature{}=\upto{}100,
+		\asingleaspectofnature{}=\nolimit{},
 	},
 	modelrulesdef={%
 		\modelruledef{\ashepherdanditsflock}{\ruletype{\universalrule}\ashepherdanditsflockdef}

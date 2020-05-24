@@ -4,7 +4,7 @@
 \newcommand{\DefensiveCharacteristics}{Defensive}
 \newcommand{\OffensiveCharacteristics}{Offensive}
 
-\newcommand{\roundbase}{round} % printed after XX mm for round bases
+\newcommand{\roundbase}{round}% printed after XX mm for round bases
 
 \newcommand{\groundmovementlabel}{Ground}
 \newcommand{\flymovementlabel}{Fly}
@@ -15,7 +15,6 @@
 
 \newcommand{\basesize}{Base}
 \newcommand{\type}{Type}
-\newcommand{\size}{Height}% deprecated
 \newcommand{\Height}{Height}
 \newcommand{\labels@options}{Options}
 \newcommand{\labels@addoptions}{Additional Options}
@@ -43,9 +42,10 @@
 \newcommand{\permodel}{\nobreak{}/model}
 \newcommand{\pereach}{\nobreak{}/each}
 \newcommand{\perextramodel}{\nobreak{}/extra model}
-\newcommand{\perextramodelshortened}{\nobreak{}/extra model} % if \perextramodel gets too long when there are 2 logos; it is not the case in English
+\newcommand{\perextramodelshortened}{\nobreak{}/extra model}% if \perextramodel gets too long when there are 2 logos; it is not the case in English
 \newcommand{\notif}[1]{(not if #1)}
 \newcommand{\wordand}{and}
+\newcommand{\wordor}{or}
 \newcommand{\wordwith}{with}
 \newcommand{\ifNmodelsorless}[1]{(if #1 models or less)}
 
@@ -71,64 +71,50 @@
 \newcommand{\zerotoonemodelsperunit}{0--1 Models/Unit}
 
 \newcommand{\zerotoXchoice}[1]{0--#1}
-\newcommand{\zerotoXchoiceperarmy}[1]{0--#1 per Army}% deprecated
 \newcommand{\zerotoXperarmy}[1]{0--#1 per Army}
-\newcommand{\maxXmodels}[1]{max. #1 models}% deprecated
-\newcommand{\maxXmodelsperunit}[1]{0--#1 Models/Unit}% deprecated, use \zerotoXmodelsperunit
 
 \newcommand{\onechoiceonlyNOC}{(one choice only)}
+\newcommand{\OnechoiceonlyNOC}{One choice only:}
 \newcommand{\Onfootonly}{On foot only}
 \newcommand{\onfootonly}{on foot only}
 \newcommand{\closecombatonly}{Close Combat only}
 \newcommand{\Xmodelsorless}[1]{(#1 models or less)}
 
 \newcommand{\ifwizardmaster}{If \wizardmaster}
-\newcommand{\specialequipmentallowance}{Special Items}% deprecated
+\newcommand{\Ifonfoot}{If on foot}
 \newcommand{\specialitemsallowance}{Special Items}
 
 \newcommand{\weaponenchantment}{Weapon Enchantment}
 \newcommand{\bannerenchantment}{Banner Enchantment}
 
-\newcommand{\weapononechoice}{\optionschoice{Weapon \onechoiceonlyNOC{}:}}
-\newcommand{\replacehwwithonechoice}{\optionschoice{Replace its \hw{} with \onechoiceonlyNOC{}:}}
-\newcommand{\weaponschoice}{\optionschoice{Weapons:}}
-\newcommand{\shootingweapononechoice}{\optionschoice{Shooting Weapon \onechoiceonlyNOC{}:}}
-\newcommand{\armouronechoice}{\optionschoice{Armour \onechoiceonlyNOC{}:}}
-\newcommand{\mustbecomeoneofthefollowing}{\optionschoice{\textbf{Must} become one of the following:}}
-\newcommand{\mustbecomeoneofthefollowingNOC}{Must become one of the following:}
-\newcommand{\musttakeoneormoreofthefollowing}{\optionschoice{\textbf{Must} take one or more of the following:}}
-\newcommand{\musttakeoneofthefollowing}{\optionschoice{\textbf{Must} take one of the following:}}
-\newcommand{\musttakeoneofthefollowingNOC}{Must take one of the following:}
-\newcommand{\uptotwoofthefollowing}{\optionschoice{Up to two of the following:}}
-\newcommand{\uptotwoofthefollowingTWOCOL}{\optionschoiceTWOCOL{Up to two of the following:}}
-
-\newcommand{\replaceshieldwithonechoice}{\optionschoice{Replace its \shield{} with \onechoiceonlyNOC{}:}}
-
 \newcommand{\onechoiceonly}{\optionschoice{One choice only:}}
 \newcommand{\onechoiceonlyACO}[1]{\optionschoice{One choice only:}{\AlCoOrder{#1}}}
 \newcommand{\onechoiceonlyTWOCOL}{\optionschoiceTWOCOL{One choice only:}}
+\newcommand{\onechoiceonlyTWOCOLACO}[1]{\optionschoiceTWOCOL{One choice only:}{\AlCoOrder{#1}}}
 \newcommand{\explonechoiceonly}{\exploptionschoice{One choice only:}}
 \newcommand{\explonechoiceonlyACO}[1]{\exploptionschoice{One choice only:}{\explAlCoOrder{#1}}}
 
-\newcommand{\mustbecomeonechoiceonly}{\optionschoice{\textbf{Must} become (one choice only):}}
+\newcommand{\mustchooseonechoiceonly}{\optionschoice{\textbf{Must} choose (one choice only):}}
+\newcommand{\mustchooseonechoiceonlyNOC}{\textbf{Must} choose (one choice only):}
+\newcommand{\mustchooseoneormoreofthefollowing}{\optionschoice{\textbf{Must} choose one or more of the following:}}
 
 \newcommand{\charactermountnote}[2]{%
-A mount marked with (#1) counts towards #2. Additionally, the mount and its rider count towards Characters.%
+A mount marked with (#1) counts towards #2. The mount and its rider also count towards Characters.%
 }
 \newcommand{\charactermountnotefull}[2]{%
 A mount marked with [#1] and its rider count towards Characters and #2.%
 }
 \newcommand{\twocategoriesnote}[2]{%
-This unit counts both towards #1 and #2.%
+The unit counts both towards #1 and #2.%
 }
 \newcommand{\mountcategorynote}[1]{%
-This mount and its rider count towards Characters. Additionally, this mount counts towards #1.%
+The mount and its rider count towards Characters. The mount also counts towards #1.%
 }
 \newcommand{\mountcategorynotefull}[1]{%
-This mount and its rider count towards Characters and #1.%
+The mount and its rider count towards Characters and #1.%
 }
 \newcommand{\unitsofXormoremodelscounttowardscore}[1]{Units of #1 or more models count towards Core instead of Special.}
-\newcommand{\unitsofXmodelscounttowardscore}[1]{Units of #1 models count towards Core.}
+\newcommand{\unitsofXmodelscounttowardscore}[1]{Units of #1 models count towards Core instead of Special.}
 \newcommand{\maxXunitsofYormoremodelscounttowardscore}[2]{A maximum of #1 \isitoneornot{#1}{unit}{units} of #2 or more models count towards Core instead of Special.}
 
 \newcommand{\wizardconclavespellsintro}{\wizardconclavespellslist{\textbf{Must} select 2 spells from:}}

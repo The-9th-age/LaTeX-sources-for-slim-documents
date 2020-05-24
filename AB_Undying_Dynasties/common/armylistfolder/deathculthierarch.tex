@@ -2,10 +2,10 @@
 \unitentry{%
 	name=\deathculthierarch{},
 	logo=character,
-	cost=125,
+	cost=130,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
@@ -26,16 +26,16 @@
 	paths={\cosmology{}=cosmology,\divination{}=divination,\evocation{}=evocation},
 	options={%
 		\ifwizardmaster{}\spacebeforecolon{}:=,
-			\AlCoOrder{\suboptionindent\hierophant{}=50,\suboptionindent\textbf{\soulconduit}=25},
-			\suboptionindent\specialequipmentallowance{}=\upto{}200,
+			\AlCoOrder{\suboptionindent\hierophant{}=45,\suboptionindent\textbf{\soulconduit}=20},
+			\suboptionindent\specialitemsallowance{}=\upto{}200,
 		\Else{}\spacebeforecolon{}:=,
-			\suboptionindent\hierophant{}=20,
-			\suboptionindent\specialequipmentallowance{}=\upto{}100,
+			\suboptionindent\hierophant{}=15,
+			\suboptionindent\specialitemsallowance{}=\upto{}100,
 		\la{}=5,
 	},
 	optionalmodelrulesdef={\modelruledef{\soulconduit}{\ruletype{\universalrule}\soulconduitdef}},
 	mounts={%
-		\skeletalhorse{}=20,
-		\arkofages{}=145,
+		\skeletalhorse{}=10,
+		\arkofages{}=130,
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

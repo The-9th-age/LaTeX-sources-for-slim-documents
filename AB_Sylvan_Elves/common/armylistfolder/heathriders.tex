@@ -7,11 +7,11 @@
 	cost=180,
 	unitsize=5,
 	maxunitsize=15,
-	costpermodel=32,
+	costpermodel=29,
 	scoring=yes,
 	maxunitsperarmy=3,
 	type=\cavalry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=25\timess{}50,
 	global@Ad=9,
 	global@Ma=18,
@@ -38,10 +38,10 @@
 	offenseB@Ag=4,
 	offenserulesB={\harnessed{}},
 	options={%
-		\optionschoice{\mustchooseone}{%
+		\mustchooseonechoiceonly{\AlCoOrder{%
 			\shield{}=\free{},
-			\textbf{\heathhunters} (\zerotoXmodelsperunit{10})=5\permodel{},
-		},
+			\textbf{\heathhunters} (\NOTESTzerotoXmodelsperunit{10})=5\permodel{},
+		}},
 		\ambush{} \only{\textbf{\heathhunters}}=2\permodel{},
 	},
 	commandgroup={%
@@ -57,4 +57,4 @@
 		\toggletrue{onecolprintcommandgroup}%
 		\togglefalse{twocolprintcommandgroup}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

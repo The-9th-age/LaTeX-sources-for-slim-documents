@@ -25,13 +25,13 @@
 }
 
 \newcommand{\masterofundeathdef}{%
-	One Character in the Vampire Covenant army must be nominated to be the \textbf{Master}. At the start of the game, the General is always the Master.%
+	One Character in the Vampire Covenant army \textbf{must} be nominated to be the \textbf{Master}. At the start of the game, the General is always the Master.%
 }
 
 \newcommand{\ashestoashesdef}{%
-	At the end of any phase in which the Master is removed as a casualty, every unit in the army with one or more models with \ashestoashes{} must pass a Discipline Test or lose a number of Health Points equal to the amount by which the test was failed, with no saves of any kind allowed. These Health Point losses are allotted following the rules for \unstable{}, except that they can never be allotted to models that do not have \ashestoashes{}. The number of Health Points lost is reduced by 1 if the unit \newrule{is within range of \rallyaroundtheflag{}}.\DTLpar
-	At the end of the Player Turn in which the Master was removed as a casualty, a new Master may be selected. \newrule{In order t}o do so, nominate a friendly Wizard Character that either has Vampiric or is using Evocation. This Character becomes the new Master.\DTLpar
-	At the start of each friendly Player Turn after the \newrule{army's} Master has been removed as a casualty and no new Master has been selected, every unit with \ashestoashes{} must once again pass a Discipline Test or lose Health Points as described above.%
+	At the end of any phase in which the Master is removed as a casualty, every unit in the army with one or more models with \ashestoashes{} \textbf{must} pass a Discipline Test or lose a number of Health Points equal to the amount by which the test was failed, with no saves of any kind allowed. These Health Point losses are allotted following the rules for \unstable{}, except that they can never be allotted to models that do not have \ashestoashes{}. The number of Health Points lost is reduced by 1 if the unit is within range of \rallyaroundtheflag{}.\DTLpar
+	At the end of the Player Turn in which the Master was removed as a casualty, a new Master may be selected. In order to do so, nominate a friendly Wizard Character that either has Vampiric or has chosen Evocation. This Character becomes the new Master.\DTLpar
+	At the start of each friendly Player Turn after the army's Master has been removed as a casualty and no new Master has been selected, every unit with \ashestoashes{} \textbf{must} once again pass a Discipline Test or lose Health Points as described above.%
 }
 
 \newcommand{\gatesofthenetherworlddef}{%
@@ -39,7 +39,7 @@
 }
 
 \newcommand{\awakendef}{%
-	The model can Raise Health Points above a unit's starting size for the units stated within brackets. However, units cannot be increased beyond twice their starting size or beyond the maximum unit size written in their unit entry. A unit's starting size is the size of the unit as written on the Army List (or the size of the unit at the time of its creation).%
+	The model can Raise Health Points above a unit's starting size for the units stated within brackets. However, units cannot be increased beyond twice their starting size or beyond the maximum unit size written in their unit entry. A unit's starting size is the size of the unit as written on the Army List or the size of the unit when it is Summoned.%
 }
 
 \newcommand{\necromanticauradef}{%
@@ -48,33 +48,33 @@
 
 \newcommand{\thedeadarisedef}{%
 	\itemrestriction{\zerotoXperarmy{1}.}%
-The model can cast \newrule{\textbf{\thedeadarise} as a} Bound Spell with Power Level (4/8).\DTLpar%
-\newrule{\textbf{\thedeadarise}:} \range{12}, Type \ground{}, Duration \instant{}.\newline
-Summon a unit listed in the Awaken (X) Universal Rule of the Caster (declare which before casting) with as many Health Points as given by the Reanimated value of the unit. All models must be placed within the spell's range, with at least one model touching the target point. All upgrades except Command Group are allowed. The unit loses Scoring (if it had it).%
+The model can cast \textbf{\spellformat{\thedeadarise}{}} as a Bound Spell with Power Level (4/8).\DTLpar%
+\textbf{\thedeadarise}: \range{12}, Type \ground{}, Duration \instant{}.\newline
+Summon a unit listed in the Awaken (X) Universal Rule of the Caster (declare which before casting) with a number of Health Points corresponding to the Reanimated value of the unit. All models \textbf{must} be placed within the spell's range, with at least one model touching the target point. All upgrades except Command Group Options are allowed. The unit loses Scoring (if it had it).%
 }
 
 \newcommand{\ghostlyformdef}{%
-	The model gains \newrule{\textbf{\ghoststep} and \textbf{\magicalattacks}}. \rnf{} models with \newrule{\ghostlyform} can only be joined by Characters with Ghostly Form.%
+	The model gains \textbf{\ghoststep} and \textbf{\magicalattacks}. \rnf{} models with \ghostlyform can only be joined by Characters with Ghostly Form.%
 }
 
 \newcommand{\autonomousdef}{%
-	Undead units consisting entirely of models with Autonomous may perform March Moves as normal, even when outside the range of the Commanding Presence of any friendly models. The unit must still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.%
+	Undead units consisting entirely of models with Autonomous may perform March Moves as normal, even when outside the range of Commanding Presence of any friendly models. The unit \textbf{must} still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.%
 }
 
 \newcommand{\reaperdef}{%
-	A unit consisting entirely of models on foot with Reaper ignores all other units when moving in the Movement Phase, but it must follow the Unit Spacing rule at the end of its move.\DTLpar%
+	A unit consisting entirely of models on foot with Reaper ignores all other units when moving in the Movement Phase, but it \textbf{must} follow the Unit Spacing rule at the end of its move.\DTLpar%
 The unit can make a Sweeping Attack. The enemy unit suffers 1 hit with Strength 5, Armour Penetration 10, and Magical Attacks for each model with Reaper in the unit.%
 }
 
 \newcommand{\vampiricdef}{%
-	At the end of each Melee Phase, check and resolve the following effects for all \newrule{models} with Vampiric:%
+	At the end of each Melee Phase, check and resolve the following effects for all models with Vampiric:%
 	\begin{itemize}%
 		\item \textbf{Character} -- If at least one attack with Vampiric made by the Character caused an unsaved wound, the Character can make a single Vampiric roll. If successful, the Character Recovers a single Health Point.%
-		\item \textbf{\newrule{\rnf{} model}} -- If at least one attack with Vampiric made by a \rnf{} model in the unit caused an unsaved wound, the unit can make a single Vampiric roll. If successful, the unit Raises a single Health Point.%
+		\item \textbf{\rnf{} model} -- If at least one attack with Vampiric made by a \rnf{} model in the unit caused an unsaved wound, the unit can make a single Vampiric roll. If successful, the unit Raises a single Health Point.%
 	\end{itemize}%
 	A Vampiric roll is successful if the D6 scores X+, where X is the number stated within brackets. Use only the best value if a unit or Character has multiple parts with this Attack Attribute that each caused unsaved wounds. A roll of \result{1} on a Vampiric roll is always a failure and a \result{6} is always a success. Models with Towering Presence suffer a \minuss{}2 modifier to their Vampiric rolls.%
 }
 
 \newcommand{\unholyappetitedef}{%
-	After a Round of Combat in which at least one attack with Unholy Appetite caused an unsaved wound, all attacks with Unholy Appetite from models in the same unit must reroll failed to-hit rolls until the end of the next Player Turn.%
+	After a Round of Combat in which at least one attack with Unholy Appetite caused an unsaved wound, all attacks with Unholy Appetite from models in the same unit \textbf{must} reroll failed to-hit rolls until the end of the next Player Turn.%
 }

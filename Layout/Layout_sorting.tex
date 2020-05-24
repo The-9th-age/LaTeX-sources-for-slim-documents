@@ -124,3 +124,18 @@
 }%
 \DTLcleardb{alphaorderlist}%
 }
+
+\newcommand{\calculatepenultimate}[1]{\DTLsub{\dtlpenultimate}{#1}{1}}
+\newcommand{\alphaorderlistand}[1]{%
+\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+\expandafter\parcommalist\expandafter{#1}{\locallists@alphaorderlist}%
+\forlistloop{\addtosortedlist}{\locallists@alphaorderlist}%
+\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+\expandafter\calculatepenultimate\expandafter{\DTLrowcount{alphaorderlist}}%
+\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+\theDesc{}\DTLiflastrow{}{%
+	\dtlifnumeq{\dtlpenultimate}{\DTLcurrentindex}{, \wordand{} }{, }%
+	}%
+}%
+\DTLcleardb{alphaorderlist}%
+}

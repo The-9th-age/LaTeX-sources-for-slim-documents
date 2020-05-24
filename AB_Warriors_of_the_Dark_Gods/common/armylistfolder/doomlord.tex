@@ -7,17 +7,17 @@
 	cost=360,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
 	global@Ad=6,
 	global@Ma=12,
 	global@Di=9,
-	globalrules={\pathexiled{},\textbf{\masterofdestruction{}},\fearless{}},
+	globalrules={\pathexiled{},\hidebf{\masterofdestruction{}},\fearless{}},
 	defense@HP=4,
 	defense@Df=6,
 	defense@Re=5,
 	defense@Arm=1,
-	defensearmour={\hellforgedarmor{},\shield{}},
+	defensearmour={\hellforgedarmor{}},
 	offensename=\doomlord{},
 	offense@Ag=5,
 	offense@At=5,
@@ -27,12 +27,15 @@
 	offenserules={},
 	options={%
 		\trophyrack{}=25,
-		\specialequipmentallowance{}=\upto{}150,
+		\specialitemsallowance{}=\upto{}150,
 		\allowanceifgeneral{}=\upto{}200,
-		\replaceshieldwithspikedshield{}=25,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=\free{},
+			\spikedshield{}=50,
+		}},
 		\onechoiceonlyACO{%
-			\pw{}=10,
-			\halberd{}=30,
+			\pw{}=5,
+			\halberd{}=25,
 			\gw{}=40,
 		},
 	},
@@ -42,4 +45,4 @@
 	modelrulesdef={%
 		\modelruledef{\masterofdestruction}{\masterofdestructiondef}
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

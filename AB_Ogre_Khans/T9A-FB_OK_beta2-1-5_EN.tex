@@ -1,0 +1,46 @@
+%Language is defined here
+\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+
+% Preamble
+\input{../Layout/Layout.tex}
+\input{common/layout.tex}
+\input{language_specific/\languagetag/dictionnary_modelrules.tex}
+\input{language_specific/\languagetag/dictionnary_specialequipment.tex}
+\input{language_specific/\languagetag/dictionnary_bignames.tex}
+\input{language_specific/\languagetag/dictionnary_armylist.tex}
+\input{language_specific/\languagetag/dictionnary_others.tex}
+\input{common/toc.tex}
+\input{common/footer.tex}
+
+\newcommand{\booktitle}{Ogre Khans}
+\newcommand{\preversion}{\nth{2} Edition, beta version~}
+\newcommand{\version}{2.1}
+%\newcommand\releasedate{November 16, 2018} % Comment if you want to use today's date in your default language
+%\newcommand{\translationversion}{WIP VERSION} % Translation version, or anything related to version
+\newcommand{\booklogo}{pics/logo_big_OK.jpg}
+\def\bookprefix{OK}
+\hypersetup{pdftitle={T9A -- \booktitle{} -- \version}}
+
+\begin{document}
+
+% all main sections are in specific files
+\input{../Layout/Titlepage.tex}
+\input{common/modelrules.tex}
+\additionalspacebeforemaintitle{}
+\input{common/hereditaryspell.tex}
+\newpage
+\input{common/bignames.tex}
+\newpage
+\input{common/specialequipment.tex}
+\newpage
+\input{common/armyorg.tex}
+\additionalspacebeforemaintitle{}
+\input{common/armylist.tex}
+\newpage
+\input{common/qrs.tex}
+\newpage
+\input{language_specific/\languagetag/changelog.tex}
+
+\end{document}

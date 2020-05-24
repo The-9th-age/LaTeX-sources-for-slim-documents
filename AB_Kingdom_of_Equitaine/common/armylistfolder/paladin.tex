@@ -2,12 +2,13 @@
 \unitentry{%
 	name=\paladin{},
 	logo=character,
-	optionallogo=character_bird,
+	optionallogo=character,
+	secondoptionallogo=bird,
 	categorynote={\charactermountnotefull{\airbornegallantryInitial}{\airbornegallantry}},
 	cost=130,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
@@ -28,10 +29,10 @@
 	options={%
 		\bsb{}=50,
 		\asinglevirtue{}=\nolimit{},
-		\specialequipmentallowance{}=\upto{}100,
+		\specialitemsallowance{}=\upto{}100,
 		\onechoiceonlyACO{%
 			\questingoath{} \wordand{} \bastardsword{}=40,
-			\grailoath{}=30,
+			\grailoath{}=20,
 		},
 		\shield{}=5,
 		\AlCoOrder{%
@@ -43,6 +44,6 @@
 	},
 	mounts={%
 		\bardedwarhorse{}=40,
-		\pegasus{} [\airbornegallantryInitial{}]=100,
+		\pegasus{} [\airbornegallantryInitial{}]=95,
 	},
 } % END UNIT ENTRY

@@ -103,7 +103,7 @@
 
 \newcommand{\armyorganisationoptions}{Army Organisation Options}
 \newcommand{\monarchofundeathoption}{%
-If a Pharaoh is the General, it may become \commanderoftheterracottaarmy{} or \lordofthebarrowlegion{} (see \hyperlink{UDMonarchsOfUndeath}{Monarchs of Undeath} page \pageref{UDMonarchsOfUndeath}).%
+If a Pharaoh is the General, it may become \commanderoftheterracottaarmy{} or \lordofthebarrowlegion{} (see \hyperlink{UDMonarchsOfUndeath}{Monarchs of Undeath}, page \pageref{UDMonarchsOfUndeath}).%
 }
 
 % Death Cult Hierarch
@@ -111,7 +111,7 @@ If a Pharaoh is the General, it may become \commanderoftheterracottaarmy{} or \l
 \newcommand{\soulconduit}{Soul Conduit}
 \newcommand{\soulconduitdef}{%
 If the model is present on the Battlefield at the beginning of a friendly Magic Phase, you don't draw a Flux Card. Instead apply the following:%
-\fluxcard{5 Magic Dice}{both players}{4+D3 Veil Tokens}{Active Player}%
+\fluxcard{5 Magic Dice}{both players}{4+\Dthree{} Veil Tokens}{Active Player}%
 }
 \newcommand{\Else}{Else}
 
@@ -123,7 +123,7 @@ Model parts without \harnessed{} in the bearer's unit gain \battlefocus{}.%
 }
 \newcommand{\royalguard}{Royal Guard}
 \newcommand{\royalguarddef}{%
-The model counts as a \rnf{} model for the purpose of \undyingwill{}. If in the same unit as a Pharaoh or a Nomarch, a Tomb Harbinger must issue and accept Duels unless another model does so first.%
+The model counts as a \rnf{} model for the purpose of \undyingwill{}. If in the same unit as a Pharaoh or a Nomarch, a Tomb Harbinger \textbf{must} issue and accept Duels unless another model does so first.%
 }
 
 
@@ -131,7 +131,7 @@ The model counts as a \rnf{} model for the purpose of \undyingwill{}. If in the 
 
 \newcommand{\masterofstone}{Master of Stone}
 \newcommand{\masterofstonedef}{%
-Right before the battle (during step 7 of the Deployment Phase Sequence), and at the beginning of each friendly Player Turn, choose a friendly unit consisting entirely of models with \ensouledstatue{} within \distance{18} of the Tomb Architect. This unit gains \regeneration{5+} until the start of your next Player Turn or until the Tomb Architect is removed as a casualty, whichever comes first.%
+Right before the battle (during step 7 of the Deployment Phase Sequence), and at the start of each friendly Player Turn, choose a friendly unit consisting entirely of models with \ensouledstatue{} within \distance{18} of the Tomb Architect. This unit gains \textbf{\fortitude{5+}} until the start of your next Player Turn or until the Tomb Architect is removed as a casualty, whichever comes first.%
 }
 
 % Casket of Phatep
@@ -144,7 +144,7 @@ Enemy Wizards within \distance{36} of one or more Caskets of Phatep suffer a \mi
 \newcommand{\phatepscursedef}{%
 Unless this model made an Advance Move or March Move during the current Player Turn, it can cast the following Bound Spell with Power Level (6/6):\newline%
 Type: \damage{}, \hex{}, \range{36}. Duration: \instant{}.\newline%
-The target must take a Discipline Test rolling an additional D6. If failed, the target suffers a number of hits equal to
+The target \textbf{must} take a Discipline Test rolling an additional D6. If failed, the target suffers a number of hits equal to
 the amount by which the test was failed. Hits are resolved with Armour Penetration 10 and wound automatically.%
 }
 
@@ -170,7 +170,7 @@ One use only. May be activated at the start of any of your Magic Phases. Until t
 	}{%
 		\wellofsoulsfluxcard{5 Magic Dice}{both players}{5 Veil Tokens}{Active Player}%
 	}{%
-		When making a casting roll with 3 or more Magic Dice, all doubles count as triples. Note that a Caster can suffer multiple Miscast effects from a single casting roll. However no Miscast effect can be applied more than once.%
+		When making a casting roll with 3 or more Magic Dice, all doubles count as triples. Note that a Caster can suffer multiple Miscast effects from a single casting roll. However, no Miscast effect can be applied more than once.%
 	}%
 }
 
@@ -178,7 +178,7 @@ One use only. May be activated at the start of any of your Magic Phases. Until t
 
 \newcommand{\eternalguardian}{Eternal Guardian}
 \newcommand{\eternalguardiandef}{%
-When the model suffers a wound from an attack with \multiplewounds{}{}, the number of wounds this is multiplied into (due to \multiplewounds{}{}) is halved, rounding up.%
+When the model suffers a wound from an attack with \multiplewounds{}{} (X), reduce X by half, rounding fractions up.%
 }
 
 
@@ -188,7 +188,7 @@ When the model suffers a wound from an attack with \multiplewounds{}{}, the numb
 
 \newcommand{\boundindeath}{Bound in Death}
 \newcommand{\boundindeathdef}{%
-\rnf{} models in this unit must be fewer than 3 before hits can be distributed onto Characters with the same Type and Height as this unit.%
+\rnf{} models in this unit \textbf{must} be fewer than 3 before hits can be distributed onto Characters with the same Type and Height as this unit.%
 }
 \newcommand{\chariothost}{Chariot Host}
 \newcommand{\chariothostdef}{%
@@ -204,7 +204,7 @@ The model loses Light Troops and gains \textbf{Scoring}. Its Charioteers gain \t
 % Tomb Cataphracts
 
 \newcommand{\undergroundambushcategorynote}{%
-The unit additionally counts towards \entombed{} when taking \undergroundambush{}.%
+The unit also counts towards \entombed{} when taking \undergroundambush{}.%
 }
 
 % Scarab Swarms
@@ -229,8 +229,8 @@ The model can make a number of Supporting Attacks equal to its Attack Value.%
 \newcommand{\charnelcatapultdef}{%
 This Artillery Weapon \textbf{always} hits on a roll equal to or greater than its Aim. It can be fired in two ways:%
 \begin{smallitemize}%
-\item As a \textbf{\catapult{4\timess{}4}} with \range{12--60}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], [\textbf{\multiplewounds{D3, \clippedwings{}}{}}]%
-\item As a \textbf{\catapult{6\timess{}6}} with \range{12--48}, \shots{1}, \St{} 3, \AP{} 0, \textbf{\flamingattacks{}}, \textbf{\magicalattacks{}}. For the purpose of Panic Test, a unit suffering one or more Health Point losses from this weapon is treated as having suffered \SI{25}{\percent} Health Point losses. Panic Tests caused by this weapon are taken at \minuss{}1 Discipline.%
+\item \textbf{\catapult{4\timess{}4}}, \range{12--60}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], [\textbf{\multiplewounds{D3, \clippedwings{}}{}}]%
+\item \textbf{\catapult{6\timess{}6}}, \range{12--48}, \shots{1}, \St{} 3, \AP{} 0, \textbf{\flamingattacks{}}, \textbf{\magicalattacks{}}. For the purpose of Panic Tests, a unit suffering one or more Health Point losses from this weapon is treated as having suffered \SI{25}{\percent} Health Point losses. Panic Tests caused by this weapon are taken at \minuss{}1 Discipline.%
 \end{smallitemize}%
 }
 

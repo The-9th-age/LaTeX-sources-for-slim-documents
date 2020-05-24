@@ -2,20 +2,20 @@
 \unitentry{%
 	name=\peasantbowmen{},
 	logo=core,
-	cost=170,
+	cost=160,
 	unitsize=15,
 	maxunitsize=30,
-	costpermodel=10,
+	costpermodel=9,
 	scoring=yes,
 	maxunitsperarmy=4,
 	maxmodelsperarmy=100,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=5,
-	globalrules={\insignificant{},\scoring{},\serf{},\textbf{\bowmensstakes}},
+	globalrules={\insignificant{},\scoring{},\serf{},\hidebf{\bowmensstakes}},
 	defense@HP=1,
 	defense@Df=2,
 	defense@Re=3,
@@ -26,10 +26,11 @@
 	offense@St=3,
 	offense@AP=0,
 	offense@Ag=3,
-	offenseweapons={\longbow{} (4+)},
-	offenserules={\textbf{\braziers}},
 	options={%
-		\replacelongbowandbrazierswithcrossbow{}=3\permodel{},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\longbow{} (4+) \wordand{} \textbf{\braziers{}}=\free{},
+			\crossbow{} (4+)=3\permodel{},
+		}},
 	},
 	commandgroup={%
 		\champion{}=20,
@@ -40,4 +41,4 @@
 		\modelruledef{\bowmensstakes}{\ruletype{\universalrule}\bowmensstakesdef}%
 		\modelruledef{\braziers}{\ruletype{\attackattributeshooting}\braziersdef}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

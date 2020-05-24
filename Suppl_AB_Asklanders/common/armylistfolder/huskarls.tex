@@ -10,7 +10,7 @@
     maxunitsperarmy=5,
 	scoring=yes,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=25\timess{}25,
 	global@Ad=4,
 	global@Ma=8,
@@ -20,7 +20,7 @@
 	defense@Df=5,
 	defense@Re=3,
 	defense@Arm=0,
-	defensearmour={\ha{}, \shield{}},
+	defensearmour={\ha{}},
 	offensename=\huskarl{},
 	offense@At=1,
 	offense@Of=4,
@@ -34,10 +34,11 @@
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
 	options={%
-		\throwingweapons{} (4+)=3\permodel{},
-		\onechoiceonly{%
-			\replaceshieldwithgw{}=3\permodel{},	
-			\spear{}=3\permodel{},
-		},
+		\throwingweapons{} (4+)=4\permodel{},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=\free{},
+			\gw{}=2\permodel{},	
+			\spear{} \wordand{} \shield{}=3\permodel{},
+		}},
 	},	
-} % END UNIT ENTRY
+}% END UNIT ENTRY

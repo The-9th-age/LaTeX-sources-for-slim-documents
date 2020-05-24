@@ -23,63 +23,64 @@
 % Special Equipment Texts
 
 \newcommand{\boughofwyscandef}{%
-	Attacks made with this \sylvanlongbow{} gain +1 to wound when shooting from Short Range, and become \textbf{\magicalattacks}.
+	Attacks made with this \sylvanlongbow{} gain +1 to wound when shooting from Short Range, and become \textbf{\magicalattacks}.%
 }
 \newcommand{\lifeseedfeathersdef}{%
-	\shots{\textbf{always} 1}. Attacks made with this weapon become \textbf{\magicalattacks}. Instead of firing this \sylvanlongbow{} as usual, the wielder may apply the following rules instead:
-	\begin{smallitemize}
-		\item When fired at a target \textbf{within \distance{10}} of the bearer, this Shooting Attack's Strength is \textbf{set} to 4 and Armour Penetration to 1.
-		\item When fired at a target \textbf{more than \distance{10} and up to and including \distance{20}} away from the bearer, its Strength is \textbf{set} to 5 and Armour Penetration to 2.
-		\item When fired at a target \textbf{more than \distance{20} and up to and including \distance{30}} away from the bearer, its Strength is \textbf{set} to 6 and Armour Penetration to 3 and it gains \textbf{\multiplewounds{2}{}}.
-	\end{smallitemize}
+	Attacks made with this weapon become \textbf{\magicalattacks{}}. Instead of firing this \sylvanlongbow{} using the standard rules for Sylvan Longbows and Longbows, the wielder may apply the following rules:\newline
+	\range{30}, \shots{\textbf{always} 1}, Strength and Armour Penetration vary depending on the wielder's distance to the target:
+	\begin{smallitemizeitem}%
+		\item \St{} 4, \AP{} 1 if within \distance{10}
+		\item \St{} 5, \AP{} 2 if more than \distance{10} and within \distance{20}
+		\item \St{} 6, \AP{} 3 if more than \distance{20} and within \distance{30}, and the attack gains \textbf{\multiplewounds{2}{}}
+	\end{smallitemizeitem}%
 }
 \newcommand{\huntershonourdef}{%
-	Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and become \textbf{\magicalattacks}. If the wielder causes at least one unsaved wound with this weapon, the wielder and all \rnf{} models in the wielder's unit gain \textbf{\distracting} until the end of the Melee Phase.
+	Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and become \textbf{\magicalattacks}. If the wielder causes at least one unsaved wound with this weapon, the wielder and all \rnf{} models in the wielder's unit gain \textbf{\distracting} until the end of the Melee Phase.%
 }
 \newcommand{\spiritofthewhirlwinddef}{%
-	The bearer gains +1 Attack Value, and attacks made with this weapon gain +1 Strength, \textbf{\lethalstrike}, and become \textbf{\magicalattacks}.
+	The bearer gains +1 Attack Value, and attacks made with this weapon gain +1 Strength, \textbf{\lethalstrike}, and become \textbf{\magicalattacks}.%
 }
 
 \newcommand{\shieldingbarkrestriction}{Infantry models only}
 \newcommand{\shieldingbarkdef}{%
-	The wearer gains +1 Armour, \textbf{\aegis{5}}, \textbf{\fearless}, \textbf{\flammable}, and \textbf{\magicalattacks}.
+	The wearer gains +1 Armour, \textbf{\aegis{5}}, \textbf{\fearless}, \textbf{\flammable}, and \textbf{\magicalattacks}.%
 }
 \newcommand{\curseoftheblackstagdef}{%
-	The bearer gains \textbf{\devastatingcharge{+1 \At{}, +1 \St{}, +1 \DefensiveSkillInitials{}}}.
+	The bearer gains \textbf{\devastatingcharge{+1 \At{}, +1 \St{}, +1 \DefensiveSkillInitials{}}}.%
 }
 
 \newcommand{\bannerofdeceptiondef}{%
-	At the end of step 4 of the Deployment Phase Sequence (before deploying Scouts), the owner may remove the bearer's unit from the Battlefield and deploy it again elsewhere (any Characters joined to the unit must remain in the unit; this does not affect the number of Undeployed Units for calculating the starting roll-off bonus).
+	At the end of step 4 of the Deployment Phase Sequence (before deploying Scouts), the owner may remove the bearer's unit from the Battlefield and deploy it again elsewhere (any Characters joined to the unit must remain in the unit; this does not affect the number of Undeployed Units for calculating the starting roll-off bonus).%
 }
 \newcommand{\bannerofsilentmistdef}{%
-	The bearer's unit gains Soft Cover. Enemy units within \distance{3} of the bearer's unit may not gain any benefit from a Musician.
+	The bearer's unit gains Soft Cover. Enemy units within \distance{3} of the bearer's unit may not gain any benefit from a Musician.%
 }
 \newcommand{\predatorpennantdef}{%
-	The bearer's unit gains \textbf{\devastatingcharge{\distracting}}.
+	The bearer's unit gains \textbf{\devastatingcharge{\distracting}}.%
 }
 
 \newcommand{\hailshotrestriction}{Forest Princes and Chieftains only}
 \newcommand{\hailshotdef}{%
 	One use only. When this Artefact is used, it is a Shooting Weapon with the following profile:\newline
-\range{30}, \shots{3D6}, \St{} 4, \AP{} 1, \textbf{\magicalattacks}. Aim is \textbf{set} to 2+. When fired from Short Range it gains +1 Armour Penetration. \masterarcher{} cannot be used in conjunction with \hailshot{}.
+\range{30}, \shots{3D6}, \St{} 4, \AP{} 1, \textbf{\magicalattacks}. Aim is \textbf{set} to 2+. When fired from Short Range, it gains +1 Armour Penetration. \masterarcher{} cannot be used in conjunction with \hailshot{}.%
 }
 \newcommand{\mistwalkersmirrorrestriction}{Models on foot only}
 \newcommand{\mistwalkersmirrordef}{%
-	One use only. If the bearer's unit consists entirely of Standard Height Infantry models, is unengaged, and is entirely inside a Forest Terrain Feature that doesn't contain any enemy models, the unit may teleport to any other Forest Terrain Feature on the Battlefield. This special movement is resolved at the end of the owner's Movement Phase. When teleporting, the unit must be placed entirely inside the target Forest. It may appear in any legal formation but must follow the Unit Spacing rule. The unit counts as having performed a March Move.
+	One use only. If the bearer's unit consists entirely of Standard Height Infantry models, is unengaged, and is fully inside a Forest Terrain Feature that doesn't contain any enemy models, the unit may teleport to any other Forest Terrain Feature on the Battlefield. This special movement is resolved at the end of the owner's Movement Phase. When teleporting, the unit \textbf{must} be placed fully inside the target Forest. It may appear in any legal formation but \textbf{must} follow the Unit Spacing rule. The unit counts as having performed a March Move.%
 }
 \newcommand{\sacredseedsrestriction}{Models on foot only}
 \newcommand{\sacredseedsdef}{%
 	One use only. The player may activate this Artefact at the end of any friendly Movement Phase and place a Forest
-Terrain Feature in contact with the bearer and at least \distance{1} away from any enemy units and other Terrain Features. The Forest may not be larger than \distance{6} in diameter.
+Terrain Feature in contact with the bearer and at least \distance{1} away from any enemy units and other Terrain Features. The Forest \textbf{must} fit within a circle with a diameter of \distance{6}.%
 }
 \newcommand{\drumsofcenyrnrestriction}{Models on foot only}
 \newcommand{\drumsofcenyrndef}{%
-	One use only. May be activated when the bearer's unit declares a Charge. The target of the Charge may only declare Hold as its Charge Reaction unless it is already Fleeing. The enemy unit may still declare Charge Reactions as normal if it is subsequently Charged by other units.
+	One use only. May be activated when the bearer's unit declares a Charge. The target of the Charge may only declare Hold as its Charge Reaction unless it is already Fleeing. The enemy unit may still declare Charge Reactions as normal if it is subsequently Charged by other units.%
 }
 \newcommand{\hornofthewildhuntdef}{%
-	One use only. May be activated when a friendly unit within \distance{8} fails a roll for Charge Range. The roll may be rerolled.
+	One use only. May be activated when a friendly unit within \distance{8} fails a roll for Charge Range. The roll may be rerolled.%
 }
 \newcommand{\glyphofamrylrestriction}{Cannot be taken by models with \sylvanspirit{}}
 \newcommand{\glyphofamryldef}{%
-	The bearer gains \textbf{Cannot be Stomped}. When fighting a Duel, the bearer gains +3 Defensive Skill.
+	The bearer gains \textbf{Cannot be Stomped}. When fighting a Duel, the bearer gains +3 Defensive Skill.%
 }

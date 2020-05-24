@@ -5,13 +5,13 @@
 	cost=175,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=8,
 	global@Rsr=1,
-	globalrules={\undead{},\ashestoashes{},\notaleader{},\textbf{\unlivingshield{}},\fearless{}},
+	globalrules={\undead{},\ashestoashes{},\notaleader{},\hidebf{\unlivingshield{}},\fearless{}},
 	defense@HP=4,
 	defense@Df=5,
 	defense@Re=5,
@@ -26,18 +26,18 @@
 	offenserules={\magicalattacks{},\lethalstrike{},\multiplewounds{2}{\againststandard{}}},
 	options={%
 		\bsb{}=50,
-		\specialequipmentallowance{}=\upto{}150,
+		\specialitemsallowance{}=\upto{}150,
 		\onechoiceonlyACO{%
 			\pw{}=5,
-			\gw{}=10,
-			\lance{}=10,
-			\halberd{}=10,
+			\gw{}=5,
+			\lance{}=5,
+			\halberd{}=5,
 		},
 	},
 	mounts={%
-		\skeletalsteed{}=40,
+		\skeletalsteed{}=55,
 	},
 	modelrulesdef={%
 		\modelruledef{\unlivingshield}{\ruletype{\universalrule}\unlivingshielddef}
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

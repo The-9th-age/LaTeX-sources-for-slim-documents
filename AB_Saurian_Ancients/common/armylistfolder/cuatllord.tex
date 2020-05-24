@@ -1,21 +1,23 @@
-
+{\edef\tempotitle{\labels@optionalmodelrulesdef}
+\renewcommand{\labels@optionalmodelrulesdef}{\tempotitle{}\spacebeforecolon{}: \disciplines{}}
 \unitentry{%
 	name=\cuatllord{},
 	logo=character,
 	cost=470,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=50\timess{}50,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=8,
-	globalrules={\coldblooded{}, \wizardmaster{}, \tall{}, \textbf{\palanquin{}}},
+	globalrules={\coldblooded{},\wizardmaster{},\tall{},\hidebf{\palanquin{}}},
 	defense@HP=4,
 	defense@Df=2,
 	defense@Re=4,
 	defense@Arm=0,
-	defenserules={\aegis{} (4+)},
+	defenserules=\aegis{} (4+),
+	offensename=\cuatllord{},
 	offense@At=1,
 	offense@Of=2,
 	offense@St=3,
@@ -28,18 +30,19 @@
 	options={%
 		\bsb{}=100,
 		\specialitemsallowance{}=\upto{}200,
-		\disciplines{}=\upto{}200,
+		\textbf{\disciplines{}}=\upto{}200,
     },
 	endtext={%
 		\cuatllorddisciplineslist{\disciplinesnote}{%
-			\cuatllorddisciplineslistentry{\masterreality}{135}{\masterrealitydef}
-			\cuatllorddisciplineslistentry{\grasp}{120}{\graspdef}
-			\cuatllorddisciplineslistentry{\ancknow}{95}{\ancknowdef}
-			\cuatllorddisciplineslistentry{\breakspells}{70}{\breakspellsdef}
-			\cuatllorddisciplineslistentry{\proteanpot}{70}{\proteanpotdef}
-			\cuatllorddisciplineslistentry{\soulfireweaver}{150}{\soulfireweaverdef}
+			\cuatllorddisciplineslistentry{\masterreality}{130}{\masterrealitydef}
+			\cuatllorddisciplineslistentry{\grasp}{130}{\graspdef}
+			\cuatllorddisciplineslistentry{\ancknow}{85}{\ancknowdef}
+			\cuatllorddisciplineslistentry{\breakspells}{60}{\breakspellsdef}
+			\cuatllorddisciplineslistentry{\proteanpot}{65}{\proteanpotdef}
+			\cuatllorddisciplineslistentry{\soulfireweaver}{120}{\soulfireweaverdef}
 			\cuatllorddisciplineslistentry{\symbiosis}{50}{\symbiosisdef}
 			\cuatllorddisciplineslistentry{\trainedbirth}{50}{\trainedbirthdef}
-			}
+		}%
 	},
 } % END UNIT ENTRY
+}

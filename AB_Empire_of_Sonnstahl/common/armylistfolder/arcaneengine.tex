@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\arcengine{},
 	logo=special,
-	cost=290,
+	cost=280,
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\construct{},
@@ -28,19 +28,20 @@
 	offenseB@St=3,
 	offenseB@AP=0,
 	offenseB@Ag=3,
-	offenserulesB={\harnessed{}},
+	offenserulesB=\harnessed{},
 	offensenameI=\chassis{},
 	offenseI@St=5,
 	offenseI@AP=2,
-	offenserulesI={\impacthits{D6},\inanimate{}},
+	offenserulesI={\impacthits{\Dsix{}},\inanimate{}},
 	options={%
-		\musttakeoneofthefollowing{%
+		\mustchooseonechoiceonly{\AlCoOrder{%
 			\textbf{\arcanesh{}}=\free{},
-			\textbf{\foresight{}}=\free{},
-			},
+			\textbf{\foresight{}}=10,
+		}},
 	},
 	optionalmodelrulesdef={%
 		\modelruledef{\arcanesh}{\ruletype{\universalrule}{\arcaneshdef}}%
 		\modelruledef{\foresight}{\ruletype{\universalrule}{\foresightdef}}%
 	},
-} % END UNIT ENTRY
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

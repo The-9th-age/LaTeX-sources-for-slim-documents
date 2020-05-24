@@ -2,6 +2,8 @@
 \unitentry{%
 	name=\eoswizard{},
 	logo=character,
+	optionallogo=character_EoS,
+	categorynote=\charactermountnote{\sunfInitial}{\sunf},
 	cost=125,
 	unitsize=1,
 	type=\infantry{},
@@ -10,7 +12,7 @@
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=7,
-	globalrules={\wizardapprentice{}},
+	globalrules=\wizardapprentice{},
 	defense@HP=3,
 	defense@Df=3,
 	defense@Re=3,
@@ -32,9 +34,9 @@
 	},
 	paths={\alchemy{}=alchemy,\cosmology{}=cosmology,\pyromancy{}=pyromancy,\divination{}=divination},
 	mounts={%
-		\horse{}=20,
-		\pegasus{}=50,
-		\greatgriff{}=100,
-		\arcengine{}=200,
+		\horse{}=10,
+		\pegasus{}=30,
+		\greatgriff{} ({\sunfInitial})=85,
+		\arcengine{}=190,
 	},
 } % END UNIT ENTRY

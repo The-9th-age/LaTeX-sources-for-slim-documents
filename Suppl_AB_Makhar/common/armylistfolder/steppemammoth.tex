@@ -1,0 +1,47 @@
+
+\def\fistofthemakharruleone{[\textbf{\multiplewounds{}{} (\Dthree{})}]}
+\def\fistofthemakharruletwo{\textbf{\quicktofire{}}}
+
+\unitentry{%
+	name=\steppemammoth{},
+	fluff=\steppemammothfluff{},
+	logo=arrows,
+	cost=370,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\beast{},
+	size=\heightgigantic{},
+	basesize=100\timess{}150,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\makharbattlefever{},\partingshot{}},
+	defense@HP=6,
+	defense@Df=3,
+	defense@Re=6,
+	defense@Arm=3,
+	offensename=\crew{} (X),
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\recurvebow{} (3+), \makharlance{}},
+	offensenameB=\steppemammoth{},
+	offenseB@At=4,
+	offenseB@Of=3,
+	offenseB@St=6,
+	offenseB@AP=3,
+	offenseB@Ag=2,
+	offenserulesB={\impacthits{} (\Dthree{}), \harnessed{}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\crew{} (6)=\free{},
+			\crew{} (3) \wordand{} \textbf{\fistofthemakhar{}} (4+) \onthesteppemammoth{}=40,
+			\crew{} (6) \wordand{} \rallyaroundtheflag{}\refsymbol{}=100,
+		}},
+		\refsymbolbis{}\steppemammothnote{}=,
+	},
+	optionalmodelrulesdef={\modelruledef{\fistofthemakhar}{\ruletype{\artilleryweapon}%
+	\catapult{} (4\timess{}4), \range{12--48}, \shots{1}, \St{} 3 [7],\newline \AP{} 0 [4], \alphaorderlist{\fistofthemakharruleone{},\fistofthemakharruletwo{}}.}},
+}

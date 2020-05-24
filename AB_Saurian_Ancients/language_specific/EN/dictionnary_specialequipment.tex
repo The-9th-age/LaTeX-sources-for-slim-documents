@@ -1,85 +1,81 @@
 % SPECIAL ITEMS
 
+\newcommand{\nocore}{Cannot be taken by units that count towards Core}
+
 \newcommand{\gloryofthedawnage}{Glory of the Dawn Age}
 \newcommand{\gloryofthedawnagedef}{%
-\enchantmentrestriction{Spear enchantment.}
-Attacks made with this weapon gain +1 Strength, \textbf{Magical Attacks}, and \textbf{Multiple Wounds (2)}.
+	Attacks made with this weapon gain +1 Strength, \textbf{Magical Attacks}, and \textbf{Multiple Wounds (2)}.%
 }
 
 \newcommand{\wildfireburst}{Wildfire Burst}
 \newcommand{\wildfireburstdef}{%
-\enchantmentrestriction{Bow enchantment.}
-This weapon has Shots 4, Str 4, AP 1 and \textbf{always} hits on 3+. Attacks made with this weapon gain \textbf{Flaming Attacks} and \textbf{Magical Attacks}. A unit that is hit by these attacks loses Soft Cover until the end of the Player Turn (if it had it). If the enemy unit was in Hard Cover, it is now considered to be in Soft Cover until the end of the Player Turn.
+	This weapon has Shots 4, \St{} 4, \AP{} 1 and \textbf{always} hits on 3+. Attacks made with this weapon become \textbf{Flaming Attacks} and \textbf{Magical Attacks}. A unit that is hit by one or more of these attacks loses Soft Cover until the end of the Player Turn (if it had it). If the enemy unit was in Hard Cover, it is now considered to be in Soft Cover until the end of the Player Turn.%
 }
 
 \newcommand{\taurosaursvigour}{Taurosaur's Vigour}
 \newcommand{\taurosaursvigourdef}{%
-\enchantmentrestriction{Suit of Armour enchantment.}
-The wearer gains +1 Armour, +1 Health Point.
+	The wearer gains +1 Armour and +1 Health Point.%
 }
 
 \newcommand{\serratescales}{Serrate Scales}
 \newcommand{\serratescalesdef}{%
-\enchantmentrestriction{Shield enchantment.}
-The bearer gains +2 Attack Value while using this Shield. The 2 Close Combat Attacks gained by this enchantment \textbf{always} have Strength 5 and Armour Penetration 2.  These attacks do not benefit from any rules or bonuses granted by Weapon Enchantments.
+	While using this Shield, the bearer gains \textbf{\grindattacks{} (2)} that are \textbf{always} resolved with Strength 5 and Armour Penetration 2.%
 }
 
 \newcommand{\sphereofshielding}{Sphere of Shielding}
+\newcommand{\sphereofshieldingrestriction}{Models on Palanquin and Skink Palanquin only}
 \newcommand{\sphereofshieldingdef}{%
-\itemrestriction{Models on Palanquin and Skink Palanquin only.}
-The bearer gains \textbf{Aegis (2+, against Ranged Attacks)}. The bearer automatically fails all saves against Melee Attacks.
+	The bearer gains \textbf{Aegis (2+, against Ranged Attacks)} and automatically fails all saves against Melee Attacks.%
 }
 
 \newcommand{\ancientplaque}{Ancient Plaque}
 \newcommand{\ancientplaquedef}{%
-\itemrestriction{Dominant.}
-Once per friendly Magic Phase, the bearer may reroll one Magic Dice that was used for a Casting Attempt. This ability cannot be used when the bearer is casting with only one Magic Dice.
+	Once per Magic Phase, the bearer may reroll a single Magic Dice when making a casting roll, provided the spell was not Miscast. This ability cannot be used for Casting Attempts with only one Magic Dice.%
 }
 
 \newcommand{\starfallshard}{Starfall Shard}
 \newcommand{\starfallsharddef}{%
-The bearer’s model gains \textbf{Aegis (2+, against Flaming Attacks)} and \textbf{Hard Target (1)}, and automatically fails all Fortitude Saves.
+	The bearer's model gains \textbf{Aegis (2+, against Flaming Attacks)} and \textbf{Hard Target (1)}, and automatically fails all Fortitude Saves.%
 }
 
 \newcommand{\spiritofthestampede}{Spirit of the Stampede}
 \newcommand{\spiritofthestampededef}{%
-The bearer's mount gains \textbf{Impact Hits (D6)}. If it already had Impact Hits, increase the number of Impact Hits by D6.
+	The bearer's mount gains \textbf{Impact Hits (D6)}. If it already had Impact Hits, increase the number of Impact Hits by D6 instead.%
 }
 
 \newcommand{\jadestaff}{Jade Staff}
 \newcommand{\jadestaffdef}{%
-The bearer can cast \textit{Healing Waters} from Druidism as a Bound Spell with Power Level (4/8).
+	The bearer can cast \spellformat{Healing Waters}{\druidism{}} as a Bound Spell with Power Level (4/8).%
 }
 
 \newcommand{\raptorspirit}{Raptor Spirit}
 \newcommand{\raptorspiritdef}{%
-\itemrestriction{Models on foot only.}
-The bearer gains \distance{+4} Advance Rate, \distance{+4} March Rate, and \textbf{Swiftstride}. This Artefact cannot be taken by a model with Ranger’s Boots.
+	The bearer gains \distance{+4} Advance Rate, \distance{+4} March Rate, and \textbf{Swiftstride}. This Artefact cannot be taken by a model with Ranger's Boots.%
 }
 
 \newcommand{\eggofthequetzal}{Egg of the Quetzal}
 \newcommand{\eggofthequetzaldef}{%
-The bearer gains \textbf{Breath Attack (Str D3+2, AP 1, Magical Attacks)}.
+	The bearer gains \textbf{Breath Attack (\St{} D3+2, \AP{} 1, Magical Attacks)}.%
 }
 
 \newcommand{\suntablet}{Sun Tablet}
 \newcommand{\suntabletdef}{%
-The bearer selects its spells from all the Learned Spells of its chosen Path and the Hereditary Spell of its army. This overrides the normal Spell Selection rules connected to being a Wizard Apprentice/Adept. This Artefact cannot be combined with Protean Potentate.
+	The bearer selects its spells from all Learned Spells of its chosen Path and \spellformat{\sparkofcreation}{\hereditaryspell}. This overrides the normal Spell Selection rules connected to being a Wizard Apprentice/Adept. This Artefact cannot be combined with Protean Potentate.%
 }
 
 \newcommand{\obsidiantesseract}{Obsidian Tesseract}
 \newcommand{\obsidiantesseractdef}{%
-One use only. May be activated in the opponent's Magic Phase after Siphon the Veil. When activated, remove 1 Magic Dice from the opponent's Magic Dice pool.
+	One use only. May be activated in the opponent's Magic Phase at the end of step 3 of the Magic Phase Sequence (Siphon the Veil). When activated, remove 1 Magic Dice from the opponent's Magic Dice pool.%
 }
 
 \newcommand{\totemofmixoatl}{Totem of Mixoatl}
-\newcommand{\totemofmixoatldef}{
-\itemrestriction{Cannot be taken by Core units.}
-The bearer's unit gains \textbf{Hard Target (1)}. One use only. May be activated at the start of a Round of Combat. Until the end of the Round of Combat, all enemy units Engaged with the bearer's unit suffer \minuss3 Offensive Skill.
+\newcommand{\totemofmixoatldef}{%
+	The bearer's unit gains \textbf{Hard Target (1)}.\newline%
+	One use only. May be activated at the start of a Round of Combat. Until the end of the Round of Combat, enemy units in base contact with the bearer's unit suffer \minuss{}3 Offensive Skill.%
 }
 
 \newcommand{\treefrogbanner}{Tree Frog Banner}
-\newcommand{\treefrogbannerdef}{
-Close Combat Attacks from Skink\refsymbol{} model parts in the unit gain \textbf{Poison Attacks}.\newline
-\refsymbol{}\textit{The following model parts are considered Skinks: Skink Captains, Skink Priests, Skink Braves, Skink Hunters, Chameleons, Pteradon Sentries - Rider only, Rhamphodon Riders - Rider only, Taurosaur - Crew only}.
+\newcommand{\treefrogbannerdef}{%
+	Close Combat Attacks from Skink\refsymbol{} model parts in the bearer's unit become \textbf{Poison Attacks}.\newline%
+	\refsymbolbis{}\whoisconsideredskinkequipment{}%
 }

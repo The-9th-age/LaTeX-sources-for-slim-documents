@@ -22,28 +22,29 @@
 
 % Special Equipment Texts
 
+\newcommand{\divinejudgementrestriction}{Cannot be taken by a model with Might}
 \newcommand{\divinejudgementdef}{%
 	Attacks made with this weapon gain \textbf{\devastatingcharge{\multiplewounds{D3+1}{}}} and become \textbf{\magicalattacks}.%
 }
 \newcommand{\tristansresolvedef}{%
-	When using this weapon, the wielder gains +1 Strength, +1 Armour Penetration, +1 Attack Value, and \textbf{\magicalattacks}. After a successful to-hit roll, the attacker may discard one of the hits with this weapon and choose a Weapon Enchantment carried by the model the attack was allocated towards. The chosen Weapon Enchantment cannot be used for the rest of the battle.%
+	When using this weapon, the wielder gains +1 Strength, +1 Armour Penetration, +1 Attack Value, and \textbf{\magicalattacks}. After a successful to-hit roll, the attacker may discard one of the hits with this weapon and choose an enchanted weapon carried by the model the attack was allocated towards. The Weapon Enchantments of the chosen weapon are ignored for the rest of the battle.%
 }
 \newcommand{\wyrmwoodcoredef}{%
 	The wielder gains \textbf{\breathattack{\St{} 5, \AP{} 0, \flamingattacks}}. Attacks made with this weapon become \textbf{\flamingattacks} and \textbf{\magicalattacks}.%
 }
 
 \newcommand{\crusaderssalvationdef}{%
-	The wearer gains +1 Armour and must reroll failed Armour Saves.%
+	The wearer gains +1 Armour and \textbf{must} reroll failed Armour Saves.%
 }
 \newcommand{\fortressoffaithdef}{%
-	While using this Shield, the bearer must reroll all natural to-hit and to-wound rolls of \result{1} with its Close Combat Attacks, and must reroll all natural Armour Save rolls of \result{1}.%
+	While using this Shield, the bearer \textbf{must} reroll all natural to-hit and to-wound rolls of \result{1} with its Close Combat Attacks, and \textbf{must} reroll all natural Armour Save rolls of \result{1}.%
 }
 \newcommand{\faithofpercivalrestriction}{Cannot be taken by models with \toweringpresence{}}
 \newcommand{\faithofpercivaldef}{%
 	While using this Shield, the wearer gains \textbf{\aegis{} (+1, max. 4+)}. Attacks against the bearer that are \divineattacks{} lose this Attack Attribute while using this Shield.%
 }
 \newcommand{\uthersconvictiondef}{%
-	The bearer gains +1 Armour. The bearer gains \textbf{\aegis{} (+1, max. 4+, against Armour Penetration 6 or more)}.%
+	The bearer gains +1 Armour and \textbf{\aegis{} (+1, max. 4+, against Armour Penetration 6 or more)}.%
 }
 
 \newcommand{\oriflammerestriction}{Cannot be taken by units that count towards Core}
@@ -51,7 +52,7 @@
 	The bearer gains \textbf{\fear}. Enemy units in base contact with the bearer's unit cannot benefit from \rallyaroundtheflag{}.%
 }
 \newcommand{\bannerofrolanddef}{%
-	The bearer's unit gains \textbf{\aegis{} (+1, max. 4+, against Ranged Attacks)}. In addition, enemy units cannot choose Stand and Shoot as a Charge Reaction when reacting to charges made by the bearer's unit.%
+	The bearer's unit gains \textbf{\aegis{} (+1, max. 4+, against Ranged Attacks)}. In addition, enemy units cannot choose Stand and Shoot as a Charge Reaction when reacting to Charges made by the bearer's unit.%
 }
 \newcommand{\bannerofthelastchargedef}{%
 	\rnf{} Cavalry models in the bearer's unit gain \textbf{\impacthits{X}}, where X is equal to the number of Full Ranks in the unit. These \impacthits{} are resolved with Strength 4 and Armour Penetration 1.%
@@ -67,8 +68,8 @@
 	One use only. May be activated after rolling for a Dispelling Attempt. Add +2 to the rolled result. This is an exception to the Casting and Dispelling Modifiers rule.%
 }
 \newcommand{\blackknightstabarddef}{%
-	One use only. Activate when the bearer reaches 0 (or fewer) Health Points. Do not remove the bearer as a casualty. Instead, after resolving all simultaneous attacks (such as all Shooting Attacks from the same unit or all Melee Attacks at the same Initiative Step), the bearer's Health Points are set to 1, and it gains \textbf{\aegis{} (3+)} until the end of the Player Turn.%
+	One use only. Activate when the bearer reaches 0 (or fewer) Health Points. Ignore all Health Point losses below 0 and do not remove the bearer as a casualty. Instead, after resolving all simultaneous attacks (such as all Shooting Attacks from the same unit or all Melee Attacks at the same Initiative Step), the bearer's Health Points are \textbf{set} to 1, and it gains \textbf{\aegis{} (3+)} until the end of the Player Turn.%
 }
 \newcommand{\crystalofthevaliantchargedef}{%
-	One use only. May be activated at the start of the opponent's Magic Phase. In this phase, during Siphon the Veil, before converting Veil Tokens into Magic Dice, remove 1 Veil Token from the Active Player's Veil Token pool for each friendly unit that is Engaged in Combat within \distance{18} of the bearer. Add the Veil Tokens removed this way to your Veil Token pool.%
+	One use only. May be activated at the start of the opponent's Magic Phase. In this phase, during Siphon the Veil, before converting Veil Tokens into Magic Dice, remove 1 Veil Token from the Active Player's Veil Token pool for each friendly unit that is Engaged in Combat within \distance{18} of the bearer. Add the Veil Tokens removed this way to your Veil Token pool. This cannot increase your Veil Token pool beyond 6 Veil Tokens. Any excess Veil Tokens are discarded.%
 }

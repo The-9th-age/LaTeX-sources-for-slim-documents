@@ -2,16 +2,16 @@
 \unitentry{%
 	name=\beastgiant{},
 	logo=monster,
-	cost=300,
+	cost=290,
 	unitsize=1,
 	maxunitsperarmy=3,
 	type=\infantry{},
-	size=\sizegigantic{},
+	size=\heightgigantic{},
 	basesize=50\timess{}75,
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=8,
-	globalrules={\textbf{\giantseegiantdo}},
+	globalrules={\hidebf{\giantseegiantdo}},
 	defense@HP=7,
 	defense@Df=3,
 	defense@Re=5,
@@ -22,13 +22,13 @@
 	offense@St=5,
 	offense@AP=2,
 	offense@Ag=3,
-	offenserules={\textbf{\rage}},
+	offenserules={\hidebf{\rage}},
 	options={%
-		\textbf{\bigbrother}=35,
+		\textbf{\bigbrother}=30,
 		\onechoiceonlyACO{%
-			\textbf{\beerbarrel}=20,
+			\textbf{\beerbarrel}=30,
 			\textbf{\giantclub}=30,
-			\textbf{\uprootedtree}=10,
+			\textbf{\uprootedtree}=5,
 		}
 	},%
 	modelrulesdef={%
@@ -42,4 +42,4 @@
 		\modelruledef{\beerbarrel{}}{\ruletype{\shootingweapon{}}\beerbarreldef{}}%
 	},%
 	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

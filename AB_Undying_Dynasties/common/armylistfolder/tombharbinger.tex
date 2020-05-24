@@ -2,16 +2,16 @@
 \unitentry{%
 	name=\tombharbinger{},
 	logo=character,
-	cost=180,
+	cost=170,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=7,
 	global@Rsr=1,
-	globalrules={\undead{},\dusttodust{},\flammable{},\textbf{\royalguard},\fearless{}},
+	globalrules={\undead{},\dusttodust{},\flammable{},\hidebf{\royalguard},\fearless{}},
 	defense@HP=3,
 	defense@Df=4,
 	defense@Re=5,
@@ -23,10 +23,10 @@
 	offense@St=4,
 	offense@AP=1,
 	offense@Ag=3,
-	offenserules={\lethalstrike{},\poisonattacks{},\textbf{\guardianswrath}},
+	offenserules={\lethalstrike{},\poisonattacks{},\hidebf{\guardianswrath}},
 	options={%
 		\bsb{}=50,
-		\specialequipmentallowance{}=\upto{}100,
+		\specialitemsallowance{}=\upto{}100,
 		\AlCoOrder{\shield{}=5,\ha{}=10},
 		\aspenbow{} (4+)=5,
 		\onechoiceonlyACO{%
@@ -41,8 +41,8 @@
 		\modelruledef{\royalguard}{\ruletype{\universalrule}\royalguarddef}%
 	},
 	mounts={%
-		\skeletalhorse{}=30,
-		\skeletonchariot{}=50,
-		\amuut{}=50,
+		\skeletalhorse{}=35,
+		\skeletonchariot{}=60,
+		\amuut{}=55,
 	},
 } % END UNIT ENTRY

@@ -2,14 +2,15 @@
 \unitentry{%
 	name=\tuskercavalry{},
 	logo=special,
-	cost=415,
+	cost=400,
 	unitsize=3,
 	maxunitsize=5,
-	costpermodel=130,
+	costpermodel=125,
 	maxunitsperarmy=3,
 	type=\cavalry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=50\timess{}100,
+	scoring=yes,
 	global@Ad=8,
 	global@Ma=14,
 	global@Di=8,
@@ -18,6 +19,7 @@
 	defense@Df=3,
 	defense@Re=5,
 	defense@Arm=2,
+	defensearmour={\ha{}},
 	offensename=\rider{},
 	offense@At=3,
 	offense@Of=3,
@@ -30,9 +32,9 @@
 	offenseB@St=5,
 	offenseB@AP=2,
 	offenseB@Ag=2,
-	offenserulesB={\impacthits{D3},\harnessed{}},
+	offenserulesB={\impacthits{\Dthree{}},\harnessed{}},
 	options={%
-		\weapononechoice{%
+		\onechoiceonlyACO{%
 			\pw{}=5\permodel{},
 			\gw{}=15\permodel{},
 		},

@@ -9,7 +9,7 @@
 	scoring=yes,
 	maxunitsperarmy=4,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
@@ -25,10 +25,17 @@
 	offense@St=3,
 	offense@AP=0,
 	offense@Ag=3,
-	offenseweapons={\throwingweapons{} (5+)},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\throwingweapons{} (5+)=\free{},
+			\bow{} (4+) (\NOTESTzerotoXmodelsperarmy{100})=2\permodel{},
+			\shield{}=1\permodel{},
+			\spear{}=1\permodel{},
+		}},
+	},
 	commandgroup={%
-		\textbf{\scraplingforeman{}}=25,
+		\alphaorderstickto{\champion{}=20}\textbf{\scraplingforeman{}} (\profilebelow{})=25,
 		\musician{}=20,
 		\standardbearer{}=20,
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

@@ -13,20 +13,20 @@
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=7,
-	globalrules={\parent{}\refsymbol{},\scoring{},\support{}\refsymbol{}\refsymbol{}},
+	globalrules={\parent{}\hideinQRS{\refsymbol{}},\scoring{},\support{}\hideinQRS{\refsymbolB{}}},
 	defense@HP=1,
 	defense@Df=3,
 	defense@Re=3,
 	defense@Arm=0,
 	defensearmour={\la{},\shield{}},
-	offensename=\hvyinf{},
+	offensename=\hvyinfSINGULAR{},
 	offense@At=1,
 	offense@Of=3,
 	offense@St=3,
 	offense@AP=0,
 	offense@Ag=3,
 	options={%
-		\weapononechoice{%
+		\onechoiceonlyACO{%
 			\spear{}=1\permodel{},
 			\halberd{}=1\permodel{},
 		},
@@ -37,8 +37,8 @@
 		\standardbearer{}=20,
 			\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
-		endtext={%
-		\refsymbol{}If starting size is 21 or more models{}.\\
-		\refsymbol{}\refsymbol{}If starting size is 20 models{}.
+	endtext={%
+		\refsymbolbis{}\hvyinfconditionforparent{}\\%
+		\refsymbolBbis{}\hvyinfconditionforsupport{}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

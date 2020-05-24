@@ -2,18 +2,18 @@
 \unitentry{%
 	name=\phoenix{},
 	logo=monster,
-	cost=375,
+	cost=340,
 	unitsize=1,
 	maxunitsperarmy=3,
 	type=\beast{},
-	size=\sizegigantic{},
+	size=\heightgigantic{},
 	basesize=50\timess{}100,
 	global@Ad=2,
 	global@Ma=4,
 	global@Adfly=9,
 	global@Mafly=18,
 	global@Di=8,
-	globalrules={\fly{9}{18},\lighttroops{},\textbf{\rebirth}},
+	globalrules={\fly{9}{18},\lighttroops{},\hidebf{\rebirth}},
 	defense@HP=5,
 	defense@Df=5,
 	defense@Re=5,
@@ -26,13 +26,13 @@
 	offense@Ag=4,
 	offenserules={},
 	options={%
-		\mustbecomeonechoiceonly{%
+		\mustchooseonechoiceonly{%
 			\AlCoOrder{%
 				\textbf{\frostphoenix}=\free{},
-				\textbf{\firephoenix}=45,
+				\textbf{\firephoenix}=65,
 			},
 		},
-		\columnbreak\textbf{\wardensbond}=75,
+		\columnbreak\textbf{\wardensbond}=65,
 	},
 	modelrulesdef={\modelruledef{\rebirth}{\ruletype{\universalrule}\rebirthdef}},
 	optionalmodelrulesdef={%

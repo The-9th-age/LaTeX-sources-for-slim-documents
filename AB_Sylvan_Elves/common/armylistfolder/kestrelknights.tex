@@ -2,13 +2,13 @@
 \unitentry{%
 	name=\kestrelknights{},
 	logo=special,
-	cost=310,
+	cost=305,
 	unitsize=3,
 	maxunitsize=6,
-	costpermodel=80,
+	costpermodel=72,
 	maxunitsperarmy=2,
 	type=\cavalry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
 	global@Ad=2,
 	global@Ma=4,
@@ -38,10 +38,10 @@
 	offenseB@Ag=4,
 	offenserulesB={\harnessed{}},
 	options={%
-		\optionschoice{\mustchooseone{}}{%
-			\shield{}=\free{},
-			\skirmisher{} \wordand{} \sylvanlongbow{} (3+)=2\permodel{},
-		},
+		\optionschoice{\theknightmusttake{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+			\shield{}=2,
+			\skirmisher{} \wordand{} \sylvanlongbow{} (3+)=\free{},
+		}},
 	},
 	commandgroup={%
 		\champion{}=20,
@@ -49,4 +49,4 @@
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

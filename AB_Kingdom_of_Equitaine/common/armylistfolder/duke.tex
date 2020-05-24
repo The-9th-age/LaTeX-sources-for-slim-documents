@@ -2,13 +2,15 @@
 \unitentry{%
 	name=\duke{},
 	logo=character,
-	optionallogo=character_bird,
-	categorynote={\charactermountnotefull{\airbornegallantryInitial}{\airbornegallantry} %
+	optionallogo=character,
+	secondoptionallogo=bird,
+	thirdoptionallogo=character_bird,
+	categorynote={\charactermountnotefull{\airbornegallantryInitial}{\airbornegallantry}\newline%
 		\charactermountnote{\airbornegallantryInitial}{\airbornegallantry}},
-	cost=170,
+	cost=160,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
@@ -28,9 +30,9 @@
 	offenserules={\lanceformation{},\oathoffealty{}},
 	options={%
 		\asinglevirtue{}=\nolimit{},
-		\specialequipmentallowance{}=\upto{}200,
+		\specialitemsallowance{}=\upto{}200,
 		\onechoiceonlyACO{%
-			\questingoath{} \wordand{} \bastardsword{}=60,
+			\questingoath{} \wordand{} \bastardsword{}=70,
 			\grailoath{}=50,
 		},
 		\shield{}=5,
@@ -42,8 +44,8 @@
 		},
 	},
 	mounts={%
-		\bardedwarhorse{}=70,
+		\bardedwarhorse{}=65,
 		\pegasus{} [\airbornegallantryInitial{}]=130,
-		\hippogriff{} (\airbornegallantryInitial{})=215,
+		\hippogriff{} (\airbornegallantryInitial{})=205,
 	},
 } % END UNIT ENTRY

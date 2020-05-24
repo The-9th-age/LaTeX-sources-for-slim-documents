@@ -1,15 +1,17 @@
 \unitentry{%
 	name=\mammothhunter{},
 	logo=character,
-	cost=210,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\chainedbeastsInitial}{\chainedbeasts},
+	cost=220,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
-	global@Ad=6,
-	global@Ma=12,
+	global@Ad=7,
+	global@Ma=14,
 	global@Di=9,
-	globalrules={\lighttroops{},\notaleader{},\swiftstride{},\textbf{\loner{}},\textbf{\animalmaster{}}},
+	globalrules={\lighttroops{},\notaleader{},\swiftstride{},\hidebf{\loner{}},\hidebf{\animalmaster{}}},
 	defense@HP=4,
 	defense@Df=5,
 	defense@Re=5,
@@ -21,23 +23,25 @@
 	offense@St=5,
 	offense@AP=2,
 	offense@Ag=4,
-	offenserules={\sonsoftheavalanche{},\huntingspear{}},
+	offenserules={\sonsoftheavalanche{}},
 	options={%
 		\asinglebigname{}=\nolimit{},
-		\specialequipmentallowance{}=\upto{}100,
+		\specialitemsallowance{}=\upto{}100,
 		\textbf{\leaderofthepack}=\free{},
-		\weapononechoice{%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\huntingspear{} (2+)=\free{},
+			\ogrecrossbow{} (2+)=\free{},
+		}},
+		\onechoiceonlyACO{%
 			\pw{}=10,
-            \ironfist{}=15,
-			\lance{}=15,
+            \ironfist{} (\onfootonly{})=20,
+			\lance{}=10,
 			\gw{}=20,
 		},
-        \onechoiceonlyACO{%
+        \optionschoice{\Ifonfoot{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
             \vanguard{}=15,
 			\scout{}=15,
-            May take a \tusker{}=95,
-            May take a \rockaurochs{} \& lose \lighttroops{} =360,
-        	},
+        }},
 	},
 	modelrulesdef={%
 		\modelruledef{\loner}{\ruletype{\universalrule}\lonerdef}%
@@ -46,4 +50,10 @@
 	optionalmodelrulesdef={%
 		\modelruledef{\leaderofthepack}{\ruletype{\universalrule}\leaderofthepackdef}%
 	},
-} % END UNIT ENTRY
+	mounts={%
+		\tusker{}\refsymbol{}=85,
+		\rockaurochs{}\refsymbol{} (\chainedbeastsInitial{})=320,
+		\refsymbolbis{}\themodelloseslighttroops{}=\void{9999},
+	},
+	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
+}% END UNIT ENTRY

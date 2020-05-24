@@ -25,19 +25,20 @@
 	offenseB@St=3,
 	offenseB@AP=0,
 	offenseB@Ag=3,
-	offenserulesB={\harnessed{}},
+	offenserulesB=\harnessed{},
 	offensenameI=\chassis{},
 	offenseI@St=5,
 	offenseI@AP=2,
-	offenserulesI={\impacthits{D6},\inanimate{}},
+	offenserulesI={\impacthits{\Dsix{}},\inanimate{}},
 	options={%
-		\musttakeoneofthefollowing{%
-			\textbf{\arcanesh{}}=\free{},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\arcanesh{}}=10,
 			\textbf{\foresight{}}=\free{},
-			},
+			}},
 	},
 	optionalmodelrulesdef={%
 		\modelruledef{\arcanesh}{\ruletype{\universalrule}{\arcaneshdef}}%
 		\modelruledef{\foresight}{\ruletype{\universalrule}{\foresightdef}}%
 	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
 } % END UNIT ENTRY

@@ -3,17 +3,35 @@
 
 \input{../Layout/AB_qrs.tex}
 
-\centeredsubtitle{\shootingweapons}
+\vspace*{20pt}
+
+\centeredsubtitle{\artilleryandshootingweapons}
 
 \startartillerytable
-\petrifyinggaze{} & - & 3+ & \distance{12} & 2 & 10 & D6+1 & \quicktofire{}\newline \towoundagainstagility{} \tabularnewline
-\aspenbow{} & - & 5+/4+\refsymbol{} & \distance{24} & 3 & 0 & 1 & \volleyfire{} \tabularnewline
-\greataspenbow{} & - & 5+/4+\refsymbol{} & \distance{36} & 5 & 2 & 1 & \volleyfire{} \tabularnewline
-\giantaspenbow{} & - & 5+ & \distance{48} & 3 [6] & 10 & 1 &  \textbf{\areaattack{} (1\timess{}5)}\newline{}[\multiplewounds{D3}{}] \tabularnewline
-\charnelcatapult{} (1) & \catapult{4\timess{}4} & 5+ & \distance{12--60} & 3 [7] & 0 [4] & 1 & [\multiplewounds{D3, \clippedwings{}}{}] \tabularnewline
-\charnelcatapult{} (2) & \catapult{6\timess{}6} & 5+ & \distance{12--48} & 3 & 0 & 1 & \flamingattacks{}\newline \magicalattacks{}\newline \panictestcharnelcatapult{} \tabularnewline
+\petrifyinggaze{} & - & \distance{12} & 2 & 10 & \Dsix{}+1 & \quicktofire{}\newline \towoundagainstagility{} \tabularnewline
+\aspenbow{} & - & \distance{24} & 3 & 0 & 1 & \volleyfire{} \tabularnewline
+\greataspenbow{} & - & \distance{36} & 5 & 2 & 1 & \volleyfire{} \tabularnewline
+\giantaspenbow{} & - & \distance{48} & 3 [6] & 10 & 1 & \areaattack{} (1\timess{}5)\newline{}[\multiplewounds{\Dthree{}}{}] \tabularnewline
+\charnelcatapult{} (1) & \catapult{4\timess{}4} & \distance{12--60} & 3 [7] & 0 [4] & 1 & [\multiplewounds{\Dthree{}, \clippedwings{}}{}] \tabularnewline
+\charnelcatapult{} (2) & \catapult{6\timess{}6} & \distance{12--48} & 3 & 0 & 1 & \flamingattacks{}\newline \magicalattacks{}\newline \panictestcharnelcatapult{} \tabularnewline
 \closeartillerytable
-\artillerytablenote{\refsymbolbis{}\aspenbowaimnote{}}
+
+\vspace*{20pt}
+
+\centeredsubtitle{\aimtable}
+
+\startaimtable
+\aspenbow{} & 4+\refsymbol{} & \characters{} \tabularnewline
+& 5+\refsymbol{} & \QRSothers{} \tabularnewline
+\greataspenbow{} & 4+\refsymbol{} & \characters{} \tabularnewline
+& 5+\refsymbol{} & \shabtiarcher{} \tabularnewline
+\giantaspenbow{} & 5+\refsymbol{} & \colossus{} \tabularnewline
+\charnelcatapult{} (1) \wordand{} (2) & 5+\refsymbol{} & \charnelcatapult{} \tabularnewline
+\petrifyinggaze{} & 3+ & \sandstalker{} \tabularnewline
+\closeaimtable
+\artillerytablenote{\refsymbolbis{}\aimnote{}}
+
+\vspace*{20pt}
 
 \centeredsubtitle{\resurrected}
 

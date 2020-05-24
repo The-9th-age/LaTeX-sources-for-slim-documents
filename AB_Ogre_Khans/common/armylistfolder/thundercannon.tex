@@ -6,7 +6,7 @@
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\construct{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=50\timess{}100,
 	global@Ad=6,
 	global@Ma=6,
@@ -38,8 +38,8 @@
 	offensenameI=\chassis{},
 	offenseI@St=5,
 	offenseI@AP=2,
-	offenserulesI={\impacthits{} (D6), \inanimate{},\textbf{\thundercannon{} (4+)}},
-	modelrulesdef={
-		\modelruledef{\thundercannon}{\ruletype{\artilleryweapon}\thundercannondef}
+	offenserulesI={\impacthits{} (\Dsix{}), \inanimate{},\hidebf{\thundercannon{} (4+)}},
+	modelrulesdef={%
+		\modelruledef{\thundercannon}{\ruletype{\artilleryweapon}\thundercannondef}%
 	},
 }

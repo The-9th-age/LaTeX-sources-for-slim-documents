@@ -3,6 +3,10 @@
 
 % Big Names Names
 
+\newcommand{\bignamesintro}{%
+	Big Names follow the general rules of Special Items concerning which model parts are affected. Each Character can take a single Big Name. Big Names are each \zerotoXperarmy{1}, unless specifically stated otherwise.%
+}
+
 \newcommand{\trolleater}{Trolleater}
 \newcommand{\hoardmaster}{Hoardmaster}
 \newcommand{\headhunter}{Headhunter}
@@ -16,43 +20,41 @@
 % Big Names Texts
 
 \newcommand{\trolleaterdef}{%
-\itemrestriction{Models on foot only.}
-The bearer gains \textbf{Fortitude (4+)} and \textbf{Multiple Wounds (2, against Large and Infantry)}.
+	The bearer gains \textbf{Fortitude (4+)} and \textbf{Multiple Wounds (2, against Large and Infantry)}.%
 }
 
+\newcommand{\hoardmasterrestriction}{Great Khans and Khans only}
 \newcommand{\hoardmasterdef}{%
-\itemrestriction{Great Khans and Khans only.}
-The bearer gains \textbf{Weapon Master}, Plate Armour, Iron Fist, Great Weapon, Halberd and Paired Weapons. The bearer cannot take Weapon Enchantments.
+	The bearer gains \textbf{Weapon Master}, Plate Armour, Great Weapon, Halberd, Iron Fist, and Paired Weapons. The bearer cannot take Weapon Enchantments.%
 }
 
 \newcommand{\headhunterdef}{%
-At the end of any Melee Phase in which attacks made by the bearer have caused one or more models to lose their last Health Point, roll a D6, unless the bearer is Fleeing. On a roll of 3+ it the bearer's model Recovers a single Health Point.
+	At the end of any Melee Phase in which attacks made by the bearer have caused one or more enemy models to lose their last Health Point, roll a D6, unless the bearer is Fleeing. On a roll of 3+ the bearer's model Recovers a single Health Point.\columnbreak% remove the \comlumnbreak when translating
 }
 
+\newcommand{\cultleaderrestriction}{General or Battle Standard Bearer only}
 \newcommand{\cultleaderdef}{%
-\itemrestriction{General or Battle Standard Bearer only.}
-The range of the bearer’s \textbf{Commanding Presence} or \textbf{Rally Around the Flag} is \textbf{always} \distance{18}.
+	The range of the bearer's \textbf{\commandingpresence{}} or \textbf{\rallyaroundtheflag{}} is \textbf{always} \distance{18}.%
 }
 
 \newcommand{\firebranddef}{%
-If the bearer selects one or more spells from Pyromancy, it gains \textbf{Flaming Attacks}, \textbf{Aegis (2+, against Flaming Attacks)}, \textbf{Breath Attack (Str 4, AP 0, Flaming Attacks)}, and \textbf{always} knows \textit{Fireball} (Pyromancy) in addition to its other spells. The bearer automatically fails all Fortitude Saves.
+	If the bearer selects one or more spells from \pyromancy{}, it gains \textbf{\aegis{} (2+, against \flamingattacks{})}, \textbf{\breathattack{} (\St{} 4, \AP{} 0, \flamingattacks{})}, \textbf{\flamingattacks{}}, and \textbf{always} knows \spellformat{\pyromancyspellone{}}{\pyromancy{}} in addition to its other spells. The bearer automatically fails all Fortitude Saves.%
 }
 
+\newcommand{\gutroarerrestriction}{Shamans only}
 \newcommand{\gutroarerdef}{%
-\itemrestriction{Shamans only.}
-The bearer gains \textbf{Fear} and \textbf{Channel (1)}.
+	The bearer gains \textbf{\channel{} (1)} and \textbf{\fear{}}.%
 }
 
+\newcommand{\wildheartrestriction}{Mammoth Hunters only. \oneofakind{}}
 \newcommand{\wildheartdef}{%
-\itemrestriction{Mammoth Hunters only. \oneofakind{}.}
-The bearer loses Not a Leader and must be the General. Its Special Item allowance is increased to 150 pts. Another Mammoth Hunter in the army may be the Battle Standard Bearer for 50 pts; this Battle Standard Bearer gains Scrapling Lookout when joined to Yeti units. The Core limit is reduced to \enquote{Min. \SI{20}{\percent}}. The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, Bombardiers, or Thunder Cannons.
+	The bearer loses \notaleader{} and \textbf{must} be the General. Its Special Item allowance is increased to 150 pts. Another Mammoth Hunter in the army may be the Battle Standard Bearer for 50 pts; this Battle Standard Bearer gains \textbf{\scraplinglookout{}} when joined to Yeti units. The Core limit is reduced to \enquote{\armylistmin{20}}. The army may not include any Great Khans, Khans, Bruisers, Mercenary Veterans, Bombardiers, or Thunder Cannons.%
 }
 
 \newcommand{\spinesplitterdef}{%
-\itemrestriction{Models on foot only.}
-The bearer gains \textbf{Devastating Charge (+1 Att, +1 Str, +1 AP)}. The Strength and Armour Penetration bonuses from Devastating Charge also affect Impact Hits and Stomp Attacks.
+	The bearer gains \textbf{\devastatingcharge{} (+1 \At{}, +1 \St{}, +1 \AP{})}. The Strength and Armour Penetration bonuses from Devastating Charge also affect Impact Hits and Stomp Attacks.%
 }
 
 \newcommand{\rottenjawdef}{%
-The bearer gains \textbf{Poison Attacks}, and all friendly Kin-Eater units may reroll Ambush rolls of 1 and 2 while the bearer is on the Battlefield. Unless the bearer is Gigantic, all attacks against it with Poison Attacks lose this Attack Attribute.
+	The bearer gains \textbf{\poisonattacks{}}, and all friendly Kin-Eater units may reroll Ambush rolls of 1 and 2 while the bearer is on the Battlefield. Unless the bearer is Gigantic, all attacks against it with Poison Attacks lose this Attack Attribute.%
 }

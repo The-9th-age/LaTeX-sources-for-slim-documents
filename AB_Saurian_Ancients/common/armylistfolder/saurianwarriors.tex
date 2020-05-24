@@ -8,7 +8,7 @@
 	costpermodel=21,
 	scoring=yes,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=25\timess{}25,
 	global@Ad=4,
 	global@Ma=8,
@@ -18,21 +18,21 @@
 	defense@Df=3,
 	defense@Re=4,
 	defense@Arm=2,
-	defensearmour={\shield{}},
-	offensename=\saurianwarriors{},
+	defensearmour=\shield{},
+	offensename=\saurianwarrior{},
 	offense@At=2,
 	offense@Of=3,
 	offense@St=4,
 	offense@AP=1,
 	offense@Ag=2,
-	offenserules={\bornpredator{}},
+	offenserules=\bornpredator{},
 	options={%
 		\spear{}=2\permodel{},
-			\onetotemchoiceonly{%
-				Piranha=1\permodel{},
-				Jaguar=2\permodel{},
-				Serpent=3\permodel{},
-				Crocodile=5\permodel{},
+			\optionschoice{\textbf{\totemanimal{}} \onechoiceonlyNOC{}\spacebeforecolon{}:}{%
+				\piranha{}=1\permodel{},
+				\jaguar{}=1\permodel{},
+				\serpent{}=3\permodel{},
+				\crocodile{}=4\permodel{},
 			},			
 		},
 	commandgroup={%
@@ -42,6 +42,7 @@
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%
 	},
 	optionalmodelrulesdef={%
-		\modelruledef{\totemanimals}{\ruletype{\universalrule}\totemanimalsdef}%
+		\modelruledef{\totemanimal}{\ruletype{\universalrule}\totemanimaldef}%
 	},
-} % END UNIT ENTRY
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

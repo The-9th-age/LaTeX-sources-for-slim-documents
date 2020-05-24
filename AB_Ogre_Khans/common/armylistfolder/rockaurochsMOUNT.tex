@@ -1,10 +1,11 @@
+
 \unitentry{%
 	name=\rockaurochs{},
 	logo=character_monster,
 	categorynote=\mountcategorynote{\chainedbeasts},
 	maxmountsperarmy=1,
 	type=\beast{},
-	size=\sizegigantic{},
+	size=\heightgigantic{},
 	basesize=100\timess{}150,
 	global@Ad=7,
 	global@Ma=14,
@@ -21,7 +22,7 @@
 	offense@St=6,
 	offense@AP=3,
 	offense@Ag=2,
-	offenserules={\impacthits{3D3},\harnessed{},\battlefocus{},\devastatingcharge{+1 \St{}, +1 \AP{}},\textbf{\livingavalanche{}}},
+	offenserules={\impacthits{\XDthree{3}},\harnessed{},\battlefocus{},\devastatingcharge{+1 \St{}, +1 \AP{}},\hidebf{\livingavalanche{}}},
 	modelrulesdef={%
 		\modelruledef{\livingavalanche}{\ruletype{\attackattribute}\livingavalanchedef}
 	},

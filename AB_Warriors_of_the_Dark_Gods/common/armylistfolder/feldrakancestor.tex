@@ -4,15 +4,15 @@
 	logo=character,
 	secondlogo=monster,
 	categorynote=\twocategoriesnote{\characters}{\legendarybeasts},
-	cost=685,
+	cost=650,
 	unitsize=1,
 	type=\beast{},
-	size=\sizegigantic{},
+	size=\heightgigantic{},
 	basesize=75\timess{}100,
 	global@Ad=8,
 	global@Ma=16,
 	global@Di=9,
-	globalrules={\textbf{\primallegend}},
+	globalrules={\hidebf{\primallegend}},
 	defense@HP=8,
 	defense@Df=6,
 	defense@Re=6,
@@ -27,12 +27,12 @@
 	offense@AP=4,
 	offenserules={%
 		\hatred{} (\againstfly{}),%
-		\breathattack{\St{} 4, \AP{} 1, \textbf{\dyingembers{}}, \flamingattacks{}}%
+		\breathattack{\St{} 4, \AP{} 1, \hidebf{\dyingembers{}}, \flamingattacks{}}%
 	},
 	options={%
 		\specialequipmentfeldrak{}=\nolimit{},
 		\onechoiceonlyACO{%
-			\gw{}=30,
+			\gw{}=20,
 			\halberd{}=50,
 			\pw{}=90,
 		},

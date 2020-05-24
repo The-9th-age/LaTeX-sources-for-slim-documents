@@ -84,7 +84,7 @@
 
 \newcommand{\beloved}{Beloved}
 \newcommand{\beloveddef}{%
-When the model is joined to a unit with at least one Full Rank of models with Lance Formation, it gains \textbf{\standbehind} and cannot be chosen by the opponent as the model that refuses a Duel.%
+When the model is joined to a unit with at least one Full Rank of models with Lance Formation, it gains \textbf{\standbehind} and cannot be chosen by the opponent as the model that suffers the penalties for refusing a Duel.%
 }
 
 % Castellan
@@ -97,8 +97,8 @@ When the model is joined to a unit with at least one Full Rank of models with La
 \newcommand{\masteratarmsdef}{The Castellan gains +1 Attack Value and its unit gains \textbf{\weaponmaster}.}
 \newcommand{\bannerman}{Bannerman}
 \newcommand{\bannermandef}{%
-\itemrestrictionnopar{\zerotoXmodelsperarmy{2}.}%
-The Castellan gains \textbf{\standbehind} and is a Standard Bearer.%
+	\itemrestrictionnopar{\zerotoXmodelsperarmy{2}.}%
+	The Castellan gains \textbf{\standbehind} and is a Standard Bearer.%
 }
 
 
@@ -116,7 +116,7 @@ The Castellan gains \textbf{\standbehind} and is a Standard Bearer.%
 
 \newcommand{\bowmensstakes}{Bowmen's Stakes}
 \newcommand{\bowmensstakesdef}{%
-When deploying the unit, you may place a Wall Terrain Feature fully within \distance{1} of the unit's Front Facing but not in contact with any other Terrain Feature. This Wall is up to \SI{20}{\milli\meter} deep, and its length cannot be wider than the unit, to a maximum of \distance{12}. It follows the normal rules for Walls, with the exception that it contributes to Soft Cover instead of Hard Cover.%
+When deploying the unit, you may place a Wall Terrain Feature fully within \distance{1} of the unit's Front Facing but not in contact with any other Terrain Feature except Open Terrain. This Wall is up to \SI{20}{\milli\meter} deep, and its length cannot be wider than the unit, to a maximum of \distance{12}. It follows the normal rules for Walls, with the exception that it contributes to Soft Cover instead of Hard Cover.%
 }
 
 \newcommand{\braziers}{Braziers}
@@ -124,10 +124,11 @@ When deploying the unit, you may place a Wall Terrain Feature fully within \dist
 Before shooting a \longbow{}, the model may choose to gain \textbf{\flamingattacks} for its Shooting Attack. The effect lasts for the duration of the phase.%
 }
 
-\newcommand{\replacelongbowandbrazierswithcrossbow}{Replace \longbow{} and \textbf{\braziers} with\newline \crossbow{} (4+)}
-
-
 %%% SPECIAL
+
+% Yeomen Outriders
+
+\newcommand{\theoutridermusttake}{The Outrider \textbf{must} take}
 
 % Knights Forlorn
 
@@ -145,7 +146,7 @@ Only Damsels and Characters with \grailoath{} may join the unit.%
 }
 \newcommand{\holymight}{Holy Might}
 \newcommand{\holymightdef}{%
-The model part can make up to 2 Supporting Attacks when its unit has at least one Full Rank.%
+The model part can make up to 2 Supporting Attacks while its unit has at least one Full Rank.%
 }
 
 % The Green Knight
@@ -163,14 +164,6 @@ The Green Knight gains \textbf{\theblessing}. If the army Prayed, The Green Knig
 \newcommand{\lambentsworddef}{%
 Attacks made with this weapon gain +2 Strength, +2 Armour Penetration, and ignore \parry{}.%
 }
-
-% Yeoman Outriders
-
-\newcommand{\replacebowwiththrowingweapons}{Replace \bow{} with \throwingweapons{} (5+)}
-
-% Peasant Crusaders
-
-\newcommand{\replaceshieldwithpairedweapons}{Replace \shield{} with \pw{}}
 
 % Sacred Reliquary
 

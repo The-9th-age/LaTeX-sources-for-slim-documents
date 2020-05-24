@@ -7,18 +7,30 @@
 	\else
 		\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{../Layout/pics/full_cover_compressed.jpg}};	
 	\fi
-	\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt,below=76mm,blur shadow] at (current page.north){\includegraphics[width=150mm]{\thisbookhasacover}};
-	\ifdefined\languageisfrench% add other languages
-		\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_FR.png}};
+	\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt,below=76mm,blur shadow] at (current page.north){\includegraphics[height=170mm]{\thisbookhasacover}};
+	\ifdefined\languageisfrench
+		\ifdefined\thisisnotfantasybattles
+			\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB_FR.png}};
+		\else
+			\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_FR.png}};
+		\fi
 	\else
 		\ifdefined\languageisitalian
-			\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_IT.png}};
+			\ifdefined\thisisnotfantasybattles
+				\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB_IT.png}};
+			\else
+				\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_IT.png}};
+			\fi
 		\else
 			\ifdefined\languageisspanish
-				\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_ES.png}};
-			\else
-				\ifdefined\languageisgerman
-					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
+				\ifdefined\thisisnotfantasybattles
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
+				\else
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_ES.png}};
+				\fi
+			\else% German is same as English
+				\ifdefined\thisisnotfantasybattles
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
 				\else
 					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
 				\fi

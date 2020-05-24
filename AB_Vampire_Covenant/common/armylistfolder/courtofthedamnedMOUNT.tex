@@ -4,12 +4,12 @@
 	name=\courtofthedamned{},
 	logo=character,
 	type=\construct{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=60\timess{}100,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=\ascharacter{},
-	globalrules={\ghoststep{},\fear{},\toweringpresence{},\warplatform{},\textbf{\chillofthegrave{}}},
+	globalrules={\ghoststep{},\fear{},\toweringpresence{},\warplatform{},\hidebf{\chillofthegrave{}}},
 	defense@HP=5,
 	defense@Df=5,
 	defense@Re=5,
@@ -31,12 +31,12 @@
 	offensenameI=\chassis{},
 	offenseI@St=5,
 	offenseI@AP=2,
-	offenserulesI={\impacthits{D6},\inanimate{}},
+	offenserulesI={\impacthits{\Dsix{}},\inanimate{}},
 	modelrulesdef={%
 		\modelruledef{\chillofthegrave}{\ruletype{\universalrule}\chillofthegravedef}
 	},
 	mounts={%
-		\musttakeaegis{}=75,
+		\musttakeaegis{}=95,
 	},
 } % END UNIT ENTRY
 } % END of renewcommand

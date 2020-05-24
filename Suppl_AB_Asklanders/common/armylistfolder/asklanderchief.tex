@@ -5,10 +5,10 @@
 	logo=character,
 	optionallogo=character_monster,
 	categorynote=\charactermountnote{\legendarybeastsinitials}{\legendarybeasts},
-	cost=115,
+	cost=110,
 	unitsize=1,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=25\timess{}25,
 	global@Ad=4,
 	global@Ma=8,
@@ -18,22 +18,25 @@
 	defense@Df=5,
 	defense@Re=4,
 	defense@Arm=0,
-    defensearmour={\ha{}},
 	offensename=\asklanderchief{},
 	offense@Ag=5,
 	offense@At=3,
 	offense@Of=5,
 	offense@St=5,
 	offense@AP=1,
-	offenserules={\textbf{\deedsnotwords{}}},
+	offenserules={\hidebf{\deedsnotwords{}}},
 	options={%
-		\bsb{}=50,	   		
+		\bsb{}=50,
 	   	{\allowanceifgeneral{}, \textbf{\jarl{}}}=30,
 	   	\textbf{\longshipraid{}} (\zerotoXmodelsperarmy{2})=40,
-	   	\specialequipmentallowance{}=\upto{}100,
+	   	\specialitemsallowance{}=\upto{}100,
 	   	\suboptionindent{}\allowanceifgeneral{}=\upto{}150,
 	   	\shield{}=5,
-	   	\berserkersbearpeltchiefoption{} (\berserkersbearpeltchiefoptionnote{})=50, 
+	   	\mustchooseonechoiceonly{%
+	   		\ha{}=\free{},
+	   		\shield{} \wordand{} \berserkersbearpelt{}\refsymbol{}=50,
+	   		\refsymbolbis{}\berserkersbearpeltchiefoptionnote{}=,
+	   	},
 	   	\throwingweapons{} (4+)=5,
 		\onechoiceonlyACO{%
 			\pw{}=5,
@@ -44,19 +47,17 @@
 	},
 	mounts={%
 		\blackstallion{}=85,
-		\shadowchaser{}=75,
-		\wardais{}=50,
-		\darkchariot{}=115,
-		\chimera{} (\legendarybeastsinitials{})=165,
-		\wastelandbehemoth{} (\legendarybeastsinitials{})=375,
+		\shadowchaser{}=70,
+		\wardais{}=55,
+		\darkchariot{}=120,
+		\chimera{} (\legendarybeastsinitials{})=160,
+		\wastelandbehemoth{} (\legendarybeastsinitials{})=365,
 	},
 	modelrulesdef={%
 		\modelruledef{\deedsnotwords{}}{\ruletype{\attackattribute{}}\deedsnotwordsdef{}}%
-	},	
+	},
 	optionalmodelrulesdef={%
 		\modelruledef{\jarl{}}{\ruletype{\universal}{\jarldef{}}}%
 		\modelruledef{\longshipraid{}}{\ruletype{\universal}{\longshipraiddef{}}}%
 	},
 } % END UNIT ENTRY
-
-

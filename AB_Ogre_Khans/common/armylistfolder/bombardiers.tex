@@ -2,13 +2,14 @@
 \unitentry{%
 	name=\bombardiers{},
 	logo=cannonballs,
-	cost=185,
+	cost=180,
 	unitsize=3,
 	maxunitsize=8,
-	costpermodel=82,
+	costpermodel=83,
 	scoring=yes,
+	maxunitsperarmy=3,
 	type=\infantry{},
-	size=\sizelarge{},
+	size=\heightlarge{},
 	basesize=40\timess{}40,
 	global@Ad=6,
 	global@Ma=12,
@@ -25,7 +26,7 @@
 	offense@St=4,
 	offense@AP=1,
 	offense@Ag=2,
-	offenserules={\sonsoftheavalanche{},\textbf{\handcannon{} (4+)}},
+	offenserules={\sonsoftheavalanche{},\hidebf{\handcannon{} (4+)}},
 	commandgroup={%
 		\champion{}=20,
 		\musician{}=20,
@@ -35,4 +36,4 @@
 	modelrulesdef={
 		\modelruledef{\handcannon}{\ruletype{\shootingweapon}\handcannondef}
 	},
-} % END UNIT ENTRY
+}% END UNIT ENTRY

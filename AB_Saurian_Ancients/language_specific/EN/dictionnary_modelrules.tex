@@ -1,45 +1,48 @@
+
 % ARMY MODEL RULES
 \newcommand{\coldblooded}{Cold-Blooded}
 \newcommand{\coldbloodeddef}{% Universal Rule
-Discipline Tests of units with Cold-Blooded are subject to Minimized Roll.
+	The model's Discipline Tests are subject to Minimised Roll.%
 }
 
 \newcommand{\telepathiclink}{Telepathic Link}
 \newcommand{\telepathiclinkdef}{% Universal Rule
-A Cuatl Lord may cast spells of type Damage through a friendly model with Telepathic Link if it is within \distance{24} of the Cuatl Lord. When casting using Telepathic Link, measure the range for the spell from the model with Telepathic Link and use its Front Arc and Line of Sight. The range of the spell is reduced by half. The Cuatl Lord may cast spells of type Missile even if it is Engaged in Combat as long as the model with Telepathic Link is not. If the spell is Miscast, the Cuatl Lord suffers the Miscast as normal, and the model with Telepathic Link suffers a single hit with Armour Penetration 2 and a Strength equal to the number of Magic Dice used. If the Cuatl Lord casts a spell using Telepathic Link, the Attribute Spell gets cast through the model with Telepathic Link as well, applying the same restrictions as for the first spell (usually only type Damage, range is reduced by half, measure range and use Front Arc and Line of Sight from the model with Telepathic Link. Attribute Spells with a type other than Damage are not cast). The Caster is considered to be the Cuatl Lord.
+	A Cuatl Lord may cast spells of type Damage through a friendly model with Telepathic Link if it is within \distance{24} of the Cuatl Lord. When casting using Telepathic Link, measure the range for the spell from the model with Telepathic Link and use its Front Arc and Line of Sight. The range of the spell is reduced by half. The Cuatl Lord may cast spells of type Missile even if it is Engaged in Combat, as long as the model with Telepathic Link is not.\DTLpar%
+	If the spell is Miscast, the Cuatl Lord suffers the Miscast effect as normal, and the model with Telepathic Link suffers a single hit with Armour Penetration 2 and a Strength equal to the number of Magic Dice used.\DTLpar%
+	If the Cuatl Lord casts a spell using Telepathic Link, the Attribute Spell gets cast through the model with Telepathic Link as well, applying the same restrictions as for the Learned Spell (usually only type Damage, range is reduced by half, measure range and use Front Arc and Line of Sight from the model with Telepathic Link). Attribute Spells with a type other than Damage are not cast. The Cuatl Lord is considered to be the Caster.%
 }
 
 \newcommand{\engineoftheancients}{Engine of the Ancients}
 \newcommand{\engineoftheancientsdef}{% Universal Rule
-\zerotoXperarmy{1}\\
-The model part gains \textbf{Telepathic Link}. All friendly units within \distance{6} of the Engine of the Ancients gain \textbf{Aegis (5+, against Ranged Attacks)}. At the beginning of each friendly Player Turn, you may choose to replace Aegis with one of the following effects until the start of the next friendly Player Turn:
-\begin{itemize}
-\item Choose a Magic Path. Friendly Wizards casting spells from this Path have the Casting Values reduced by 1.
-\item During the owner’s Shooting Phase, pick an enemy unit that is not Engaged in Combat and within \distance{9} of the Engine of the Ancients. That unit suffers D3 hits with \textbf{Flaming Attacks} and Armour Penetration 10 that always wound on a roll equal to or greater than \result{7 minus the target's Armour}. A natural \result{6} always wounds and a natural \result{1} always fails to wound. This is considered a Special Attack.
-\end{itemize}
+	\itemrestriction{\zerotooneunitsperarmy{}.}%
+	The model part gains \textbf{Telepathic Link}. All friendly units within \distance{6} of the Engine of the Ancients gain \textbf{Aegis (5+, against Ranged Attacks)}. At the beginning of each friendly Player Turn, you may choose to replace Aegis with one of the following effects until the start of the next friendly Player Turn:%
+		\begin{itemize}
+			\item Choose a Path of Magic. The Casting Values of spells from this Path cast by friendly Wizards are reduced by 1.
+			\item During the owner's Shooting Phase, choose an enemy unit that is not Engaged in Combat and within \distance{9} of the Engine of the Ancients. That unit suffers D3 hits with \textbf{Flaming Attacks} and Armour Penetration 10 that always wound on a roll equal to or greater than \enquote{7 minus the target's Armour}. A natural \result{6} always wounds and a natural \result{1} always fails to wound. This is considered a Special Attack.
+		\end{itemize}
 }
 
 \newcommand{\bornpredator}{Born Predator}
 \newcommand{\bornpredatordef}{% Attack Attribute -- Close Combat
-The attack must reroll natural to-hit rolls of  \result{1}.%
+	Natural to-hit rolls of \result{1} of attacks with this Attack Attribute \textbf{must} be rerolled.%
 }
 
 \newcommand{\poisonedjavelin}{Poisoned Javelin}
 \newcommand{\poisonedjavelindef}{% Shooting Weapon
-\range{12}, \shots{1}, \St{} as user, \AP{} as user, \textbf{\poisonattacks{}}, \textbf{\quicktofire{}}.
+	\range{12}, \shots{1}, \St{} as user, \AP{} as user, \textbf{\poisonattacks{}}, \textbf{\quicktofire{}}.%
 }
 
 \newcommand{\giantblowpipes}{Giant Blowpipes}
 \newcommand{\giantblowpipesdef}{% Artillery Weapon
-\range{12}, \shots{8}, \St{} 3, \AP{} 0, \textbf{\poisonattacks{}}, \textbf{\quicktofire{}}.
+	\range{12}, \shots{8}, \St{} 3, \AP{} 0, \textbf{\poisonattacks{}}, \textbf{\quicktofire{}}, .%
 }
 
 \newcommand{\blowpipe}{Blowpipe}
 \newcommand{\blowpipedef}{% Shooting Weapon
-\range{12}, \shots{2}, \St{} 2, \AP{} 0, \textbf{\poisonattacks{}}. +1 to hit against units consisting entirely of models with Towering Presence.
+	\range{12}, \shots{2}, \St{} 2, \AP{} 0, \textbf{\poisonattacks{}}, +1 to hit against units consisting entirely of models with Towering Presence.%
 }
 
-\newcommand{\giantbow}{Great Bow}
-\newcommand{\giantbowdef}{% Artillery Weapon
-\range{36}, \shots{1}, \St{} 3 [5], \AP{} 10, \textbf{\areaattack{} (1\timess{}5)}, [\textbf{\multiplewounds{D3}{}}], \textbf{\quicktofire{}}.
+\newcommand{\greatbow}{Great Bow}
+\newcommand{\greatbowdef}{% Artillery Weapon
+	\range{36}, \shots{1}, \St{} 3 [5], \AP{} 10, \textbf{\areaattack{} (1\timess{}5)}, [\textbf{\multiplewounds{D3}{}}], \textbf{\quicktofire{}}.%
 }

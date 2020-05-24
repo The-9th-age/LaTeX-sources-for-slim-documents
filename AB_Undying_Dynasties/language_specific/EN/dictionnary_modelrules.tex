@@ -25,9 +25,9 @@ One of a Kind. An Undying Dynasties army \textbf{must} include a single model wi
 }
 
 \newcommand{\dusttodustdef}{%
-At the end of any phase in which the \hierophant{} is removed as a casualty, every unit in the army with \dusttodust{} must pass a Discipline Test or lose a number of Health Points equal to the amount by which the test was failed, with no saves of any kind allowed. These Health Point \newrule{losses} are allotted following the rules for \unstable{}. The number of Health Points lost is reduced by 1 if the unit is within range of \rallyaroundtheflag{}.\DTLpar
+At the end of any phase in which the \hierophant{} was removed as a casualty, every unit in the army with \dusttodust{} \textbf{must} pass a Discipline Test or lose a number of Health Points equal to the amount by which the test was failed, with no saves of any kind allowed. These Health Point losses are allotted following the rules for \unstable{}. The number of Health Points lost is reduced by 1 if the unit is within range of \rallyaroundtheflag{}.\DTLpar
 At the end of the Player Turn in which the \hierophant{} was removed as a casualty, a new \hierophant{} may be selected. In order to do so, nominate a friendly Wizard Character. This Character becomes the new \hierophant{}.\DTLpar
-At the start of each friendly Player Turn after the army's \hierophant{} has been removed as a casualty and no new \hierophant{} has been selected, every unit with \dusttodust{} must once again pass a Discipline Test or lose Health Points as described above.%
+At the start of each friendly Player Turn after the army's \hierophant{} has been removed as a casualty and no new \hierophant{} has been selected, every unit with \dusttodust{} \textbf{must} once again pass a Discipline Test or lose Health Points as described above.%
 }
 
 \newcommand{\ensouledstatuedef}{%
@@ -39,16 +39,20 @@ Units with one or more models with \undyingwill{} gain +2 Offensive Skill, +2 De
 }
 
 \newcommand{\autonomousdef}{%
-\undead{} units consisting entirely of models with \autonomous{} may perform March Moves as normal even when outside the range of friendly models' \commandingpresence{}. The unit must still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.%
+\undead{} units consisting entirely of models with \autonomous{} may perform March Moves as normal even when outside the range of friendly models' \commandingpresence{}. The unit \textbf{must} still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.%
 }
 
 \newcommand{\undergroundambushdef}{%
-The model follows the rules for \ambush{}, with the following exception: instead of entering the Battlefield from a Board Edge, place the unit anywhere on the Battlefield in a legal formation and following the Unit Spacing rule. Then roll a D6:
+The model follows the rules for \ambush{}, with the following exception. Instead of entering the Battlefield from the Board Edge:
+\begin{enumerate}
+\item Choose an arriving unit with Underground Ambush.
+\item Place the unit anywhere on the Battlefield in a legal formation and following the Unit Spacing rule. \item Roll a D6:
 \begin{itemize}
 \item If 5--6 is rolled, the unit arrives where it was initially placed.
-\item If 1--4 is rolled, move the unit (without changing the direction it is facing) \distance{2D6} in a randomly chosen direction. If this would bring the unit within \distance{1} of other units, Impassable Terrain, or the Board Edge, the unit stops \distance{1} short of them and each model in the Ambushing unit must take a Dangerous Terrain (1) Test. The unit may then perform a Pivot (and must follow the Unit Spacing rule after the Pivot). None of these manoeuvres prevent the unit from moving following the rules for Ambush afterwards.
+\item If 1--4 is rolled, move the unit (without changing the direction it is facing) \distance{2D6} in a randomly chosen direction. If this would bring the unit within \distance{1} of other units, Impassable Terrain, or the Board Edge, the unit stops \distance{1} short of them and each model in the Ambushing unit \textbf{must} take a Dangerous Terrain (1) Test. The unit may then perform a Pivot (and must follow the Unit Spacing rule after the Pivot). None of these manoeuvres prevent the unit from moving following the rules for Ambush afterwards.
 \end{itemize}%
-
+\item Repeat steps 1--3 for all other arriving units with Underground Ambush.
+\end{enumerate}%
 }
 
 \newcommand{\aspenbowdef}{%

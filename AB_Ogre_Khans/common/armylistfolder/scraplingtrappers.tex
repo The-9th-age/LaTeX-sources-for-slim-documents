@@ -5,15 +5,15 @@
 	cost=80,
 	unitsize=5,
 	maxunitsize=10,
-	costpermodel=10,
+	costpermodel=8,
 	maxunitsperarmy=3,
 	type=\infantry{},
-	size=\sizestandard{},
+	size=\heightstandard{},
 	basesize=20\timess{}20,
 	global@Ad=4,
 	global@Ma=8,
 	global@Di=6,
-	globalrules={\insignificant{},\scout{},\skirmisher{},\lighttroops{},\vanguard{},\textbf{\itsatrap{}}},
+	globalrules={\insignificant{},\scout{},\skirmisher{},\lighttroops{},\vanguard{},\hidebf{\itsatrap{}}},
 	defense@HP=1,
 	defense@Df=2,
 	defense@Re=3,
@@ -27,10 +27,10 @@
 	offense@Ag=3,
 	offenseweapons={\throwingweapons{} (5+)},
 	commandgroup={%
-		\champion{}=20
+		\champion{}=20,
 	},
 	modelrulesdef={%
 		\modelruledef{\itsatrap}{\ruletype{\universalrule}\itsatrapdef}
 	},
 	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
-} % END UNIT ENTRY
+}% END UNIT ENTRY
