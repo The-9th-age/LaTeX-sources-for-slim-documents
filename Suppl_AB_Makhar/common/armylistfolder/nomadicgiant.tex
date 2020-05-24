@@ -1,8 +1,4 @@
 
-\def\recurvebowruleone{\textbf{\areaattack{} (1\timess{}5)}}
-\def\recurvebowruletwo{[\textbf{\multiplewounds{}{} (\Dthree{})}]}
-\def\recurvebowrulethree{\textbf{\quicktofire{}}}
-
 \unitentry{%
 	name=\nomadicgiant{},
 	fluff=\nomadicgiantfluff{},
@@ -47,7 +43,7 @@
 		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
 		\modelruledef{\tribalwarspear{}}{\ruletype{\closecombatweapon{}}\tribalwarspeardef{}}
 		\modelruledef{\giantrecurvebow{}}{\ruletype{\artilleryweapon{}}%
-		\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlist{\recurvebowruleone{},\recurvebowruletwo{},\recurvebowrulethree{}}.}
+		\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{\areaattack{} (1\timess{}5),[\multiplewounds{}{} (\Dthree{})],\quicktofire{}}.}
 	},%
 	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
 }% END UNIT

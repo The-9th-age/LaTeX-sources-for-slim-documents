@@ -1,0 +1,74 @@
+
+\unitentry{%
+	name=\gunneryteam{},
+	logo=special,
+	cost=155,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=40\timess{}40,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\infernalbrand{},\hidebf{\cumbersome{}},\firesofindustry{} (1)},
+	defense@HP=4,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{}},
+	defenserules={\hardtarget{} (1)},
+	offensename=\gunneryteam{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\marchandshoot{},\quicktofire{}},
+	modelrulesdef={%
+		\modelruledef{\cumbersome}{\ruletype{\universalrule}\cumbersomedef{}}
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\naphthathrower{}=\free{},
+			\rocketbattery{} (4+)=25,
+			\titanmortar{} (4+)=\free{},
+		}},	
+	},
+	endtext={%
+		\vspace*{7pt}%
+		\raggedcolumns%
+		\setlength{\columnsep}{10pt}%
+		\begin{multicols}{3}%
+			\ifnaphthathrower{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=\free{},
+					\clustermunitions{}=5,
+					\ethercloud{}=5,
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+			\columnbreak
+			\iftitanmortar{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=5,
+					\clustermunitions{}=\free{},
+					\ethercloud{}=5,
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+			\columnbreak
+			\ifrocketbattery{}\spacebeforecolon{}:\newline
+			\def\tempaddoptions{%
+				\optionschoice{\shootingattacksmustgain{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+					\kadimmanifestation{}=10,
+					\clustermunitions{}=5,
+					\ethercloud{}=\free{},
+				}},
+			}
+			\addoptions{\tempaddoptions}%
+		\end{multicols}%
+	},
+}% END UNIT ENTRY

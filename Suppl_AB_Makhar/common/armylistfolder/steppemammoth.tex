@@ -1,7 +1,4 @@
 
-\def\fistofthemakharruleone{[\textbf{\multiplewounds{}{} (\Dthree{})}]}
-\def\fistofthemakharruletwo{\textbf{\quicktofire{}}}
-
 \unitentry{%
 	name=\steppemammoth{},
 	fluff=\steppemammothfluff{},
@@ -27,7 +24,7 @@
 	offense@AP=0,
 	offense@Ag=3,
 	offenserules={\recurvebow{} (3+), \makharlance{}},
-	offensenameB=\steppemammoth{},
+	offensenameB=\mammoth{},
 	offenseB@At=4,
 	offenseB@Of=3,
 	offenseB@St=6,
@@ -36,11 +33,10 @@
 	offenserulesB={\impacthits{} (\Dthree{}), \harnessed{}},
 	options={%
 		\onechoiceonlyACO{%
-			\rallyaroundtheflag{}\refsymbol{}=50,
-			\textbf{\fistofthemakhar{} (4+)}=\free{},
+			\rallyaroundtheflag{}=50,
+			\textbf{\fistofthemakhar{} (4+)}\newline\optionnewlineindent\onthemammoth{}=\free{},
 		},
-		\refsymbolbis{}\steppemammothnote{}=,
 	},
 	optionalmodelrulesdef={\modelruledef{\fistofthemakhar}{\ruletype{\artilleryweapon}%
-	\catapult{} (4\timess{}4), \range{12--48}, \shots{1}, \St{} 3 [7],\newline \AP{} 0 [4], \alphaorderlist{\fistofthemakharruleone{},\fistofthemakharruletwo{}}.}},
+	\catapult{} (4\timess{}4), \range{12--48}, \shots{1}, \St{} 3 [7],\newline \AP{} 0 [4], \alphaorderlistbf{[\multiplewounds{}{} (\Dthree{})],\quicktofire{}}.}},
 }

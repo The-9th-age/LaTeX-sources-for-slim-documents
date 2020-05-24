@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\rakachitmachinist{},
+	logo=character,
+	categorynote=,
+	cost=155,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=5,
+	globalrules={\safetyinnumbers{},\callous{},\honourless{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=1,
+	defensearmour={\ha{}},
+	offensename=\rakachitmachinist{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\magicalattacks{},\hidebf{\mechanicallimbs{}}},
+	options={%
+		\specialitemsallowance{}=\upto{}100,
+		\onechoiceonlyACO{%
+			\gasglobes{} (3+)=5,
+			\ratlockpistols{} (3+)=20,
+			\jezail{} (3+)=20,
+		},
+	},
+	modelrulesdef={%
+		\modelruledef{\mechanicallimbs}{\ruletype{\specialattack}\mechanicallimbsdef}
+	},
+}% END UNIT ENTRY

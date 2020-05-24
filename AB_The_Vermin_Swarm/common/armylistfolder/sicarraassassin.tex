@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\sicarraassassin{},
+	logo=character,
+	categorynote=,
+	cost=260,
+	unitsize=1,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=7,
+	globalrules={\safetyinnumbers{},\callous{},\honourless{},\notaleader{},\hidebf{\professionalcourtesy{}}},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (4+)},
+	offensename=\sicarraassassin{},
+	offense@At=3,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=4,
+	offense@Ag=8,
+	offenseweapons={\pw{},},
+	offenserules={\tailweapon{},\lightningreflexes{},\poisonattacks{},{\multiplewounds{}{} (\Dthree{}, \againstcharacter{})\hideinQRS{\refsymbol{}}}},
+	options={%
+		\lethalstrike{}=15,
+		{\ambush{}, \scout{}, \wordand{} \vanguard{}}=30,
+		\specialitemsallowance{}=\upto{}100,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\throwingweapons{} (3+)=\free{},
+			\sling{} (2+)=\free{},
+		}},
+	},
+	modelrulesdef={%
+		\modelruledef{\professionalcourtesy}{\ruletype{\universalrule}\professionalcourtesydef}
+	},
+	endtext={\refsymbolbis{}\sicarraassassinnote{}},
+}% END UNIT ENTRY

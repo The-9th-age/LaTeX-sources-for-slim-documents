@@ -1,0 +1,36 @@
+
+\unitentry{%
+	name=\dreadreaper{},
+	logo=harpoons,
+	cost=180,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=60,
+	global@Ad=5,
+	global@Ma=5,
+	global@Di=8,
+	globalrules={\warmachine{}},
+	defense@HP=4,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la},
+	offensename=\crew{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\moveorfire{},\lightningreflexes{},\killerinstinct{}},
+	offenseweapons={\hidebf{\elvenboltthrower{} (3+)}},
+	modelrulesdef={%
+		\modelruledef{\elvenboltthrower}{\ruletype{\artilleryweapon}\elvenboltthrowerdef{}\spacebeforecolon{}:%
+			\begin{smallitemize}%
+				\item \range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{\areaattack{} (1\timess{}5),[\multiplewounds{\Dthree{}}{}]}%
+				\item \range{48}, \shots{6}, \St{} 4, \AP{} 2%
+			\end{smallitemize}%
+		}
+	},
+}% END UNIT ENTRY

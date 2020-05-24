@@ -128,6 +128,7 @@
 }
 
 \newcommand{\ifgeneralmusttakegreaterdominion}{If General, \textbf{must} take Greater Dominion}
+\newcommand{\ifgeneralandmounted}{If General and mounted}
 
 \newcommand{\manifestationsoffatherchaosandpride}{Manifestations of Father Chaos and Pride}
 
@@ -189,7 +190,7 @@
 
 \newcommand{\devour}{Devour}
 \newcommand{\devourdef}{%
-	For each Health Point loss the model causes with Close Combat Attacks, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model gains +1 Health Point.\par
+	For each Health Point loss the model causes with Close Combat Attacks against enemy units, roll a D6 at the end of the Initiative Step. For each rolled 4+, the model gains +1 Health Point.\par
 	When the model has 18 Health Points, all units within \distance{9} immediately suffer 2D6 hits with \textbf{\toxicattacks}, and the model is removed as a casualty.%
 }
 
@@ -213,6 +214,8 @@
 \newcommand{\thirdeyedef}{%
 At the beginning of each friendly Charge Phase, draw the Flux Card for that Player Turn instead of step 2 of the Magic Phase Sequence.%
 }
+
+\newcommand{\ifgeneralwithstrixianspirit}{If General with \textbf{\strixianspirit}}
 
 \newcommand{\strixianspirit}{Strixian Spirit}
 \newcommand{\strixianspiritdef}{%
@@ -291,12 +294,7 @@ At the beginning of each friendly Charge Phase, draw the Flux Card for that Play
 
 \newcommand{\firestarter}{Firestarter}
 \newcommand{\firestarterdef}{%
-	Choose one spell:
-	\begin{itemize}
-		\item \spellformat{\thaumaturgyspellone}{\thaumaturgy}
-		\item \spellformat{\spearofinfinity}{\hereditaryspell}
-	\end{itemize}
-	The choice has to be noted on the Army List. The Standard Bearer can cast the chosen spell as a Bound Spell with Power Level (5/8).%
+	The Standard Bearer can cast the spell stated in brackets as a Bound Spell with Power Level (5/8).%
 }
 
 % Succubi
@@ -308,10 +306,6 @@ At the beginning of each friendly Charge Phase, draw the Flux Card for that Play
 
 
 %% SPECIAL
-
-% Eidolons
-
-\newcommand{\eidolonaegis}{\aegis{} (4+, against \magicalattacks{})}%deprecated
 
 % Hellhounds
 
@@ -353,7 +347,7 @@ At the beginning of each friendly Charge Phase, draw the Flux Card for that Play
 
 \newcommand{\mountainbreaker}{Mountain Breaker}
 \newcommand{\mountainbreakerdef}{%
-	The model gains +\distance{2} Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence. In addition, the model's Impact Hits gain \textbf{\multiplewounds{}{} (D3, against \toweringpresence{})}.%
+	The model gains +\distance{2} Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence in the Charge Phase. In addition, the model's Impact Hits gain \textbf{\multiplewounds{}{} (D3, against \toweringpresence{})}.%
 }
 
 % Clawed Fiends
@@ -433,6 +427,8 @@ At the beginning of each friendly Charge Phase, draw the Flux Card for that Play
 }
 
 % Bloat Flies
+
+\newcommand{\boatfliesaegis}{\aegis{} (5+, against \magicalattacks{})}
 
 \newcommand{\acidblood}{Acid Blood}
 \newcommand{\acidblooddef}{%

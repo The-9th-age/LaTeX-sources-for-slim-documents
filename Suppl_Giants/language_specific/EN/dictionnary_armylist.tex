@@ -1,0 +1,188 @@
+
+%%%% Unit entries names
+
+\newcommand{\cultistgiant}{Cultist Giant}
+\newcommand{\dreadedgiant}{Dreaded Giant}
+\newcommand{\giantdwarf}{Giant Dwarf}
+\newcommand{\imperialgiant}{Imperial Giant}
+\newcommand{\highborngiant}{Highborn Giant}
+\newcommand{\feudalgiant}{Feudal Giant}
+\newcommand{\sauriangiant}{Saurian Giant}
+\newcommand{\sylvangiant}{Sylvan Giant}
+\newcommand{\verminousgiant}{Verminous Giant}
+\newcommand{\ancientgiant}{Ancient Giant}
+\newcommand{\corpsegiant}{Corpse Giant}
+
+
+%%%% Unit entries rules
+
+% General
+
+\newcommand{\themodelcountstowards}[1]{The unit counts towards #1.}
+\newcommand{\nongiantgiganticrestriction}{Reduce this by 1 for each non-Giant Gigantic model in the Army.}
+
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+
+\newcommand{\rage}{Rage}
+\newcommand{\ragedef}{%
+	Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers \minuss{}1 Attack Value.%
+}
+
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\giantclubdef}{Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.}
+
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\bigbrotherdef}{%
+	The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.%
+}
+
+% Cultist Giant
+
+\newcommand{\DLgiantseegiantdodef}{The model gains \textbf{Mark of the Eternal Champion}.}
+\newcommand{\manifestation}{Manifestation}
+\newcommand{\ironhusk}{Iron Husk}
+\newcommand{\unhingingjaw}{Unhinging Jaw}
+\newcommand{\graspingproboscis}{Grasping Proboscis}
+\newcommand{\segmentedshell}{Segmented Shell}
+
+% Dreaded Giant
+
+\newcommand{\themenagerie}{The Menagerie}
+\newcommand{\DEgiantseegiantdodef}{The model gains \textbf{Killer Instinct}.}
+\newcommand{\monstrouswhip}{Monstrous Whip}
+\newcommand{\monstrouswhipdef}{%
+	Rolls for Charge Range of other friendly Gigantic models that are within \distance{12} of one or more models with Monstrous Whip are subject to Maximised Roll.%
+}
+\newcommand{\medusamask}{Medusa Mask}
+\newcommand{\medusamaskdef}{%
+	The model can cast \spellformat{\witchcraftspellsix}{\witchcraft} as a Bound Spell with Power level (4/8). In addition, the model counts as having 1 additional Full Rank for the purpose of Steadfast (for both himself and enemies).%
+}
+
+% Giant Dwarf
+
+\newcommand{\DHgiantseegiantdodef}{The model gains \textbf{\hatred{}} and \textbf{Sturdy}.}
+\newcommand{\giantseeker}{Giant Seeker}
+\newcommand{\giantseekerdef}{%
+	The model gains \textbf{\aegis{} (6+)}, \textbf{\fearless{}}, and \textbf{\unbreakable{}}.%
+}
+\newcommand{\giantofthedeep}{Giant of the Deep}
+\newcommand{\giantofthedeepdef}{%
+	The model gains a Shield and \textbf{Wall of Iron} (see Deep Watch unit).%
+}
+
+% Imperial Giant
+
+\newcommand{\sunnasfury}{Sunna's Fury}
+\newcommand{\EoSgiantseegiantdodef}{The model gains \textbf{Support Unit}.}
+\newcommand{\giantrepeater}{Giant Repeater}
+\newcommand{\bigfanofsunna}{Big Fan of Sunna}
+\newcommand{\bigfanofsunnadef}{%
+	The model gains \textbf{\battlefocus{}} and \textbf{Fanatical} (see Flagellants unit).%
+}
+
+% Highborn Giant
+
+\newcommand{\ancientallies}{Ancient Allies}
+\newcommand{\HEgiantseegiantdodef}{The model gains \textbf{Martial Discipline}.}
+\newcommand{\lioncloakandaxe}{Lion Cloak and Axe}
+\newcommand{\lioncloakandaxedef}{%
+	The model replaces its Light Armour with Lion's Fur and gains \textbf{Multiple Wounds (2, against Large and Beasts, Large and Cavalry, Gigantic)}.%
+}
+\newcommand{\shoreguardianbow}{Shoreguardian Bow}
+
+% Feudal Giant
+
+\newcommand{\KoEgiantseegiantdodef}{The model gains \textbf{The Blessing}.}
+\newcommand{\serfhelphelp}{Serf (Help! Help! I'm being Oppressed)}
+\newcommand{\serfhelphelpdef}{%
+	The model loses The Blessing and gains \textbf{Insignificant}, \textbf{Serf}, and \textbf{Vanguard}.%
+}
+\newcommand{\knightedgiant}{Knighted Giant}
+\newcommand{\knightedgiantdef}{%
+	The model gains a Light Armour, \textbf{\devastatingcharge{+2 \St{}, +2 \AP{}}}, and \textbf{\swiftstride{}}.%
+}
+
+% Saurian Ancient
+
+\newcommand{\thunderlizards}{Thunder Lizards}
+\newcommand{\SAgiantseegiantdodef}{The model gains \textbf{Cold Blooded}.}
+\newcommand{\petsalamander}{Pet Salamander}
+\newcommand{\petsalamanderdef}{%
+	Whenever a Misfire is rolled, instead of rolling on the Misfire Table, the model suffers D3 hits that wound automatically with no saves of any kind allowed.%
+}
+\newcommand{\mindlinked}{Mind-linked}
+\newcommand{\mindlinkeddef}{%
+	The model gains \textbf{Telepathic Link}.  Whenever a spell is cast through the model, it suffers 1 hit that wounds automatically with no saves of any kind allowed.%
+}
+
+% Sylvan Giant
+
+\newcommand{\unseenarrows}{Unseen Arrows}
+\newcommand{\SEgiantseegiantdodef}{%
+	The model gains \textbf{\feignedflight{}}, \textbf{\lighttroops{}}, and \textbf{\strider{} (\forest{})}.%
+}
+\newcommand{\bonebreakdancer}{Bone Break Dancer}
+\newcommand{\sylvanblades}{Sylvan Blades}
+\newcommand{\bonebreakdancerdef}{%
+	At the start of each Round of Combat, choose one of the dances listed below and apply its effects until the end of the Round of Combat. The model cannot choose this dance again until after one of the following has happened:%
+	\begin{itemize}%
+		\item The model is no longer Engaged in Combat.%
+		\item The model has chosen a different dance.%
+	\end{itemize}%
+}
+\newcommand{\danceofthebigdip}{The Twist}
+\newcommand{\danceofthebigdipdef}{Enemy units in base contact do not receive any Rank Bonus to their Combat Score.}
+\newcommand{\danceofthebigfist}{Jump!}
+\newcommand{\danceofthebigbelly}{Belly Dancing}
+\newcommand{\danceofthebigfeet}{Tap Dancing}
+\newcommand{\saplingbow}{Sapling Bow}
+
+% Verminous Giant
+
+\newcommand{\builtandbred}{Built and Bred}
+\newcommand{\VSgiantseegiantdodef}{The model gains \textbf{Brood's Courage (Rats-at-Arms)} and \textbf{Safety in Numbers}.}
+\newcommand{\livingbomb}{Living Bomb}
+\newcommand{\livingbombdef}{%
+	When the model is removed as a casualty, all units within \distance{6} suffer 2D6 hits with Toxic Attacks.%
+}
+\newcommand{\bigsneaker}{Big Sneaker}
+\newcommand{\bigsneakerdef}{%
+	The model gains \textbf{\distracting{}}, \textbf{\hardtarget{} (1)}, and \textbf{\poisonattacks{}}.%
+}
+
+% Ancient Giant
+
+\newcommand{\masonsmenagerie}{Mason's Menagerie}
+\newcommand{\resurrectedInitials}{Rsr}
+\newcommand{\UDgiantseegiantdodef}{The model gains \textbf{Dust to Dust}, \textbf{\fearless{}}, and \textbf{\undead{}}.}
+\newcommand{\UDragedef}{%
+	Whenever the model loses a Health Point, the model part gains +1 Attack Value. Whenever it gains a Health Point, the model part suffers \minuss{}1 Attack Value.%
+}
+\newcommand{\bonechariot}{Bone Chariot}
+\newcommand{\bonechariotdef}{%
+	The model part gains \textbf{\harnessed{}}, \textbf{\impacthits{} (D6)}, and the model gains the following additional model parts:%
+}
+\newcommand{\charioteercrew}{Charioteer Crew}
+\newcommand{\aspenbow}{Aspen Bow}
+\newcommand{\sepulchralguard}{Sepulchral Guard}
+\newcommand{\sepulchralguarddef}{%
+	The model gains \textbf{\lethalstrike{}}, \textbf{\magicalattacks{}}, and \textbf{\poisonattacks{}}.%
+}
+
+% Corpse Giant
+
+\newcommand{\swiftdeath}{Swift Death}
+\newcommand{\reanimatedInitials}{Rea}
+\newcommand{\VCgiantseegiantdodef}{The model gains \textbf{Ashes to Ashes}, \textbf{\fearless{}}, and \textbf{\undead{}}.}
+\newcommand{\barrowgiant}{Barrow Giant}
+\newcommand{\barrowgiantdef}{%
+	The model gains a Halberd and \textbf{\multiplewounds{}{} (2, against Standard)}.%
+}
+\newcommand{\ghoulgiant}{Ghoul Giant}
+\newcommand{\ghoulgiantdef}{%
+	The model gains \textbf{\poisonattacks{}} and \textbf{Unholy Appetite}.%
+}
+\newcommand{\zombiegiant}{Zombie Giant}
+\newcommand{\zombiegiantdef}{%
+	The model gains \textbf{\stubborn{}}, its Reanimated is \textbf{set} to D6+1, and its Offensive Skill and Defensive Skill are \textbf{set} to 1.%
+}

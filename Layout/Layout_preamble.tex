@@ -28,6 +28,7 @@
 \usepackage{parskip}%[=v1] 																									% no paragraph indentation and spaces between paragraphs
 \usepackage{accsupp}																												% allows to automatically replace some characters when copy-pasted
 \usepackage{pdfrender}																											% Allows to print outlined characters
+\usepackage{verse}																													% For poems
 
 
 %% Language specific packages
@@ -50,6 +51,10 @@
 \fi
 \ifdefined\languageisrussian
 	\usepackage[russian]{babel}
+	\usepackage[super]{nth}																										% to write 9^th correctly
+	\setmainfont[Ligatures=TeX]{Cambria} % default is Latin Modern
+	%\newfontfamily\titlefont[Ligatures=TeX]{Georgia} % font for front page title
+	\renewfontfamily\fulltitlefont[Ligatures=TeX]{Georgia} % font for front page title
 \fi
 \ifdefined\languageisgerman
 	\usepackage[german]{babel}

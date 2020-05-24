@@ -1,0 +1,99 @@
+
+% Army Model Rules Names
+
+\newcommand{\infernalbrand}{Infernal Brand}
+\newcommand{\taurukhritual}{Taurukh Ritual}
+\newcommand{\incendiary}{Incendiary}
+\newcommand{\firesofindustry}{Fires of Industry}
+
+\newcommand{\clustermunitions}{Cluster Munitions}
+\newcommand{\ethercloud}{Ether Cloud}
+\newcommand{\kadimmanifestation}{Kadim Manifestation}
+\newcommand{\oilskins}{Oil Skins}
+
+\newcommand{\volcanicembrace}{Volcanic Embrace}
+
+\newcommand{\infernalarmour}{Infernal Armour}
+
+\newcommand{\flintlockaxe}{Flintlock Axe}
+\newcommand{\blunderbuss}{Blunderbuss}
+
+\newcommand{\naphthathrower}{Naphtha Thrower}
+\newcommand{\rocketbattery}{Rocket Battery}
+\newcommand{\titanmortar}{Titan Mortar}
+
+\newcommand{\infernalweapon}{Infernal Weapon}
+
+% Army Model Rules Texts
+
+\newcommand{\infernalbranddef}{%
+	The model considers all units that do not contain any models with \infernalbrand{} Insignificant. It can only join or be joined by models with \infernalbrand{}. In addition, models without \infernalbrand{} in units within \distance{6} of a friendly non-Fleeing model with \infernalbrand{}:%
+	\begin{itemize}%
+		\item Gain \textbf{\battlefocus{}}.%
+		\item \textbf{Must} reroll failed Charge Range rolls in the Charge Phase.%
+	\end{itemize}%
+}
+\newcommand{\taurukhritualdef}{%
+	The model is subject to the following modifications:%
+	\begin{itemize}%
+		\item It gains \textbf{\cannotbestomped{}}, \textbf{\impacthits{} (1)}, and \textbf{\tall{}}.
+		\item It loses March and Shoot.
+		\item Its Advance Rate is \textbf{set} to \distance{7}, its March Rate is \textbf{set} to \distance{14}, and it gains +1 Armour.
+		\item Its base size is changed to 25\timess{}\SI{50}{\milli\meter}.
+		\item Its Type is changed to Beast.%
+	\end{itemize}	%
+}
+\newcommand{\incendiarydef}{%
+	A unit with one or more instances of \incendiary{} gains \textbf{\flammable{}}. Remove one instance of \incendiary{}:%
+	\begin{itemize}%
+		\item Immediately when the unit suffers one or more wounds (before saves are performed) from Ranged Attacks that are Flaming Attacks.%
+		\item At the end of a Round of Combat in which the unit suffers one or more wounds (before saves are performed) from Melee Attacks that are Flaming Attacks.%
+	\end{itemize}%
+	A Character leaving a unit affected by \incendiary{} is no longer affected, unless the Character was a single model unit when it gained \incendiary{}. In that case, the Character keeps those instances of \incendiary{}.%
+}
+\newcommand{\firesofindustrydef}{%
+	The sum of the \firesofindustry{} values stated in brackets of all models in the army is restricted to \zerotoXperarmy{6}.%
+}
+
+\newcommand{\clustermunitionsdef}{%
+	If the attack scores one or more hits against an enemy unit, the next closest unengaged enemy unit within \distance{6} of the original target immediately suffers \Dthree{}+1 hits with Strength 4 and Armour Penetration 1. If there is more than one eligible unit, the Active Player chooses which is hit. These hits aren't affected by \clustermunitions{}.%
+}
+\newcommand{\etherclouddef}{%
+	Any Panic Tests the attack causes to enemy units through \SI{25}{\percent} casualties are taken at \minuss{}1 Discipline. In addition, when the attack hits a unit containing one or more models with Channel, the target's owner loses 1 Veil Token from their Veil Token pool.%
+}
+\newcommand{\kadimmanifestationdef}{%
+	The attacks become \textbf{\flamingattacks{}} and \textbf{\magicalattacks{}}. If the attacks become \flamingattacks{} from more than one source (including other instances of Kadim Manifestation), they also become \textbf{\divineattacks{}}.%
+}
+\newcommand{\oilskinsdef}{%
+	Model parts with this rule may:%
+	\begin{itemize}%
+		\item Immediately before performing a Melee Attack, \textbf{set} the Strength of their attacks to 1 until the end of the Round of Combat.%
+		\item Immediately before performing a Shooting Attack, \textbf{set} the Strength of their attacks to 1 and reduce the range of their Shooting Attacks by \minuss{}\distance{6} until the end of the phase.%
+	\end{itemize}%
+	If so, all model parts with \oilskins{} in the unit must do so. If one or more of these attacks hit, the target unit gains one instance of \incendiary{} after resolving these attacks.%
+}
+
+\newcommand{\volcanicembracedef}{%
+	The model part gains \textbf{\grindattacks{} (X)}, where X corresponds to the value stated in brackets. These \grindattacks{} are resolved with Strength 4 and Armour Penetration 0. In addition, all attacks made by the model part, including Special Attacks, gain \textbf{\kadimmanifestation{}}.%
+}
+
+\newcommand{\infernalarmourdef}{%
+	Follows the rules for Plate Armour (can be enchanted as if it was Plate Armour). The wearer's model gains \textbf{\aegis{} (6+, against \flamingattacks{})} and \textbf{\aegis{} (+1, against \flamingattacks{})}.%
+}
+
+\newcommand{\infernalweapondef}{%
+	Follows the rules for Halberds. In addition, this weapon loses Two-Handed.%
+}
+
+\newcommand{\flintlockandblunderbussrestriction}{%
+	0--60 \rnf{} Models with \flintlockaxe{} or \blunderbuss{} per Army%
+}
+\newcommand{\flintlockaxedef}{%
+	Counts as a Close Combat Weapon with \textbf{\twohanded} in close combat. Close Combat Attacks made with it gain +1 Strength. Can be enchanted like a Close Combat Weapon, but only Close Combat Attacks are affected by the Weapon Enchantment unless specifically stated otherwise.%
+}
+\newcommand{\blunderbussdef}{%
+	Failed to-hit rolls of \result{1} when shooting at Short Range \textbf{must} be rerolled.%
+}
+\newcommand{\rocketbatterydef}{%
+	When rolling to hit, if two or more dice rolled a natural \result{1}, the weapon Misfires. For each \result{1} rolled after the second, the roll on the Misfire Table suffers a \minuss{}2 modifier.%
+}

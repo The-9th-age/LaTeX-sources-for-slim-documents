@@ -1,0 +1,240 @@
+
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\vermindaemon}{Vermin Daemon}
+\newcommand{\tyrant}{Tyrant}
+\newcommand{\chief}{Chief}
+\newcommand{\magister}{Magister}
+\newcommand{\rakachitmachinist}{Rakachit Machinist}
+\newcommand{\sicarraassassin}{Sicarra Assassin}
+\newcommand{\plaguepatriarch}{Plague Patriarch}
+
+% MOUNTS
+
+\newcommand{\verminguardlitter}{Vermin Guard Litter}
+
+\newcommand{\verminhulkbodyguard}{Vermin Hulk Bodyguard}
+\newcommand{\verminhulkbodyguardQRS}{VH Bodyguard}
+\newcommand{\verminhulkbodyguardSHORT}{VH Bodyguard}
+
+\newcommand{\monstrousrat}{Monstrous Rat}
+
+\newcommand{\plaguependulum}{Plague Pendulum}
+ \newcommand{\chassis}{Chassis}
+ \newcommand{\ram}{Ram}
+ 
+\newcommand{\doombell}{Doom Bell}
+
+% CORE
+
+\newcommand{\ratsatarms}{Rats-at-Arms}
+\newcommand{\ratatarms}{Rat-at-Arms}
+
+\newcommand{\verminguard}{Vermin Guard}
+\newcommand{\verminguardSINGULAR}{Vermin Guard}
+
+\newcommand{\plaguebrotherhood}{Plague Brotherhood}
+\newcommand{\plaguebrother}{Plague Brother}
+
+\newcommand{\slaves}{Slaves}
+\newcommand{\slave}{Slave}
+
+\newcommand{\footpads}{Footpads}
+\newcommand{\footpad}{Footpad}
+
+% SPECIAL
+
+\newcommand{\giantrats}{Giant Rats}
+\newcommand{\giantrat}{Giant Rat}
+
+\newcommand{\plaguedisciples}{Plague Disciples}
+\newcommand{\plaguedisciple}{Plague Disciple}
+
+\newcommand{\verminhulks}{Vermin Hulks}
+\newcommand{\verminhulk}{Vermin Hulk}
+
+\newcommand{\ratswarms}{Rat Swarms}
+\newcommand{\ratswarm}{Rat Swarm}
+
+% Meat Grinder already defined as a Model Rule
+
+\newcommand{\gutterblades}{Gutter Blades}
+\newcommand{\gutterblade}{Gutter Blade}
+
+% TUNNEL GUNNERS
+
+\newcommand{\weaponteam}{Weapon Team}
+
+\newcommand{\jezails}{Jezails}% Singular already defined as a Model Rule
+
+\newcommand{\grenadiers}{Grenadiers}
+\newcommand{\grenadier}{Grenadier}
+
+\newcommand{\plaguecatapult}{Plague Catapult}
+\newcommand{\crew}{Crew}
+
+\newcommand{\lightningcannon}{Lightning Cannon}
+
+\newcommand{\dreadmill}{Dreadmill}
+
+% BUILT AND BRED
+
+\newcommand{\abomination}{Abomination}
+
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Vermin Daemon
+
+\newcommand{\againstmagicalattacks}{against Magical Attacks}
+\newcommand{\schemer}{Schemer}
+\newcommand{\schemerdef}{%
+	The model knows one additional spell. \newrule{In addition, spells cast by the model gain +\distance{3} range.} If a Vermin Daemon is part of the army, the Tunnel Gunners Category is reduced to \enquote{Max. \SI{25}{\percent}}.%
+}
+
+% Chief
+
+\newcommand{\fetthisbroodmaster}{Fetthis Broodmaster}
+\newcommand{\fetthisbroodmasterdef}{%
+	The \newrule{model}'s Advance Rate is \textbf{set} to \distance{7}, its March Rate is \textbf{set} to \distance{14}, and it gains \textbf{\swiftstride}.%
+}
+
+% Rakachit Machinist
+
+\newcommand{\mechanicallimbs}{Mechanical Limbs}
+\newcommand{\mechanicallimbsdef}{%
+	\newrule{The model} may use one of the attacks \newrule{below} once per Player Turn. If used as a Shooting Attack, the attack may be used in addition to using a Shooting Weapon, provided both Shooting Attacks target the same unit.%
+	\begin{smallitemize}%
+		\item \textbf{Lightning Coil:} Shooting Attack. \range{18}, \shots{\Dsix}, \St{} 2, \AP{} 3. This attack hits automatically.%
+		\item \textbf{Naphta Thrower:} \textbf{\breathattack{} (\St{} 3, \AP{} 0, \flamingattacks{})}. This Breath Attack is not limited to being used only once per game.%
+	\end{smallitemize}%
+}
+
+% Sicarra Assassin
+
+\newcommand{\againstcharacter}{against Character}
+\newcommand{\sicarraassassinnote}{%
+	Affects only attacks made with Close Combat and Shooting Weapons that are not enchanted.%
+}
+\newcommand{\professionalcourtesy}{Professional Courtesy}
+\newcommand{\professionalcourtesydef}{%
+	\newrule{The model} cannot join or be deployed in units that contain another \newrule{model with Professional Courtesy}. \newrule{The model} may perform Make Way moves even when it is in base contact with an enemy model.%
+}
+
+% Plague Patriarch
+
+\newcommand{\instancesofdarkshard}{\newrule{instances of} Dark Shard}
+\newcommand{\putridscholar}{Putrid Scholar}
+\newcommand{\putridscholardef}{%
+	The model selects its spells from all Learned Spells of \newrule{Occultism} and \spellformat{\theawakenedswarm}{\hereditaryspell}. This overrides the normal Spell Selection rules connected to being a Wizard Apprentice or Adept.%
+}
+
+%% MOUNTS
+
+% Vermin Guard Litter
+
+\newcommand{\herdingtheswarm}{Herding the Swarm}
+\newcommand{\herdingtheswarmdef}{%
+	The model's range of Commanding Presence (if available) is increased by \distance{6}.%
+}
+
+% Plague Pendulum
+
+\newcommand{\pendulum}{Pendulum}
+\newcommand{\pendulumdef}{%
+	The model part can only use its Grind Attacks against enemy units Engaged in the model's Front Facing.%
+}
+
+% Doom Bell
+
+\newcommand{\abovethemasses}{Above the Masses}
+\newcommand{\abovethemassesdef}{%
+	When \newrule{the rider} chooses targets for spells with type Direct, it ignores the restriction of only choosing targets in its Front Arc. When \newrule{the rider} chooses targets for spells with type Missile, it can draw Line of Sight at \SI{360}{\degree} from any point of the \newrule{model}'s base, and may cast Missile spells even when Engaged in Combat. All non-Bound Spells cast by the \newrule{rider} gain +\distance{3} range.%
+}
+\newcommand{\soundingthebell}{Sounding the Bell}
+\newcommand{\soundingthebelldef}{%
+	Enemy units within \distance{18} of one or more models with this Universal Rule suffer \minuss{}1 Offensive Skill and \minuss{}1 Defensive Skill. At the start of each friendly Magic Phase, the owner may choose to roll a D6. On 2+, the Offensive and Defensive Skill modifiers are increased to \minuss{}2 each, until the start of the next friendly Magic Phase. If a \result{1} is rolled, the \newrule{model} loses Sounding the Bell until the \newrule{start of the next friendly Magic Phase}, and all units (friend and foe) with models in base contact with the \newrule{model} suffer D6 hits with Strength 4 and Armour Penetration 2.%
+}
+
+%% CORE
+
+% Slaves
+
+\newcommand{\disposable}{Disposable}
+\newcommand{\disposabledef}{%
+	If the unit Breaks from Combat, it is immediately removed as a casualty. When checking if an enemy unit is Steadfast,
+\newrule{friendly} Slave units count as having 0 Full Ranks, unless the Slave unit is Engaged in the enemy unit's Flank or Rear Facing. When shooting into a combat where the only Engaged friendly models are Slaves:%
+	\begin{smallitemize}%
+		\item The Shooting Attack gains +2 to hit.%
+		\item When randomising to see which unit is hit, the intended target is hit on 4+ (instead of 3+).%
+	\end{smallitemize}%
+}
+
+
+%% SPECIAL
+
+% Vermin Hulks
+
+\newcommand{\thunderhulk}{Thunder Hulk}
+\newcommand{\thunderhulkdef}{%
+	The model gains Heavy Armour and its base size is changed to 50\timess{}\SI{50}{\milli\meter}.%
+}
+\newcommand{\ifthunderhulk}{If \textbf{\thunderhulk{}}}
+
+% Rat Swarms
+
+\newcommand{\tinyrule}{Tiny}
+\newcommand{\tinyruledef}{%
+	The model ignores friendly units when moving in the Charge and Movement Phase, but must follow the Unit Spacing rule at the end of the move.%
+}
+
+% Meat Grinder
+
+\newcommand{\onewiththeswarm}{One with the Swarm}
+\newcommand{\onewiththeswarmdef}{%
+	The model can only join units of Rats-at-Arms\removedrule{ and loses Insignificant while joined to such units}.%
+}
+
+
+%% TUNNEL GUNNERS
+
+% Weapon Team
+
+\newcommand{\scorchedfur}{Scorched Fur}
+\newcommand{\scorchedfurdef}{%
+	When the model rolls Breakdown on the Misfire Table, it is removed as a casualty.%
+}
+
+% Jezails
+
+\newcommand{\pavise}{Pavise}
+\newcommand{\pavisedef}{%
+	The model gains +3 Armour against Ranged Attacks.%
+}
+
+% Catapult and Cannon
+
+\newcommand{\verminousartilleryrestriction}{%
+	\plaguecatapult{} and \lightningcannon{} share the same \zerotoXunitsperarmy{2} limitation.%
+}
+\newcommand{\lightningcannondef}{%
+	Before rolling to hit, the Lightning Cannon may be supercharged. If supercharged, the weapon's Strength is \textbf{set} to 10 and its range is \textbf{set} to \distance{18} for the duration of the phase. After the shot has been resolved, roll a D6. On a roll of \result{1} or \result{2}, the Lightning Cannon cannot be supercharged again until the end of game.%
+}
+
+% Dreadmill
+
+\newcommand{\electricdischarge}{Electric Discharge}
+\newcommand{\electricdischargedef}{%
+	\newrule{Models can use} this Special Attack as \newrule{a)} a Shooting Attack, and as \newrule{b)} a Special Attack when Engaged in Combat.%
+	\begin{enumerate}[label=\alph*)]%
+		\item Choose a target using the normal rules for Shooting Attacks. The Shooting Attack has \range{18}, \shots{3}, \textbf{\accurate{}}, \textbf{\quicktofire{}}, \textbf{\reload{}}, and Aim (4+).%
+		\item The Melee Attack is made at the model part's Initiative Step. Choose a single enemy unit in base contact and roll three D6 (these rolls are not considered to-hit rolls). For each roll of 3+, the target suffers a hit from the Electric Discharge.%
+	\end{enumerate}%
+	Hits from the Electric Discharge are resolved with Strength 5, Armour Penetration 10, \textbf{Lightning Attack}, \textbf{Magical Attacks}, and \textbf{Multiple Wounds (D3)}. Before using the Electric Discharge, the Dreadmill may be supercharged. If supercharged, the Strength of attacks from the Electric Discharge is \textbf{set} to 6 and their range is \textbf{set} to \distance{12} for the duration of the phase. After the Electric Discharge has been resolved, roll a D6. On a roll of \result{1} or \result{2}, the Dreadmill cannot be supercharged again until the end of the game.%
+}
+

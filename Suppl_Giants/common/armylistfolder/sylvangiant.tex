@@ -1,0 +1,57 @@
+
+\unitentry{%
+	name=\sylvangiant{},
+	logo=arrows,
+	cost=265,
+	unitsize=1,
+	maxunitsperarmy=3\refsymbol{},
+	categorynote={\themodelcountstowards{\unseenarrows} \refsymbolbis{}\nongiantgiganticrestriction{}},
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\hidebf{\giantseegiantdo{}}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={},
+	offensename=\sylvangiant{},
+	offense@Ag=3,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\hidebf{\rage{}}},
+	options={%
+		\textbf{\bigbrother{}}=30,
+		\onechoiceonlyACO{%
+			\textbf{\giantclub{}}=30,
+			\textbf{\saplingbow{} (4+)} (\zerotooneunitsperarmy{})=25,
+			\textbf{\bonebreakdancer{}} \wordand{} \sylvanblades{}=60,
+		},
+	},
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\SEgiantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\saplingbow{}}{\ruletype{\artilleryweapon{}}
+			\range{30}, \shots{1}, \St{} 3 [6], \AP{} 3 [10], \textbf{\areaattack{1\timess{}5}}.%
+		}
+		\modelruledef{\bonebreakdancer{}}{\ruletype{\universalrule{}}
+			\bonebreakdancerdef{}\vspace*{5pt}
+			\startdancestable{}
+				\adddance{\danceofthebigdip}{\danceofthebigdipdef}
+				\adddance{\danceofthebigfist}{+1 \ArmourPenetration{} \wordand{} \textbf{\lethalstrike}.}
+				\adddance{\danceofthebigbelly}{+2 \OffensiveSkill{} \wordand{} +2 \DefensiveSkill{}.}
+				\adddance{\danceofthebigfeet}{\textbf{\stompattacks{} (\Dsix{}+2)}.}
+			\closedancestable{}
+		}
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT

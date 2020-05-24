@@ -1,0 +1,44 @@
+%Language is defined here
+%\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+\def\thisbookhasacover{../Suppl_Giants/pics/giants_cover_pic_compressed.jpg}% remove "_compressed" if you want an uncompressed cover picture
+\def\addbooktitletocover{GIANTS}% full caps, use \titlesmallcaps{XXX} for link words
+%\def\uncompressedcover % uncomment if you want an uncompressed background for the cover
+
+% Preamble
+\input{../Layout/Layout.tex}
+\input{common/layout.tex}
+\input{language_specific/\languagetag/dictionnary_armylist.tex}
+\input{language_specific/\languagetag/dictionnary_fluff.tex}
+\input{language_specific/\languagetag/dictionnary_intro.tex}
+\input{language_specific/\languagetag/dictionnary_others.tex}
+\input{common/toc.tex}
+\input{common/footer.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Giants of the Ninth Age}
+\renewcommand{\armybookname}{Supplement to Army Books}
+%\newcommand{\balanceversion}{2020}
+\newcommand{\documentversion}{1}% undefined if first version (= version 1), 2 for second version, etc.
+\newcommand{\betaversion}{1}% 1 if first beta, 2 if second beta, etc.
+%\newcommand{\hotfixversion}{}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{April 2, 2020}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{PROOFREADING VERSION}% anything related to the version
+\newcommand{\booklogo}{pics/logo_big_GIA.png}
+\def\bookprefix{GIA}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+
+% all main sections are in specific files
+\input{../Layout/Titlepage.tex}
+\input{common/intro.tex}
+\vfill
+\input{language_specific/\languagetag/credits.tex}
+\newpage
+\input{common/armylist.tex}
+%\newpage
+%\input{language_specific/\languagetag/changelog.tex}
+
+\end{document}

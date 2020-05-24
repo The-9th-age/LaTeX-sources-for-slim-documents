@@ -1,0 +1,31 @@
+
+\unitentry{%
+	name=\dreadmill{},
+	logo=pistols,
+	cost=340,
+	unitsize=1,
+	maxunitsperarmy=2,
+	categorynote=,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=8,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\safetyinnumbers{},\fearless{},\swiftstride{}},
+	defense@HP=5,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=3,
+	offensename={\dreadmill{}},
+	offense@At=,
+	offense@Of=,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\hidebf{\electricdischarge{}},\grindattacks{} (\Dthree{}),\impacthits{} (\Dthree{}),\inanimate{}},
+	offenseweapons=,
+	modelrulesdef={%
+		\modelruledef{\electricdischarge}{\ruletype{\specialattack}\electricdischargedef}
+	},
+}%

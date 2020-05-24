@@ -1,14 +1,4 @@
 
-\def\brandofthedragonruleone{\textbf{\fly{8}{16}}}
-\def\brandofthedragonruletwo{\textbf{\lighttroops{}}}
-\def\brandofthedragonrulethree{\textbf{\swiftstride{}}}
-\def\brandofthedragonrulefour{\textbf{\breathattack{\St{} 4, \AP{} 1, \flamingattacks{}}}}
-
-\def\emissaryofchaosruleone{\textbf{\stompattacks{} (\Dsix{})}}
-\def\emissaryofchaosruletwo{\textbf{\stubborn{}}}
-\def\emissaryofchaosrulethree{\textbf{\tall{}}}
-\def\emissaryofchaosrulefour{\textbf{\terror{}}}
-
 \unitentry{%
 	name=\exaltedherald{},
 	logo=character,
@@ -44,14 +34,14 @@
 					\spellformat{\thaumaturgyspelltwo}{\thaumaturgy}%
 				}%
 			\manifestationtabledef{\brandofthedragon}{%
-				\alphaorderlistand{\brandofthedragonruleone{},\brandofthedragonruletwo{},\brandofthedragonrulethree{},\brandofthedragonrulefour{}}%
+				\alphaorderlistandbf{\fly{8}{16},\lighttroops{},\swiftstride{},\breathattack{\St{} 4, \AP{} 1, \flamingattacks{}}}%
 			}{%
 				\spellformat{\occultismspellfour}{\occultism}%
 			}%
 			\manifestationtabledef{\emissaryofchaos}{%
-				\alphaorderlistand{\emissaryofchaosruleone{},\emissaryofchaosruletwo{},\emissaryofchaosrulethree{},\emissaryofchaosrulefour{}}%
+				\alphaorderlistandbf{\stompattacks{} (\Dsix{}),\stubborn{},\tall{},\terror{}}%
 			}{%
-				\spellformat{\occultismspellone}{\occultism}.%
+				\spellformat{\occultismspellone}{\occultism}%
 			}%
 			\manifestationtabledef{\sorcererimmortal}{%
 				\textbf{\veilwalker}%

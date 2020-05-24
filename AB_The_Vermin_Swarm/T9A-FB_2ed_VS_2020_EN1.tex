@@ -1,0 +1,47 @@
+
+%Language is defined here
+%\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+
+% Preamble
+\input{../Layout/Layout.tex}
+\input{common/layout.tex}
+\input{language_specific/\languagetag/dictionnary_armylist.tex}
+\input{language_specific/\languagetag/dictionnary_modelrules.tex}
+\input{language_specific/\languagetag/dictionnary_others.tex}
+\input{language_specific/\languagetag/dictionnary_specialequipment.tex}
+\input{common/toc.tex}
+\input{common/footer.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{The Vermin Swarm}
+\newcommand{\balanceversion}{2020}
+%\newcommand{\documentversion}{}% undefined if first version (= version 1), 2 for second version, etc.
+%\newcommand{\betaversion}{}% 1 if first beta, 2 if second beta, etc.
+\newcommand{\hotfixversion}{1}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+%\newcommand\releasedate{November 16, 2018}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{PROOFREADING VERSION}% anything related to the version
+\newcommand{\booklogo}{pics/logo_big_VS.jpg}
+\def\bookprefix{VS}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+
+% all main sections are in specific files
+\input{../Layout/Titlepage.tex}
+\input{common/modelrules.tex}
+\additionalspacebeforemaintitle{}
+\input{common/hereditaryspell.tex}
+\additionalspacebeforemaintitle{}
+\input{common/specialequipment.tex}
+\newpage
+\input{common/armyorg.tex}
+\additionalspacebeforemaintitle{}
+\input{common/armylist.tex}
+\newpage
+\input{common/qrs.tex}
+%\newpage
+%\input{language_specific/\languagetag/changelog.tex}
+
+\end{document}

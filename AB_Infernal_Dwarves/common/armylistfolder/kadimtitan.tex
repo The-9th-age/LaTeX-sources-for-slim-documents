@@ -1,0 +1,30 @@
+
+\unitentry{%
+	name=\kadimtitan{},
+	logo=IoD,
+	cost=480,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=100\timess{}150,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\supernal{},\fearless{}},
+	defense@HP=7,
+	defense@Df=4,
+	defense@Re=6,
+	defense@Arm=2,
+	defenserules={\aegis{} (5+),{\aegis{} (2+, \againstflamingattacks{})}},
+	offensename=\kadimtitan{},
+	offense@At=5,
+	offense@Of=4,
+	offense@St=6,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\volcanicembrace{}{} (\XDthree{2}),\hidebf{\searingheat{}}},
+	modelrulesdef={%
+		\modelruledef{\searingheat}{\ruletype{\attackattribute}\searingheatdef}
+	},
+}% END UNIT ENTRY

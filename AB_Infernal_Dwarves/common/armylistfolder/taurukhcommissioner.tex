@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\taurukhcommissioner{},
+	logo=character,
+	cost=290,
+	unitsize=1,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={\fear{},\infernalbrand{}},
+	defense@HP=4,
+	defense@Df=6,
+	defense@Re=5,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{}},
+	offensename=\taurukhcommissionerSHORT{},
+	offense@At=4,
+	offense@Of=6,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\impacthits{} (1),\hidebf{\aneyeforaneye{}}},
+	options={%
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}150,
+		\shield{}=15\columnbreak{},
+		\onechoiceonlyACO{%
+			\gw{}=25,
+			\infernalweapon{}=30,
+			\pw{}=5,
+		},
+	},
+	modelrulesdef={%
+		\modelruledef{\aneyeforaneye}{\ruletype{\attackattribute}\aneyeforaneyedef}
+	},
+}% END UNIT ENTRY

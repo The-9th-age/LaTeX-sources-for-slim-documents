@@ -1,0 +1,35 @@
+
+\maintitle{CUModelRules}{\armymodelrules}
+
+\newcommand{\waywardchildrendef}{%
+	\item +\distance{1} \AdvanceRate{}
+	\item +\distance{2} \MarchRate{}
+	\item +1 \Agility{}
+}
+
+\newcommand{\fallenheroesdef}{%
+	\item \basesetto{} 25\timess{}\SI{25}{\milli\meter}
+	\item \resiliencesetto{} 4
+	\item \minuss{}1 \Agility{}
+}
+
+\newcommand{\thedishonoureddef}{%
+	\item \minuss{}\distance{1} \AdvanceRate{}
+	\item \marchratesetto{} \distance{9}\refsymbol{}
+	\item \resiliencesetto{} 4
+	\item \minuss{}1 \Agility{}
+}
+
+\newcommand{\kinslayersdef}{%
+	\item \basesetto{} 25\timess{}\SI{25}{\milli\meter}
+	\item +1 \OffensiveSkill{}
+	\item +1 \DefensiveSkill{}
+}
+
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\pledgedtodarkness{}}{\pledgedtodarknessdef}
+\AMRsortedlistentry{\sacrificialofferings{}}{\sacrificialofferingsdef}
+\AMRsortedlistentry{\daemonicsummon{}}{\daemonicsummondef}
+\closeAMRsortedlist

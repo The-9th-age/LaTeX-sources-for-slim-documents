@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\shackledslaves{},
+	logo=core,
+	cost=120,
+	unitsize=20,
+	maxunitsize=40,
+	costpermodel=5,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=4,
+	globalrules={\insignificant{},\hidebf{\forcedcompliance{}}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename=\shackledslave{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=1,
+	offenserules=,
+	commandgroup={%
+		\musician{}=20,
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=1\permodel{},
+			\pw{}=\free{},
+		}},
+	},
+	modelrulesdef={%
+		\modelruledef{\forcedcompliance}{\ruletype{\universalrule}\forcedcompliancedef}
+	},
+	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
+}% END UNIT ENTRY

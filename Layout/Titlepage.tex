@@ -28,11 +28,19 @@
 				\else
 					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_ES.png}};
 				\fi
-			\else% German is same as English
-				\ifdefined\thisisnotfantasybattles
-					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
-				\else
-					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
+			\else
+				\ifdefined\languageisrussian
+					\ifdefined\thisisnotfantasybattles
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
+					\else
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_RU.png}};
+					\fi
+				\else% German is same as English
+					\ifdefined\thisisnotfantasybattles
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
+					\else
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
+					\fi
 				\fi
 			\fi
 		\fi
@@ -78,8 +86,15 @@
 
 \else
 
+\ifdefined\languageisrussian
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_RU.pdf}%
+
+\else
+
 \includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
 
+\fi
 \fi
 \fi
 \fi
@@ -122,7 +137,7 @@
 {\fontsize{12}{14.4}\selectfont
 	
 	\ifdef{\editionversion}{\editionversion{}, }{}\versionname{} \ifdef{\balanceversion}{\balanceversion{}}{}%
-	\ifdef{\documentversion}{\ifdef{\balanceversion}{.}{}\documentversion{}}{} %
+	\ifdef{\documentversion}{\ifdef{\balanceversion}{.}{}\documentversion{}}{\ifdef{\balanceversion}{}{1}} %
 	\ifdef{\betaversion}{\betaname{} \betaversion{} }{}%
 	\ifdef{\alphaversion}{\alphaname{} \alphaversion{} }{}%
 	\ifdef{\hotfixversion}{\hotfixname{} \hotfixversion{} }{}%

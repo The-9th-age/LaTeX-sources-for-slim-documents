@@ -1,0 +1,53 @@
+
+\unitentry{%
+	name=\disciplesoflugar{},
+	logo=special,
+	cost=320,
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=22,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={\scoring{},\infernalbrand{},\feignedflight{},\hidebf{\pactoffire{}}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (5+),{\aegis{} (2+, \againstflamingattacks{})}}, 
+	offensename=\discipleoflugar{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=2,
+	offense@Ag=3,
+	offenserules=,
+	offenseweapons=,
+	options={%
+		{\textbf{\litigator{}} (\zerotoXmodelsperunit{15}, \zerotoXunitsperarmy{1})}=15,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\pw{}=\free{},
+			\gw{}=3\permodel{},
+		}},
+	},
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+		\standardbearer{}=20,
+		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{},
+	},
+	modelrulesdef={%
+		\modelruledef{\pactoffire}{\ruletype{\universalrule}\pactoffiredef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\litigator}{\ruletype{\universalrule}\litigatordef}
+	},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}
+		\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\overlord{},
+	logo=character,
+	optionallogo=character_IoD,
+	categorynote=\charactermountnote{\instrumentsofdestructioninitials}{\instrumentsofdestruction},
+	cost=270,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=10,
+	globalrules={\infernalbrand{},\hidebf{\keystothecitadel{}}},
+	defense@HP=3,
+	defense@Df=7,
+	defense@Re=5,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{}},
+	offensename=\overlord{},
+	offense@At=4,
+	offense@Of=7,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={\hatred{},\marchandshoot{}},
+	options={%
+		\taurukhritual{} (\onfootonly{})=150,
+		\specialitemsallowance{}=\upto{}175,
+		\shield{}=5,
+		\blunderbuss{} (4+)=5,
+	},
+	mounts={%
+		\bullofshamut{} (\instrumentsofdestructioninitials{})=220,
+		\greatbullofshamut{} (\instrumentsofdestructioninitials{})=410,
+	},
+	modelrulesdef={%
+		\modelruledef{\keystothecitadel}{\ruletype{\universalrule}\keystothecitadeldef}
+	},
+}% END UNIT ENTRY

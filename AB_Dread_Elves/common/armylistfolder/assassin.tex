@@ -1,0 +1,55 @@
+
+\unitentry{%
+	name=\assassin{},
+	logo=character,
+	optionallogo=arrows,
+	categorynote=\assassincategorynote{},
+	cost=150,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={\notaleader{},\scout{},\hidebf{\professionalcourtesy{}},\hidebf{\agentoftheobsidianthrones{}}},
+	defense@HP=3,
+	defense@Df=7,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\assassin{},
+	offense@At=3,
+	offense@Of=7,
+	offense@St=4,
+	offense@AP=2,
+	offense@Ag=9,
+	offenserules={\lightningreflexes{},\killerinstinct{},\poisonattacks{}},
+	options={%
+		\textbf{\masterpoisoner{}}=\nolimit{},
+		\onechoiceonlyACO{%
+			\textbf{\pathofsilentdeath{}}=40,
+			\textbf{\pathofbloodymurder{}}=90,
+		}\columnbreak,
+		\specialitemsallowance{}=\upto{}100,
+		\pw{}=15,
+	},
+	modelrulesdef={%
+		\modelruledef{\professionalcourtesy{}}{\ruletype{\universalrule}\professionalcourtesydef}
+		\modelruledef{\agentoftheobsidianthrones{}}{\ruletype{\universalrule}\agentoftheobsidianthronesdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\pathofbloodymurder{}}{\ruletype{\universalrule}\pathofbloodymurderdef}
+		\modelruledef{\pathofsilentdeath{}}{\ruletype{\universalrule}\pathofsilentdeathdef}
+		\modelruledef{\assassinthrowingweapons{}}{\ruletype{\shootingweapon}%
+			\range{12}, \shots{3}, \St{} \asuser{}, \AP{} \asuser{}, \textbf{\quicktofire{}}.%
+		}
+		\modelruledef{\masterpoisoner{}}{\ruletype{\attackattributeclosecombatandshooting}\masterpoisonerdef%
+			\masterpoisonerstarttable%
+				\newpoison{\nightshade}{30}{\nightshadedef}%
+				\newpoison{\wolfsbane}{45}{\wolfsbanedef}%
+				\newpoison{\bloodroot}{50}{\bloodrootdef}%				
+			\masterpoisonerclosetable%
+		}
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

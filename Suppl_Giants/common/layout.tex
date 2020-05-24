@@ -1,0 +1,86 @@
+
+% Army list titles
+
+\newrobustcmd{\titleicon}[1]{\raisebox{-0.15\height}{\includegraphics[height=28pt]{logo_small_#1.png}}}
+
+\newcommand{\armylisttitlelogo}[3]{%
+	\hypertarget{#1}{%
+		\section*{\texorpdfstring{\titleicon{#3}}{} #2 \texorpdfstring{\titleicon{#3}}{}}%
+	}\label{#1}%
+	\stepcounter{categorynumber}%
+	\DTLnewrow{categories}%
+	\DTLnewdbentry{categories}{name}{#2}%
+	\onlyinfrench{\vspace*{-17pt}}%
+}
+
+% Cultist Giant Manifestations
+
+\renewcommand{\prenameformat}[1]{% command used in explicit options AlCoOrder
+	\raisebox{-.2\height}{\makebox[18pt][c]{%
+	\ifblank{#1}{% nothing
+	}{%
+		\includegraphics[height=10pt]{{pics/#1_5}.pdf}%
+	}%
+	}}%
+	{\fontsize{1}{1.2}\selectfont \textcolor{white}{-}}%This part avoid a huge bug in the layout
+}
+
+
+% Dances of the Sylvan Giant
+
+\newcommand{\startdancestable}{%
+\renewcommand{\arraystretch}{1.5}%
+\DTLifdbexists{danceslist}{\DTLcleardb{danceslist}}{\DTLnewdb{danceslist}}% Create new/discard old list
+\begin{center}\begin{tabular}{>{\raggedleft}m{5cm}m{9cm}}%
+\toprule
+}
+
+\newcommand{\closedancestable}{%
+\DTLsort*{sortlabel}{danceslist}% Sort list
+\DTLforeach*{danceslist}{\name=name,\ruletext=ruletext}{%
+\textbf{\name}&\ruletext{}\DTLiflastrow{}{\tabularnewline}%
+}
+\tabularnewline\bottomrule
+\end{tabular}\end{center}%
+\DTLcleardb{danceslist}%
+}
+
+\newcommand{\adddance}[2]{%
+	\DTLnewrow{danceslist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{danceslist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{danceslist}{name}{#1}%
+	\DTLnewdbentry{danceslist}{ruletext}{#2}%
+}
+
+% Bone Chariot of the Ancient Giant
+
+\newcommand{\bonechariotprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\charioteercrew{} (2)%
+	&%
+	{\ChVal{2}}&%
+	{\ChVal{3}}&%
+	{\ChVal{3}}&%
+	{\ChVal{0}}&%
+	{\ChVal{2}}&%
+	\strut{\alphaorderlist{\aspenbow{} (5+),\halberd{}}}%
+	\tabularnewline%
+	\end{tabular}%
+}

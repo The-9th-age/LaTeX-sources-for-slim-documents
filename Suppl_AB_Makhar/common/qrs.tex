@@ -3,18 +3,22 @@
 
 \input{../Layout/AB_qrs.tex}
 
-\vfill
+\vspace*{10pt}
+
 \centeredsubtitle{\artilleryandshootingweapons}
 
 \startartillerytable
-\recurvebow{} & - & \distance{24} & 3 & 0/1 & 1 & \alphaorderlist{\quicktofire{}, \volleyfire{}},\par \recurvebowqrsdef{} \tabularnewline
-\hawthorncurse{} & - & \distance{18} & 3 [6] & 10 & 1 & \areaattack{1\timess{}5}\par\reload{}\par[\multiplewounds{}{} (\Dthree{})]\par\nonegativetohitmodifiers{} \tabularnewline
-\wildfireburst{} (\bow{}) & - & \distance{24} & 4 & 1 & 4 & \flamingattacks{},\newline \magicalattacks{},\newline \wildfireburstbonus{},\newline \alwayshitsonthreeplus{} \tabularnewline
-\giantrecurvebow{} &  & \distance{48} & 3 [6] & 10 & 1 & \areaattack{} (1\timess{}5),\par [\multiplewounds{D3}{}],\par \quicktofire{} \tabularnewline
-\fistofthemakhar{} & \catapult{} (4\timess{}4) & \distance{12--48} & 3 [7] & 0 [4] & 1 & [\multiplewounds{D3}{}],\par \quicktofire{} \tabularnewline
+\recurvebow{} & - & \distance{24} & 3 & 0/1 & 1 & \alphaorderlist{\quicktofire{},\volleyfire{}}\par \recurvebowqrsdef{} \tabularnewline
+\hawthorncurse{} & - & \distance{18} & 3 [6] & 10 & 1 & \alphaorderlistpar{\areaattack{1\timess{}5},\reload{},[\multiplewounds{}{} (\Dthree{})]}\par\nonegativetohitmodifiers{} \tabularnewline
+\wildfireburst{} (\bow{}) & - & \distance{24} & 4 & 1 & 4 & \alphaorderlistpar{\flamingattacks{},\magicalattacks{}}\par\wildfireburstbonus{}\par\alwayshitsonthreeplus{} \tabularnewline
+\giantrecurvebow{} &  & \distance{48} & 3 [6] & 10 & 1 & \alphaorderlistpar{\areaattack{} (1\timess{}5),[\multiplewounds{D3}{}],\quicktofire{}} \tabularnewline
+\fistofthemakhar{} & \catapult{} (4\timess{}4) & \distance{12--48} & 3 [7] & 0 [4] & 1 & \alphaorderlistpar{[\multiplewounds{D3}{}],\quicktofire{}} \tabularnewline
 \closeartillerytable
 
-\vfill
+\vspace*{10pt}
+
+\centeredsubtitle{\aimtable{}}
+
 \startaimtable
 \hawthorncurse{} & 3+ & \characters{} \tabularnewline
 \wildfireburst{} (\bow{}) & 3+ & \characters{} \tabularnewline

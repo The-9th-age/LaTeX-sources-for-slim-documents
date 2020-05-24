@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\dancersofyema{},
+	logo=special,
+	cost=200,
+	unitsize=10,
+	maxunitsize=30,
+	costpermodel=22,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\scoring{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\la{},\shield{}}, 
+	offensename=\dancerofyema{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{},\cultofyema{}},
+	offenseweapons={\hidebf{\gladiatorweapons}},
+	commandgroup={%
+		\champion{}=20,
+		\musician{}=20,
+		\standardbearer{}=20,
+		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{},
+	},
+	options={%
+		\textbf{\cultisttroupe{}}\newline {(\zerotoXunitsperarmy{1}, \zerotoXmodelsperunit{15})}=\free{},
+	},
+	modelrulesdef={%
+		\modelruledef{\gladiatorweapons}{\ruletype{\closecombatweapon}\gladiatorweaponsdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\cultisttroupe}{\ruletype{\universalrule}\cultisttroupedef}
+	},
+}% END UNIT ENTRY

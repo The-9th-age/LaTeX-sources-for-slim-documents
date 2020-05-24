@@ -79,7 +79,7 @@
 \newcommand{\refs}{*}
 \newcommand{\refsbis}{*}
 \newcommand{\refsB}{$^{\dagger}$}
-\newcommand{\refslBbis}{$^{\dagger}$}
+\newcommand{\refsBbis}{$^{\dagger}$}
 \DeclareSIUnit[number-unit-product = {}]{\inch}{″}
 \DeclareSIUnit[number-unit-product = {}]{\foot}{′}
 \newcommand{\plusone}{+1} % still used?
@@ -115,7 +115,11 @@ $\rangle$%
 \newcommand{\optionnewlineindent}{\hspace*{0.3cm}}
 
 \newlength{\lengthbeforemodelsize}
-\setlength{\lengthbeforemodelsize}{6.5cm}
+\ifundef{\languageisrussian}{%
+	\setlength{\lengthbeforemodelsize}{6.5cm}
+}{%
+	\setlength{\lengthbeforemodelsize}{5.5cm}
+}
 \newlength{\lengthbeforemodelsizetwologos}
 
 \newlength{\lengthoftheptsblock}
@@ -128,14 +132,24 @@ $\rangle$%
 
 %%% Language specific %%%
 
+\newcommand{\onlyinenglish}[1]{#1}%
+\ifundef{\languageisenglish}{%
+	\renewcommand{\onlyinenglish}[1]{}
+}{}
+
 \ifundef{\DEnewline}{%
 	\newcommand{\DEnewline}{}% defined to \newline when language is DE
+}{}%
+
+\ifundef{\RUnewline}{%
+	\newcommand{\RUnewline}{}% defined to \newline when language is DE
 }{}%
 
 \ifundef{\languageisfrench}{%
 	\newcommand{\onlyinfrench}[1]{}%
 	\newcommand{\frenchsmallcharacs}[1]{#1}%
 }{%
+	\setlist[itemize]{label=--}%
 	\newcommand{\onlyinfrench}[1]{#1}%
 	\newcommand{\frenchsmallcharacs}[1]{{\normalfontsize#1}}%
 }

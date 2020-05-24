@@ -1,7 +1,4 @@
 
-\def\impcannonruleone{\textbf{\areaattack{1\timess{}5}}}
-\def\impcannonruletwo{[\textbf{\multiplewounds{\Dthree{}+1, \clippedwings{}}{}}]}
-
 \unitentry{%
 	name=\arty{},
 	logo=cannonballs,
@@ -29,7 +26,7 @@
 	optionalmodelrulesdef={%
 		\modelruledef{\impcannon}{\ruletype{\artilleryweapon}\impcannondef%
 			\begin{itemize}
-				\item \textbf{\cannon{}}, \range{72}, \shots{1}, \St{} 4 [10], \AP{} 0 [10], \alphaorderlist{\impcannonruleone{}, \impcannonruletwo{}}%
+				\item \textbf{\cannon{}}, \range{72}, \shots{1}, \St{} 4 [10], \AP{} 0 [10], \alphaorderlistbf{\areaattack{1\timess{}5},{[\multiplewounds{\Dthree{}+1, \clippedwings{}}{}]}}%
 				\item \textbf{\volleygun{}}, \range{12}, \shots{2D6}, \St{} 4, \AP{} 4%
 			\end{itemize}%
 		}
@@ -37,7 +34,7 @@
 			\textbf{\volleygun{}}, \range{24}, \shots{3D6\timess{}2}, \St{} 5, \AP{} 3.%
 		}
 		\modelruledef{\impmortar}{\ruletype{\artilleryweapon}%
-			\textbf{\catapult{6\timess{}6}}, \range{12--48}, \shots{1}, \St{} 3 [6], \AP{} 1 [4], [\textbf{\multiplewounds{\Dthree{}}{}}].%
+			\textbf{\catapult{6\timess{}6}}, \range{12--48}, \shots{1}, \St{} 3 [6], \AP{} 1 [4], \textbf{[\multiplewounds{\Dthree{}}{}]}.%
 		}
 		\modelruledef{\improcket}{\ruletype{\artilleryweapon}%
 			\textbf{\catapult{1\timess{}1}}, \range{15--48}, \shots{3}, \St{} 5, \AP{} 3, \textbf{\multiplewounds{\Dthree{}}{}}.\newline%
