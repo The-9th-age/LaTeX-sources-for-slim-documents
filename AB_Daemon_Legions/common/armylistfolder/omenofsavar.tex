@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\omenofsavar{},
+	logo=character,
+	optionallogo=character_bird,
+	categorynote=\charactermountnote{\avesinitials}{\aves},
+	cost=490,
+	unitsize=1,
+	type=\beast{},
+	size=\heightstandard{},
+	maxunitsperarmy=3,
+	basesize=50\timess{}50,
+	global@Ad=6,
+	global@Ma=18,
+	global@Di=9,
+	globalrules={\fear{},\supernal{},\fearless{},\hidebf{\divineright},\wizardapprentice{},\hidebf{\dominionofpride}},
+	defense@HP=4,
+	defense@Df=7,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=6+,
+	printAeg=defined,
+	defenserules={\omenofsavaraegis{}},
+	offensename=\omenofsavar{},
+	offense@At=\Dsix{}+2,
+	offense@Of=\Dsix{}+5,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=6,
+	magic={\wizardadept{}=75,\wizardmaster{}=225,},
+	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy},
+	options={%
+		\ifgeneralmusttakegreaterdominion{}=40,
+		\manifestationsoffatherchaosandpride{}=\upto{}150,
+	},
+	mounts={%
+		\throneofoverwhelmingsplendour{} (\avesinitials{})=175,
+	},
+	modelrulesdef={%
+		\modelruledef{\divineright}{\ruletype{\universalrule}\divinerightdef}
+		\modelruledef{\dominionofpride}{\ruletype{\universalrule}\dominionofpridedef}
+	},
+} % END UNIT ENTRY

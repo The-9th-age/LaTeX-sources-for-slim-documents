@@ -6,12 +6,14 @@
 		\splitatstickto{#1}{\prefixforsorting}{\actualname}%
 		\pdfstringdef\textwithoutformatting{#1}%
 		\pdfsubstitute\textwithoutformatting{<STICKTO<}{}%
+		\pdfsubstitute\textwithoutformatting{[}{}%
 		\pdfsubstitute\textwithoutformatting{'}{}%
 		\pdfsubstitute\textwithoutformatting{ }{}%
 		\dolanguagespecificsubstitute{}%
 		\sortitem{\textwithoutformatting}{\actualname}%	
 	}{%
 	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{[}{}%
 	\pdfsubstitute\textwithoutformatting{'}{}%
 	\pdfsubstitute\textwithoutformatting{ }{}%
 	\dolanguagespecificsubstitute{}%
@@ -26,6 +28,7 @@
 		\splitatstickto{#1}{\prefixforsorting}{\actualname}%
 		\pdfstringdef\textwithoutformatting{#1}%
 		\pdfsubstitute\textwithoutformatting{<STICKTO<}{}%
+		\pdfsubstitute\textwithoutformatting{[}{}%
 		\pdfsubstitute\textwithoutformatting{'}{}%
 		\pdfsubstitute\textwithoutformatting{ }{}%
 		\dolanguagespecificsubstitute{}%
@@ -43,6 +46,7 @@
 		\sortitemwithcost{\textwithoutformatting}{\actualname}{\costwithoutformatting}%
 	}{%
 	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{[}{}%
 	\pdfsubstitute\textwithoutformatting{'}{}%
 	\pdfsubstitute\textwithoutformatting{ }{}%
 	\dolanguagespecificsubstitute{}%
