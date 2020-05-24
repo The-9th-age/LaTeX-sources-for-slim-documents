@@ -7,8 +7,7 @@
 	maxunitsperarmy=3,
 	type=\infantry{},
 	size=\sizegigantic{},
-	basesize=50x75,
-	scoring=no,
+	basesize=50\timess{}75,
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=8,
@@ -25,6 +24,7 @@
 	offense@Ag=3,
 	offenserules={\textbf{\rage}},
 	options={%
+		\textbf{\bigbrother}=35,
 		\onechoiceonlyACO{%
 			\textbf{\beerbarrel}=20,
 			\textbf{\giantclub}=30,
@@ -36,9 +36,10 @@
 		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
 	},
 	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
 		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
 		\modelruledef{\uprootedtree{}}{\ruletype{\closecombatweapon{}}\uprootedtreedef{}}
 		\modelruledef{\beerbarrel{}}{\ruletype{\shootingweapon{}}\beerbarreldef{}}%
 	},%
 	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
-} % END UNIT
+} % END UNIT ENTRY

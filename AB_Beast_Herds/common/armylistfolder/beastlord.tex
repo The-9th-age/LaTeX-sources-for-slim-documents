@@ -6,8 +6,7 @@
 	unitsize=1,
 	type=\infantry{},
 	size=\sizestandard{},
-	basesize=25x25,
-	scoring=no,
+	basesize=25\timess{}25,
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=9,
@@ -16,16 +15,16 @@
 	defense@Df=6,
 	defense@Re=5,
 	defense@Arm=0,
-	defensearmour={\la},
+	defensearmour={\la{}},
 	offensename=\beastlord{},
 	offense@At=4,
 	offense@Of=6,
 	offense@St=5,
 	offense@AP=2,
 	offense@Ag=5,
-	offenserules={\primalinstinct},
+	offenserules={\primalinstinct{}},
 	options={%
-		\ifgeneral{}, \huntingcall{}=25,
+		\huntingcall{} \generalonly{}=25,
 		\specialequipmentallowance{}=\upto{}200,
 		\shield{}=5,
 		\ha{}=15,
@@ -39,6 +38,6 @@
 	},
 	mounts={%
 		\raidingchariot{}=90,
-		\razortuskchariot{}=125,
+		\razortuskchariot{}=125
 	},
 } % END UNIT ENTRY

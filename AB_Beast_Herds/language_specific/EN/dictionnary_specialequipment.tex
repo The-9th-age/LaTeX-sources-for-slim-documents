@@ -24,62 +24,66 @@
 \newcommand{\hawthorncursedef}{%
 \itemrestriction{Models without \ambush{} only.}
 \enchantmentrestriction{\hw{} enchantment.}
-Attacks made with this weapon gain \textbf{\devastatingcharge{+2 \St{}, +2 \AP{}}} and \textbf{\magicalattacks}. The weapon can be used as a Shooting Weapon (3+) and the following profile: \range{18}, \shots{1}, \St{} 3 [6], \AP{} 10, \textbf{\penetrating}, \textbf{\reload}, [\textbf{\multiplewounds{D3}{}}]. This Shooting Attack never suffers negative to-hit modifiers.
+Attacks made with this weapon gain \textbf{\devastatingcharge{+2 \St{}, +2 \AP{}}} and become \textbf{\magicalattacks}. The weapon can be used as a Shooting Weapon (3+) with the following profile: \range{18}, \shots{1}, \St{} 3 [6], \AP{} 10, \textbf{\areaattack{} (1\timess{}5)}, \textbf{\reload}, [\textbf{\multiplewounds{D3}{}}]. This Shooting Attack never suffers negative to-hit modifiers.%
 }
 \newcommand{\ancestralcarvingsdef}{%
-\itemrestriction{0-3 per Army. Soothsayers only.}
+\itemrestriction{0--3 per Army. Soothsayers only.}
 \enchantmentrestriction{\hw{} enchantment.}
-Attacks made with this weapon gain +2 Strength, +2 Armour Penetration, and \textbf{\magicalattacks}. The wielder gains +2 Attack Value and \textbf{\distracting} while using this weapon.
+Attacks made with this weapon gain +2 Strength and +2 Armour Penetration, and become \textbf{\magicalattacks}. The wielder gains +2 Attack Value and \textbf{\distracting} while using this weapon.%
 }
 \newcommand{\twinhungersdef}{%
 \enchantmentrestriction{\pw{} enchantment.}
-Attacks made with this weapon gain \textbf{\lethalstrike} and \textbf{\magicalattacks}. Whenever the wielder rolls a natural \result{6} to wound with a Close Combat Attack, and this attack successfully causes an unsaved wound, the bearer Recovers 1 Health Point at the end of the Initiative Step. No more than 1 Health Point may be recovered per Phase in this manner.
+Attacks made with this weapon gain \textbf{\lethalstrike} and become \textbf{\magicalattacks}. Whenever the wielder rolls a natural \result{6} to wound with a Close Combat Attack, and this attack successfully causes an unsaved wound, the bearer Recovers 1 Health Point at the end of the Initiative Step. No more than 1 Health Point may be recovered per phase in this manner.%
 }
 \newcommand{\fatalfollydef}{%
 \enchantmentrestriction{\beastaxe{} enchantment.}
-Attacks made with this weapon gain \textbf{\magicalattacks}. For each Close Combat Attack against the wielder that rolls a natural to-hit roll of \result{1}, the wielder must perform a Close Combat Attack at the same Initiative Step (this overrides the normal restriction that \beastaxe{} attacks always strike at Initiative Step 0). This must be allocated towards the model (or Health Pool) that rolled the \result{1} to hit. 
+Attacks made with this weapon become \textbf{\magicalattacks}. For each Close Combat Attack against the wielder that rolls a natural to-hit roll of \result{1}, the wielder must perform a Close Combat Attack at the same Initiative Step (this overrides the normal restriction that \beastaxe{} attacks always strike at Initiative Step 0). This must be allocated towards the model (or Health Pool) that rolled the \result{1} to hit.%
 }
 
 \newcommand{\aaghorsafflictiondef}{%
 \enchantmentrestriction{\la{} enchantment.}
-The wearer gains +1 Resilience and \textbf{\fortitude{4}}, but automatically fails all of its Armour Saves.
+The wearer gains +1 Resilience and \textbf{\fortitude{4}}, but automatically fails all of its Armour Saves.%
 }
 \newcommand{\tricksterscunningdef}{%
 \enchantmentrestriction{\la{} enchantment.}
-Successful to-wound rolls against the wearer must be rerolled.
+Successful to-wound rolls against the wearer must be rerolled.%
 }
 \newcommand{\obscuringfogdef}{%
 \enchantmentrestriction{\shield{} enchantment.}
-While using this Shield, enemy units in base contact with the bearer suffer -1 Agility. The bearer's unit does not benefit from +1 Agility for Charging. 
+While using this Shield, enemy units in base contact with the bearer suffer \minuss{}1 Agility. The bearer's unit does not benefit from +1 Agility for Charging.%
 }
 \newcommand{\wildformdef}{%
-\enchantmentrestriction{Suits of Armour enchantment.}
-At the start of the Melee Phase the bearer may choose to gain one of the following:\newline
-+1 Strength, +1 Armour Penetration, -1 Resilience \textbf{or}\newline 
--1 Strength, -1 Armour Penetration, +1 Resilience.\newline 
-Effects last until the end of the Melee Phase.
+\enchantmentrestriction{Suit of Armour enchantment.}
+At the start of the Melee Phase the bearer may choose to gain either of the following:%
+\wildformeffectslayout{%
+	+1 Strength, +1 Armour Penetration, and \minuss{}1 Resilience%
+}{%
+}{%
+	\minuss{}1 Strength, \minuss{}1 Armour Penetration, and +1 Resilience%
+}%
+The effects last until the end of the Melee Phase.%
 }
 
 \newcommand{\bannerofthewildherddef}{%
-\itemrestriction{0-3 per Army.}
-One use only. A single \bannerofthewildherd{} per unit may be activated at the start of each Round of Combat. For the duration of this Round of Combat, all Mongrels and Wildhorns in the bearer's unit gain +1 Strength and +1 Armour Penetration.
+\itemrestriction{0--3 per Army.}
+One use only. A single \bannerofthewildherd{} per unit may be activated at the start of each Round of Combat. For the duration of this Round of Combat, all Mongrels and Wildhorns in the bearer's unit gain +1 Strength and +1 Armour Penetration.%
 }
 
 \newcommand{\darkraindef}{%
-One use only. This item is automatically activated at the start of the first Game Turn (if the bearer is not on the Battlefield at this time, the item cannot be used). Its effects last until the end of this Game Turn. If the owning player has the second Player Turn, all Shooting Attacks suffer -2 to hit during the opponent's Shooting Phase. If the owning player has the first Player Turn, instead all Shooting Attacks suffer -1 to hit during the opponent's Shooting Phase.
+One use only. This item is automatically activated at the start of the first Game Turn (if the bearer is not on the Battlefield at this time, the item cannot be used). Its effects last until the end of this Game Turn. If the owner has the second Player Turn, all Shooting Attacks suffer \minuss{}2 to hit during the opponent's Shooting Phase. If the owner has the first Player Turn, instead all Shooting Attacks suffer \minuss{}1 to hit during the opponent's Shooting Phase.%
 }
 \newcommand{\pillagericondef}{%
-All friendly units within \distance{12} of the bearer comprised entirely of Razortusks or single model Chariots, excluding Characters, gain \textbf{\vanguard}.
+All friendly units within \distance{12} of the bearer comprised entirely of Razortusks or single model Chariots, excluding Characters, gain \textbf{\vanguard}.%
 }
 \newcommand{\seedofthedarkforestdef}{%
-One use only. Right before the battle (during step 7 of the Deployment Phase Sequence), the bearer must place a single Forest Terrain Feature (that must be no larger than \distance{10} in length and \distance{6} in width) on the Battlefield, not in contact with any other Terrain Feature, more than \distance{1} away from all enemy units, and with its centre within \distance{12} of the bearer. All friendly models inside the Dark Forest gain a +1 modifier to their casting rolls for Augment spells and Hex spells, and add (+1/+1) to the Power Level of  Totem Bound Spells they cast.
+One use only. Right before the battle (during step 7 of the Deployment Phase Sequence), the bearer must place a single Forest Terrain Feature that must be no larger than \distance{10} in length and \distance{6} in width on the Battlefield, not in contact with any other Terrain Feature, more than \distance{1} away from all enemy units, and with its centre within \distance{12} of the bearer. All friendly models inside this Forest Terrain Feature gain a +1 modifier to their casting rolls for Augment, Hex, and Universal spells, and add (+1/+1) to the Power Level of  Totem Bound Spells they cast.%
 }
 \newcommand{\inscribingburindef}{%
-While the bearer has more than half of its base inside a Forest Terrain Feature, all friendly units with more than half of their Footprint inside any Forest Terrain Feature on the Battlefield gain \textbf{\magicresistance{2}}.
+While the bearer has the centre of its base inside a Forest Terrain Feature, all friendly units with more than half of their models with the centre of their bases inside any Forest Terrain Feature on the Battlefield gain \textbf{\magicresistance{2}}.%
 }
 \newcommand{\eyeofdominancedef}{%
-Close Combat Attacks from Beast, Cavalry, and Construct models will \textbf{always} hit the bearer only on a roll of 6+. If the attacking model is a multipart model, only model parts with \harnessed{} are affected.
+Close Combat Attacks from Beast, Cavalry, and Construct models will \textbf{always} hit the bearer only on a roll of 6+. If the attacking model is a multipart model, only model parts with \harnessed{} are affected.%
 }
 \newcommand{\crownofhornsdef}{%
-The bearer, all models in its unit, and all units within range of its \commandingpresence{} (if applicable) automatically pass Discipline Tests taken due to \primalinstinct{}.
+The bearer's unit and all units within range of its \commandingpresence{} (if applicable) automatically pass Discipline Tests taken due to \primalinstinct{}.%
 }

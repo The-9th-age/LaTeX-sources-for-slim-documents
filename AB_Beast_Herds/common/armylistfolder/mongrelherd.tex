@@ -8,10 +8,10 @@
 	unitsize=20,
 	maxunitsize=50,
 	costpermodel=8,
+	scoring=yes,
 	type=\infantry{},
 	size=\sizestandard{},
-	basesize=20x20,
-	scoring=yes,
+	basesize=20\timess{}20,
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=6,
@@ -35,8 +35,7 @@
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{},
 	},
 	options={%
-		\ambush{}\refsymbol{}=20,
-		\refsymbol{}{\maxXmodelsperunit{30}, \zerotoXunitsperarmy{2}}=,
+		\ambush{} {(\zerotoXmodelsperunit{30}, \zerotoXunitsperarmy{2})}=20,
 		\spear{}=\free{},
 	},
 } % END UNIT ENTRY

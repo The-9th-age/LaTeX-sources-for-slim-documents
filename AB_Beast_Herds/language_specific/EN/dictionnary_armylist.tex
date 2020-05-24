@@ -73,9 +73,9 @@
 
 %% CHARACTERS
 
-% Beast Lord
+% Beast Lord and Beast Chieftain
 
-\newcommand{\ifgeneral}{If General}
+\newcommand{\generalonly}{(General only)}
 
 % Soothsayer
 
@@ -99,10 +99,15 @@ All friendly units within \distance{6} of one or more models with Hunting Horn g
 
 % Wildhorn Herd
 
-\newcommand{\ambushcategorynote}{This unit counts towards \ambushpredators{} if Ambushing.}
+\newcommand{\replaceshieldwith}{Replace \shield{} with:}
+\newcommand{\ambushcategorynote}{This unit additionally counts towards \ambushpredators{} if Ambushing.} %Also for Characters.
 
 
 %% SPECIAL
+
+% Feral Hounds
+
+\newcommand{\unitadditionallycounttowardsambush}{This unit additionally counts towards \ambushpredators{}.}
 
 % Longhorn Herd
 
@@ -114,7 +119,7 @@ All friendly units within \distance{6} of one or more models with Hunting Horn g
 \newcommand{\sleeperdef}{%
 The model follows the rules for \ambush{} with the following exceptions:
 \begin{smallitemize}%
-\item At the end of step 2 of the owner's Movement Phase Sequence (including the owner's Player Turn 1), the owner may decide for each of their \briarbeasts{} if they will enter the Battlefield or not (no dice rolls are required).
+\item Immediatly after step 2 of the owner's Movement Phase Sequence (including the owner's Player Turn 1), the owner may decide for each of their \briarbeasts{} if they will enter the Battlefield or not (no dice rolls are required).
 \item When the model enters the Battlefield, it must be placed completely within any Forest Terrain Feature instead of having its Rear Facing touch the Board Edge. If the model cannot be placed, it cannot enter the Battlefield this turn.
 \end{smallitemize}%
 }
@@ -126,7 +131,7 @@ The model follows the rules for \ambush{} with the following exceptions:
 
 \newcommand{\hurlattack}{Hurl Attack}
 \newcommand{\hurlattackdef}{%
-\textbf{\catapult{} (4)}. \range{6-36}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], \textbf{\divineattacks}, \textbf{\magicalattacks}, [\textbf{\multiplewounds{D3, \clippedwings{}}{}}]. A \cyclops{} that only Pivots (and moves no further) during its owner's Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.
+\textbf{\catapult{} (4\timess{}4)}. \range{6--36}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], \textbf{\divineattacks}, \textbf{\magicalattacks}, [\textbf{\multiplewounds{D3, \clippedwings{}}{}}]. A \cyclops{} that only Pivots (and moves no further) during its owner's Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.
 }
 
 % Gortarch
@@ -140,7 +145,7 @@ Whenever a \gortach{} inflicts an unsaved \lethalstrike{} (rolling a natural \re
 
 \newcommand{\auraofmadness}{Aura of Madness}
 \newcommand{\auraofmadnessdef}{%
-Enemy units within \distance{6} of one or more models with \auraofmadness{} suffer -1 Discipline.
+Enemy units within \distance{6} of one or more models with \auraofmadness{} suffer \minuss{}1 Discipline.
 }
 
 % Beast Giant
@@ -155,8 +160,12 @@ Enemy units within \distance{6} of one or more models with \auraofmadness{} suff
 The model gains \textbf{\drunkard} and \textbf{\strider{\forest}}. At the end of a friendly Movement Phase, if the model is in contact with a Forest Terrain Feature it may lose its current weapon (if applicable) and gain \uprootedtree{}.
 }
 \newcommand{\ragedef}{%
-Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers -1 Attack Value.
+Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers \minuss{}1 Attack Value.
 }
+
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\bigbrotherdef}{The model's Health Points are set to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.}
+
 \newcommand{\giantclubdef}{%
 Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.
 }
@@ -165,5 +174,5 @@ Attacks made with this weapon hit automatically and have their Strength \textbf{
 }
 \newcommand{\beerbarreldef}{%
 The bearer gains \textbf{\lootedbooze}. Once per game, the weapon may be used as a Shooting Weapon with the following profile: \newline
-\range{8}, \shots{1}, \St{} 4, \AP{} 0, \textbf{\areaattack{3}}, \textbf{\reload}, hits automatically. After being used as a Shooting Weapon, the bearer loses \lootedbooze{}.
+\range{8}, \shots{1}, \St{} 4, \AP{} 0, \textbf{\areaattack{3\timess{}3}}, \textbf{\reload}, hits automatically. After being used as a Shooting Weapon, the bearer loses \lootedbooze{}.
 }

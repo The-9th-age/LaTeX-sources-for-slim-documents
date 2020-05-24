@@ -8,10 +8,10 @@
 	unitsize=15,
 	maxunitsize=50,
 	costpermodel=10,
+	scoring=yes,
 	type=\infantry{},
 	size=\sizestandard{},
-	basesize=25x25,
-	scoring=yes,
+	basesize=25\timess{}25,
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=7,
@@ -20,6 +20,7 @@
 	defense@Df=4,
 	defense@Re=4,
 	defense@Arm=0,
+	defenserules=\shield{},
 	offensename=\wildhorn{},
 	offense@At=1,
 	offense@Of=4,
@@ -35,12 +36,11 @@
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{},
 	},
 	options={%
-		\ambush{}\refsymbol{}=20,
-		\refsymbol{}{\maxXmodelsperunit{25}, \zerotoXunitsperarmy{2}}=,
-		\onechoiceonly{%
-			\shield{}=1\permodel{},
+		\ambush{} {(\zerotoXmodelsperunit{25}, \zerotoXunitsperarmy{2})}=20,
+		\optionschoice{\replaceshieldwith{}}{\AlCoOrder{%
 			\pw{}=2\permodel{},
-		},
-		\throwingweapons{} (5+)=2\permodel{},
+			\throwingweapons{} (5+)=2\permodel{},
+			\pw{} \wordand{}\newline \suboptionindent{}\throwingweapons{} (5+)=4\permodel{},
+		}},
 	},
 } % END UNIT ENTRY

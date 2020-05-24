@@ -8,8 +8,7 @@
 	unitsize=1,
 	type=\infantry{},
 	size=\sizestandard{},
-	basesize=25x25,
-	scoring=no,
+	basesize=25\timess{}25,
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=8,
@@ -18,7 +17,7 @@
 	defense@Df=5,
 	defense@Re=5,
 	defense@Arm=0,
-	defensearmour={\la},
+	defensearmour={\la{}},
 	offensename=\beastchieftain{},
 	offense@At=3,
 	offense@Of=5,
@@ -29,7 +28,7 @@
 	options={%
 		\AlCoOrder{%
 			\ambush{} (\onfootonly{})=10,
-			\ifgeneral{}, \huntingcall{}=25,
+			\huntingcall{} \generalonly{}=25,
 			\bsb{}=50,
 			\greatertotembearer{}=85,
 		},
