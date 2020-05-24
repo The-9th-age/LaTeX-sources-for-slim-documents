@@ -2,10 +2,10 @@
 \unitentry{%
 	name=\eidolons{},
 	logo=special,
-	cost=225,
+	cost=\newrule{185},
 	unitsize=5,
 	maxunitsize=10,
-	costpermodel=45,
+	costpermodel=\newrule{33},
 	maxmodelsperarmy=18,
 	type=\beast{},
 	size=\sizestandard{},
@@ -40,11 +40,12 @@
 		\champion{}=120,
 	},
 	explicitoptions={%
+		\setexploption{\newrule{\scout{} (\zerotoXunitsperarmy{1})}}{\newrule{4\permodel{}}}
 		\manifestationonechoice{%
-			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=2\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}
 			\addsortedexploption{prename=chaos,hypertag=kaleidoscopicflesh,name=\kaleidoscopicflesh{},cost=5\permodel{}}
-			\addsortedexploption{prename=sloth,hypertag=auraofdespair,name=\auraofdespair{},cost=6\permodel{}}
-			\addsortedexploption{prename=chaos,hypertag=sorcerousantennae,name=\sorcerousantennae{},cost=45}
+			\addsortedexploption{prename=sloth,hypertag=auraofdespair,name=\auraofdespair{},cost=4\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=sorcerousantennae,name=\sorcerousantennae{},cost=35}
 		}
 	},
 }

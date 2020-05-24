@@ -4,15 +4,15 @@
 	logo=character,
 	optionallogo=character_monster,
 	categorynote=\charactermountnote{\legendarybeastsinitials}{\legendarybeasts},
-	cost=300,
+	cost=295,
 	unitsize=1,
 	type=\infantry{},
 	size=\sizestandard{},
 	basesize=25\timess{}25,
 	global@Ad=5,
 	global@Ma=10,
-	global@Di=8,
-	globalrules={\pathfavoured{}},
+	global@Di=9,
+	globalrules={\pathfavoured{},\newrule{\fearless{}}},
 	defense@HP=3,
 	defense@Df=7,
 	defense@Re=5,
@@ -26,19 +26,19 @@
 	offense@AP=2,
 	offenserules={},
 	options={%
-		\bsb{}=50,
+		\newrule{\trophyrack{}}=\newrule{25},
 		\specialequipmentallowance{}=\upto{}150,
 		\allowanceifgeneral{}=\upto{}200,
 		\maytakegifts{}=\nolimit{},
 		\replaceshieldwithspikedshield{}=15,
 		\mustchoosefavour{%
-            \envy{}=20,
+            \envy{}=\newrule{25},
             \gluttony{}=25,
-            \greed{}=40,
+            \greed{}=\newrule{30},
             \lust{}=\free{},
-            \pride{}=30,
+            \pride{}=40,
             \sloth{}=45,
-            \wrath{}=10,
+            \wrath{}=\newrule{20},
 		},
 		\onechoiceonlyACO{%
             \pw{}=10,
@@ -49,22 +49,20 @@
     },
 	mounts={%
           \blacksteed{}=120,
-          \wardais{}=125,
-          \scythedskywheel{}=130,
+          \wardais{}=60,
+          \scythedskywheel{}=\newrule{120},
           \darkchariot{}=130,
-          \karkadan{}=105,
-          \chimera{} (\legendarybeastsinitials{})=180,
-          \wastelanddragon{} (\legendarybeastsinitials{}) \only{\general}=\void{420},
-          \suboptionindent{}\withoutsloth{}=420,
-           \suboptionindent{}\withsloth{}=510,
+          \karkadan{}=\newrule{95},
+          \chimera{} (\legendarybeastsinitials{})=170,
+          \wastelanddragon{} (\legendarybeastsinitials{}) \only{\general}=\newrule{390},
 	},
 	endtext={%
 		\giftsofthedarkgodslist{\giftsofdarkgodsnote}{%
-			\giftsofthedarkgodslistentry{\daemonicwings}{100}{\daemonicwingsrule}
+			\giftsofthedarkgodslistentry{\daemonicwings}{\newrule{90}}{\daemonicwingsrule}
 			\giftsofthedarkgodslistentry{\entropicaura}{60}{\entropicaurarule}
 			\giftsofthedarkgodslistentry{\luckofthedarkgods}{60}{\luckofthedarkgodsrule}
 			\giftsofthedarkgodslistentry{\idolofspite}{60}{\idolofspiterule}
-			\giftsofthedarkgodslistentry{\masterofdestruction}{40}{\masterofdestructionrule}
+			\giftsofthedarkgodslistentry{\darkprelate}{60}{\darkprelaterule}
 		}
 	},
 } % END UNIT ENTRY

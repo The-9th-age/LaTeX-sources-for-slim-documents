@@ -4,7 +4,7 @@
 	logo=character,
 	optionallogo=character_bird,
 	categorynote=\charactermountnote{\avesinitials}{\aves},
-	cost=395,
+	cost=490,
 	unitsize=1,
 	type=\beast{},
 	size=\sizestandard{},
@@ -13,9 +13,9 @@
 	global@Ad=6,
 	global@Ma=18,
 	global@Di=9,
-	globalrules={\fear{},\supernal{},\fearless{},\textbf{\divineright},\wizardapprentice{}},
+	globalrules={\fear{},\supernal{},\fearless{},\textbf{\divineright},\wizardapprentice{},\textbf{\dominionofpride}},
 	defense@HP=4,
-	defense@Df=8,
+	defense@Df=7,
 	defense@Re=5,
 	defense@Arm=0,
 	defense@Aeg=6+,
@@ -30,16 +30,14 @@
 	magic={\wizardadept{}=75,\wizardmaster{}=225,},
 	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy},
 	options={%
-		\ifgeneralmusttakedominionofpride{}=40,
+		\ifgeneralmusttakegreaterdominion{}=40,
 		\manifestationsoffatherchaosandpride{}=\upto{}150,
 	},
 	mounts={%
-		\throneofoverwhelmingsplendour{} (\avesinitials{})=330,
+		\throneofoverwhelmingsplendour{} (\avesinitials{})=\newrule{185},
 	},
 	modelrulesdef={%
 		\modelruledef{\divineright}{\ruletype{\universalrule}\divinerightdef}
-	},
-	optionalmodelrulesdef={%
 		\modelruledef{\dominionofpride}{\ruletype{\universalrule}\dominionofpridedef}
 	},
 } % END UNIT ENTRY

@@ -11,8 +11,8 @@
 	basesize=40\timess{}40,
 	global@Ad=6,
 	global@Ma=12,
-	global@Di=8,
-	globalrules={\pathexiled{}},
+	global@Di=9,
+	globalrules={\pathexiled{},\textbf{\masterofdestruction{}},\newrule{\fearless{}}},
 	defense@HP=4,
 	defense@Df=6,
 	defense@Re=5,
@@ -26,17 +26,20 @@
 	offense@AP=2,
 	offenserules={},
 	options={%
-		\bsb{}=50,
+		\newrule{\trophyrack{}}=\newrule{25},
 		\specialequipmentallowance{}=\upto{}150,
 		\allowanceifgeneral{}=\upto{}200,
-		\replaceshieldwithspikedshield{}=20,
+		\replaceshieldwithspikedshield{}=\newrule{25},
 		\onechoiceonlyACO{%
 			\pw{}=10,
-			\halberd{}=15,
-			\gw{}=25,
+			\halberd{}=30,
+			\gw{}=40,
 		},
 	},
 	mounts={%
-          \wastelandbehemoth{} (\legendarybeastsinitials{})=260,
+          \wastelandbehemoth{} (\legendarybeastsinitials{})=\newrule{225},
+	},
+	modelrulesdef={%
+		\modelruledef{\masterofdestruction}{\masterofdestructiondef}
 	},
 } % END UNIT ENTRY

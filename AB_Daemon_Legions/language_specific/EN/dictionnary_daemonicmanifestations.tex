@@ -20,7 +20,8 @@ Note that Guiding and non-Guiding Manifestations are considered to be the same M
 
 \newcommand{\manifestationsoffatherchaos}{Manifestations of Father\newline Chaos}
 
-\newcommand{\dexteroustentacles}{Dextrous Tentacles}
+\newcommand{\dexteroustentacles}{Dextrous Tentacles}% deprecated
+\newcommand{\dextroustentacles}{Dextrous Tentacles}
 \newcommand{\livingshield}{Living Shield}
 \newcommand{\chitinousscales}{Chitinous Scales}
 \newcommand{\centipedelegs}{Centipede Legs}
@@ -28,7 +29,8 @@ Note that Guiding and non-Guiding Manifestations are considered to be the same M
 \newcommand{\sorcerousantennae}{Sorcerous Antennae}
 \newcommand{\markoftheeternalchampion}{Mark of the Eternal Champion}
 \newcommand{\chargedtendrils}{Charged Tendrils}
-\newcommand{\tarskin}{Tar Skin}
+\newcommand{\tarskin}{Mirrored Scales}% deprecated
+\newcommand{\mirroredscales}{Mirrored Scales}
 \newcommand{\darkhide}{Dark Hide}
 \newcommand{\hammerhand}{Hammer Hand}
 \newcommand{\ironhusk}{Iron Husk}
@@ -44,56 +46,54 @@ The model \guidingversion{and each \rnf{} model in its unit} gains +1 Agility.%
 }
 \newcommand{\livingshielddef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\parry}.%
+The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\parry}.\newpage% remove \newpage when translating
 }
 \newcommand{\chitinousscalesdef}{%
 The model gains +2 Armour, to a maximum of 3.%
 }
 \newcommand{\centipedelegsdef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-The model \guidingversion{and each \rnf{} model in its unit} gains +\distance{1} Advance Rate.\newpage% remove \newpage when translating
+The model \guidingversion{and each \rnf{} model in its unit} gains +\distance{1} Advance Rate.%
 }
 \newcommand{\unnaturalrootsdef}{%
-When a unit with one or more instances of this Manifestation rolls a Break Test or Combat Reform test, the Combat Score difference counts as 2 less, to a minimum of 0 (this has no effect on other units Engaged in the same Combat).%
+\newrule{A side with one or more units with one or more instances of Unnatural Roots Engaged in Combat at the end of the Round of Combat adds +1 to its Combat Score.}%
 }
 \newcommand{\sorcerousantennaedef}{%
 \itemrestriction{0--2 per Army.}
-During Siphon the Veil in each of your Magic Phases, each unit with one or more instances of this Manifestation adds a Veil Token to your Veil Token pool.
+\newrule{At the start of} Siphon the Veil in each of your Magic Phases, \newrule{choose a single model part in} each unit with one or more instances of this Manifestation. \newrule{The chosen model part gains \textbf{\channel{} (1)} until the end of the Magic Phase.}%
 }
 \newcommand{\markoftheeternalchampiondef}{%
-This Manifestation can only be taken by single model units or units with a Champion.  If given to a unit with a Champion, only the Champion is affected by the Manifestation.\newline
-If the affected model is not a Wizard, it gains \textbf{\wizardapprentice} and must select \spellformat{\spearofinfinity}{\hereditaryspell}. If the affected model is already a Wizard, it knows \spellformat{\spearofinfinity}{} in addition to its other spells and cannot select it during Spell Selection.%
+If the \newrule{bearer} is not a Wizard, it becomes a \textbf{\wizardapprentice} that does not select spells as normal but always knows \spellformat{\spearofinfinity}{\hereditaryspell}. If the \newrule{bearer} is already a Wizard, it knows \spellformat{\spearofinfinity}{} in addition to its other spells and cannot select it during Spell Selection.%
 }
 \newcommand{\chargedtendrilsdef}{%
-At the end of Siphon the Veil, the owner may store one additional Veil Token, up to a maximum of 6.%
+At the end of Siphon the Veil, each unit with one or more instances of this Manifestation allows the owner to store one additional Veil Token, up to a maximum of 6.%
 }
-\newcommand{\tarskindef}{%
-\itemrestriction{Dominant.}
-Enemy units in base contact with one or more models with this Manifestation suffer \minuss{}1 Attack Value.%
+\newcommand{\mirroredscalesdef}{%
+\itemrestriction{\guidingversion{Dominant}.}
+\newrule{Each Close Combat Attack allocated towards the bearer \guidingversion{and \rnf{} models in its unit} that rolls a natural \result{1} on its to-hit roll hits the attacking model's Health Pool instead.}%
 }
 \newcommand{\darkhidedef}{%
-The model gains \textbf{\scout} with the following exception: it must be deployed fully inside the owner's Deployment Zone.%
+The model gains \textbf{\scout} with the following exception: it must be deployed fully inside the owner's Deployment Zone, and the owner must have deployed at least one unit normally.%
 }
 \newcommand{\hammerhanddef}{%
-The bearer gains +1 Attack Value.%
+The model gains +1 Attack Value.%
 }
 \newcommand{\ironhuskdef}{%
-\itemrestriction{Cannot be taken by Gigantic models.}
-The model gains +1 Resilience.%
+The model\newrule{'s} Resilience \newrule{is \textbf{set} to 6}.%
 }
 \newcommand{\brimstonesecretionsdef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-Attacks made against the model \guidingversion{and against \rnf{} models in friendly units within \distance{6} of the model} no longer are \divineattacks{} (if they were).%
+Attacks made against the model \guidingversion{and against \rnf{} models in \newrule{its unit}} no longer are \divineattacks{} (if they were).%
 }
 \newcommand{\thirdeyedef}{%
-When a Learned Spell that targets the model or its unit is successfully cast, the bearer may cast that spell as a Bound Spell with Power Level (5/8) in the following Magic Phase.%
+\newrule{At the beginning of each friendly Charge Phase, draw the Flux Card for that Player Turn instead of step 2 of the Magic Phase Sequence.}%
 }
 \newcommand{\clovenhoovesdef}{%
 The model gains \textbf{\impacthits{} (D3)}. These Impact Hits are resolved with Strength 5 and Armour Penetration 2.%
 }
 \newcommand{\witheringvapourdef}{%
 \itemrestriction{0--2 per Army.}
-The model gains \textbf{\breathattack{\St{} 3, \AP{} 2}}.\columnbreak% remove the columnbreak when translating
+The bearer gains a \textbf{\breathattack{\St{} 3, \AP{} 2}}.%
 }
 \newcommand{\kaleidoscopicfleshdef}{%
 \itemrestriction{\guidingversion{Dominant}.}
@@ -115,11 +115,11 @@ The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\hard
 The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\poisonattacks}. If the model's Close Combat Attacks {or those of \rnf{} models in its unit} already were \poisonattacks{} from another source than this Manifestation, the attack will automatically wound on successful to-hit rolls of 5+, instead of 6+.%
 }
 \newcommand{\greenfireeyesdef}{%
-One use only. May be activated when the model's unit fails a Charge Range roll. If all models in the unit activate their \greenfireeyes{}, the Charge Range roll may be rerolled.%
+One use only. \newrule{Must be activated w}hen the model's unit fails \newrule{its first} Charge Range roll\newrule{. The unit must} reroll the Charge Range roll.%
 }
 \newcommand{\piercingspikedef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-Close Combat Attacks against enemy models with an Armour value of 3 or higher made by the model \guidingversion{and each \rnf{} model in its unit} gain +1 Strength.%
+Close Combat Attacks\removedrule{ against enemy models with an Armour value of 3 or higher} made by the model \guidingversion{and each \rnf{} model in its unit} gain\removedrule{ +1 Strength and} +1 Armour Penetration.%
 }
 
 
@@ -141,8 +141,8 @@ The model \guidingversion{and each \rnf{} model in its unit} must reroll failed 
 One use only. Must be activated the first time the bearer's unit performs a Post-Combat Pivot or a Post-Combat Reform. The model \guidingversion{and each \rnf{} model in its unit} gains +1 Strength and +1 Armour Penetration until the end of the game.%
 }
 \newcommand{\broodmotherdef}{%
-\itemrestriction{Cannot be taken by Gigantic models. Dominant.}
-At the end of each Round of Combat during which the model's unit was Engaged in Combat, roll a D6 and add the number of unsaved wounds caused by Close Combat Attacks from models with \broodmother{} \guidingversion{and \rnf{} model in the bearer's unit}. On a score of 7 or more, the unit Raises D3 Health Points.%
+\itemrestriction{\removedrule{Cannot be taken by Gigantic models. }Dominant.}
+At the end of each Round of Combat during which the model's unit was Engaged in Combat, \newrule{and during which the model} \guidingversion{and \rnf{} models in the bearer's unit} \newrule{caused at least three Health Point losses with Close Combat Attacks, the unit Raises D3 Health Points}.%
 }
 
 
@@ -152,18 +152,19 @@ At the end of each Round of Combat during which the model's unit was Engaged in 
 \newcommand{\manifestationsofgreed}{Manifestations of Greed}
 
 \newcommand{\graspingproboscis}{Grasping Proboscis}
-\newcommand{\diviningsnout}{Divining Stout}
+\newcommand{\diviningsnout}{Divining Snout}
 \newcommand{\smotheringcoils}{Smothering Coils}
 
 \newcommand{\graspingproboscisdef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-At the end of each Round of Combat during which the model's unit was Engaged in Combat, roll a D6 and add the number of unsaved wounds caused by Close Combat Attacks from models with \graspingproboscis{} \guidingversion{and \rnf{} model in the bearer's unit}. On a score of 6 or more, you gain one Veil Token to your Veil Token pool.%
+At the end of each Round of Combat during which the model's unit was Engaged in Combat, \newrule{and the model \guidingversion{and \rnf{} model in the bearer's unit} caused at least three Health Point losses by Close Combat Attacks,} you gain \newrule{D3} Veil Token to your Veil Token pool.%
 }
 \newcommand{\diviningsnoutdef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-The model \guidingversion{and each \rnf{} model in its unit} must reroll failed Charge Range rolls when rolling for Charge Range against a unit that contains one Special Item. In addition, if the Charged unit contains more than one Special Item, all models with \diviningsnout{} also gain +\distance{2} Advance Rate for the Charge Range roll. The effects only apply if all models in the unit are affected by \diviningsnout{}.%
+\newrule{When Charging a unit that contains more than one Special Item, t}he model \guidingversion{and each \rnf{} model in its unit} must reroll failed Charge Range rolls when rolling for Charge Range \newrule{and gains +\distance{2} Advance Rate for the Charge Range roll}. The effects only apply if all models in the unit are affected by \diviningsnout{}.%
 }
 \newcommand{\smotheringcoilsdef}{%
+\itemrestriction{\guidingversion{Dominant}.}
 The model \guidingversion{and each \rnf{} model in its unit} gains +1 to-wound with Close Combat Attacks against models with Scoring.%
 }
 
@@ -183,7 +184,7 @@ The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\deva
 }
 \newcommand{\mesmerisingplumagedef}{%
 \itemrestriction{Dominant.}
-Friendly units (including the bearer's unit) Engaged in the same Combat as one or more models with this Manifestation gain +1 Offensive Skill and +1 Defensive Skill while Engaged in that Combat.%
+\newrule{Enemy units in base contact with one or more models with this Manifestation suffer \minuss{}1 Offensive Skill and \minuss{}1 Defensive Skill.}%
 }
 \newcommand{\roaminghandsdef}{%
 \itemrestriction{\guidingversion{Dominant}.}
@@ -209,7 +210,7 @@ Discipline Tests taken by units with at least one model with this Manifestation 
 }
 \newcommand{\bronzebackbonedef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\hatred}. If the model's unit loses a Round of Combat, the model \guidingversion{and each \rnf{} model in its unit} must reroll failed to-hit rolls in the following Round of Combat.%
+\newrule{The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\hatred}.}%
 }
 
 
@@ -224,7 +225,7 @@ The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\hatr
 
 \newcommand{\segmentedshelldef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-When the bearer \guidingversion{or a \rnf{} model in its unit} suffers a wound from an attack with \multiplewounds{}{}, the number of wounds that it is multiplied into (due to \multiplewounds{}{}) is reduced by 1, to a minimum of 1.%
+When the model \guidingversion{or a \rnf{} model in its unit} suffers a wound from an attack with \multiplewounds{}{}, the number of wounds that it is multiplied into (due to \multiplewounds{}{}) is reduced by 1, to a minimum of 1.%
 }
 \newcommand{\auraofdespairdef}{%
 \itemrestriction{Dominant.}
@@ -232,7 +233,7 @@ Enemy units suffer \minuss{}\distance{2} Advance Rate to a minimum of 1 when rol
 }
 \newcommand{\chillingyawndef}{%
 \itemrestriction{Dominant.}
-Enemy units in base contact with one or more models with this Manifestation suffer \minuss{}3 Agility.%
+Enemy units in base contact with one or more models with this Manifestation suffer \minuss{}\newrule{2} Agility.%
 }
 
 
@@ -246,7 +247,8 @@ Enemy units in base contact with one or more models with this Manifestation suff
 \newcommand{\redhaze}{Red Haze}
 
 \newcommand{\incendiaryichordef}{%
-The model gains \textbf{\aegis{} (2+, against \flamingattacks{})}. All Melee Attacks (including Special Attacks) and Shooting Attacks made by models with \incendiaryichor{} become \textbf{\flamingattacks{}}.%
+\itemrestriction{\guidingversion{Dominant}.}
+The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\aegis{} (2+, against \flamingattacks{})}. All Melee Attacks (including Special Attacks) and Shooting Attacks made by \newrule{the} model with \incendiaryichor{} \guidingversion{and each \rnf{} model in its unit} become \textbf{\flamingattacks{}}. \newrule{The bearer \guidingversion{and each \rnf{} model in its unit} automatically fails all Fortitude Saves.}%
 }
 \newcommand{\whipcracktaildef}{%
 \itemrestriction{\guidingversion{Dominant}.}
@@ -254,5 +256,5 @@ The model \guidingversion{and each \rnf{} model in its unit} gains \textbf{\ligh
 }
 \newcommand{\redhazedef}{%
 \itemrestriction{\guidingversion{Dominant}.}
-This Manifestation may be activated at the start of any Round of Combat. All models in the same unit must activate it if one model does. When activated, the model's Close Combat Attacks \guidingversion{and those of \rnf{} models in its unit} gain +1 Strength and +1 Armour Penetration, but each of its attacks with a natural to-hit roll of \result{1} is distributed onto the bearer's unit. The effects last until the end of the Round of Combat.%
+\newrule{T}he model's Close Combat Attacks \guidingversion{and those of \rnf{} models in its unit} gain +1 Strength and +1 Armour Penetration, but each of its \newrule{Close Combat A}ttacks with a natural to-hit roll of \result{1} is distributed onto the bearer's unit.\removedrule{ The effects last until the end of the Round of Combat.}%
 }

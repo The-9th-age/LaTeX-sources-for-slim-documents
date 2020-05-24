@@ -2,10 +2,10 @@
 \unitentry{%
 	name=\imps{},
 	logo=core,
-	cost=235,
+	cost=215,
 	unitsize=10,
 	maxunitsize=25,
-	costpermodel=20,
+	costpermodel=15,
 	scoring=yes,
 	maxmodelsperarmy=40,
 	type=\beast{},
@@ -21,6 +21,7 @@
 	defense@Arm=0,
 	defense@Aeg=5+,
 	printAeg=defined,
+	defenserules={\impsaegis{}},
 	offensename=\imp{},
 	offense@At=1,
 	offense@Of=2,
@@ -35,9 +36,10 @@
 	},
 	explicitoptions={%
 		\manifestationonechoice{%
-			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=2\permodel{}}	
-			\addsortedexploption{prename=chaos,hypertag=darkhide,name=\darkhide{},cost=4\permodel}				
-			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},cost=30}
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}	
+			\addsortedexploption{prename=chaos,hypertag=darkhide,name=\darkhide{},cost=3\permodel}		
+			\addsortedexploption{prename=chaos,hypertag=chargedtendrils,name=\chargedtendrils{},cost=30}			
+			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},postname=~\newrule{\only{\champion}},cost=30}
 			\addsortedexploption{prename=chaos,hypertag=sourcerousantennae,name=\sorcerousantennae{},cost=45}	
 		}
 	},

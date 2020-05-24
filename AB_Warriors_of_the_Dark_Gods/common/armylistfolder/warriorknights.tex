@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\warriorknights{},
 	logo=special,
-	cost=240,
+	cost=\newrule{250},
 	unitsize=5,
 	maxunitsize=10,
 	maxunitsperarmy=5,
@@ -14,7 +14,7 @@
 	global@Ad=8,
 	global@Ma=14,
 	global@Di=8,
-	globalrules={\pathfavoured{},\scoring{}},
+	globalrules={\pathfavoured{},\scoring{},\newrule{\fearless{}}},
 	defense@HP=1,
 	defense@Df=5,
 	defense@Re=4,
@@ -34,23 +34,22 @@
 	offenseB@Ag=3,
 	offenserulesB={\harnessed{}},
 	options={%
-		\favouredchampionmustchoosefavour{\warriorriders}{%
-			\envy{}=8\permodel{},
+		\unitwithchampionmaychoosefavour{\warriorriders}{%
+			\envy{}=5\permodel{},
 			\gluttony{}=7\permodel{},
-			\greed{}=4\permodel{},
-			\lust{}=12\permodel{},
+			\greed{}=\newrule{5}\permodel{},
+			\lust{}=\newrule{11}\permodel{},
 			\pride{}=3\permodel{},
 			\sloth{}=8\permodel{},
 			\wrath{}=8\permodel{},
 		},
 		\onechoiceonlyACO{%
 			\gw{}=2\permodel{},
-			\lance{}=10\permodel{},
+			\lance{}=\newrule{8}\permodel{},
 		},%
 	},
 	commandgroup={%
-		\champion{}=20,
-		\alphaorderstickto{\champion{}=20}\suboptionindent{}\upgradeto{} \favouredchampion{}=20,
+		\champion{}=35,
 		\musician{}=20,
 		\standardbearer{}=20,
 		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\bannerallowance{}=\nolimit{}%

@@ -14,3 +14,11 @@
 	\hspace*{-18pt}\raisebox{-.2\height}{\makebox[18pt][c]{\includegraphics[height=10pt]{{pics/#1_5}.pdf}}}%
 	{\fontsize{1}{1.2}\selectfont \textcolor{white}{-}}%This part avoid a huge bug in the layout
 }
+
+%%% Morphlings (Veil Serpents)
+
+\newcommand{\startmorphlingslist}{\begin{itemize}[label={}, parsep=0cm, labelindent=0cm, labelwidth=0cm, noitemsep, topsep=0em, leftmargin=0.3cm]}
+
+\newcommand{\closemorphlingslist}{\end{itemize}}
+
+\newcommand{\newmorphlingentry}[3]{\item \prenameformat{#1}\hyperlink{#2}{#3}}

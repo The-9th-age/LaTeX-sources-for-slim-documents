@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\hellmaw{},
 	logo=monster,
-	cost=280,
+	cost=\newrule{270},
 	unitsize=1,
 	maxunitsperarmy=2,
 	type=\construct{},
@@ -11,7 +11,7 @@
 	global@Ad=5,
 	global@Ma=10,
 	global@Di=5,
-	globalrules={\fearless{}, \supernal{},\textbf{\gateway}},
+	globalrules={\fearless{},\supernal{},\textbf{\gateway}},
 	defense@HP=5,
 	defense@Df=3,
 	defense@Re=5,
@@ -25,8 +25,8 @@
 	offense@AP=2,
 	options={%
 		\onechoiceonly{%
-			\oneominousgateway{}=50,
-			\twoominousgateways{}=150,%
+			\oneominousgateway{}=\newrule{75},
+			\twoominousgateways{}=\newrule{175},%
 		},
 	},
 	modelrulesdef={\modelruledef{\gateway}{\ruletype{\universalrule}\gatewaydef}},

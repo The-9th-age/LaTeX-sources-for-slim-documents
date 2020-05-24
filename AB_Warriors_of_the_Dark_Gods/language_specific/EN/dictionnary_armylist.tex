@@ -109,10 +109,10 @@
 % Exalted Herald
 
 \newcommand{\manifestation}{Manifestation}
-\newcommand{\manifestationdef}{During Spell Selection, each Exalted Herald must choose two different Manifestations from the list below and apply the effects during the game. The model knows the spells indicated on the chosen Manifestations. This replaces the normal rules for Spell Selection connected to being a Wizard Adept. In addition, \spellformat{\divinationattribute}{\divination} becomes the Attribute Spell for all non-Bound Spells cast by the model, replacing the spells' corresponding Attribute where applicable.}
+\newcommand{\manifestationdef}{During Spell Selection, each Exalted Herald must choose two different Manifestations from the list below and apply the effects during the game. The model must select 3 spells out of the spells indicated for the chosen Manifestations, \spellformat{\thaumaturgyspellfive}{\thaumaturgy}, and \spellformat{\hellfire}{\hereditaryspell}. This replaces the normal rules for Spell Selection connected to being a Wizard Adept. In addition, \spellformat{\divinationattribute}{\divination} becomes the Attribute Spell for all non-Bound Spells cast by the model, replacing the spells' corresponding Attribute where applicable.}
 
 \newcommand{\theexaltedheraldgains}{The Exalted Herald gains}
-\newcommand{\theexaltedheraldknows}{The Exalted Herald knows}
+\newcommand{\theexaltedheraldknows}{The Exalted Herald has access to}
 
 % The manifestations will be automatically sorted in alphabetical order.
 \newcommand{\abidingspirit}{Abiding Spirit}
@@ -124,12 +124,12 @@
 \newcommand{\brandofthedragonspells}{\spellformat{\occultismspellfour}{\occultism}.}
 
 \newcommand{\emissaryofchaos}{Emissary of Chaos}
-\newcommand{\emissaryofchaosrule}{+1 Discipline and \textbf{\terror}.}
-\newcommand{\emissaryofchaosspells}{\spellformat{\thaumaturgyspellthree}{\thaumaturgy} and \spellformat{\thaumaturgyspellfive}{\thaumaturgy}.}
+\newcommand{\emissaryofchaosrule}{\textbf{\stompattacks{} (D6)}, \textbf{\stubborn{}}, \textbf{\tall{}}, and \textbf{\terror}.}
+\newcommand{\emissaryofchaosspells}{\spellformat{\occultismspellone}{\occultism}.}
 
 \newcommand{\sorcererimmortal}{Sorcerer Immortal}
 \newcommand{\sorcererimmortalrule}{\textbf{\veilwalker}.}
-\newcommand{\sorcererimmortalspells}{\spellformat{\occultismspellfive}{\occultism} and \spellformat{\occultismspellsix}{\occultism}. May replace one of its Learned Spells with \spellformat{\hellfire}{\hereditaryspell} during Spell Selection.}
+\newcommand{\sorcererimmortalspells}{\spellformat{\occultismspellfive}{\occultism} and \spellformat{\occultismspellsix}{\occultism}.}
 
 \newcommand{\unholyavatar}{Unholy Avatar}
 \newcommand{\unholyavatarrule}{+1 Strength, +1 Armour Penetration, and \textbf{\divineattacks}.}
@@ -139,7 +139,7 @@
 
 \newcommand{\allowanceifgeneral}{\suboptionindent{}If General}
 \newcommand{\maytakegifts}{A single \textbf{Gift of the Dark Gods}}
-\newcommand{\mustchoosefavour}[1]{\optionschoiceTWOCOL{\textbf{Must} choose one Favour:}{\AlOrder{#1}}}
+\newcommand{\mustchoosefavour}[1]{\optionschoiceTWOCOL{\textbf{Must} choose a single Favour:}{\AlOrder{#1}}}
 \newcommand{\replaceshieldwithspikedshield}{Replace Shield with Spiked Shield}
 \newcommand{\withoutsloth}{Without Favour of Sloth}
 \newcommand{\withsloth}{With Favour of Sloth}
@@ -163,9 +163,16 @@ The bearer's model gains \textbf{\aegis{+1, max. 4+}}.%
 \newcommand{\idolofspiterule}{%
 One use only. May be activated at the start of a Round of Combat. For the duration of that Round of Combat, the bearer gains +1 Attack Value, +1 Strength, and +1 Armour Penetration.%
 }
+\newcommand{\darkprelate}{Dark Prelate}
+\newcommand{\darkprelaterule}{%
+	The bearer can cast \spellformat{\evocationspellone}{\evocation} and \spellformat{\occultismspelltwo}{\occultism} as Bound Spells, Power Level (4/8), with type \castersunit{}. \spellformat{\occultismspelltwo}{} is automatically cast with the amplified version (without performing The Sacrifice).%
+}
+
+% Doom Lord
+
 \newcommand{\masterofdestruction}{Master of Destruction}
-\newcommand{\masterofdestructionrule}{%
-The bearer can use a \shield{} (or a \spikedshield{}) simultaneously with a \gw{} or a \halberd{}.%
+\newcommand{\masterofdestructiondef}{%
+	The bearer can use a \shield{} (or a \spikedshield{}) simultaneously with a \gw{} or a \halberd{}.%
 }
 
 % Barbarian Chief
@@ -176,14 +183,14 @@ The bearer can use a \shield{} (or a \spikedshield{}) simultaneously with a \gw{
 % Feldrak Ancestor
 
 \newcommand{\primallegend}{Primal Legend}
-\newcommand{\primallegenddef}{The limit of Legendary Beasts is increased to \enquote{Max. \SI{45}{\percent}}. A model with this rule counts all units of Standard Height as \insignificant{}, and while it is on the board, friendly units with \fly{}{} may not use Flying Movement.}
+\newcommand{\primallegenddef}{The limit of Legendary Beasts is increased to \enquote{Max. \SI{45}{\percent}}. While the model is on the board, friendly units with \fly{}{} may not use Flying Movement.}
 
 \newcommand{\dyingembers}{Dying Embers}
 \newcommand{\dyingembersdef}{After using the \breathattack{}, the model loses a Health Point with no saves of any kind allowed.}
 
 \newcommand{\againstfly}{against \fly{}}
 
-\newcommand{\specialequipmentfeldrak}{One Weapon Enchantment,\newline paying twice the listed point cost}
+\newcommand{\specialequipmentfeldrak}{One Weapon Enchantment,\newline paying twice the listed Point Cost}
 
 %% MOUNTS
 
@@ -191,22 +198,21 @@ The bearer can use a \shield{} (or a \spikedshield{}) simultaneously with a \gw{
 
 \newcommand{\barbarianchiefmusttakeprizedstallion}{\barbarianchief{} \textbf{must} take \textbf{\prizedstallion}}
 \newcommand{\prizedstallion}{Prized Stallion}
-\newcommand{\prizedstalliondef}{The model has its March Rate \textbf{set} to \distance{16}.}
+\newcommand{\prizedstalliondef}{The model's March Rate is \textbf{set} to \distance{16}.}
 
 % War Dais
 
 \newcommand{\throneofeminence}{Throne of Eminence}
-\newcommand{\throneofeminencedef}{The model gains +1 Discipline, up to a maximum of 9.}
 
 % Chimera
 
 \newcommand{\wings}{Wings}
-\newcommand{\wingsdef}{The model has its March Rate \textbf{set} to \distance{16} and gains \textbf{\fly{8}{16}} and \textbf{\lighttroops{}}.}
+\newcommand{\wingsdef}{The model's March Rate is \textbf{set} to \distance{16} and  it gains \textbf{\fly{8}{16}} and \textbf{\lighttroops{}}.}
 
 % Unbroken Chimera
 
 \newcommand{\additionallimbs}{Additional Limbs}
-\newcommand{\additionallimbsdef}{The model has its March Rate \textbf{set} to \distance{20} and its Armour \textbf{set} to 3.}
+\newcommand{\additionallimbsdef}{The model's March Rate is \textbf{set} to \distance{20} and its Armour  is \textbf{set} to 3.}
 
 % Battleshrine
 
@@ -221,13 +227,16 @@ After Spell Selection, the Wizard \textbf{must} replace one of its Learned Spell
 \end{itemize}%
 }
 
+
 %% CORE
 
 % Warriors
 
-\newcommand{\favouredchampionmustchoosefavour}[2]{\optionschoiceTWOCOL{Only units with a \favouredchampion{} can and \textbf{must} upgrade #1 with a single Favour:}{\AlOrder{#2}}}% For Warriors and Warrior Knights
+\newcommand{\warriorsfavouroption}[1]{%
+	\optionschoiceTWOCOL{Only units with a Champion may upgrade Warriors with a single Favour:\refsymbol{}}{\AlOrder{#1}}%
+}
 
-\newcommand{\unitsizereduction}{ Max. unit size reduced to \textbf{20} models}
+\newcommand{\unitsizereduction}{ Max. unit size for a unit with a Favour is reduced to \textbf{20} models}
 \newcommand{\upgradeto}{Upgrade to}
 
 % Fallen
@@ -236,13 +245,17 @@ After Spell Selection, the Wizard \textbf{must} replace one of its Learned Spell
 
 %% SPECIAL
 
+% Warrior Knights
+
+\newcommand{\unitwithchampionmaychoosefavour}[2]{\optionschoiceTWOCOL{Only units with a Champion may upgrade #1 with a single Favour:}{\AlOrder{#2}}}
+
 % Chosen
 
-\newcommand{\XXXmustchoosefavour}[2]{\optionschoiceTWOCOL{#1 \textbf{must} choose a single Favour:}{\AlOrder{#2}}}% For Chosen and Chosen Knights
+\newcommand{\XXXmustchoosefavour}[2]{\optionschoiceTWOCOL{#1 \textbf{must} choose a single Favour:}{\AlOrder{#2}}}% For Chosen Knights only
 
 \newcommand{\mastersofbattle}{Master of Battle}
 \newcommand{\mastersofbattledef}{%
-The model's maximum number of Supporting Attacks is \textbf{set} to 3.%
+The model's maximum number of Supporting\newline Attacks is \textbf{set} to 3.%
 }
 
 % Forsworn
@@ -254,13 +267,15 @@ The unit cannot be joined by Characters, and it may never have more ranks than f
 \item The unit with \damnation{} is considered destroyed and its models are considered to be removed as casualties.
 \item Each \wretchedone{} model is placed in the same position and facing the same direction as the replaced model, even if the replaced model was in base contact with an enemy unit. In this case, the \wretchedone{} model is placed in base contact with the enemy unit too.
 \item The \wretchedone{} models form a new unit.
-\item The \wretchedone{} unit follows the rules for Summoned Units, except that it ignores the Unit Spacing rule when placed on the board.
+\item The \wretchedone{} unit follows the rules for Summoned Units, except that it ignores the Unit Spacing rule when placed on the Battlefield.
 \end{itemize}%
 }
 
 \newcommand{\replacewithdamnation}{Lose \pathexiled{} and\newline gain \textbf{\damnation{}}}
 
 % Battleshrine
+
+\newcommand{\battleshrinespecialequipmentoption}{The Shrine Priest may take a single Banner Enchantment or Artefact from this Army Book}
 
 \newcommand{\beaconofthedarkgodsunitdef}{%
 Instead of selecting spells as normal, the Wizard \textbf{must} select one of the following spells during Spell Selection: 
@@ -270,8 +285,6 @@ Instead of selecting spells as normal, the Wizard \textbf{must} select one of th
 \item \spellformat{\hellfire}{\hereditaryspell}
 \end{itemize}%
 }
-
-\newcommand{\seespecialequipment}{see Special Items}
 
 % Flayers
 
@@ -322,7 +335,7 @@ The model gains \textbf{\wizardapprentice}. Instead of selecting spells as norma
 \newcommand{\twoominousgateways}{Two \textbf{Ominous Gateways}}
 \newcommand{\ominousgatewaydef}{%
 \zerotoXchoiceperarmy{2}.\newline%
-During step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield with a Gateway Marker. This must be outside the opponent's Deployment Zone. If both players have Ominous Gateways, the player that picked their Deployment Zone marks their Ominous Gateways first.%
+\newrule{At the start of} step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gateway in your army, mark a point on the Battlefield with a Gateway Marker. This must be outside the opponent's Deployment Zone.\removedrule{ If both players have Ominous Gateways, the player that picked their Deployment Zone marks their Ominous Gateways first.}%
 }
 
 \newcommand{\gateway}{Gateway}
@@ -330,17 +343,17 @@ During step 7 of the Pre-Game Sequence (Spell Selection), for each Ominous Gatew
 At the end of each friendly Magic Phase, each Hellmaw may do one of the following:
 \begin{smallitemize}%
 \item \textbf{Open a Gateway:} Mark a single point on the Battlefield with a Gateway Marker. This point must be within Line of Sight and \distance{24} of the Hellmaw, and more than \distance{6} away from enemy units. There can never be more than 4 friendly Gateway Markers on the Battlefield (including Ominous Gateways).
-\item \textbf{Close a Gateway:} Choose a friendly Gateway Marker with its centre within Line of Sight and \distance{24} of the Hellmaw. All units within \distance{6} of the centre of the marker suffer D6 hits with \textbf{Toxic Attacks} and \textbf{Magical Attacks}. Then remove the marker.\newline{}If all friendly Hellmaws have been removed as casualties, immediately close all Gateways as described above.
+\item \textbf{Close a Gateway:} Choose a friendly Gateway Marker with its centre within Line of Sight and \distance{24} of the Hellmaw. All units within \distance{6} of the centre of the marker suffer D6 hits with \textbf{Toxic Attacks} and \textbf{Magical Attacks}. Then remove the marker.\newline{}If all friendly Hellmaws have been removed as casualties, immediately close all friendly Gateways as described above.
 \end{smallitemize}%
 
 A friendly unit consisting entirely of non-Gigantic models that ends an Advance or March Move in contact with the centre of a friendly Gateway Marker may choose to enter the Gateway: remove the unit from the Battlefield. The unit:
-\begin{smallitemize}%
+\begin{smallenumerate}%
 \item Is then placed back on the Battlefield within \distance{3} of the centre of any other friendly Gateway Marker. No model can end up with its centre farther away than its March Rate from the centre of the chosen marker.
 \item Must have the same formation, but may face any direction.
 \item Must follow the Unit Spacing rule.
-\item Suffers D6 + X hits with \textbf{Toxic Attacks} and \textbf{Magical Attacks}, where X is equal to the number of ranks in the unit. Hits distributed onto models with Hell-Forged Armour or Supernal automatically fail to wound.
+\item Suffers D6 + X hits with \textbf{Toxic Attacks} and \textbf{Magical Attacks}, distributed by the owner, where X is equal to the number of ranks in the unit. Hits distributed onto models with Hell-Forged Armour or Supernal automatically fail to wound.
 \item Loses Scoring until its next Player Turn.
-\end{smallitemize}%
+\end{smallenumerate}%
 
 Only a single unit may exit the same Gateway Marker in each Player Turn.%
 }

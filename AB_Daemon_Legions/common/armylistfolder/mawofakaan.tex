@@ -2,7 +2,7 @@
 \unitentry{%
 	name=\mawofakaan{},
 	logo=character,
-	cost=610,
+	cost=\newrule{570},
 	unitsize=1,
 	type=\beast{},
 	size=\sizegigantic{},
@@ -11,7 +11,7 @@
 	global@Ad=7,
 	global@Ma=14,
 	global@Di=9,
-	globalrules={\supernal{},\fearless{},\wizardapprentice{}},
+	globalrules={\supernal{},\fearless{},\wizardapprentice{},\textbf{\dominionofgluttony}},
 	defense@HP=9,
 	defense@Df=5,
 	defense@Re=5,
@@ -23,22 +23,16 @@
 	offense@At=6,
 	offense@Of=5,
 	offense@St=6,
-	offense@AP=1,
+	offense@AP=2,
 	offense@Ag=3,
 	magic={\wizardadept{}=75,\wizardmaster{}=225,},
 	paths={\evocation{}=evocation,\witchcraft{}=witchcraft},
 	options={%
-		\ifgeneralmusttakedominionofgluttony{}=60,
+		\ifgeneralmusttakegreaterdominion{}=60,
 		\manifestationsoffatherchaosandgluttony{}=\upto{}150,
 	},
 	modelrulesdef={%
 		\modelruledef{\devour}{\ruletype{\personalprotection}\devourdef}
-	},
-	optionalmodelrulesdef={%
 		\modelruledef{\dominionofgluttony}{\ruletype{\universalrule}\dominionofgluttonydef}
-	},
-	toggles={%
-		\toggletrue{onecolprintoptionalmodelrulesdef}
-		\togglefalse{twocolprintoptionalmodelrulesdef}
 	},
 } % END UNIT ENTRY

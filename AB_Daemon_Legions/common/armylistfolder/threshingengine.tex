@@ -4,7 +4,7 @@
 	logo=special,
 	optionallogo=bird,
 	categorynote=\flycategorynote{},
-	cost=180,
+	cost=160,
 	unitsize=1,
 	maxunitsperarmy=5,
 	type=\construct{},
@@ -43,21 +43,21 @@
 	},
 	explicitoptions={%
 		\explonechoiceonly{%
-			\setexploption{\fly{9}{9} \wordand{} \lighttroops{} (\zerotoXunitsperarmy{2})}{45}
-			\setexploption{\textbf{\hordethresher{}} (\zerotoXunitsperarmy{3})}{75}
-			\setexploption{\textbf{\legionthresher{}} (\zerotoXunitsperarmy{2})}{140}
+			\setexploption{\fly{9}{9} \wordand{} \lighttroops{} (\zerotoXunitsperarmy{2})}{30}
+			\setexploption{\textbf{\hordethresher{}} (\zerotoXunitsperarmy{3})}{\newrule{75}}
+			\setexploption{\textbf{\legionthresher{}} (\zerotoXunitsperarmy{2})}{\newrule{140}}
 		}
 		\manifestationonechoice{%
-			\addsortedexploption{prename=greed,hypertag=diviningsnout,name=\diviningsnout{},cost=35}
-			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},postname=\refsymbol{},cost=40}
-			\addsortedexploption{prename=pride,hypertag=hornsofhubris,name=\hornsofhubris{},cost=25}
-			\addsortedexploption{prename=lust,hypertag=roaminghands,name=\roaminghands{},cost=50}
-			\addsortedexploption{prename=wrath,hypertag=whipcracktail,name=\whipcracktail{},cost=35}
+			\addsortedexploption{prename=greed,hypertag=diviningsnout,name=\diviningsnout{},cost=\newrule{15}}
+			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},cost=35}
+			\addsortedexploption{prename=pride,hypertag=hornsofhubris,name=\hornsofhubris{},cost=20}
+			\addsortedexploption{prename=lust,hypertag=roaminghands,name=\roaminghands{},cost=40}
+			\addsortedexploption{prename=wrath,hypertag=whipcracktail,name=\whipcracktail{},cost=30}
 		}
-		\setexploption{\refsymbol{} \zerotoXunitsperarmy{3}}{}
 	},
 	optionalmodelrulesdef={%
 		\modelruledef{\hordethresher}{\ruletype{\universalrule}\hordethresherdef}
 		\modelruledef{\legionthresher}{\ruletype{\universalrule}\legionthresherdef}
+		\modelruledef{\newrule{\void{ZZZ}\colossalstature}}{\newrule{\ruletype{\universalrule}\colossalstaturedef}}
 	},
 } % END UNIT ENTRY

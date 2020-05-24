@@ -11,7 +11,8 @@
 \newcommand{\wastelandtorch}{Wasteland Torch}
 
 \newcommand{\ledgerofsouls}{Ledger of Souls}
-\newcommand{\orbofforeboding}{Orb of Foreboding}
+\newcommand{\orbofforeboding}{\newrule{Veilgate Orb}}% Deprecated
+\newcommand{\veilgateorb}{\newrule{Veilgate Orb}}
 \newcommand{\immortalgauntlets}{Immortal Gauntlets}
 \newcommand{\lordofthedamned}{Lord of the Damned}
 \newcommand{\wyrdstone}{Wyrd Stone}
@@ -20,51 +21,49 @@
 
 \newcommand{\burningportentdef}{%
 \enchantmentrestriction{\hw{} enchantment.}
-Attacks made with this weapon have their Armour Penetration \textbf{set} to 10 and become \textbf{\flamingattacks{}} and \textbf{\magicalattacks{}}, and gain \textbf{\multiplewounds{D3}{}}.
+Attacks made with this weapon have their Armour Penetration \textbf{set} to 10, become \textbf{\flamingattacks{}} and \textbf{\magicalattacks{}}, and gain \textbf{\multiplewounds{D3}{}}.%
 }
 \newcommand{\symbolofslaughterdef}{%
 \enchantmentrestriction{\hw{} and \pw{} enchantment.}
-When using this weapon, the wielder gains +2 Attack Value, +2 Agility, and \textbf{\magicalattacks{}}. Close Combat Attacks made against the wielder's model gain +1 to hit.
+When using this weapon, the wielder gains +2 Attack Value, +2 Agility, and \textbf{\magicalattacks{}}. Close Combat Attacks made against the wielder's model gain +1 to hit.%
 }
 
 \newcommand{\thriceforgeddef}{%
-\itemrestriction{Standard Height models only.}
+\itemrestriction{\newrule{Cannot be taken by Gigantic models}.}
 \enchantmentrestriction{Suit of Armour enchantment.}
-The wearer gains +3 Armour.
+The wearer gains +3 Armour. \newrule{If the bearer's model has Towering Presence, its Armour cannot be improved beyond 5.}%
 }
 \newcommand{\gladiatorsspiritdef}{%
 \enchantmentrestriction{Suit of Armour enchantment.}
-The wearer gains +1 Armour and \textbf{Parry}.
+The wearer gains +1 Armour and \textbf{Parry}.%
 }
 
 \newcommand{\iconoftheinfinitedef}{%
 \itemrestriction{Cannot be taken by units that count towards Core. 0--2 per Army.}
-The bearer of one or more Icons of the Infinite can cast \spellformat{\hellfire}{\hereditaryspell} as a Bound Spell with Power Level (4/8).
+The bearer of one or more Icons of the Infinite can cast \spellformat{\hellfire}{\hereditaryspell} as a Bound Spell with Power Level (4/8).%
 }
 \newcommand{\zealotsbannerdef}{%
 \itemrestriction{0--3 per Army.}
-The maximum number of Supporting Attacks that models in the second rank of the bearer's unit can perform is increased by 1.
+The maximum number of Supporting Attacks that models in the second rank of the bearer's unit can perform is increased by 1.%
 }
 \newcommand{\wastelandtorchdef}{%
-The bearer's unit gains \textbf{Strider (Ruins)}. After determining Deployment Zones (at the end of step 6 of the Pre-Game Sequence), you may choose a single Field or Forest Terrain Feature that becomes Ruins.
+The bearer's unit gains \textbf{Strider (Ruins)}. After determining Deployment Zones (at the end of step 6 of the Pre-Game Sequence), you may choose a single Field or Forest Terrain Feature that becomes Ruins. The bearer's unit gains \textbf{\flamingattacks{}} in the First Round of Combat.%
 }
 
 \newcommand{\ledgerofsoulsdef}{%
 \itemrestriction{Dominant.}
-Whenever a friendly model with \hellforgedarmor{} or \irredeemable{} within \distance{12} of the bearer, or a model in the bearer's unit loses its last Health Point, you gain one Veil Token for each Health Point the model (that was removed as a casualty) started the game with. In addition, at the end of Siphon the Veil, the army may keep up to 6 Veil Tokens (instead of the normal 3).
+\newrule{Whenever a friendly model without Insignificant in a unit within \distance{9} of the bearer's model loses its last Health Point due to enemy attacks, you gain one Veil Token for each Health Point that model started the game with.}%
 }
-\newcommand{\orbofforebodingdef}{%
-At the start of the Deployment Phase, immediately before step 1 (Determine who deploys first), you may choose one of the opponent's non-Character units that can be deployed during the Deployment Phase. This unit loses \vanguard{} and \scout{}. The opponent must immediately deploy this unit. This is done outside the normal Deployment procedure and is ignored when determining the first deployed unit and the number of deployed units.
+\newcommand{\veilgateorbdef}{%
+\newrule{At the end of Siphon the Veil, the army may keep up to 6 Veil Tokens instead of the normal 3.}%
 }
 \newcommand{\immortalgauntletsdef}{%
-At the start of any Round of Combat you may discard a Veil Token from your Veil Token pool. If so, choose either \divineattacks{}, \flamingattacks{}, or \magicalattacks{}. The bearer's Close Combat Attacks gain the chosen Attack Attribute. The chosen effect lasts until the end of the phase.
+At the start of any Round of Combat you may discard a Veil Token from your Veil Token pool. If so, choose either \divineattacks{}, \flamingattacks{}, or \magicalattacks{}. The bearer's Close Combat Attacks gain the chosen Attack Attribute. The chosen effect lasts until the end of the phase.%
 }
 \newcommand{\lordofthedamneddef}{%
-\itemrestriction{Sorcerers and Doomlords only.}
-Any unit with \irredeemable{} within \distance{18} of the bearer may reroll the distance it moves in the Movement Phase with \randommovement{}.
+\itemrestriction{Sorcerers, Doomlords, and Shrine Priests only.}
+Any unit with \irredeemable{} within \distance{18} of the bearer's model may reroll the distance it moves in the Movement Phase with \randommovement{}.%
 }
 \newcommand{\wyrdstonedef}{%
-One use only. Must be activated when the bearer's model is hit by an attack with at least Strength 5 or at least Armour Penetration 5. The bearer's model gains \textbf{\aegis{4+}}.\newline
-If the bearer's model is Standard or Large, this effect ends at end of the Player Turn.\newline
-If the bearer's model is Gigantic, this effect ends after rolling the \aegis{} Save once (if the bearer is hit by several simultaneous attacks, the owner chooses which attack to use the \aegis{} Save against).
+One use only. Must be activated when the bearer's model suffers the first hit in the game. This hit is ignored. If the bearer is hit by several simultaneous attacks, the bearer chooses which attack to ignore.%
 }

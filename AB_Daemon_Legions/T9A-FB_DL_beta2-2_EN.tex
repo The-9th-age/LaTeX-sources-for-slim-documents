@@ -1,5 +1,5 @@
 %Language is defined here
-%\def\thereisachangelog{}
+\def\thereisachangelog{}
 \def\languageisenglish{}
 \def\thisisanarmybook{}
 
@@ -9,17 +9,17 @@
 \input{language_specific/\languagetag/dictionnary_armylist.tex}
 \input{language_specific/\languagetag/dictionnary_modelrules.tex}
 \input{language_specific/\languagetag/dictionnary_others.tex}
-\input{language_specific/\languagetag/dictionnary_specialequipment.tex}
+\input{language_specific/\languagetag/dictionnary_daemonicmanifestations.tex}
 \input{common/toc.tex}
 \input{common/footer.tex}
 
-\newcommand{\booktitle}{Warriors of the Dark Gods}
+\newcommand{\booktitle}{Daemon Legions}
 \newcommand{\preversion}{\nth{2} Edition, beta version~}
-\newcommand{\version}{2.0}
-%\newcommand\releasedate{November 16, 2018} % Comment if you want to use today's date in your default language
+\newcommand{\version}{2.2}
+%\newcommand\releasedate{December 24, 2018} % Comment if you want to use today's date in your default language
 %\newcommand{\translationversion}{PROOFREADING VERSION} % Translation version, or anything related to version
-\newcommand{\booklogo}{../AB_Warriors_of_the_Dark_Gods/pics/wdg.pdf}
-\def\bookprefix{WDG}
+\newcommand{\booklogo}{pics/logo_big_DL.png}
+\def\bookprefix{DL}
 \hypersetup{pdftitle={T9A -- \booktitle{} -- \version}}
 
 \begin{document}
@@ -30,14 +30,14 @@
 \additionalspacebeforemaintitle{}
 \input{common/hereditaryspell.tex}
 \newpage
-\input{common/specialequipment.tex}
+\input{common/daemonicmanifestations.tex}
 \newpage
 \input{common/armyorg.tex}
-%\additionalspacebeforemaintitle{}
+\additionalspacebeforemaintitle{}
 \input{common/armylist.tex}
 \newpage
 \input{common/qrs.tex}
-%\newpage
-%\input{language_specific/\languagetag/changelog.tex}
+\newpage
+\input{language_specific/\languagetag/changelog.tex}
 
 \end{document}
