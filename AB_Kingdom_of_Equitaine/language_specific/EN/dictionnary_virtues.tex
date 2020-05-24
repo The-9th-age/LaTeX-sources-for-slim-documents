@@ -1,0 +1,50 @@
+
+\newcommand{\virtues}{Virtues}
+\newcommand{\virtuesInitial}{Vi}
+
+\newcommand{\might}{Might}
+\newcommand{\mightdef}{%
+\itemrestriction{\oneofakind{}.}%
+When using a \lance{}, the bearer gains \textbf{\devastatingcharge{+1 \At{}, +1 \AP{}, +1 \St{}}}. When Charging and using a \lance{}, every unsaved wound caused by the bearer's Close Combat Attacks, before applying \multiplewounds{}{}, generates another Close Combat Attack:%
+\begin{smallitemize}%
+\item Allocate and resolve the new attacks before removing any casualties, in the same Initiative Step as the attacks that generated them.%
+\item You cannot generate more attacks than there were Health Points in the Health Pool towards which the initial attacks were allocated.%
+\item The new attacks do not generate any further attacks.%
+\end{smallitemize}%
+}
+
+\newcommand{\renown}{Renown}
+\newcommand{\renowndef}{%
+\itemrestriction{\oneofakind{}.}%
+The bearer gain \textbf{\lethalstrike}. Close Combat Attacks made by the bearer that roll a natural \result{6} to wound gain \textbf{\multiplewounds{D3}{}}.%
+}
+
+\newcommand{\valour}{Valour}
+\newcommand{\valourdef}{%
+\itemrestriction{\oneofakind{}.}%
+The bearer automatically Issues a Duel whenever possible (this cannot be prevented by Issuing a Duel with another friendly model first), and this Duel must be accepted whenever possible. When Fighting a Duel, the bearer must reroll failed to-hit and to-wound rolls.%
+}
+
+\newcommand{\audacity}{Audacity}
+\newcommand{\audacitydef}{%
+\itemrestriction{\oneofakind{}.}%
+Attacks made by the bearer that are allocated towards models of Large Size must reroll failed to-hit rolls. Attacks made by the bearer that are allocated towards models with \toweringpresence{} must reroll both failed to-hit and failed to-wound rolls.%
+}
+
+\newcommand{\piety}{Piety}
+\newcommand{\pietydef}{%
+\itemrestriction{\oneofakind{}.}%
+The bearer and all \rnf{} models in the bearer's unit gain \textbf{\aegis{} (+1, max. 5+)}. The bearer may only join Standard Size units.%
+}
+
+\newcommand{\daring}{Daring}
+\newcommand{\daringdef}{%
+\itemrestriction{\oneofakind{}.}%
+Charge Range rolls of the bearer's unit and Charge Range rolls towards enemy units in base contact with the bearer are subject to Maximised Roll.%
+}
+
+\newcommand{\humility}{Humility}
+\newcommand{\humilitydef}{%
+\itemrestriction{0-2 per Army.}%
+The bearer gains \textbf{\insignificant}, has its \commandingpresence{} range increased to \distance{12}, and gains \textbf{\rallyaroundtheflag}. However, only units with more than half of their models with \insignificant{} may benefit from this instance of \rallyaroundtheflag{}.%
+}

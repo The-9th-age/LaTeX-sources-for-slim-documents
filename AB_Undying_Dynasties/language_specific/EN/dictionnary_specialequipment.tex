@@ -1,0 +1,93 @@
+
+% Special Equipment Names
+
+\newcommand{\godslayer}{Godslayer}
+\newcommand{\scourgeofkings}{Scourge of Kings}
+
+\newcommand{\jackalsblessing}{Jackal's Blessing}
+\newcommand{\sunsembrace}{Sun's Embrace}
+
+\newcommand{\banneroftheentombed}{Banner of the Entombed}
+
+\newcommand{\crownofthepharaohs}{Crown of the Pharaohs}
+\newcommand{\sacredhourglass}{Sacred Hourglass}
+\newcommand{\bookofthedead}{Book of the Dead}
+\newcommand{\steedsofnephetra}{Steeds of Nephet-Ra}
+\newcommand{\sekhemsceptre}{Sekhem Sceptre}
+\newcommand{\blessedwrappings}{Blessed Wrappings}
+\newcommand{\ankhofnaptesh}{Ankh of Naptesh}
+\newcommand{\sandstormcloak}{Sandstorm Cloak}
+\newcommand{\deathmaskofteput}{Death Mask of Teput}
+\newcommand{\scrollofdesiccation}{Scroll of Desiccation}
+
+% Special Equipment Texts
+
+\newcommand{\godslayerdef}{%
+\enchantmentrestriction{\gw{} enchantment.}
+The wielder gains +1 Attack when using this weapon. Attacks made with this weapon gain \textbf{\divineattacks}, \textbf{\magicalattacks}, and \textbf{\multiplewounds{2}{\against{} \aegis{}}} (note that the latter also applies against models with conditional Aegis Saves).%
+}
+
+\newcommand{\scourgeofkingsdef}{%
+\enchantmentrestriction{\hw{} and \pw{} enchantment.}
+When using this weapon, the wielder's Attack Value is \textbf{set} to 6. Attacks made with this weapon gain \textbf{\magicalattacks} and must reroll failed to-wound rolls when \rewordedrule{F}ighting \removedreworded{in }a Duel.%
+}
+
+\newcommand{\jackalsblessingdef}{%
+\enchantmentrestriction{Suit\removedreworded{s} of Armour enchantment.}
+The wearer gains +2 Health Points and \textbf{\fortitude{5+}}.%
+}
+
+\newcommand{\sunsembracedef}{%
+\enchantmentrestriction{\shield{} enchantment.}
+The bearer gains \textbf{\distracting} while using this \shield{}.%
+}
+
+\newcommand{\banneroftheentombeddef}{%
+\itemrestriction{Core and Battle Standard Bearer only. 0-2 per Army.}
+If taken by a Character, the bearer gains \textbf{\undergroundambush}. If taken by a \rnf{} model, the bearer's unit gains \undergroundambush{} and additional models cannot be added to the unit during Army List creation. Standard Size models using this banner to Ambush must arrive in a formation containing exactly 5 models per rank (except for the last) and cannot make a Reform (or a Swift Reform) during this Player Turn.\vspace*{5pt}\newline
+\bannerentombedpic{A unit with \undergroundambush{} additionally counts towards \entombed{}.}%
+}
+
+\newcommand{\crownofthepharaohsdef}{%
+\itemrestriction{Pharaohs and Nomarchs only.}
+The bearer increases the range of its \commandingpresence{} by \distance{6}. At the start of each of your Player Turns, the bearer may lose \undyingwill{} and choose a friendly unit within \distance{12}. This unit benefits from \undyingwill{} until the start of your next Player Turn.\columnbreak%
+}
+
+\newcommand{\sacredhourglassdef}{%
+\itemrestriction{Dominant.}
+The bearer may reroll failed Casting Attempts that were rolled using 2 Magic Dice (by rerolling both Magic Dice).%
+}
+
+\newcommand{\bookofthedeaddef}{%
+The bearer can cast \spellformat{\deathisonlythebeginning}{} as a Bound Spell with Power Level (4/8) and the following modifications:\newline
+The spell is considered a Learned Spell (instead of an Attribute Spell) and its Range is changed to \distance{12}, Aura.%
+}
+
+\newcommand{\steedsofnephetradef}{%
+Models with at least one Skeletal Horse model part in the bearer's unit gain \textbf{\ghoststep} and +\distance{4} March Rate.%
+}
+
+\newcommand{\sekhemsceptredef}{%
+The bearer gains \textbf{\autonomous} and \textbf{\stubborn}.%
+}
+
+\newcommand{\blessedwrappingsdef}{%
+The bearer gains +1 Health Point and loses Flam\-ma\-ble if it had it (note that this does not prevent the model from gaining Flammable from other sources).%
+}
+
+\newcommand{\ankhofnapteshdef}{%
+The bearer gains \textbf{\hierophant}. \rnf{} models in the bearer's unit gain \textbf{\regeneration{6+}}.%
+}
+
+\newcommand{\sandstormcloakdef}{%
+\itemrestriction{Models on foot only.}
+The bearer gains \textbf{\fly{5}{15}} and can perform a \textbf{\sweepingattack} that causes 2D6 hits with Strength 2 and Armour Penetration 1.%
+}
+
+\newcommand{\deathmaskofteputdef}{%
+Models in enemy units in base contact with the bearer suffer -2 Offensive Skill.%
+}
+
+\newcommand{\scrollofdesiccationdef}{%
+After determining Deployment Zones (at the end of step 6 of the Pre-Game Sequence), choose a Field, Forest, or Water Terrain Feature. This Terrain Feature ceases to be the Terrain Feature it used to be and loses all its rules. It is treated as Dangerous Terrain (1) for all enemy units.%
+}

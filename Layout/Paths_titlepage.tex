@@ -1,0 +1,78 @@
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+{\titlefont\fontsize{40}{48}\selectfont\noindent\theninthage
+
+\fantasybattles}
+
+\vspace*{10pt}
+
+{\titlefont\fontsize{50}{60}\selectfont \booktitle
+\vspace{0.4cm}
+
+\fontsize{14}{16.8}\selectfont \ifdef{\preversion}{\preversion}{}\version{}
+
+\ifdef{\releasedate}{\releasedate}{\today}
+
+\ifdef{\translationversion}{{\fontsize{14}{16.8}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}}
+
+\vspace*{20pt}
+
+\newcommand{\iconheight}{1.6cm}
+\newcommand{\minipagewidth}{3cm}
+\newcommand{\spacebetweeniconrows}{0.8cm}
+
+\hspace*{0.5cm}\begin{minipage}[c]{\minipagewidth}
+\begin{center}
+\titlepagelefticons
+
+\end{center}
+\end{minipage}
+\hfill\begin{minipage}[c]{8cm}
+
+{\fontsize{12}{14.4}\selectfont
+
+\hfill\textcolor{white}{\verysmallfontsize d}% debug, else everything goes wild with alignment.
+\begin{center}
+\hypertarget{tableofcontents}{\tocentry{howtousethisdoc}{\howtousethisdoc}}
+
+\vspace*{5pt}
+
+\titlepagetoc
+
+\vspace*{5pt}
+
+\tocentry{magicphasesummary}{\magicphasesummary}
+
+\ifdef\thereisachangelog{\tocentry{pathschangelog}{\changelog}}{}
+\end{center}
+}
+
+\end{minipage}\hfill
+\begin{minipage}[c]{\minipagewidth}
+\begin{center}
+
+\titlepagerighticons{}
+\end{center}
+\end{minipage}\hspace*{0.5cm}
+
+\vfill
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\frontpagecreditswithoutblue}}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\license}}
+\tabularnewline
+\end{tabular}
+
+
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{2}

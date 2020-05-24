@@ -1,0 +1,40 @@
+
+\unitentry{
+	name=\thegreenknight{},
+	logo=special,
+	cost=375,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\cavalry{},
+	size=\sizestandard{},
+	basesize=25x50,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=8,
+	globalrules={\ghoststep{},\terror{},\supernal{},\textbf{\eternalchampion}},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=2,
+	defensearmour={\ha{},\shield{}},
+	defenserules={\textbf{\thriceblessed}},
+	offensename={\thegreenknight{}},
+	offense@At=5,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=6,
+	offenseweapons={\lambentsword{}},
+	offensenameB={\spectralstallion{}},
+	offenseB@At=1,
+	offenseB@Of=4,
+	offenseB@St=4,
+	offenseB@AP=1,
+	offenseB@Ag=4,
+	offenserulesB={\harnessed{},\devastatingcharge{+1 \St{}, +1 \AP{}}},
+	modelrulesdef={%
+		\modelruledef{\eternalchampion}{\ruletype{\universalrule}\eternalchampiondef}%
+		\modelruledef{\thriceblessed}{\ruletype{\personalprotection}\thriceblesseddef}%
+		\modelruledef{\lambentsword}{\ruletype{\closecombatweapon}\lambentsworddef}%
+	},
+}

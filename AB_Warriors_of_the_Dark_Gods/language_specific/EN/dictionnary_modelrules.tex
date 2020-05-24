@@ -1,0 +1,90 @@
+% Army Model Rules Names
+
+\newcommand{\favoursofthedarkgods}{Favours of the Dark Gods}
+
+\newcommand{\envy}{Envy}
+\newcommand{\envyfulltitle}{Favour of Kuulima, Goddess of \envy{}}
+\newcommand{\gluttony}{Gluttony}
+\newcommand{\gluttonyfulltitle}{Favour of Akaan, God of \gluttony{}}
+\newcommand{\greed}{Greed}
+\newcommand{\greedfulltitle}{Favour of Sugulag, God of \greed{}}
+\newcommand{\lust}{Lust}
+\newcommand{\lustfulltitle}{Favour of Cibaresh, God of \lust{}}
+\newcommand{\pride}{Pride}
+\newcommand{\pridefulltitle}{Favour of Savar, God of \pride{}}
+\newcommand{\sloth}{Sloth}
+\newcommand{\slothfulltitle}{Favour of Nukuja, Goddess of \sloth{}}
+\newcommand{\wrath}{Wrath}
+\newcommand{\wrathfulltitle}{Favour of Vanadra, Goddess of \wrath{}}
+
+\newcommand{\pathfavoured}{Path of the Favoured}
+\newcommand{\pathexiled}{Path of the Exiled}
+\newcommand{\favouredchampion}{Favoured Champion}
+\newcommand{\irredeemable}{Irredeemable}
+\newcommand{\veilwalker}{Veil Walker}
+\newcommand{\battlefever}{Battle Fever}
+\newcommand{\hellforgedarmor}{Hell-Forged Armour}
+\newcommand{\spikedshield}{Spiked Shield}
+
+% Army Model Rules Texts
+
+\newcommand{\favoursofthedarkgodsintro}{A Character with a Favour cannot join a unit that contains any models with a different Favour than the Character.}
+
+\newcommand{\envydef}{%
+The model part gains \textbf{\devastatingcharge{} (+1 Armour Penetration)}. Charge Range rolls by units with more than half of their models with this Favour are subject to Maximised Roll.
+}
+
+\newcommand{\gluttonydef}{%
+The first time a model with this Favour successfully charges a Fleeing unit, or is on the winning side of a combat and does not Pursue (or Overrun), the model part with this Favour gains +1 Strength (the effect lasts for the duration of the game).
+}
+
+\newcommand{\greeddef}{%
+The bearer gains \gw{}, \halberd{}, \pw{}, and \textbf{\weaponmaster}. A Character with this Favour has its Special Equipment allowance increased by 50 pts.
+\columnbreak % You may place this where you want the column break to balance the 2 columns. If you do not put it, it will be done automatically.
+}
+
+\newcommand{\lustdef}{%
+The model gains \textbf{\feignedflight{}} and \textbf{\strider{}}. Units with more than half of their models with this Favour may declare Flee as a Charge Reaction even if they have Fearless. When doing so, the subsequent Rally Test is subject to Minimised Roll.
+}
+
+\newcommand{\pridedef}{%
+Discipline Tests taken by units with at least one model with this Favour are subject to Minimised Roll.
+}
+
+\newcommand{\slothdef}{%
+Models with this Favour gain +1 Resilience. If a model with this Favour Declares a Charge against an enemy unit that is more than \distance{10} away or perform a March Move of more than \distance{10}, this effect is lost until the start of the Melee Phase in the next Player Turn.
+}
+
+\newcommand{\wrathdef}{%
+The model part gains \textbf{\lightningreflexes} and +1 Agility. Close Combat Attacks allocated towards the model gain +1 to hit. These effects are only applied in the first Round of Combat.
+}
+
+\newcommand{\pathfavoureddef}{%
+When the model Issues or fights a Duel, it adds +1 to the Combat Score of its side until the end of the Round of Combat (note that this is lost if the model with \pathfavoured{} is removed as a casualty).
+}
+\newcommand{\pathexileddef}{%
+The model gains \textbf{\stubborn{}} in the first Round of Combat provided its unit does not have more ranks than files and it is Engaged in Combat in its Front Facing. Units with Path of the Exiled cannot join or be joined by units with \pathfavoured{}. 
+}
+\newcommand{\favouredchampiondef}{%
+The model gains +1 Agility, +1 Offensive Skill, +1 Defensive Skill, and +1 Health Point. Model parts with \harnessed{} are not affected.
+}
+\newcommand{\irredeemabledef}{%
+The model cannot make Stomp Attacks and can make \grindattacks{} as Supporting Attacks, ignoring the maximum number of Supporting Attacks. When a model with \irredeemable{} is killed by a Melee Attack, remove it as a casualty only at the end of Initiative Step 0. A unit with at least one model with \irredeemable{} may never have more ranks than files. 
+}
+\newcommand{\veilwalkerdef}{%
+The model can target enemy units that are in base contact with it when casting \spellformat{Hellfire}{}. When a model with \veilwalker{} casts any non-Bound Spell, you may discard one Veil Token when declaring the target(s) of the spell and activate one of the following effects:
+\begin{itemize}[label={-}]
+\item \spellformat{Secret of Flesh}{}: Failed to-wound rolls from this spell must be rerolled.
+\item \spellformat{Secret of Separation}{}: The spell's range is increased by \distance{6}. Aura Spells only gain +\distance{3} range. Spells with type: Caster are unaffected.
+\item \spellformat{Secret of Substance}{}: Successful Armour Saves against wounds caused by this spell must be rerolled.
+\end{itemize}
+}
+\newcommand{\battlefeverdef}{%
+Units with more than half of their models with \battlefever{} must reroll any natural rolls of \result{1} when rolling for Charge Range. 
+}
+\newcommand{\hellforgedarmordef}{%
+Follows the rules for \pa{} (can be enchanted as if it was \pa{}) . The wearer's model gains \textbf{\fearless{}}. If more than half of a unit's models have Hell-Forged Armour, the unit must reroll failed March Tests (including when mounted on a Gigantic Mount).
+}
+\newcommand{\spikedshielddef}{%
+Follows the rules for Shield, except Large Cavalry do not gain +1 Armour for using it. This armour cannot be enchanted with Armour Enchantments from the Common Special Equipment section. Whenever a model that is using the Shield simultaneously with a \hw{} is attacked by a Melee Attack from an enemy model in the wielder's Front Facing, and it passes its Armour Save on a natural roll of 4+, the unit that performed the attack immediately suffers a hit with Strength 4 and Armour Penetration 1. This is considered a Special Attack.
+}

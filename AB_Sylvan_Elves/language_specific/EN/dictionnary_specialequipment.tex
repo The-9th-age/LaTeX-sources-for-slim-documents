@@ -1,0 +1,92 @@
+
+% Special Equipment Names
+
+\newcommand{\boughofwyscan}{Bough of Wyscan}
+\newcommand{\lifeseedfeathers}{Lifeseed Feathers}
+\newcommand{\huntershonour}{Hunter's Honour}
+\newcommand{\spiritofthewhirlwind}{Spirit of the Whirlwind}
+
+\newcommand{\shieldingbark}{Shielding Bark}
+\newcommand{\curseoftheblackstag}{Curse of the Black Stag}
+
+\newcommand{\bannerofdeception}{Banner of Deception}
+\newcommand{\bannerofsilentmist}{Banner of Silent Mist}
+\newcommand{\predatorpennant}{Predator Pennant}
+
+\newcommand{\hailshot}{Hail Shot}
+\newcommand{\mistwalkersmirror}{Mist Walker's Mirror}
+\newcommand{\sacredseeds}{Sacred Seeds}
+\newcommand{\drumsofcenyrn}{Drums of Cenyrn}
+\newcommand{\hornofthewildhunt}{Horn of the Wild Hunt}
+\newcommand{\glyphofamryl}{Glyph of Amryl}
+
+% Special Equipment Texts
+
+\newcommand{\boughofwyscandef}{%
+\sylvanlongbow{} enchantment.\newline
+Attacks made with this \sylvanlongbow{} gain +1 to wound when shooting from Short Range, and \textbf{\magicalattacks}.
+}
+\newcommand{\lifeseedfeathersdef}{%
+\sylvanlongbow{} enchantment.\newline
+\shots{\textbf{always} 1}. Attacks made with this weapon gain\removedreworded{s} \textbf{\magicalattacks}. Instead of firing this \sylvanlongbow{} as usual, the wielder may apply the following rules instead:
+\begin{smallitemize}
+\item When fired at a target \textbf{within \distance{10}} of the bearer, this Shooting Attack's Strength is \textbf{set} to 4 and Armour Penetration to 1.
+\item When fired at a target \textbf{more than \distance{10} and up to and including \distance{20}} away from the bearer, its Strength is \textbf{set} to 5 and Armour Penetration to 2.
+\item When fired at a target \textbf{more than \distance{20} and up to and including \distance{30}} away from the bearer, its Strength is \textbf{set} to 6 and Armour Penetration to 3 and it gains \textbf{\multiplewounds{2}{}}.
+\end{smallitemize}
+}
+\newcommand{\huntershonourdef}{%
+\spear{} enchantment.\newline
+Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and \textbf{\magicalattacks}. If the bearer causes at least one unsaved wound with this weapon, the bearer and all \rnf{} models in the bearer's unit gain \textbf{\distracting} until the end of the Melee Phase.
+}
+\newcommand{\spiritofthewhirlwinddef}{%
+\sylvanblades{} enchantment.\newline
+The bearer gains +1 Attack Value, and attacks made with this weapon gain +1 Strength, \textbf{\lethalstrike}, and \textbf{\magicalattacks}.
+}
+
+\newcommand{\shieldingbarkdef}{%
+\itemrestriction{Infantry models only. }
+\la{} enchantment.\newline
+The wearer gains +1 Armour, \textbf{\aegis{5}}, \textbf{\fearless}, \textbf{\flammable}, and \textbf{\magicalattacks}.
+}
+\newcommand{\curseoftheblackstagdef}{%
+\la{} enchantment.\newline
+The bearer gains \textbf{\devastatingcharge{\rewordedrule{+1 \At{}}, +1 \St{}, \rewordedrule{+1 \DefensiveSkillInitials{}}}}.
+}
+
+\newcommand{\bannerofdeceptiondef}{%
+At the end of step 4 of the Deployment Phase Sequence (before deploying Scouts), the owning player may remove the bearer's unit from the Battlefield and deploy it again elsewhere (any Characters joined to the unit must remain in the unit; this does not affect the number of Undeployed Units for calculating the starting roll-off bonus).
+}
+\newcommand{\bannerofsilentmistdef}{%
+\itemrestriction{0-2 per Army.}
+The bearer's unit gains Soft Cover. Enemy units within \distance{3} of the bearer's unit may not gain any benefit from a Musician.
+}
+\newcommand{\predatorpennantdef}{%
+The bearer's unit gains \textbf{\devastatingcharge{\distracting}}.
+}
+
+\newcommand{\hailshotdef}{%
+\itemrestriction{Forest Princes and Chieftains only.}
+One use only. When this Artefact is used, it is a Shooting Weapon with the following profile:\newline
+\range{30}, \shots{3D6}, \St{} 4, \AP{} 1, \textbf{\magicalattacks}. Aim is \textbf{set} to 2+. When fired from Short Range it gains +1 Armour Penetration. \masterarcher{} cannot be used in conjunction with \hailshot{}.
+}
+\newcommand{\mistwalkersmirrordef}{%
+\itemrestriction{Models on foot only.}
+One use only. If the bearer's unit consists entirely of Standard Size Infantry models, is unengaged, and is entirely within a Forest Terrain Feature that doesn't contain any enemy models, the unit may teleport to any other Forest Terrain Feature on the Battlefield. This special movement is resolved at the end of the player's Movement Phase. When teleporting, the unit must be placed entirely within the target Forest. It may appear in any legal formation but must follow the Unit Spacing rule. The unit counts as having performed a March Move.
+}
+\newcommand{\sacredseedsdef}{%
+\itemrestriction{Models on foot only.}
+One use only. The player may activate this Artefact at the end of any friendly Movement Phase and place a Forest
+Terrain Feature in contact with the bearer and at least \distance{1} away from any enemy units and other Terrain Features. The Forest may not be larger than \distance{6} in diameter.
+}
+\newcommand{\drumsofcenyrndef}{%
+\itemrestriction{Models on foot only.}
+One use only. May be activated when the bearer's unit Declares a Charge. The target of the charge may only declare Hold as its Charge Reaction unless it is already fleeing. The enemy unit may still declare Charge Reactions as normal if it is subsequently charged by other units.
+}
+\newcommand{\hornofthewildhuntdef}{%
+One use only. May be activated when a friendly unit within \distance{8} fails a roll for Charge Range. The roll may be rerolled.
+}
+\newcommand{\glyphofamryldef}{%
+\itemrestriction{Cannot be taken by models with \sylvanspirit{}.}
+The bearer gains \textbf{Cannot be Stomped}. When \rewordedrule{F}ighting\removedreworded{ in} a Duel, the bearer gains +3 Defensive Skill.
+}

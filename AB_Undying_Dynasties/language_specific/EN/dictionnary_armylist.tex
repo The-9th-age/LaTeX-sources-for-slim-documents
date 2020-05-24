@@ -1,0 +1,259 @@
+%%%% Unit Entry Names
+
+%% CHARACTERS
+
+\newcommand{\pharaoh}{Pharaoh}
+
+\newcommand{\nomarch}{Nomarch}
+
+\newcommand{\deathculthierarch}{Death Cult Hierarch}
+\newcommand{\deathculthierarchs}{Death Cult Hierarchs}
+
+\newcommand{\tombharbinger}{Tomb Harbinger}
+
+\newcommand{\tombarchitect}{Tomb Architect}
+
+\newcommand{\casketofphatep}{Casket of Phatep}
+\newcommand{\casketsofphatep}{Caskets of Phatep}
+\newcommand{\necropolisguards}{Necropolis Guards}
+
+%% MOUNTS
+
+\newcommand{\skeletalhorse}{Skeletal Horse}
+
+\newcommand{\skeletonchariot}{Skeleton Chariot}
+\newcommand{\chassis}{Chassis}
+
+\newcommand{\amuut}{Amuut}
+
+\newcommand{\arkofages}{Ark of Ages}
+\newcommand{\guard}{Guard}
+\newcommand{\boundspirits}{Bound Spirits}
+
+\newcommand{\shaguardian}{Sha Guardian}
+
+%% CORE
+
+\newcommand{\skeletons}{Skeletons}
+\newcommand{\skeleton}{Skeleton}
+
+\newcommand{\skeletonarchers}{Skeleton Archers}
+\newcommand{\skeletonarcher}{Skeleton Archer}
+
+\newcommand{\skeletoncavalry}{Skeleton Cavalry}
+\newcommand{\skeletoncavalrySINGULAR}{Skeleton Cavalry}
+\newcommand{\rider}{Rider}
+
+\newcommand{\skeletonscouts}{Skeleton Scouts}
+\newcommand{\skeletonscout}{Skeleton Scout}
+
+\newcommand{\skeletonchariots}{Skeleton Chariots}
+% Singular already defined in mounts
+\newcommand{\charioteer}{Charioteer}
+
+%% SPECIAL
+
+\newcommand{\necropolisguard}{Necropolis Guard}
+\newcommand{\necropolisguardSINGULAR}{Necropolis Guard}
+
+\newcommand{\tombcataphracts}{Tomb Cataphracts}
+\newcommand{\tombcataphract}{Tomb Cataphract}
+
+\newcommand{\shabtis}{Shabtis}
+\newcommand{\shabti}{Shabti}
+
+\newcommand{\greatvultures}{Great Vultures}
+\newcommand{\greatvulture}{Great Vulture}
+
+\newcommand{\scarabswarms}{Scarab Swarms}
+\newcommand{\scarabswarm}{Scarab Swarm}
+
+%% ANCIENT ORDNANCE
+
+\newcommand{\shabtiarchers}{Shabti Archers}
+\newcommand{\shabtiarcher}{Shabti Archer}
+
+\newcommand{\sandstalkers}{Sand Stalkers}
+\newcommand{\sandstalker}{Sand Stalker}
+
+\newcommand{\charnelcatapults}{Charnel Catapults}
+\newcommand{\charnelcatapult}{Charnel Catapult}
+\newcommand{\crew}{Crew}
+
+% ENTOMBED
+
+\newcommand{\sandscorpion}{Sand Scorpion}
+
+%% MASON'S MENAGERIE
+
+\newcommand{\battlesphinx}{Battle Sphinx}
+
+\newcommand{\dreadsphinx}{Dread Sphinx}
+
+\newcommand{\tombreapers}{Tomb Reapers}
+\newcommand{\tombreaper}{Tomb Reaper}
+
+\newcommand{\colossus}{Colossus}
+
+%%%% Unit Entry Texts
+
+% CHARACTERS
+
+% Pharaoh
+
+\newcommand{\armyorganisationoptions}{Army Organisation Options}
+\newcommand{\monarchofundeathoption}{%
+If a Pharaoh is the General, it may become \commanderoftheterracottaarmy{} or \lordofthebarrowlegion{} (see \hyperlink{UDMonarchsOfUndeath}{Monarchs of Undeath} page \pageref{UDMonarchsOfUndeath}).%
+}
+
+% Death Cult Hierarch
+
+\newcommand{\soulconduit}{Soul Conduit}
+\newcommand{\soulconduitdef}{%
+If the model is present on the Battlefield at the beginning of a friendly Magic Phase, you don't draw a Flux Card. Instead apply the following:%
+\fluxcard{5 Magic Dice}{both players}{4+D3 Veil Tokens}{Active Player}%
+}
+\newcommand{\Else}{Else}
+
+% Tomb Harbinger
+
+\newcommand{\guardianswrath}{Guardian's Wrath}
+\newcommand{\guardianswrathdef}{%
+The model and all model parts without \harnessed{} in its unit gain \battlefocus{}.%
+}
+\newcommand{\royalguard}{Royal Guard}
+\newcommand{\royalguarddef}{%
+The model counts as a \rnf{} model for the purpose of \undyingwill{}. If in the same unit as a Pharaoh or a Nomarch, a Tomb Harbinger must Issue and Accept Duels unless another model does so first.%
+}
+
+
+% Tomb Architect
+
+\newcommand{\masterofstone}{Master of Stone}
+\newcommand{\masterofstonedef}{%
+Right before the battle (during step 7 of the Deployment Phase Sequence), and at the beginning of each friendly Player Turn, choose a friendly unit consisting entirely of models with \ensouledstatue{} within \distance{18} of the Tomb Architect. This unit gains \regeneration{5+} until the start of your next Player Turn or until the Tomb Architect is removed as a casualty, whichever comes first.%
+}
+
+% Casket of Phatep
+
+\newcommand{\divinelight}{Divine Light}
+\newcommand{\divinelightdef}{%
+Enemy Wizards within \distance{36} of one or more Caskets of Phatep suffer a -1 modifier to their casting rolls. When a Casket of Phatep is removed as a casualty, all units within \distance{12} suffer 3D3+3 hits with Strength 1 and Armour Penetration 10.%
+}
+\newcommand{\phatepscurse}{Phatep's Curse}
+\newcommand{\phatepscursedef}{%
+Unless this model made an Advance Move or March Move during the current Player Turn, it can cast the following Bound Spell with Power Level (6/6):\newline%
+Type: \damage{}, \hex{}, \range{36}. Duration: \instant{}.\newline%
+The target must take a Discipline Test rolling an additional D6. If failed, the target suffers a number of hits equal to
+the amount by which the test was failed. Hits are resolved with Armour Penetration 10 and wound automatically.%
+}
+
+% MOUNTS
+
+% Skeleton Chariot
+
+\newcommand{\additionalhorses}{%
+Two additional Skeletal Horses and base size increased to {100x100} \si{\milli\meter}%
+}
+
+% Ark of Ages
+
+\newcommand{\sacredark}{Sacred Ark}
+\newcommand{\sacredarkdef}{%
+All friendly Wizards within \distance{12} of the Ark of Ages add \distance{+6} to the range of their non-Bound Spells. Spells of type \aura{} only add \distance{+3} to their range.\par%
+Furthermore, you gain the Well of Souls Flux Card. One use only. May be activated at the start of any of your Magic Phases. Instead of randomly drawing a Flux Card from the deck, you draw the Well of Souls Flux Card. In addition, instead of randomly drawing a Flux Card from the deck, your opponent must draw the Well of Souls Flux Card in the following Magic Phase. Afterwards discard the Well of Souls Flux Card (even if the opponent did not use it for whatever reason).\par%
+\wellofsoulslayout{%
+		\wellofsoulstitle{Well of Souls}{Flux Card}%
+	}{%
+		\fluxcard{5 Magic Dice}{both players}{5 Veil Tokens}{Active Player}%
+	}{%
+		When making a casting roll with 3 or more Magic Dice, all doubles count as triples. Note that a Caster can suffer multiple Miscast effects from a single casting roll. However no Miscast effect can be applied more than once.%
+	}%
+}
+
+% Sha Guardian
+
+\newcommand{\eternalguardian}{Eternal Guardian}
+\newcommand{\eternalguardiandef}{%
+When the model suffers a wound from an attack with \multiplewounds{}{}, the number of wounds this is multiplied into (due to \multiplewounds{}{}) is halved, rounding up.%
+}
+
+
+% CORE
+
+% Skeleton Chariot
+
+\newcommand{\boundindeath}{Bound in Death}
+\newcommand{\boundindeathdef}{%
+\rnf{} models in this unit must be fewer than 3 before hits can be distributed onto Characters with the same Type and Size as this unit.%
+}
+\newcommand{\chariothost}{Chariot Host}
+\newcommand{\chariothostdef}{%
+If the model part's unit has at least one Full Rank, and there is a model in the rank directly behind it (in the same file), its \impacthits{} cause an additional hit (normally D3+2 instead of D3+1).%
+}
+\newcommand{\legioncharioteers}{Legion Charioteers}
+\newcommand{\legioncharioteersdef}{%
+The model loses Light Troops and gains \textbf{Scoring}. Its Charioteers gain \textbf{\devastatingcharge{} (+1 \St{}, \fightinextrarank{})}.
+}
+
+% SPECIAL
+
+% Tomb Cataphracts
+
+\newcommand{\undergroundambushcategorynote}{%
+The unit additionally counts towards \entombed{} when taking \undergroundambush{}.%
+}
+
+% Scarab Swarms
+
+\newcommand{\chitinoustide}{Chitinous Tide}
+\newcommand{\chitinoustidedef}{%
+The model can make a number of Supporting Attacks equal to its Attack Value.%
+}
+
+% ANCIENT ORDNANCE
+
+% Sand Stalkers
+
+\newcommand{\petrifyinggaze}{Petrifying Gaze}
+\newcommand{\petrifyinggazedef}{%
+\range{12}, \shots{D6+1}, \St{} 2, \AP{} 10, \quicktofire{}. When rolling to wound with this attack, use the target's Agility instead of the target's Resilience. For models with more than one model part, use the highest Agility value.%
+}
+
+% Charnel Catapult
+
+% Name already defined
+\newcommand{\charnelcatapultdef}{%
+This Artillery Weapon \textbf{always} hits on a roll equal to or greater than its Aim. It can be fired in two ways:%
+\begin{smallitemize}%
+\item As a \textbf{\catapult{4}} with \range{12-60}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], [\multiplewounds{D3, \clippedwings{}}{}].%
+\item As a \textbf{\catapult{6}} with \range{12-48}, \shots{1}, \St{} 3, \AP{} 0, \flamingattacks{}, \magicalattacks{}. Units that suffer at least one casualty from this weapon must take a Panic Test just as if they had suffered \SI{25}{\percent} casualties. Panic Tests caused by this weapon are taken at -1 Discipline.%
+\end{smallitemize}%
+}
+
+% ENTOMBED
+
+% MASON'S MENAGERIE
+
+% Dread Sphinx
+
+\newcommand{\colossalkopesh}{Colossal Kopesh}
+\newcommand{\colossalkopeshdef}{%
+Attacks with this weapon gain +2 Strength, +2 Armour Penetration, and \multiplewounds{D3}{\against{} \toweringpresence}.%
+}
+
+% Colossus
+
+\newcommand{\scalesofdestiny}{Scales of Destiny}
+\newcommand{\scalesofdestinydef}{%
+The wielder suffers -1 Attack Value and -1 Armour. It has two Bound Spells:%
+\begin{smallitemize}%
+\item \spellformat{\divinationspelltwo}{\divination}. Power Level (4/8).%
+\item \spellformat{\cosmologyspellthree}{\cosmology}. Power Level (4/8).%
+\end{smallitemize}%
+}
+\newcommand{\giantaspenbow}{Giant Aspen Bow}
+\newcommand{\giantaspenbowdef}{%
+\textbf{\boltthrower}. \range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, [\multiplewounds{D3}{}].\newline%
+This Artillery Weapon \textbf{always} hits on a roll equal to or greater than its Aim.%
+}

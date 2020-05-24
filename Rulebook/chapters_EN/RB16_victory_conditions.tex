@@ -1,0 +1,70 @@
+\part{Victory Conditions}
+\label{victory_conditions}
+
+\section{Scoring Victory Points}
+\label{scoring_victory_points}
+
+At the end of each game, add up your Victory Points (VP) according to the rules below:
+
+\vspace*{5pt}
+\noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.7cm}p{13.2cm}}
+
+    Dead Units  &%
+    For each enemy unit that has been removed as a casualty, you gain a number of \textbf{VP equal to its Point Cost}.\\
+    Fleeing Units &%
+    For each enemy unit that is Fleeing at the end of the game, you gain a number of \textbf{VP equal to half its Point Cost (rounding up)}.\\
+    Decimated Units &%
+    For each enemy unit that is at \SI{25}{\percent} or less of their starting number of Health Points (starting number taken from the Army List) at the end of the game, you gain a number of \textbf{VP equal to half its Point Cost (rounding up)}. Characters are counted separately from the units they have joined. Note that if an enemy unit is both Fleeing and Decimated, you gain a number of VP equal to the unit's total Point Cost.\\
+    Dead General &%
+    If the enemy General was removed as a casuality, you gain \textbf{200 VP}. \\
+    Dead Battle Standard Bearer &%
+    If the enemy Battle Standard Bearer was removed as a casuality, you gain \textbf{200 VP}.\\
+\end{tabular}
+
+\section{Scoring Secondary Objectives}
+\label{scoring_secondary_objectives}
+
+The Secondary Objective selected at the start of the game can grant extra Battle Points (see \totalref{secondary_objectives}, as well as table \ref{table/victory_points} in the next section).
+
+\section{Who is the Winner?}
+\label{who_is_the_winner}
+
+Once all the Victory Points are added together, a total of 20 Battle Points are divided between the players, with more points to the winner depending on the Victory Points difference. Calculate the Victory Points Difference and use table \ref{table/victory_points} below to convert the Victory Points into Battle Points.
+If there is a winner of the Secondary Objective, that player gains 3 additional Battle Points while the loser of the Secondary Objective loses 3 Battle Points. In case there is no winner, the Secondary Objective ends in a draw and no additional Battle Points are awarded to either player.
+
+\vspace*{10pt}
+\begin{table}[!hbtp]
+\centering
+\noindent\begin{tabular}{M{4cm}@{}M{3cm}cc}
+\toprule
+\multicolumn{2}{c}{\textbf{Victory Points Difference}} & \multicolumn{2}{c}{\textbf{Battle Points}} \tabularnewline
+\textbf{Percentage of Army Points} & (if playing 4500 points) & \textbf{Winner} & \textbf{Loser} \tabularnewline
+\midrule
+0 - \SI{5}{\percent} & 0 - 225 & 10 & 10 \tabularnewline
+>5 - \SI{10}{\percent} & 226 - 450 & 11 & 9 \tabularnewline
+>10 - \SI{20}{\percent} & 451 - 900 & 12 & 8 \tabularnewline
+>20 - \SI{30}{\percent} & 901 - 1350 & 13 & 7 \tabularnewline
+>30 - \SI{40}{\percent} & 1351 - 1800 & 14 & 6 \tabularnewline
+>40 - \SI{50}{\percent} & 1801 - 2250 & 15 & 5 \tabularnewline
+>50 - \SI{70}{\percent} & 2251 - 3150 & 16 & 4 \tabularnewline
+>\SI{70}{\percent} & >3150 & 17 & 3 \tabularnewline
+\midrule
+\multicolumn{2}{c}{Winning Secondary Objective} & +3 & -3 \tabularnewline
+\bottomrule
+\end{tabular}
+\caption{Victory Points.}
+\label{table/victory_points}
+\end{table}
+  
+\begin{optionalrules}
+\subsection{Optional Simplified Rules for Determining the Winner}
+
+Winning the Secondary Objectives awards the winner a number of Victory Points equal to \SI{20}{\percent} of the Army Points. Once all the Victory Points are added together, compare the two results.
+\begin{itemize}[label={-}]
+\item If the difference in Victory Points is less than \SI{10}{\percent} of the Army Points, the game is a \textbf{Draw}.
+\item If the difference is at least \SI{10}{\percent} and up to \SI{50}{\percent}, it is a \textbf{Win} for the player who scored higher.
+\item If the difference is more than \SI{50}{\percent} of the Army Points, the game is a \textbf{Massacre}.
+\end{itemize}
+\end{optionalrules}
+
+\debugfooter % Else footer goes wild for some reason with ocgcolorlinks option

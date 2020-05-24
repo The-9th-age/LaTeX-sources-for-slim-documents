@@ -1,0 +1,44 @@
+
+\part{Battlefield Logistics}
+
+\section{Measuring Distances}
+\label{measuring_distances}
+
+The unit of measurement for all distances and ranges in \nameofthegame{}, is the inch (\si{\inch}). An inch corresponds to \SI{2.54}{\centi\meter}. To determine the distance between two points on the Battlefield (or two units, or any other elements), you always measure from the closest points, even if the line of measuring goes through any kind of intervening or obstructing element.
+
+The rules often refer to things being within a certain distance. Measure the distance between the closest points. If this distance is less than or equal to the given range, they are considered to be within range. This means that a model is always within range of itself and that the entire model or unit does not need to be within range, only a fraction of it.
+
+When measuring distances to and from a unit, measure from their Boundary Rectangles.
+
+Players are allowed to measure any distance at any time.
+
+\distance{1} in the game would be roughly equal to \num{1.5} meters in real life. An average human-like creature in the game has an Advance Rate of \distance{4} and a March Rate of \distance{8} which means that in a single movement phase it would move only \num{6} meters (\num{12} if marching). Likewise a ranged weapon like a longbow has an effective range of \distance{30} in the game which would equal roughly \num{45} meters, which is 5 times shorter than the average historic effective range of the weapon of around \num{250} meters.
+
+For example, players could use the historic range of the longbow to determine what kind of distance \distance{1} represents in a game. In that case \distance{1} would be slightly more than 8 meters and much closer to representing the distances assumed when writing the rules for this game.
+
+We do not wish to tell players how to imagine their fights or how many individuals each miniature should represent, but we believe that an easy equation of \distance{1} being roughly equal to \num{10} meters is a good representation of the size of the game. An average game will be played on a \num{72x48}\si{\inch} table and thus represents a real-life area of \num{720x480} \si{\meter} or roughly 50 football pitches. In medieval times (the closest thing we have to our fantasy world) this would represent an average sized battlefield where two forces with soldiers numbering from a few hundred to several thousand would meet.
+
+\section{Line of Sight}
+\label{line_of_sight}
+
+A model can draw a Line of Sight to its target (a point or model) if you can extend a straight line from the front of its base directly to its target, without the line:
+\begin{itemize}[label={-}]
+\item leaving the model's Front Arc;
+\item being interrupted by Opaque Terrain;
+\item being interrupted by the base of a model that has a \textbf{equal or bigger Size} than \textbf{both} the model and its target (see \totalref{model_classification}, for more details; Model Rules such as \hyperref[tall]{\tall} or \hyperref[skirmisher]{\skirmisher} can affect this).
+\end{itemize}
+Models on round bases can use any point on their base for drawing Line of Sight. A Line of Sight interrupted this way is said to be obscured.
+
+When drawing Line of Sight from several models inside a unit, this is done for each model independently. Line of Sight cannot be drawn to targets outside the unit's Front Arc, and models never block Line of Sight to other models within the same unit. A unit is considered to have a Line of Sight to a target if one or more models in the unit have Line of Sight. A model is considered to have a Line of Sight to a unit if it can draw a Line of Sight to any part of the unit's Footprint.
+
+\section{Unit Spacing}
+\label{unit_spacing}
+
+Normally all units must be separated from Impassable Terrain and from both friendly and enemy units by more than \distance{1} (remember that distances between units are measured to and from their Boundary Rectangles).
+
+Certain types of movement allow a unit to come within \distance{1} of other units or Impassable Terrain. The most common types of movement are:
+
+\begin{itemize}[label={-}]
+\item During an Advance Move, a March Move, or a Swift Reform, units may come up to \distance{0.5} of these elements but must be more than \distance{1} away at the end of the move.
+\item During a Failed Charge Move or a Charge Move, units are allowed to come within \distance{0.5} of these elements, including base contact (they may however only move into base contact with an enemy unit that was the target of the charge). Once these units have moved within \distance{1} of these elements, they are allowed to remain there as long as they stay within \distance{1}. As soon as they move further away, the usual restrictions regarding Unit Spacing apply again.
+\end{itemize}

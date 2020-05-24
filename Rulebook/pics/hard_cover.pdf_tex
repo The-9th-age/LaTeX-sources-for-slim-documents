@@ -1,0 +1,69 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'hard_cover.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1785.82668063bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.3015873)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{hard_cover.pdf}}%
+    \put(0.2870301,0.14642556){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ }}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{hard_cover.pdf}}%
+    \put(0.01014902,0.14642554){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ }}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{hard_cover.pdf}}%
+    \put(0.01051059,0.26390267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCA}}}%
+    \put(0.09556783,0.22859158){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\figureHCNotwithinlightofsight}}}%
+    \put(0.3359074,0.26390267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCB}}}%
+    \put(0.50714886,0.14289715){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureHCWithinlightofsight}}}%
+    \put(0.37525783,0.22739742){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureHCMorethanhalfoffootprintobscured}}}%
+    \put(0.6613042,0.26390267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSCC}}}%
+    \put(0.86395517,0.143564){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureHCWithinlightofsight}}}%
+    \put(0.69998775,0.22739742){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureHCLessthanhalfoffootprintobscured}}}%
+    \put(0.18961425,0.03744876){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureHCSizeGreen}}}%
+    \put(0.30942317,0.18113058){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\figureHCSizePurple}}}%
+    \put(0.12720466,0.13594845){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureHCSizeBlue}}}%
+  \end{picture}%
+\endgroup%

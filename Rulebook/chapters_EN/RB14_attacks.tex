@@ -1,0 +1,186 @@
+\part{Attacks}
+\label{attacks}
+
+\section{Definition and Classification of Attacks}
+
+All sources of damage are defined as Attacks, which are then divided into Melee and Ranged Attacks (see figure \ref{figure/attacks}).
+
+\subsection{Melee Attacks}
+\label{melee_attacks}
+
+Any attacks made at units in base contact with the attacker's unit in the Melee Phase are Melee Attacks.
+
+The most common type of Melee Attacks are Close Combat Attacks. Model parts perform a number of Close Combat Attacks equal to their Attack Value, see \totalref{which_models_can_attack}.
+
+Special Attacks are considered to be Melee Attacks that are not Close Combat Attacks (see \totalref{special_attacks}).
+
+\subsection{Ranged Attacks}
+\label{ranged_attacks}
+
+All attacks that are not Melee Attacks are Ranged Attacks.
+
+All Ranged Attacks made with a Shooting Weapon in the Shooting Phase or as a Stand and Shoot Charge Reaction are referred to as Shooting Attacks.
+
+Examples for other Ranged Attacks are Damage spells, ranged Special Attacks, hits from \hyperref[miscast]{Miscasts}, hits from failed \hyperref[dangerous_terrain]{Dangerous Terrain Tests}, etc.
+
+\newcommand{\figATTAttacks}{Attacks}
+\newcommand{\figATTMeleeAttacks}{\begin{minipage}{0.17\unitlength}\begin{center}%
+Melee Attacks%
+\end{center}\end{minipage}}
+\newcommand{\figATTRangedAttacks}{\begin{minipage}{0.17\unitlength}\begin{center}%
+Ranged Attacks%
+\end{center}\end{minipage}}
+\newcommand{\figATTCCAttacks}{\begin{minipage}{0.2\unitlength}\begin{center}%
+Close Combat Attacks%
+\end{center}\end{minipage}}
+\newcommand{\figATTSpeMeleeAttacks}{\begin{minipage}{0.2\unitlength}\begin{center}%
+Special Attacks%
+\end{center}\end{minipage}}
+\newcommand{\figATTShootingAttacks}{\begin{minipage}{0.15\unitlength}\begin{center}%
+Shooting Attacks%
+\end{center}\end{minipage}}
+\newcommand{\figATTOthers}{Others}
+
+\begin{figure}[!htbp]
+\centering
+\def\svgwidth{0.8\textwidth}
+\input{pics/attacks.pdf_tex}
+\caption{Classification of Attacks.}
+\label{figure/attacks}
+\end{figure}
+
+\subsection{Strength and Armour Penetration of Attacks}
+
+Attacks have a Strength and an Armour Penetration value, unless specified otherwise. Close Combat Attacks use the Strength and Armour Penetration of the model part making the attack, possibly modified by their Close Combat Weapon, Model Rules, spells, Characteristics modifiers, and other effects. Shooting Attacks use the Strength and Armour Penetration in the profile of the Shooting Weapon they are made with. Other types of attacks (such as spells and Special Attacks) follow the general rules for their type and the individual rules specified in their description.
+
+\newpage
+\section{Attack Sequence}
+\label{attack_sequence}
+
+Whenever an attack hits a model, use the following sequence:
+
+\hspace*{0.3cm}\begin{tabular}{c|m{14cm}}
+1 & Attacker distributes hits.\\
+2 & Attacker rolls to wound; if successful, proceed.\\
+3 & Defender makes Armour Save rolls; if failed, proceed.\\
+4 & Defender makes Special Save rolls; if failed, proceed.\\
+5 & Defender removes Health Points or casualties.\\
+6 & Defender checks for \hyperref[panic_test]{Panic}.\\
+\end{tabular}
+
+Complete each step for all the attacks that are happening simultaneously (such as all Shooting Attacks from a single unit or all Close Combat Attacks at a given Initiative Step) before moving on to the next step.
+
+\section{Distribute Hits}
+\label{distribute_hits}
+
+All attacks that target a unit as a whole (this includes most Ranged Attacks and most Melee Attacks that are not Close Combat Attacks), will under normal circumstances hit the unit's \rnf{} \hyperref[health_pools]{Health Pool}. How hits are distributed may change when Characters are joined to units, as described in \totalref{characters}.
+
+Note that Close Combat Attacks are not distributed, but are instead allocated before to-hit rolls are made. In this case, do not redistribute the hits at this stage.
+
+In cases where not all models of a Health Pool (mainly non-Champion \rnf{} models in the same unit) have the same relevant Characteristics or rules (such as different Resilience values or different saves), use the value or rules that the largest fraction of the Health Pool's models has, and apply them to all rolls (to-hit, to-wound, saves). In case of a tie, the attacker chooses which fraction to use.
+
+\section{To-Wound Rolls}
+\label{to_wound_rolls}
+
+If an attack has a Strength value, it must successfully wound the target to have a chance to harm it. To make a to-wound roll, roll a D6 for each hit. The difference between the Strength of the attack and the Resilience Characteristic of the defender determines the needed roll to successfully wound the target. See table \ref{table/the_wounding_table} below.
+
+A natural roll of \result{6} will always succeed and a natural roll of \result{1} will always fail. The player that inflicted the hit makes a to-wound roll for each attack that hit the target. A successful to-wound roll causes a wound; proceed to Armour Saves and Armour Modifiers. If the attack does not have a Strength value, follow the rules given for that particular attack.
+
+
+\begin{table}[!htbp]
+\centering
+  \begin{tabular}{r l}
+    %\toprule
+    Strength - Resilience & Needed roll to wound \\
+    \midrule
+    2 or more & 2+\\
+    1 & 3+ \\
+    0 & 4+ \\
+    -1 & 5+ \\
+    -2 or less & 6+\\
+    %\bottomrule
+  \end{tabular}
+ \caption{The Wounding Table.}
+ \label{table/the_wounding_table}
+\end{table}
+
+\section{Armour Saves}
+\label{armour_saves}
+
+If one or more wounds are inflicted, the player whose unit is being wounded now has a chance to save the wound(s) if it has any Armour (remember that a model's Armour cannot exceed a maximum of 6). To make an Armour Save Roll, roll a D6 for each wound. The following formula determines the needed roll to successfully discard the wound:
+\begin{center}
+7 - (Armour of the defender) + (Armour Penetration of the attack)
+\end{center}
+
+A natural roll of \result{1} will always fail. See table \ref{table/armour_save_roll} below for the different possible results of the formula.
+
+\begin{table}[!htbp]
+\centering
+  \begin{tabular}{r l}
+    \Armour{} - \AP{} & Needed roll to disregard the wound \\
+    \midrule
+    0 or less & No save possible \\
+    1 & 6+ \\
+    2 & 5+ \\
+    3 & 4+ \\
+    4 & 3+ \\
+    5 or more & 2+ \\
+  \end{tabular}
+ \caption{Armour Save Rolls.}
+ \label{table/armour_save_roll}
+\end{table}
+
+If the Armour Save is passed the wound is disregarded.
+
+\section{Special Saves}
+\label{special_saves}
+
+The attacked model now has a final chance to disregard a wound that was not saved by its Armour Save, provided it has a Special Save. There are different types of Special Saves, like \hyperref[aegis]{Aegis (X)} and \hyperref[fortitude]{Fortitude (X)}, both detailed in \totalref{model_rules}.
+
+To make a Special Save Roll, roll a D6 for each wound that was not saved by the model's Armour Save.
+\begin{itemize}[label={-}]
+\item If X is given as a dice roll (e.g. Aegis (4+)), X is the roll needed to successfully disregard the wound.
+\item If X is given as a modifier and with a maximum value (e.g. Fortitude (+1, max 3+)), the model gains this as a modifier to all its Special Saves Rolls of the same type, which cannot be increased to rolls better than the maximum value given in brackets. If the model doesn't have that type of Special Save, it instead gains a corresponding Special Save ((7-X)+) (e.g. a model with Aegis (+2, max 4+) will gain Aegis (5+)).
+\end{itemize}
+
+If a model has more than one Special Save, choose which one to use before rolling. Only a single Special Save can be used against each wound.
+
+\section{Losing Health Points}
+\label{loosing_health_points}
+
+For each unsaved wound, the attacked model immediately loses a Health Point.
+
+\subsection{Characters}
+
+If the attack was \rewordedrule{allocated towards or distributed onto} a Character, the attacked model loses 1 Health Point for each unsaved wound. If the model reaches 0 Health Points, it is removed as a casualty. Keep track of models that have lost Health Points, but not enough to reach 0 Health Points (placing \enquote{Health Point markers} next to such models works fine). These lost Health Points will be taken into account for future attacks. If the model is killed, any excess inflicted unsaved wounds are ignored.
+
+\subsection{Champions}
+
+Even though Champions are \rnf{} models, each Champion has its own Health Pool, and follows the rules for Characters above. If enough Health Points are lost by \rnf{} models in order to wipe out the entire unit, any remaining lost Health Points are allocated towards the Champion (even if it is fighting in a Duel).
+
+\subsection{\rnf{} Models}
+
+\rnf{} models (except Champions) in the same unit share a common Health Pool. If the attack was allocated \rewordedrule{towards} or distributed \rewordedrule{on}to a \rnf{} model, the combined \rnf{} Health Pool loses 1 Health Point for each unsaved wound. If the \rnf{} models have 1 Health Point each, remove one \rnf{} model for each Health Point lost.
+
+If the \rnf{} models have more than 1 Health Point each, remove whole \rnf{} models whenever possible. Keep track of Health Points lost from the Health Pool that are not enough to kill an entire model. These lost Health Points are taken into account for future attacks. For example, a unit of 10 Trolls (3 Health Points each) loses 7 Health Points. Remove two whole models (6 Health Points), leaving 1 lost Health Point which is kept track of. Later, this unit loses 2 Health Points, which is enough to kill a single Troll since 1 Health Point was lost from the previous attack.
+
+If the unit is wiped out, any excess lost Health Points are distributed \rewordedrule{on}to the Champion (even if it is fighting in a Duel). If there is no Champion, the excess Health Point losses are ignored.
+
+If a unit consists of \rnf{} models with different Types or Sizes, each Type or Size of \rnf{} model has its own separate Health Pool.
+
+\section{Removing Casualties}
+\label{removing_casualties}
+
+\subsection{Removing \rnf{} Models}
+
+\rnf{} casualties are removed from the rear rank by the owner. If the unit is in a single rank, remove models as equally as possible from both sides of the unit. Note that the requirement to remove casualties equally from both sides of a single rank unit only applies to each batch of simultaneous attacks.
+
+If a non-\rnf{} model is standing in a position that would normally be removed as a casualty, remove the next eligible \rnf{} model and have the non-\rnf{} model take its place.
+
+\subsection{Removing \rnf{} Models from Units Engaged in Combat}
+
+The removal of casualties from Engaged units follows the general rules for Removing \rnf{} models above. In addition, if the unit is in a single rank, remove casualties from either side of the unit, so that the number of units (highest priority) and number of models (lowest priority) in base contact is maximised. 
+
+ \subsection{Removing Non-\rnf{} Models}
+ 
+Non-\rnf{} casualties are removed from their positions within the unit directly. \rnf{} models are then moved to fill in empty spots. When doing this, the models follow the same guidelines as for casualty removal above.

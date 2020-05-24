@@ -1,0 +1,38 @@
+
+\unitentry{%
+	name=\scarabswarms{},
+	logo=special,
+	optionallogo=undergroundambush,
+	categorynote=\undergroundambushcategorynote{},
+	cost=140,
+	unitsize=2,
+	maxunitsize=6,
+	costpermodel=50,
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\sizestandard{},
+	basesize=40x40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=10,
+	global@Rsr=5,
+	globalrules={\undead{},\dusttodust{},\skirmisher{}},
+	defense@HP=5,
+	defense@Df=3,
+	defense@Re=2,
+	defense@Arm=0,
+	defenserules={\distracting{}},
+	offensename=\scarabswarm{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=2,
+	offense@AP=1,
+	offense@Ag=3,
+	offenserules={\poisonattacks{},\textbf{\chitinoustide}},
+	options={%
+		\undergroundambush{}=15\permodel{},
+	},
+	modelrulesdef={%
+		\modelruledef{\chitinoustide}{\ruletype{\attackattributeclosecombat}{\chitinoustidedef}}%	
+	},
+} % END UNIT ENTRY

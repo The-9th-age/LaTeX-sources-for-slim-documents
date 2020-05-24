@@ -1,0 +1,482 @@
+
+\part{Magic Phase}
+\label{magic_phase}
+
+In the Magic Phase, your Wizards can cast spells and your opponent can try to dispel those spells.
+
+\section{\wizards}
+\label{wizards}
+
+Models that can cast non-Bound Spells are referred to as Wizards. There are 3 types of Wizards: \wizardapprentices{}, \wizardadepts{}, and \wizardmasters{}. See \totalref{spell_selection} and \totalref{universal_rules} for details on the differences between them.
+
+\section{Spells}
+\label{spells}
+
+Spells can be cast during the Magic Phase. Most spells belong to a specific Path of Magic. Each of your Wizards has to choose an available Path of Magic to select spells from; this choice has to be written down on your Army List.
+
+\subsection{Spell Properties}
+\label{spell_properties}
+
+All spells are defined by the following 6 properties:
+
+\subsubsection{Spell Classification}
+
+Spells are classified into the different categories Learned Spells, Attribute Spells, and Hereditary Spells by letters or numbers.
+
+\subsubsection{Spell Name} 
+
+Use the spell name to state which spell you intend to cast.
+
+\subsubsection{Casting Value} 
+
+The Casting Value is the minimum value you need to reach to succeed a Casting Attempt. Spells may have different Casting Values available (see \totalref{boosted_spells}).
+
+\subsubsection{Type}
+
+The spell type describes how the spell's targets have to be chosen.
+
+\subsubsection{Duration}
+
+A spell's duration determines how long the effects of the spell are applied.
+
+\subsubsection{Effect}
+
+The effect of a spell defines what happens to the target of the spell when the spell is successfully cast. Spell effects are never affected by Special Equipment, Model Rules, other spell effects, or similar abilities affecting the Caster, unless noted otherwise.
+
+\subsection{Spell Classification}
+\label{spell_classification}
+
+Spells are divided into the following categories:
+
+\subsubsection{\learnedspells}
+\label{learned_spells}
+
+All spells labelled by a number are Learned Spells. They are the main spells of a Path, usually numbered from 1 to 6. Their assigned number is relevant for the \hyperref[spell_selection]{Spell Selection} rules.
+
+The player may only attempt to cast each \learnedspell{} once per Magic Phase, even if it is known by different Wizards (unless the spell is Replicable, see below).
+
+\subsubsection{\hereditaryspells}
+\label{hereditary_spells}
+
+Most Army Books contain a \hereditaryspell{}. It is labelled \enquote{\textbf{\hereditaryspellnumber}}. \hereditaryspells{} follow all the rules for \learnedspells{}.
+
+\subsubsection{\attributespells}
+\label{attribute_spells}
+
+Attribute Spells are spells that are labelled \enquote{\textbf{\attributespellnumber}}. All Wizards that know at least one spell from a Path automatically know the Path \attributespell{} (if there is any).
+
+Path \attributespells{} are special spells that cannot be cast independently. Instead, the Caster may cast the \attributespell{} automatically each time it successfully casts a non-\attributespell{} from the same Path. \attributespells{} cannot be dispelled.
+
+Additionally, spells may be classified as one of the following:
+
+\subsubsection{\replicablespells}
+\label{replicable_spells}
+
+Some \learnedspells{} are \replicablespells{}. These are labelled \enquote{\textit{\textbf{\replicablespellnumber}}}. The player may attempt to cast \replicablespells{} multiple times in the same Magic Phase. Each Wizard may only make a single attempt, however.
+
+\subsubsection{Bound Spells}
+\label{bound_spells_classification}
+
+Some spells are classified as Bound Spells. Bound Spells can also be cast by models that are not Wizards, but possessing a Bound Spell does not make a model a Wizard. See \totalref{bound_spells} for more details.
+
+\subsection{Spell Types}
+\label{spell_types}
+
+The spell type describes which target(s) can be chosen for the spell. Unless stated otherwise, a spell may only have a single target and the target must be a single unit. If a spell has more than one type, apply all the restrictions. For example, if a spell has the types \direct{}, \hex{}, and \range{12}, the target must be in the Caster's Front Arc, be an enemy unit, and be within \distance{12}.
+
+\subsubsection{\augment}
+
+The spell may only target friendly units (or friendly models inside units if \focused{}).
+
+\subsubsection{\aura}
+
+This is an area of effect spell. Its effects are applied to all possible targets (according to the rest of the spell types). For example, a spell with \augment{}, \aura{}, and \range{12} targets all friendly units within \distance{12}.
+
+\subsubsection{\caster}
+
+The spell targets only the model casting the spell (unless Focused, all model parts are affected).
+
+\subsubsection{\castersunit}
+
+The spell targets only the Caster's unit.
+
+\subsubsection{\damage}
+
+The spell may only target units and/or models not currently Engaged in Combat.
+
+\subsubsection{\direct}
+
+The spell may only target units and/or models in the Caster's Front Arc.
+
+\subsubsection{\focused}
+\label{focused}
+
+The spell may only target single models (including a Character inside a unit). If the target is a multipart model (such as a chariot with riders and pulling beasts, or a knight and its mount), only one model part may be targeted.
+
+\subsubsection{\ground}
+
+The spell doesn't target units or models. Instead, the target is a point on the Battlefield.
+
+\subsubsection{\hex}
+
+The spell may only target enemy units (or enemy models inside units if Focused).
+
+\subsubsection{\missile}
+
+The spell may only target units and/or models within the Caster's Line of Sight. It cannot be cast if the Caster (or its unit) is Engaged in Combat.
+
+\subsubsection{\range{X}}
+
+The spell has a maximum range. Only targets within \distance{X} can be chosen.
+
+\subsubsection{\universal}
+
+The spell may target both friendly and enemy units (or models inside units if \focused{}).
+
+\subsection{Spell Duration}
+
+The spell duration specifies how long the effects of the spell are applied. A spell duration can either be \instant{}, \lastsoneturn{}, or \permanent{} as described below:
+
+\subsubsection{\instant}
+
+The effect of the spell has no lasting duration: effects are applied when the spell is cast. Afterwards the spell ends automatically.
+
+\subsubsection{\lastsoneturn}
+\label{lasts_one_turn}
+
+The effect of the spell lasts until the start of the Caster's next Magic Phase. If an affected unit is divided into several units (the most common example being a Character leaving its unit), each of the units formed this way keeps being affected by the spell effects. Characters that join a unit affected by \lastsoneturn{} spells are not affected by these spells and likewise, units joined by Characters affected by \lastsoneturn{} spells are not affected either.
+
+\subsubsection{\permanent}
+
+The effect of the spell lasts until the end of the game or until a designated ending condition (as detailed in the spell effect) is met. The spell can never be removed by any other means than the way described in the spell. If an affected unit is divided into several units, follow the same restrictions as for \lastsoneturn{} spells.
+
+\section{Magic Phase Sequence}
+\label{magic_phase_sequence}
+
+\hspace*{0.3cm}
+\begin{tabular}{c|m{14cm}}
+1 & Start of the Magic Phase. \tabularnewline
+2 & Draw a Flux Card. \tabularnewline
+3 & Siphon the Veil. \tabularnewline
+4 & Cast a spell with one of your models (see \totalref{spell_casting_sequence}). \tabularnewline
+5 & Repeat step 4 of this sequence for each spell the Active Player can and wishes to cast. \tabularnewline
+6 & End of the Magic Phase. \tabularnewline
+\end{tabular}
+
+In the Magic Phase, spells are cast and dispelled using Magic Dice. The number of Magic Dice each player gets in each Magic Phase is determined by Flux Cards and Siphon the Veil. These dice are kept in a pool of dice, from which a number of dice can be used to either cast or dispel spells.
+
+\subsection{Flux Cards}
+
+
+
+Each player has a deck composed of the 8 Flux Cards given below. At step 2 of the Magic Phase Sequence, the Reactive Player randomly draws one of the Flux Cards from the Active Player's deck. This card determines how many starting Magic Dice both players get in this Magic Phase, and how many Veil Tokens the Active Player gets. Once a Flux Card has been drawn, it is discarded from the deck (and thus cannot be used again in later Magic Phases). The content of a Flux Cards deck is open information to both players.
+
+\begin{center}
+
+\def\fluxcardwidth{0.23\textwidth}
+\def\fluxcardgap{-0.01\textwidth}
+
+%%%%%%
+% Card 1
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 1}}
+\def\FluxCardDice{%
+\textbf{4 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{3 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{\normalfontsize All Miscasts this phase gain a \textbf{+1} Miscast Modifier}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+\hspace{\fluxcardgap}
+%%%%%%
+% Card 2
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 2}}
+\def\FluxCardDice{%
+\textbf{5 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{2 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+\hspace{\fluxcardgap}
+%%%%%%
+% Card 3
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 3}}
+\def\FluxCardDice{%
+\textbf{5 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{5 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+\hspace{\fluxcardgap}
+%%%%%%
+% Card 4
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 4}}
+\def\FluxCardDice{%
+\textbf{5 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{7 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+
+%%%%%%
+% Card 5
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 5}}
+\def\FluxCardDice{%
+\textbf{5 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{9 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+\hspace{\fluxcardgap}
+%%%%%%
+% Card 6
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 6}}
+\def\FluxCardDice{%
+\textbf{6 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{5 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+\hspace{\fluxcardgap}
+%%%%%%
+% Card 7
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 7}}
+\def\FluxCardDice{%
+\textbf{6 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{7 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+\hspace{\fluxcardgap}
+%%%%%%
+% Card 8
+%%%%%%
+\def\FluxCardTitle{\Largefontsize\textbf{Flux Card 8}}
+\def\FluxCardDice{%
+\textbf{7 Magic Dice}\par
+(both players)}
+\def\FluxCardVeil{\textbf{7 Veil Tokens}\par
+(Active Player)}
+\def\FluxCardMiscast{\normalfontsize All Miscasts this phase suffer a \textbf{-1} Miscast Modifier}
+\def\svgwidth{\fluxcardwidth}
+\input{pics/flux_card.pdf_tex}
+
+\end{center}
+
+Instead of using Flux Cards, you may use dice to randomise which Flux Card to use. Mark which cards have already been used and reroll whenever you get an already used card. Here is an example of how to randomise using two D6: reroll the first dice until its result, called X, is within 1-4. Then roll the second D6. If this rolls 4+, add +4 to X. This will give you a value of X between 1 and 8. 
+
+\subsection{Siphon the Veil}
+
+The Active Player creates a new pool of Veil Tokens that will last until his next Siphon the Veil phase.
+\begin{itemize}[label={-}]
+\item Add the number of Veil Tokens left in your previous Veil Token pool.
+\item Add the number of Veil Tokens given by the Flux Card drawn this Player Turn.
+\item Add Veil Tokens from other Sources, such as \channel{} (see page \pageref{channel}).
+\end{itemize}
+
+ Up to 12 Veil Tokens can now be removed from the pool to be turned into Magic Dice by the Active Player. For each full 3 Veil Tokens that were removed, the Active Player adds a Magic Dice to their Magic Dice pool. \rewordedrule{Up to 4 Magic Dice may be added to the Active Player's pool this way.}
+
+\subsection{Veil Token Limits}
+
+At the end of Siphon the Veil, discard Veil Tokens from the Active Player's Veil Token pool until it contains no more than 3 tokens. The remaining Veil Tokens are saved to be added to the Veil Token pool in the Active Player's next Magic Phase.
+
+Some armies can generate Veil Tokens outside Siphon the Veil. This cannot increase the Veil Token pool beyond 6 Veil Tokens.
+
+\section{Spell Casting Sequence}
+\label{spell_casting_sequence}
+
+Each of Active Player's non-Fleeing models with one or more spells may now attempt to cast each of its spells up to one time per Magic Phase. This model is referred to as the Caster. In each Magic Phase one Casting Attempt may be made for each spell, even if this spell is known by different Wizards (remember that Bound Spells, Attribute Spells, and Replicable Spells ignore this restriction).
+
+Each casting of a spell is resolved as follows:
+
+\hspace*{0.3cm}
+\begin{tabular}{c|m{14cm}}
+A & Casting Attempt. If failed, skip steps B-F. \tabularnewline
+B & Dispelling Attempt. If successful, skip steps C-F. \tabularnewline
+C & In case of Broken Concentration, skip steps D-E and go directly to step F. \tabularnewline
+D & Resolve the spell effect. \tabularnewline
+E & If applicable, choose target(s) for the \attributespell{} and resolve its effect. \tabularnewline
+F & If applicable, apply the Miscast effect. \tabularnewline
+\end{tabular}
+
+\subsection{Casting Attempt}
+
+Each Casting Attempt is resolved as follows:
+
+\hspace*{0.3cm}
+\begin{tabular}{c|m{14cm}}
+1 & The Active Player declares which Wizard is casting which spell and with how many Magic Dice. If applicable, they also declare which version of the spell is used and what its targets are. Between 1 and 5 dice from the Active Player's Magic Dice pool must be used. \tabularnewline
+2 & The Active Player rolls that many Magic Dice from the Magic Dice pool. Add the results of the rolled dice and any Casting Modifiers together (see \totalref{casting_and_dispelling_modifiers}), to get the total casting roll. \tabularnewline
+3 & The Casting Attempt is passed if the total casting roll is \textbf{equal to or higher} than the spell Casting Value. The Casting Attempt fails if the total casting roll is less than the spell's Casting Value. If so, the spell is not cast. Note that the Casting Attempt may Fizzle, if 2 or more dice were used (see \totalref{fizzle}). \tabularnewline
+\end{tabular}
+
+\subsubsection{Boosted Spells}
+\label{boosted_spells}
+
+Some spells have two Casting Values, the higher Casting Value being called the Boosted version of the spell. Boosted versions may have their type (range, target restrictions) and/or duration modified (e.g. giving the spell a longer range), and/or the effects of the spell changed. Declare if you are trying to cast the Boosted version before rolling any dice. If no declaration is made, the basic version for the chosen target is assumed to be used.
+
+\subsection{Dispelling Attempt}
+
+Whenever the Active Player passes a Casting Attempt, the Reactive Player may attempt to dispel the Casting Attempt:
+
+\hspace*{0.3cm}
+\begin{tabular}{c|m{14cm}}
+1 & The Reactive Player declares how many Magic Dice will be used from their pool. The Reactive Player must use at least 1 dice for a Dispelling Attempt. \tabularnewline
+2 & The Reactive Player rolls the chosen number of dice. Add the results of the rolled dice and any Dispelling Modifiers together (see \totalref{casting_and_dispelling_modifiers}), to get the total dispelling roll. \tabularnewline
+3 & The Dispelling Attempt is successful if the total dispelling roll is \textbf{equal to or higher} than the total casting roll. If so, the spell is dispelled.The Dispelling Attempt fails if the total dispelling roll is less than the total casting roll. If so, the spell is successfully cast. Note that the Dispelling Attempt may Fizzle if 2 or more dice were used (see \totalref{fizzle}). \tabularnewline
+\end{tabular}
+
+\subsection{Resolve the Spell}
+
+If the spell was not dispelled, it is successfully cast. Apply the spell effects. Afterwards (if applicable), choose a target for the Path Attribute Spell and immediately apply its effects (Attribute Spells cannot be dispelled).
+
+\subsection{Additional Rules Affecting Casting and Dispelling Attempts}
+
+\subsubsection{Casting and Dispelling Modifiers}
+\label{casting_and_dispelling_modifiers}
+
+There are many potential sources for modifiers to the roll (the most common modifier for casting rolls is the +1 to cast modifier for being a \wizardmaster{}). Add these modifiers to the casting or dispelling rolls. Any Casting or Dispelling Modifiers may not exceed a total of +2 and -2.
+
+\subsubsection{Fizzle}
+\label{fizzle}
+
+When a Casting Attempt or Dispelling Attempt is failed and 2 dice or more were used for the attempt, any Magic Dice that rolled a natural \result{1} are put back in the Magic Dice Pool from which they came. Note that this does not apply to passed Casting Attempts that are then dispelled.
+
+\section{\miscast}
+\label{miscast}
+
+When making a casting roll and three or more Magic Dice roll the same value, the Casting Attempt is a Miscast. If the Casting Attempt is successful and not dispelled, apply the effects of the Miscast, which are determined by the value on the Magic Dice that was rolled three times (see table \ref{table/miscast}).
+
+If \textbf{3 Magic Dice} were used for the casting roll, the Miscast counts the value of the dice that rolled three of a kind as one lower (e.g. a triple \result{4} counts as triple \result{3}).
+
+If \textbf{5 Magic Dice} were used for the casting roll, the Miscast counts the value of the dice that rolled three of a kind as one higher (e.g. a triple \result{4} counts as triple \result{5}).
+
+\subsection{Miscast Modifiers}
+
+A +X or -X Miscast Modifier means that X is added to or deducted from the value of the dice yielding the Miscast.  For example, a +1 Miscast Modifier makes a 222 count as a 333 Miscast.
+
+
+\vspace*{10pt}
+\renewcommand{\arraystretch}{2}
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{>{\raggedleft}p{2.5cm}p{12cm}}
+\hline
+
+\textbf{Three of a kind:}&
+\textbf{\miscast{} Effects}\tabularnewline
+
+\hline
+
+\textbf{000} or lower & No additional effects.\tabularnewline
+
+\textbf{111} & \textbf{\brokenconcentration}
+
+\vspace*{5pt}
+The Casting Attempt is considered to be failed (apply Fizzle as normal).\tabularnewline
+
+\textbf{222} & \textbf{\witchfire}
+
+\vspace*{5pt}
+After resolving the spell effect (including any Attribute Spell), the Caster's unit suffers \textbf{1D6 hits} with Armour Penetration 2, \magicalattacks{}, and a Strength equal to the number of Magic Dice that were used for the casting roll.\tabularnewline
+
+\textbf{333} & \textbf{\magicalinferno}
+
+\vspace*{5pt}
+After resolving the spell effect (including any Attribute Spell), the Caster's unit suffers \textbf{2D6 hits} with Armour Penetration 2, \magicalattacks{}, and a Strength equal to the number of Magic Dice that were used for the casting roll.\tabularnewline
+
+\textbf{444} & \textbf{\amnesia}
+
+\vspace*{5pt}
+After resolving the spell effect (including any Attribute Spell), the Caster cannot cast the Miscast spell anymore this game.\tabularnewline
+
+\textbf{555} & \textbf{\backlash}
+
+\vspace*{5pt}
+After resolving the spell effect (including any Attribute Spell), the Caster suffers \textbf{2 hits} that wound on 4+ with Armour Penetration 10 and \magicalattacks.\tabularnewline
+
+\textbf{666} & \textbf{\implosion}
+
+\vspace*{5pt}
+After resolving the spell effect (including any Attribute Spell), the Caster suffers \textbf{4 hits} that wound on 4+ with Armour Penetration 10 and \magicalattacks.\tabularnewline
+
+\textbf{777} or higher & \textbf{\breachintheveil}
+
+\vspace*{5pt}
+After resolving the spell effect (including any Attribute Spell), the Caster's model dies. Remove it from the game as a casualty (no saves of any kind allowed).\tabularnewline
+\hline
+\end{tabular}
+\caption{\miscast{} Table.}
+\label{table/miscast}
+\end{table}
+\renewcommand{\arraystretch}{1.5}
+
+\section{\boundspells{}}
+\label{bound_spells}
+
+A Bound Spell is a spell that is usually contained in a magical artefact of some sort. Bound Spells cannot be used to cast Boosted versions of the spell they contain. A Bound Spell containing a spell from a Path with an Attribute also automatically contains the Path Attribute Spell.
+
+\subsection{Power Level}
+
+All Bound Spells have two Power Levels, given as values in brackets (usually Power Level (4/8)). The first value is the Bound Spell's primary Power Level. This is used when the Bound Spell is cast with 2 Magic Dice. The second value is the Bound Spell's secondary Power Level, and is used when the Bound Spell is cast with 3 Magic Dice.
+
+\subsection{Casting a Bound Spell}
+
+Casting a Bound Spell ignores the normal Casting Attempt rules, and instead follows its own. Each of the Active Player's non-Fleeing models with Bound Spells may attempt to cast each of its Bound Spells up to one time per Magic Phase. This model is referred to as the Caster. Bound Spells can be cast even if the same spell has already been cast earlier in this same Magic Phase. Casting a Bound Spell does not prevent the casting of the same spell later in the same Magic Phase (even as non-Bound Spell).
+
+\subsubsection{Bound Spell Casting Attempt}
+
+\hspace*{0.3cm}
+\begin{tabular}{c|m{14cm}}
+1 & The Active Player declares which model is casting which Bound Spell and if it is cast with 2 or 3 Magic Dice, provided there are enough dice available. If applicable, they also declare what its targets are. The spell is always cast with the basic version (Bound Spells cannot be Boosted).  \tabularnewline
+2 & The Active Player removes the chosen number of Magic Dice (2 or 3) from their Magic Dice pool (do not roll them). \tabularnewline
+3 & The Casting Attempt is always successful.
+\begin{itemize}[label={-}]
+\item If \textbf{2 Magic Dice} were removed the casting roll is equal to the Bound Spell's primary Power Level.
+\item If \textbf{3 Magic Dice} were removed the casting roll is equal to the Bound Spell's secondary Power Level.
+\end{itemize} \tabularnewline
+\end{tabular}
+
+Note that Bound Spells that contain a spell from a Path with an Attribute automatically also contain the Path Attribute Spell, and that unless noted otherwise Casting Modifiers are not applied to the casting roll of a Bound Spell.
+
+\subsubsection{Bound Spell Dispelling Attempt}
+
+Dispelling a Bound Spell works exactly like dispelling a Learned Spell
+
+\section{Magical Effects}
+
+\subsection{Magical Move}
+\label{magical_move}
+
+All moves made during the Magic Phase are Magical Moves. The move is performed as if in the Moving Units sub-phase, which means that it follows the same rules and restrictions as if this was a new Moving Units sub-phase (e.g. Fleeing units, \hyperref[shaken]{Shaken} units, units with \hyperref[random_movement]{\randommovement{}}, or units in combat cannot move). Actions that a unit could normally do in the Moving Units sub-phase can be made (such as Wheeling, Reforming, joining units, leaving units and so on). A Magical Move always has a given limit (e.g. \enquote{the target may perform a \distance{12} Magical Move}): the target's Advance Rate and March Rate are \textbf{always} equal to this value, for the duration of the move. If a unit has already done a Magical Move in this Magic Phase, it cannot move again.
+
+\subsection{Recover Health Points and Raise Health Points}
+\label{recover_and_raise_health_points}
+
+Some spells or abilities can recover Health Points lost earlier in the battle. The amount of Health Points recovered is noted in the ability (Recover X Health Points). A Character inside a combined unit never recovers Health Points from abilities that allow a unit to recover Health Points. A Character can only recover Health Points when it is the only target of an ability or spell. Recovering Health Points can never bring back dead models, and cannot increase a model's Health Points above its starting value. Any excess Recovered Health Points are lost.
+
+Raise Health Points uses the rules for Recover Health Points with the exception that Raise Health Points can bring back dead models. First, recover all lost Health Points on models in the unit (except for Characters), then bring back models in the following order: first Champions then other \rnf{} models (including Musicians and Standard Bearers). Any used One use only effects or destroyed Special Equipment (or other equipment) are not regained. Each raised model must be recovered to its full amount of Health Points before another model can be raised. This cannot raise a unit's number of models above its starting number. Once again, any excess Raised Health Points are lost. Raised Models without \frontrank{} must be placed in the back rank if incomplete, or in  new back rank if the current back rank is complete. In units with one rank (including single model units), a raised model can either be placed in the first rank or you can declare the first rank complete and create a new rank. Any models that cannot be placed in legal positions are lost. Raised models are subject to the same ongoing effects as their unit, and count as charging if their unit charged.
+
+\subsection{Summoned Units}
+\label{summoned_units}
+
+Summoned units are units created during the game. All models in a newly Summoned unit must be deployed within the range of the ability. If the unit is summoned as a result of a \ground{} type spell, at least one of the Summoned models must be placed on the targeted point and all models must be within the spell's range. Summoned models must be placed at least \distance{1} away from other units and from Impassable Terrain. If the whole unit cannot be deployed, then no models can be deployed. Once Summoned, the newly created unit operates as a normal unit on the Caster's side. Summoned units do not award Victory Points to the opponent when they are destroyed.

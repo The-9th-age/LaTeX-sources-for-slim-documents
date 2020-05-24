@@ -1,0 +1,44 @@
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+{\titlefont\fontsize{40}{48}\selectfont\noindent\theninthage
+
+\fantasybattles}
+
+\vspace*{0.5cm}
+\ifdef{\booklogo}{%
+\includegraphics[height=10cm]{\booklogo}%
+}{%
+\includegraphics[height=10cm]{../Layout/pics/logo_9th.png}%
+}
+
+{\titlefont\fontsize{50}{60}\selectfont \booktitle
+\vspace{0.4cm}
+
+\fontsize{14}{16.8}\selectfont \ifdef{\preversion}{\preversion}{}\version{}
+
+\ifdef{\releasedate}{\releasedate}{\today}
+
+\ifdef{\translationversion}{{\fontsize{14}{16.8}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}}
+\vfill
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\frontpagecredits}}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\license}}
+\tabularnewline
+\end{tabular}
+
+
+\end{center}
+
+
+\end{titlepage}
+
+\setcounter{page}{2}

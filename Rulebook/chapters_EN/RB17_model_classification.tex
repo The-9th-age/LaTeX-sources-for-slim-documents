@@ -1,0 +1,101 @@
+\part{Model Classification}
+\label{model_classification}
+
+\section{Classification of Models}
+
+All models have a Size and a Type, defined in their unit entry.
+
+\subsection{Size}
+\label{size}
+
+There are three Sizes, with the following rules:
+
+\begin{center}
+\begin{tabular}{P{5cm} P{3cm} P{3cm} P{3cm}}
+  &%
+  \textbf{Standard} &%
+  \textbf{Large} &%
+  \textbf{Gigantic} \\
+  \midrule
+  \textbf{Full Ranks}\par
+  {\normalfontsize Minimum number of models needed to form Full Ranks}&%
+  5 &%
+  3 &%
+  1 \\
+  \textbf{Supporting Attacks}\par
+  {\normalfontsize Maximum number of Supporting Attacks}&%
+  1&%
+  3&%
+  5\\
+  \textbf{Dangerous Terrain}\par
+  {\normalfontsize Number of D6 rolled when performing Dangerous Terrain Tests}&%
+  1&%
+  2&%
+  3\\
+  \textbf{Model Rules} &%
+  - &%
+  \hyperref[stomp_attacks]{Stomp Attacks (1)}&
+  \hyperref[stomp_attacks]{Stomp Attacks (D6)}\par
+  \hyperref[towering_presence]{Towering Presence}\par
+  \hyperref[massive_bulk]{Massive Bulk}\par
+  \hyperref[terror]{Terror}\\
+\end{tabular}
+\end{center}
+
+\subsection{Type}
+\label{type}
+
+There are four Types, with the following rules:
+
+\begin{center}
+\begin{tabular}{P{2cm} P{3.5cm} P{3.5cm} P{5cm}}
+  \textbf{Infantry} &
+  \textbf{Beast} &
+  \textbf{Cavalry} &
+  \textbf{Construct} \\
+  \midrule
+  - &
+  \hyperref[swiftstride]{Swiftstride} &
+  \hyperref[swiftstride]{Swiftstride}\par
+  \hyperref[cannot_be_stomped]{Cannot be Stomped}\par
+  \hyperref[tall]{Tall} &
+  Cannot use \hyperref[stomp_attacks]{Stomp Attacks}\par
+  \hyperref[chariot]{Chariot}\\
+\end{tabular}
+\end{center}
+
+\subsection{Models on Foot and Mounted Models}
+\label{model_on_foot_and_mounted_models}
+
+Certain spells or rules can affect mounted models or models on foot differently. Any model with no model part with \hyperref[harnessed]{Harnessed} is considered to be on foot. Any model with at least one model part with Harnessed is considered to be mounted.
+
+\newpage
+\section{Character Mounts}
+
+Many Characters have the option of selecting mounts from the mount section of the Army Books. When a Character, referred to as the rider, selects a mount, apply the following rules:
+
+\subsubsection{Size, Type, and Base}
+
+Always use the Size, Type, and Base of the mount.
+
+\subsubsection{Offensive Characteristics}
+
+Rider and mount use their own respective Offensive Characteristics.
+
+\subsubsection{Defensive and Global Characteristics}
+
+The combined model has a single set of Global Characteristics and a single set of Defensive Characteristics. Always use the values on the mount's profile, except when that value is \enquote{\ascharacter}. In this case, the \enquote{\ascharacter} refers to the value on the Character's profile which should be used instead. Sometimes, a value is written as \enquote{\ascharacter{} + X}. In this case, use the Character's value, increased by X.
+
+For example, if a Character (Armour 0) that rides a horse (Armour \ascharacter{} + 2), wears Heavy Armour (+2 Armour), and carries a Shield (+1 Armour), the combined model has an Armour equal to: 0 + 2 + 2 + 1 = 5.
+
+\subsubsection{Model Rules}
+
+Model Rules connected to specific model parts (such as Attack Attributes, Special Attacks, and weapons) are only applied to this model part. Other Model Rules (such as Universal Rules, Character, Armour, and Personal Protections) are applied to the combined model as normal. 
+
+Remember that models with \hyperref[massive_bulk]{Massive Bulk} (all models of Gigantic Size) ignore Armour and Personal Protections from the rider.
+
+\section{Classification of Units}
+
+Some rules call for Size or Type of units, which might contain a mix of several Sizes and Types. A unit's Type is the same as that of the largest fraction of its models. Likewise, a unit's Size is the same as that of the largest fraction of its models.
+
+In case of a tie, the opponent chooses which fraction to use.

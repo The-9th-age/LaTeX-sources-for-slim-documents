@@ -1,0 +1,39 @@
+\unitentry{%
+	name=\hellmaw{},
+	logo=monster,
+	cost=340,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\construct{},
+	size=\sizegigantic{},
+	basesize=100x150,
+	scoring=no,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=5,
+	globalrules={\supernal{},\textbf{\gateway}},
+	defense@HP=5,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=2,
+	defensearmour={\aegis{} (5+)},
+	offensename=\hellmaw{},
+	offense@Ag=1,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	options={%
+		\onechoiceonly{%
+			\columnbreak\oneominousgateway{}=50,
+			\twoominousgateways{}=125,
+		},
+	},
+	modelrulesdef={\modelruledef{\gateway}{\ruletype{\universalrule}\gatewaydef}},
+	optionalmodelrulesdef={\modelruledef{\ominousgateway}{\ruletype{\universalrule}\ominousgatewaydef}},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}%
+		\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}%
+		\toggletrue{onecolprintoptions}\togglefalse{twocolprintoptions}%
+	},
+}

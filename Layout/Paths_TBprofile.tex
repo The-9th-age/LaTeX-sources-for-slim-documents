@@ -1,0 +1,122 @@
+
+\newcommand{\startcharacteristicstable}{%
+\begin{tabular}{@{}p{0.20\textwidth}@{\hskip 0.01\textwidth}P{0.06\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{\hskip 0.01\textwidth}p{0.48\textwidth}@{}}%
+}
+
+\newcommand{\greycolor}{black!50}
+\newcommand{\greytextcolor}{\textcolor{\greycolor}}
+
+\newcommand{\ChLab}[1]{{\normalfontsize\greytextcolor{\textit{#1}}}} % Font for Characteristic's labels
+\newcommand{\ChVal}[1]{\textbf{#1}} % Font for Characteristic's values
+
+
+\rule{\textwidth}{0.7pt}\par\vspace{-5pt}%
+{%
+% Logos
+\hspace*{-3pt}%
+\begin{minipage}[b]{0.08\textwidth}%
+\begin{center}\includegraphics[width=0.7\textwidth]{\shamanismicon}\end{center}%
+\end{minipage}%
+% Title, unit cost and size
+\hspace{0.01\textwidth}\begin{minipage}[b]{0.5\textwidth+3pt}%
+% Title with hyperlink, scoring logo
+{\Largerfontsize\textbf{\totemicbeastname}} \textbf{\totemicbeastnameaddon}%
+\vspace*{3pt}\newline%
+% Unit cost and size
+\hspace*{6.5cm}%
+\singlemodel{}%
+
+\vspace{0pt}%
+\end{minipage}%
+%
+% Restrictions
+\hfill\begin{minipage}[b]{0.2\textwidth}%
+\setlength{\parskip}{0pt}%
+\vspace{0pt}%
+\end{minipage}%
+%
+% Size, Type and Base
+\begin{minipage}[b]{0.2\textwidth}%
+\renewcommand{\arraystretch}{1}%
+\begin{tabular}{@{}>{\raggedleft}p{0.25\textwidth}@{\hskip 0.03\textwidth}p{0.72\textwidth}@{}}%
+\ChLab{\size}&\sizelarge{}\tabularnewline%
+\ChLab{\type}&\beast{}\tabularnewline%
+\ChLab{\basesize}&40x40 \si{\milli\meter}%
+\tabularnewline%
+\end{tabular}%
+\vspace*{-4pt}%
+\end{minipage}\par%
+}%
+\vspace{-10pt}\rule{\textwidth}{0.7pt}\par%
+%
+\vspace*{-5pt}%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Characteristics and rules
+%%%%%%%%%%%%%%%%%%%%%%
+% Global Characteristics
+\renewcommand{\arraystretch}{1.4}%
+\startcharacteristicstable{}%
+{\ChLab{\GlobalCharacteristics}}&%
+{\ChLab{\AdvanceRateInitials}}&%
+{\ChLab{\MarchRateInitials}}& %
+{\ChLab{\DisciplineInitials}}&%
+&%
+&%
+\ChLab{\ModelRules}\tabularnewline%
+&%
+\ChVal{\distance{3D6}}%
+&%
+-%
+&%
+\ChVal{7}&%
+&%
+&%
+\strut\totemicbeastoffrules{}%
+\tabularnewline%
+\hline%
+\end{tabular}%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Defensive Characteristics
+\vspace*{-10pt}%
+\startcharacteristicstable{}%
+{\ChLab{\DefensiveCharacteristics}}&%
+{\ChLab{\HealthPointsInitials}}&%
+{\ChLab{\DefensiveSkillInitials}}&%
+{\ChLab{\ResilienceInitials}}& %
+{\ChLab{\ArmourInitials}}&%
+&%
+\tabularnewline%
+&% no defensive name
+\ChVal{3}&%
+\ChVal{3}&%
+\ChVal{5}&%
+-&%
+&%
+\strut
+\tabularnewline%
+\hline%
+\end{tabular}%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Offensive Characteristics
+\vspace*{-10pt}%
+\startcharacteristicstable{}%
+{\ChLab{\OffensiveCharacteristics}}&%
+{\ChLab{\AttackValueInitials}}&%
+{\ChLab{\OffensiveSkillInitials}}&%
+{\ChLab{\StrengthInitials}}& %
+{\ChLab{\ArmourPenetrationInitials}}&%
+{\ChLab{\AgilityInitials}}&%
+\tabularnewline%
+&%
+\ChVal{4}&%
+\ChVal{3}&%
+\ChVal{5}&%
+\ChVal{2}&%
+\ChVal{3}&%
+\strut\breathattack{\St{} 3, \AP{} 0}%
+\tabularnewline%
+%
+\end{tabular}%

@@ -1,0 +1,58 @@
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+{\titlefont\fontsize{40}{48}\selectfont\noindent\theninthage
+
+\fantasybattles}
+
+\vspace*{0.5cm}
+\ifdef{\booklogo}{%
+\includegraphics[height=8cm]{\booklogo}%
+}{%
+\includegraphics[height=8cm]{../Layout/pics/logo_9th.png}%
+}
+
+{\titlefont\fontsize{40}{48}\selectfont \booktitle
+\vspace{0.4cm}
+
+\fontsize{12}{14.4}\selectfont \armybookname{}
+
+\fontsize{12}{14.4}\selectfont \ifdef{\preversion}{\preversion}{}\version{}
+
+\ifdef{\releasedate}{\releasedate}{\today}
+
+\ifdef{\translationversion}{{\fontsize{12}{14.4}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}}
+\vfill
+
+{\fontsize{12}{14.4}\selectfont
+
+\begin{multicols}{2}
+
+\hypertarget{tableofcontents}{\tocfirstcolumn}
+
+\vspace*{\fill}\columnbreak
+
+\tocsecondcolumn
+
+\vspace*{\fill}\end{multicols}
+}
+
+\vfill
+
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\frontpagecredits}}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\license}}
+\tabularnewline
+\end{tabular}
+
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{2}

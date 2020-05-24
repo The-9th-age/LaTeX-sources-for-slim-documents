@@ -1,0 +1,44 @@
+% Army Model Rule Names
+
+\newcommand{\martialdiscipline}{Martial Discipline}
+\newcommand{\masterofspellcrafting}{Master of Spellcrafting}
+\newcommand{\valiant}{Valiant}
+
+\newcommand{\faemiasma}{Fae Miasma}
+\newcommand{\moonlightarrows}{Moonlight Arrows}
+
+\newcommand{\dragonforgedarmour}{Dragonforged Armour}
+\newcommand{\lionsfur}{Lion's Fur}
+
+% Army Model Rule Texts
+
+\newcommand{\martialdisciplinedef}{%
+If more than half of a unit's models have \martialdiscipline{}, their Discipline Tests, other than Break or Panic  Tests, are subject to Minimised Roll.%
+}
+
+\newcommand{\masterofspellcraftingdef}{%
+Spells cast by the Wizard have their Casting Value reduced by 1. When rolling casting rolls with a single Magic Dice, a natural roll of \result{1} or \result{2} on the Magic Dice is always a failed Casting Attempt, regardless of any modifiers.%
+}
+
+\newcommand{\valiantdef}{%
+The model is immune to the effects of \fear{}. If more than half of a unit's models have \valiant{}, the unit automatically passes Panic Tests caused by \terror{}.%
+}
+
+
+\newcommand{\faemiasmadef}{%
+This Attack Attribute can only be used with Longbows and Paired Weapons.\newline%
+When a unit is hit by attacks with \faemiasma{}, it must take a Resilience Test for each hit, using the Resilience that the largest proportion of models in the unit has (use the higher value in case of a tie). If one or more Resilience Tests are failed, all models in the unit are affected by \faemiasma{} until the start of the Active Player's next Player Turn. A model that is affected by (one or more instances of) \faemiasma{} suffers a -1 to-hit modifier (both for Shooting Attacks and Close Combat Attacks).%
+}
+
+\newcommand{\moonlightarrowsdef}{%
+This Attack Attribute can only be used with Bows or Longbows without Weapon Enchantments. The attack gains \textbf{\flamingattacks} and \textbf{\magicalattacks}, has its Strength \textbf{set} to 4 and its Armour Penetration \textbf{set} to 1.%
+}
+
+
+\newcommand{\dragonforgedarmourdef}{%
+Follows the rules for \ha{} (can be enchanted as if it was \ha{}). In addition, the wearer gains \textbf{\aegis{} (2+, against \flamingattacks{})} and \textbf{\aegis{} (6+)}, and cannot benefit from \fortitude{}.%
+}
+
+\newcommand{\lionsfurdef}{%
+If on foot, the wearer gains +1 Armour, which is improved to +2 Armour against Shooting Attacks.%
+}
